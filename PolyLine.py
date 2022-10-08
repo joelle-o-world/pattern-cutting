@@ -33,7 +33,7 @@ class PolyLine:
             list.append(LineSegment(start, end))
         return list
 
-    def angles():
+    def angles(self):
         "Iterate all the three point angles"
         # TODO:
 
@@ -64,6 +64,26 @@ class PolyLine:
         "Get the tangent to the poly line at w millimeters along."
         # TODO
 
-    def findCorners():
+    def findCorners(self):
         "Find sharp corners in the line"
         # TODO
+
+    def top(self):
+        "y coordinate of the topmost point"
+        # TODO:
+
+    def bottom(self):
+        "y coordinate of the bottom-most point"
+        # TODO:
+
+    def left(self):
+        "x coordinate of the left-most point"
+        #TODO: 
+
+    def right(self):
+        "x coordinate of the right-most point"
+        # TODO:
+
+    def svg(self):
+        "drawSvg object representation"
+        # TODO:
