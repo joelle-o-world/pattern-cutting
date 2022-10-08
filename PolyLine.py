@@ -56,12 +56,21 @@ class LineSegment:
     def right(self):
         return max([self.start.x, self.end.x])
 
+
 class PolyLine:
     points: list[vec2]
+
+    # Constrction
     def __init__(self, points = []):
         self.points = points
 
+    def append(self, p):
+        self.points.append(p)
 
+    def close(self):
+        self.append(self.start())
+
+    # Iteration
     def segments(self):
         "Iterate line segments"
         for start, end in zip(self.points, self.points[1:]):
@@ -122,6 +131,11 @@ class PolyLine:
     def right(self):
         "x coordinate of the right-most point"
         return max([point.x for point in self.points])
+
+    def start(self):
+        return self.points[0]
+    def end(self):
+        return self.points[-1]
 
     def interleavedCoordinates(self):
         for point in self.points:
