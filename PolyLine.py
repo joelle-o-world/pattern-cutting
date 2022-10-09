@@ -104,6 +104,28 @@ class LineSegment:
     def __str__(self):
         return "{} -> {}".format(self.start, self.end)
 
+class Intersection:
+    a: vec2
+    b: vec2
+    c: vec2
+
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    @property
+    def first(self):
+        return LineSegment(self.a, self.b)
+
+    @property
+    def second(self):
+        return LineSegment(self.b, self.c)
+
+    @property
+    def angle(self):
+        return self.first.angle + math.pi + self.second.angle
+
 
 class PolyLine:
     points: list[vec2]
@@ -123,6 +145,10 @@ class PolyLine:
         "Iterate line segments"
         for start, end in zip(self.points, self.points[1:]):
             yield LineSegment(start, end)
+
+    def intersections(self):
+        for a,b,c in zip(self.points, self.points[1:], self.points[2:]):
+            yield Intersection(a,b,c)
 
     def angles(self):
         "Iterate all the three point angles"
