@@ -22,6 +22,9 @@ class vec2:
     def __sub__(self, other): 
         return vec2(self.x - other.x, self.y - other.y)
 
+    def __str__(self):
+        return "({}, {})".format(self.x, self.y)
+
 
 class LineSegment:
     start: vec2
@@ -57,6 +60,9 @@ class LineSegment:
     def right(self):
         return max([self.start.x, self.end.x])
 
+    def __str__(self):
+        return "{} -> {}".format(self.start, self.end)
+
 
 class PolyLine:
     points: list[vec2]
@@ -66,7 +72,7 @@ class PolyLine:
         self.points = points
 
     def append(self, p):
-        self.points.append(p)
+        self.points.append(vec2(p.x, p.y))
 
     def close(self):
         self.append(self.start())
@@ -81,6 +87,7 @@ class PolyLine:
         "Iterate all the three point angles"
         # TODO:
 
+    @property
     def length(self):
         "Measure the total length of the poly line"
         sum = 0.0
@@ -138,6 +145,8 @@ class PolyLine:
     def end(self):
         return self.points[-1]
 
+
+    # Exporting
     def interleavedCoordinates(self):
         for point in self.points:
             yield point.x
@@ -146,6 +155,10 @@ class PolyLine:
     def svg(self):
         "drawSvg object representation"
         return draw.Lines(*self.interleavedCoordinates(), close=False);
+
+    def __str__(self):
+        points = ["{}".format(point) for point in self.points]
+        return " -> ".join(points)
 
 
 if __name__ == "__main__":
