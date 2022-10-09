@@ -33,6 +33,7 @@ class LineSegment:
         self.start = start
         self.end = end
 
+    @property 
     def length(self):
         return math.sqrt(math.pow(self.start.x - self.end.x, 2) + math.pow(self.start.y - self.end.y, 2))
 
@@ -40,7 +41,7 @@ class LineSegment:
         if lengthAlong < 0 or lengthAlong > self.length:
             raise ValueError
         else:
-            progress = lengthAlong / self.length()
+            progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
 
     # Bounding rectangle methods
@@ -84,15 +85,15 @@ class PolyLine:
         "Measure the total length of the poly line"
         sum = 0.0
         for segment in self.segments():
-            sum += segment.length()
+            sum += segment.length
         return sum
 
     def pointAlong(self, w):
         "Find a point a certain distance along the polyline"
         sum = 0
         for segment in self.segments():
-            if sum + segment.length() < w:
-                sum += segment.length()
+            if sum + segment.length < w:
+                sum += segment.length
             else:
                 return segment.pointAlong(w - sum)
 
