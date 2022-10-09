@@ -25,6 +25,27 @@ class vec2:
     def __str__(self):
         return "({}, {})".format(self.x, self.y)
 
+    @property
+    def angle(self):
+        if self.x == 0:
+            return 1/2 * math.pi if self.y > 0 else 3/2 * math.pi
+        return math.atan(self.y/self.x)
+    
+    @angle.setter
+    def angle(self, angle):
+        m = self.length
+        self.x = math.cos(angle) * m
+        self.y = math.sin(angle) * m
+
+    @property
+    def length(self):
+        return math.sqrt(self.x * self.x + self.y * self.y)
+
+    @length.setter
+    def length(self, length):
+        self *= length / self.length
+
+
 
 class LineSegment:
     start: vec2
@@ -36,9 +57,29 @@ class LineSegment:
         self.start = start
         self.end = end
 
+    @property
+    def vector(self):
+        return self.end - self.start
+
+    @vector.setter
+    def vector(self, vector: vec2):
+        self.end = self.start + vector
+
     @property 
     def length(self):
-        return math.sqrt(math.pow(self.start.x - self.end.x, 2) + math.pow(self.start.y - self.end.y, 2))
+        return self.vector.length
+
+    @length.setter
+    def length(self, length: float):
+        self.vector.length = length
+
+    @property
+    def angle(self):
+        return self.vector.angle
+
+    @angle.setter
+    def angle(self, angle):
+        self.vector.angle = angle
 
     def pointAlong(self, lengthAlong):
         if lengthAlong < 0 or lengthAlong > self.length:
@@ -167,3 +208,8 @@ if __name__ == "__main__":
 
     d.append(square.svg())
     d.saveSvg("example.svg")
+
+    up = vec2(0, 1)
+    print(up.angle)
+    left = vec2(1,0)
+    print(left.angle)
