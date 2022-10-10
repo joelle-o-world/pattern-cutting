@@ -16,6 +16,7 @@ class PolyLine:
     def append(self, p):
         self.points.append(vec2(p.x, p.y))
 
+
     def close(self):
         self.append(self.start())
 
@@ -97,18 +98,22 @@ class PolyLine:
         "Find sharp corners in the line"
         # TODO
 
+    @property
     def top(self) -> float:
         "y coordinate of the topmost point"
         return max([point.y for point in self.points])
 
+    @property
     def bottom(self) -> float:
         "y coordinate of the bottom-most point"
         return min([point.y for point in self.points])
 
+    @property
     def left(self) -> float:
         "x coordinate of the left-most point"
         return min([point.x for point in self.points])
 
+    @property
     def right(self) -> float:
         "x coordinate of the right-most point"
         return max([point.x for point in self.points])

@@ -83,8 +83,8 @@ for p in points.points:
 
 
 
-points.append(vec2(0, points.top()))
-points.append(vec2(0, points.bottom()))
+points.append(vec2(0, points.top))
+points.append(vec2(0, points.bottom))
 points.close()
 d.append(points.svg())
 

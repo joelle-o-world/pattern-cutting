@@ -50,15 +50,19 @@ class LineSegment:
 
 
     # Bounding rectangle methods
+    @property
     def top(self):
         return max([self.start.y, self.end.y])
 
+    @property
     def bottom(self): 
         return min([self.start.y, self.end.y])
     
+    @property
     def left(self): 
         return min([self.start.x, self.end.x])
 
+    @property
     def right(self):
         return max([self.start.x, self.end.x])
 
