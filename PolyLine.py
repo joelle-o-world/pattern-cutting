@@ -1,4 +1,3 @@
-import math
 import drawSvg as draw
 
 from vec2 import vec2
@@ -50,12 +49,16 @@ class PolyLine:
             self.remainder = remainder
 
         @property
-        def segment(self):
+        def segment(self) ->  LineSegment:
             return self.parent.segments[self.index]
 
         @property
         def point(self):
             return self.segment.pointAlong(self.remainder);
+
+        def normal(self):
+            "Unit vector line segment perpendicular to the parent at this point"
+            return self.segment.normalAlong(self.remainder)
 
     def measureAlong(self, w):
         sum = 0

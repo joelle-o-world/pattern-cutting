@@ -24,6 +24,11 @@ class LineSegment:
     def unitVector(self):
         return self.vector.unitVector()
 
+    @property
+    def direction(self):
+        "Alias for unitVector"
+        return self.unitVector()
+
     @property 
     def length(self):
         return self.vector.length
@@ -40,12 +45,18 @@ class LineSegment:
     def angle(self, angle):
         self.vector.angle = angle
 
-    def pointAlong(self, lengthAlong):
+    def pointAlong(self, lengthAlong) -> vec2:
         if lengthAlong < 0 or lengthAlong > self.length:
             raise ValueError
         else:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
+
+    def normalAlong(self, lengthAlong):
+        start = self.pointAlong(lengthAlong)
+        direction = self.direction.normal()
+        return LineSegment(start=start, end=start + direction)
+        
 
 
 
