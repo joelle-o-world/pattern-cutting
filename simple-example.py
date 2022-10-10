@@ -6,5 +6,7 @@ from render import render
 
 square = PolyLine([vec2(0,0), vec2(100,0), vec2(100,100), vec2(0,100), vec2(0,0)])
 
+square.translate(vec2(-1000, 10000))
+
 drawing = render([square])
 drawing.saveSvg("Simple Example.svg")

@@ -139,6 +139,10 @@ class PolyLine:
         points = ["{}".format(point) for point in self.points]
         return " -> ".join(points)
 
+    def translate(self, t):
+        return PolyLine([point + t for point in self.points])
+
+
 
 if __name__ == "__main__":
     square = PolyLine([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(0,0)])
