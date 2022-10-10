@@ -10,29 +10,33 @@ class vec2:
         self.x = x
         self.y = y
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> None:
         return self.x == other.x and self.y == other.y
 
-    def __mul__(self, scale: float):
+    def __mul__(self, scale: float) -> "vec2":
         return vec2(self.x * scale, self.y * scale)
 
-    def __add__(self, other):
+    def __add__(self, other) -> "vec2":
         return vec2(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other): 
+    def __sub__(self, other) -> "vec2": 
         return vec2(self.x - other.x, self.y - other.y)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "({}, {})".format(self.x, self.y)
 
+    def __truediv__(self, divisor):
+        return self * ( 1 / divisor)
+
+
     @property
-    def angle(self):
+    def angle(self) -> float:
         if self.x == 0:
             return 1/2 * math.pi if self.y > 0 else 3/2 * math.pi
         return math.atan(self.y/self.x)
     
     @angle.setter
-    def angle(self, angle):
+    def angle(self, angle: float):
         m = self.length
         self.x = math.cos(angle) * m
         self.y = math.sin(angle) * m
@@ -44,6 +48,9 @@ class vec2:
     @length.setter
     def length(self, length):
         self *= length / self.length
+
+    def unitVector(self):
+        return self / self.length 
 
 
 
@@ -64,6 +71,9 @@ class LineSegment:
     @vector.setter
     def vector(self, vector: vec2):
         self.end = self.start + vector
+
+    def unitVector(self):
+        return self.vector.unitVector()
 
     @property 
     def length(self):
@@ -88,6 +98,8 @@ class LineSegment:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
 
+
+
     # Bounding rectangle methods
     def top(self):
         return max([self.start.y, self.end.y])
@@ -105,22 +117,22 @@ class LineSegment:
         return "{} -> {}".format(self.start, self.end)
 
 class Intersection:
-    a: vec2
-    b: vec2
-    c: vec2
+    start: vec2
+    meeting: vec2
+    end: vec2
 
-    def __init__(self, a, b, c):
-        self.a = a
-        self.b = b
-        self.c = c
+    def __init__(self, start, meeting, end):
+        self.start = start
+        self.end = meeting
+        self.end = end
 
     @property
     def first(self):
-        return LineSegment(self.a, self.b)
+        return LineSegment(self.start, self.meeting)
 
     @property
     def second(self):
-        return LineSegment(self.b, self.c)
+        return LineSegment(self.meeting, self.end)
 
     @property
     def angle(self):
@@ -147,12 +159,12 @@ class PolyLine:
             yield LineSegment(start, end)
 
     def intersections(self):
-        for a,b,c in zip(self.points, self.points[1:], self.points[2:]):
-            yield Intersection(a,b,c)
+        for start,meeting,end in zip(self.points, self.points[1:], self.points[2:]):
+            yield Intersection(start,meeting,end)
 
     def angles(self):
         "Iterate all the three point angles"
-        # TODO:
+        return [intersection.angle for intersection in self.intersections()]
 
     @property
     def length(self):
@@ -162,14 +174,38 @@ class PolyLine:
             sum += segment.length
         return sum
 
-    def pointAlong(self, w):
-        "Find a point a certain distance along the polyline"
+
+    class MeasurementAlongPolyLine:
+        def __init__(self, parent, index, remainder):
+            self.parent = parent
+            self.index = index
+            self.remainder = remainder
+
+        @property
+        def segment(self):
+            return self.parent.segments[self.index]
+
+        @property
+        def point(self):
+            return self.segment.pointAlong(self.remainder);
+
+    def measureAlong(self, w):
         sum = 0
+        i = 0
         for segment in self.segments():
             if sum + segment.length < w:
                 sum += segment.length
             else:
-                return segment.pointAlong(w - sum)
+                return self.MeasurementAlongPolyLine(self, i, w - sum)
+            i += 1
+        # otherwise
+        raise ValueError
+
+    def pointAlong(self, w) -> vec2:
+        "Find a point a certain distance along the polyline"
+        return self.measureAlong(w).point
+
+ 
 
     def upsample(self):
         "Interpolate between the points to create a new poly line with greater resolution"
@@ -185,31 +221,35 @@ class PolyLine:
 
     def tangent(self, w):
         "Get the tangent to the poly line at w millimeters along."
-        # TODO
+        measurement = self.measureAlong(w)
+        point = measurement.point
+        direction = measurement.segment.unitVector()
+        return LineSegment(point, point + direction)
 
     def findCorners(self, threshholdAngle):
         "Find sharp corners in the line"
         # TODO
 
-    def top(self):
+    def top(self) -> float:
         "y coordinate of the topmost point"
         return max([point.y for point in self.points])
 
-    def bottom(self):
+    def bottom(self) -> float:
         "y coordinate of the bottom-most point"
         return min([point.y for point in self.points])
 
-    def left(self):
+    def left(self) -> float:
         "x coordinate of the left-most point"
         return min([point.x for point in self.points])
 
-    def right(self):
+    def right(self) -> float:
         "x coordinate of the right-most point"
         return max([point.x for point in self.points])
 
-    def start(self):
+    def start(self) -> vec2:
         return self.points[0]
-    def end(self):
+
+    def end(self) -> vec2:
         return self.points[-1]
 
 
