@@ -23,7 +23,7 @@ class vec2:
     def __str__(self) -> str:
         return "({}, {})".format(self.x, self.y)
 
-    def __truediv__(self, divisor):
+    def __truediv__(self, divisor) -> "vec2":
         return self * ( 1 / divisor)
 
 
@@ -49,6 +49,37 @@ class vec2:
 
     def unitVector(self):
         return self / self.length 
+
+    @property
+    def direction(self):
+        return self.unitVector()
+
+    def copy(self):
+        return vec2(self.x, self.y)
+
+    def withAngle(self, angle):
+        "Make a new vector with the same length but different angle"
+        new = self.copy()
+        new.angle = angle
+        return new 
+
+    def withLength(self, length):
+        "Make a new vector with the same angle but different length"
+        new = self.copy()
+        new.length = length
+        return new
+
+    def rotate(self, rotation):
+        return self.withAngle(self.angle + rotation)
+
+    def extend(self, extension):
+        return self.withLength(self.length + extension)
+
+    def normal(self):
+        "Get a vector perpendicular to this one"
+        # TODO: what about the normal in the other direction?
+        return self.rotate(math.degrees(90))
+
 
 
 
