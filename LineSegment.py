@@ -2,6 +2,8 @@
 from vec2 import vec2
 
 class LineSegment:
+    "A line with a start and an end in 2d space"
+
     start: vec2
     end: vec2
 

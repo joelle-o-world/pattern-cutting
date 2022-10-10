@@ -3,6 +3,8 @@ from LineSegment import LineSegment
 import math
 
 class Intersection:
+    "Represents a point where two line segments meet"
+
     start: vec2
     meeting: vec2
     end: vec2

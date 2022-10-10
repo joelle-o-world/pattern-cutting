@@ -6,6 +6,7 @@ from LineSegment import LineSegment
 from Intersection import Intersection
 
 class PolyLine:
+    "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: list[vec2]
 
     # Constrction
