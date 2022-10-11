@@ -1,4 +1,5 @@
 import math
+import drawSvg as draw
 
 class vec2:
     x: float
@@ -81,6 +82,26 @@ class vec2:
         "Get a vector perpendicular to this one"
         # TODO: what about the normal in the other direction?
         return vec2(-self.y, self.x)
+
+
+    @property
+    def top(self): 
+        return self.y
+
+    @property
+    def bottom(self): 
+        return self.y
+
+    @property
+    def left(self):
+        return self.x
+
+    @property
+    def right(self):
+        return self.x
+
+    def svg(self):
+        return draw.Circle(self.x, self.y, 1, fill="black")
 
 
 

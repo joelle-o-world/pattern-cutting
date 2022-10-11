@@ -1,6 +1,7 @@
 from vec2 import vec2
 from LineSegment import LineSegment
-import math
+
+from angles import normalizeAngle
 
 class Intersection:
     "Represents a point where two line segments meet"
@@ -11,7 +12,7 @@ class Intersection:
 
     def __init__(self, start, meeting, end):
         self.start = start
-        self.end = meeting
+        self.meeting = meeting
         self.end = end
 
     @property
@@ -24,5 +25,6 @@ class Intersection:
 
     @property
     def angle(self):
-        return self.first.angle + math.pi + self.second.angle
+        return normalizeAngle(self.second.angle - self.first.angle)
+
 

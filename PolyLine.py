@@ -1,4 +1,5 @@
 import drawSvg as draw
+import math
 import numpy as np
 
 from vec2 import vec2
@@ -184,12 +185,17 @@ class PolyLine:
         middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1]
         return PolyLine([startMeasurement.point, *middlePoints, endMeasurement.point])
 
-
+    def corners(self, threshholdAngle=math.radians(15)):
+        "Find the corners that have an angle larger than the threshhold"
+        return [intersection.meeting for intersection in self.intersections() if abs(intersection.angle) > threshholdAngle]
 
 
 if __name__ == "__main__":
-    square = PolyLine([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(0,0)])
+    square = PolyLine([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(1,1)])
     d = draw.Drawing(1000, 1000, origin='center',  stroke='black', fill='none')
+
+    for angle in square.angles():
+        print("Angle", math.degrees(angle))
 
     d.append(square.svg())
     d.saveSvg("example.svg")
@@ -197,4 +203,4 @@ if __name__ == "__main__":
     up = vec2(0, 1)
     print(up.angle)
     left = vec2(1,0)
-    print(left.angle)
+

@@ -15,6 +15,15 @@ markers = square.evenlySpacedMeasurements()
 circle = Circle(vec2(500, 500), 100).polyline(50)
 
 
-drawing = render([square, *markers, sliced, *sliced.evenlySpacedMeasurements(), circle, *circle.evenlySpacedMeasurements()])
+drawing = render([
+    square, 
+    *square.evenlySpacedMeasurements(),
+    *square.corners(),
+    sliced, 
+    *sliced.evenlySpacedMeasurements(), 
+    circle, 
+    *circle.corners(),
+    *circle.evenlySpacedMeasurements()
+])
 drawing.saveSvg("Simple Example.svg")
 print("Done!")
