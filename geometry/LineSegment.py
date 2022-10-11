@@ -1,6 +1,8 @@
 
-from vec2 import vec2
 import drawSvg as draw
+
+from geometry.vec2 import vec2
+
 
 class LineSegment:
     "A line with a start and an end in 2d space"
