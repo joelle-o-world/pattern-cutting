@@ -45,7 +45,9 @@ class vec2:
 
     @length.setter
     def length(self, length):
-        self *= length / self.length
+        scale = length / self.length
+        self.x *= scale
+        self.y *= scale
 
     def unitVector(self):
         return self / self.length 
@@ -78,7 +80,7 @@ class vec2:
     def normal(self):
         "Get a vector perpendicular to this one"
         # TODO: what about the normal in the other direction?
-        return self.rotate(math.degrees(90))
+        return vec2(-self.y, self.x)
 
 
 

@@ -1,5 +1,6 @@
 
 from vec2 import vec2
+import drawSvg as draw
 
 class LineSegment:
     "A line with a start and an end in 2d space"
@@ -35,7 +36,7 @@ class LineSegment:
 
     @length.setter
     def length(self, length: float):
-        self.vector.length = length
+        self.vector = self.vector.withLength(length)
 
     @property
     def angle(self):
@@ -43,7 +44,21 @@ class LineSegment:
 
     @angle.setter
     def angle(self, angle):
-        self.vector.angle = angle
+        self.vector = self.vector.withAngle(angle)
+
+    def copy(self):
+        # TODO: I'll bet copy methods aren't the way!
+        return LineSegment(self.start.copy(), self.end.copy())
+
+    def withAngle(self, angle):
+        new = self.copy()
+        new.angle = angle
+        return new
+
+    def withLength(self, length):
+        new = self.copy()
+        new.length = length
+        return new
 
     def pointAlong(self, lengthAlong) -> vec2:
         if lengthAlong < 0 or lengthAlong > self.length:
@@ -58,7 +73,8 @@ class LineSegment:
         return LineSegment(start=start, end=start + direction)
         
 
-
+    def svg(self):
+        return draw.Line(self.start.x, self.start.y, self.end.x, self.end.y)
 
     # Bounding rectangle methods
     @property
@@ -79,4 +95,8 @@ class LineSegment:
 
     def __str__(self):
         return "{} -> {}".format(self.start, self.end)
+
+    def translate(self, vec):
+        return LineSegment(start = self.start + vec, end = self.end + vec)
+
 

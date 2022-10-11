@@ -1,4 +1,5 @@
 import drawSvg as draw
+import numpy as np
 
 from vec2 import vec2
 from LineSegment import LineSegment
@@ -25,6 +26,12 @@ class PolyLine:
         for start, end in zip(self.points, self.points[1:]):
             yield LineSegment(start, end)
 
+    def segment(self, index):
+        return LineSegment(
+            start = self.points[index],
+            end = self.points[index+1]
+        )
+
     def intersections(self):
         for start,meeting,end in zip(self.points, self.points[1:], self.points[2:]):
             yield Intersection(start,meeting,end)
@@ -42,15 +49,17 @@ class PolyLine:
         return sum
 
 
+    # TODO: Probably doesnt make sense for this to be a subclass any more
     class MeasurementAlongPolyLine:
-        def __init__(self, parent, index, remainder):
+        def __init__(self, parent, lengthAlong: float, index, remainder):
             self.parent = parent
             self.index = index
             self.remainder = remainder
+            self.lengthAlong = lengthAlong
 
         @property
         def segment(self) ->  LineSegment:
-            return self.parent.segments[self.index]
+            return self.parent.segment( self.index )
 
         @property
         def point(self):
@@ -60,6 +69,29 @@ class PolyLine:
             "Unit vector line segment perpendicular to the parent at this point"
             return self.segment.normalAlong(self.remainder)
 
+        def svg(self):
+            marker = self.normal().withLength(-3)
+            textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
+            label = draw.Text("{:.0f}mm".format(self.lengthAlong), 5, stroke='none', fill="#000000", path = textPath.svg())
+            group = draw.Group()
+            group.append(marker.svg())
+            group.append(label)
+            return group
+
+        # TODO: Use a boundingRect() method instead
+        @property
+        def top(self): 
+            return self.point.y
+        @property
+        def bottom(self): 
+            return self.point.y
+        @property
+        def left(self): 
+            return self.point.x
+        @property
+        def right(self): 
+            return self.point.x
+
     def measureAlong(self, w):
         sum = 0
         i = 0
@@ -67,7 +99,7 @@ class PolyLine:
             if sum + segment.length < w:
                 sum += segment.length
             else:
-                return self.MeasurementAlongPolyLine(self, i, w - sum)
+                return self.MeasurementAlongPolyLine(self, w, i, w - sum)
             i += 1
         # otherwise
         raise ValueError
@@ -76,7 +108,8 @@ class PolyLine:
         "Find a point a certain distance along the polyline"
         return self.measureAlong(w).point
 
- 
+    def evenlySpacedMeasurements(self, step = 10):
+        return [self.measureAlong(w) for w in np.arange(0, self.length, step)]
 
     def upsample(self):
         "Interpolate between the points to create a new poly line with greater resolution"

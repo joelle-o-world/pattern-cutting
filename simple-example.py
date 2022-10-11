@@ -6,7 +6,10 @@ from render import render
 
 square = PolyLine([vec2(0,0), vec2(100,0), vec2(100,100), vec2(0,100), vec2(0,0)])
 
-square.translate(vec2(-1000, 10000))
+markers = square.evenlySpacedMeasurements()
 
-drawing = render([square])
+print([marker.svg() for marker in markers])
+
+drawing = render([square, *markers])
 drawing.saveSvg("Simple Example.svg")
+print("Done!")
