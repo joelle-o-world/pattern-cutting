@@ -3,6 +3,7 @@
 from vec2 import vec2
 from PolyLine import PolyLine
 from render import render
+from Circle import Circle
 
 square = PolyLine([vec2(0,0), vec2(100,0), vec2(100,100), vec2(0,100), vec2(0,0)])
 sliced = square.slice(25, 175).translate(vec2(0, 200))
@@ -10,8 +11,10 @@ sliced = square.slice(25, 175).translate(vec2(0, 200))
 
 markers = square.evenlySpacedMeasurements()
 
-print([marker.svg() for marker in markers])
 
-drawing = render([square, *markers, sliced, *sliced.evenlySpacedMeasurements()])
+circle = Circle(vec2(500, 500), 100).polyline(50)
+
+
+drawing = render([square, *markers, sliced, *sliced.evenlySpacedMeasurements(), circle, *circle.evenlySpacedMeasurements()])
 drawing.saveSvg("Simple Example.svg")
 print("Done!")
