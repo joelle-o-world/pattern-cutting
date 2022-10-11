@@ -178,6 +178,13 @@ class PolyLine:
     def translate(self, t):
         return PolyLine([point + t for point in self.points])
 
+    def slice(self, start, end):
+        startMeasurement = self.measureAlong(start)
+        endMeasurement = self.measureAlong(end)
+        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1]
+        return PolyLine([startMeasurement.point, *middlePoints, endMeasurement.point])
+
+
 
 
 if __name__ == "__main__":
