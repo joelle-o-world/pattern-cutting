@@ -1,7 +1,7 @@
-from vec2 import vec2
-from LineSegment import LineSegment
+from geometry.LineSegment import LineSegment
+from geometry.angles import normalizeAngle
+from geometry.vec2 import vec2
 
-from angles import normalizeAngle
 
 class Intersection:
     "Represents a point where two line segments meet"

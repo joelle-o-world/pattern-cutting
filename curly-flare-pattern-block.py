@@ -45,7 +45,7 @@ measurements = [
 ]
 
 
-from PolyLine import vec2, PolyLine
+from geometry.PolyLine import vec2, PolyLine
 
 
 

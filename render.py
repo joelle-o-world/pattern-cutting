@@ -1,4 +1,4 @@
-from Rectangle import Rectangle, minimumBoundingRect
+from geometry.Rectangle import minimumBoundingRect
 import drawSvg as draw
 
 def render(objects):

@@ -1,14 +1,17 @@
+from typing import List
+
 import drawSvg as draw
 import math
 import numpy as np
 
-from vec2 import vec2
-from LineSegment import LineSegment
-from Intersection import Intersection
+from geometry.Intersection import Intersection
+from geometry.LineSegment import LineSegment
+from geometry.vec2 import vec2
+
 
 class PolyLine:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
-    points: list[vec2]
+    points: List[vec2]
 
     # Constrction
     def __init__(self, points = []):

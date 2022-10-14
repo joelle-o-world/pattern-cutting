@@ -1,7 +1,8 @@
-from vec2 import vec2
 import math
 import numpy as np
-from PolyLine import PolyLine
+from geometry.vec2 import vec2
+from geometry.PolyLine import PolyLine
+
 
 class Circle:
     def __init__(self, center: vec2, radius: float):
