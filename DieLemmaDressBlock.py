@@ -1,8 +1,8 @@
 # This is a pattern Jane made when we were working on The Chicken Dress for Die Lemma (August 2022)
 # I'm digitising it here based on measurements taken from the block
 
-from vec2 import vec2
-from PolyLine import PolyLine
+from geometry.vec2 import vec2
+from geometry.PolyLine import PolyLine
 from render import render
 
 inch = 25.4
