@@ -32,9 +32,7 @@ class vec2:
 
     @property
     def angle(self) -> float:
-        if self.x == 0:
-            return 1/2 * math.pi if self.y > 0 else 3/2 * math.pi
-        return math.atan(self.y/self.x)
+        return math.atan2(self.y, self.x)
     
     @angle.setter
     def angle(self, angle: float):

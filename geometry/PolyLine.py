@@ -13,6 +13,12 @@ class PolyLine:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[vec2]
 
+    def firstPoint(self):
+        return self.points[0]
+    def lastPoint(self):
+        return self.points[-1]
+
+
     # Constrction
     def __init__(self, points = []):
         self.points = points
@@ -44,12 +50,13 @@ class PolyLine:
             end = self.points[index+1]
         )
 
-    def firstSegment(self):
-        return self.segment(0)
 
     @property
     def numberOfSegments(self):
-        return len(self.points)- 1
+        return len(self.points) - 1
+
+    def firstSegment(self):
+        return self.segment(0)
 
     def lastSegment(self):
         return self.segment(self.numberOfSegments - 1)
@@ -250,6 +257,19 @@ class PolyLine:
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
         return [intersection.meeting for intersection in self.intersections() if abs(intersection.angle) > threshholdAngle]
+
+
+    def parallel(self, distance):
+        # First point is drawn at a normal to the first segment
+        first = self.firstPoint() + self.firstSegment().normal().withLength(distance)
+
+        # Same for the last point
+        last = self.lastPoint() + self.lastSegment().normal().withLength(distance)
+
+        # The inbetween points are drawn by bisecting the angle of the intersections 
+        inbetween = [ intersection.bisect().withLength(distance).end for intersection in self.intersections() ]
+
+        return PolyLine([first, *inbetween,  last])
 
 
 if __name__ == "__main__":

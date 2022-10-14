@@ -69,6 +69,9 @@ class LineSegment:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
 
+    def normal(self):
+        return self.vector.normal()
+
     def normalAlong(self, lengthAlong):
         start = self.pointAlong(lengthAlong)
         direction = self.direction.normal()
