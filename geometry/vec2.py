@@ -163,6 +163,12 @@ class vec2:
             group.append(label)
 
         return group
+    
+    @property
+    def tuple(self):
+        return self.x, self.y
+
+
 
 
 def midpoint(a: vec2, b: vec2):
