@@ -100,9 +100,19 @@ class vec2:
     def right(self):
         return self.x
 
+    label: str | None = None
+    def labelText(self):
+        # TODO: automatically add coordinates if flag is set
+        return self.label
+
     def svg(self):
-        return draw.Circle(self.x, self.y, 1, fill="black")
+        group = draw.Group()
+        circle = draw.Circle(self.x, self.y, 1, fill="black")
+        group.append(circle)
+        labelText = self.labelText()
+        if labelText:
+            # TODO: Get font size from a context object
+            label = draw.Text(labelText, 5, self.x + 2, self.y + 2, fill="#000000", stroke="none")
+            group.append(label)
 
-
-
-
+        return group
