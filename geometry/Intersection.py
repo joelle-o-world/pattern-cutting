@@ -39,3 +39,23 @@ class Intersection:
     def bisect(self):
         vector = vec2(1,0).withAngle( self.first.angle + self.clockwiseAngle / 2)
         return LineSegment(self.meeting, self.meeting + vector)
+
+    def parallel(self, distance):
+        "find a parallel intersection at a given distance"
+
+        first = self.first.parallel(distance)
+        second = self.second.parallel(distance)
+
+        meeting = self.first.parallel(distance).extrapolatedIntersection(self.bisect())
+
+
+        # meeting = first.extrapolatedIntersection(second)
+        if meeting:
+            return Intersection(start=first.start, meeting = meeting, end = second.end)
+        else:
+            raise Exception()
+
+        
+
+
+

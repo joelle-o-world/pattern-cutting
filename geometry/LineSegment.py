@@ -1,7 +1,9 @@
 
+import math
 import drawSvg as draw
 
 from geometry.vec2 import vec2
+from geometry.Line import StraightLine
 
 
 class LineSegment:
@@ -104,4 +106,59 @@ class LineSegment:
     def translate(self, vec):
         return LineSegment(start = self.start + vec, end = self.end + vec)
 
+    def gradient(self):
+        if self.start.x == self.end.x:
+            return float("inf")
+        return (self.end.y - self.start.y) / (self.end.x - self.start.x)
 
+    def vertical(self):
+        return self.start.x == self.end.x
+
+    def parallel(self, distance):
+        return self.translate( self.normal().withLength(distance))
+
+    def straightLine(self):
+        if self.vertical():
+            # Its vertical
+            return StraightLine(gradient = float("inf"), intercept = self.start.x)
+        else:
+            gradient = self.gradient()
+            intercept = self.start.y - self.start.x * gradient
+            return StraightLine(gradient=gradient, intercept = intercept)
+
+
+    def extrapolatedIntersection(self, other: "LineSegment"):
+        def coeffs(line: LineSegment):
+            A = (line.start.y - line.end.y)
+            B = (line.end.x - line.start.x)
+            C = (line.start.x*line.end.y - line.end.x*line.start.y)
+            return A, B, -C
+        L1 = coeffs(self)
+        L2 = coeffs(other)
+        D  = L1[0] * L2[1] - L1[1] * L2[0]
+        Dx = L1[2] * L2[1] - L1[1] * L2[2]
+        Dy = L1[0] * L2[2] - L1[2] * L2[0]
+        if D != 0:
+            x = Dx / D
+            y = Dy / D
+            return vec2(x,y)
+        else:
+            return False
+
+
+    # def extrapolatedIntersection(self, other: "LineSegment"):
+    #     "Find the intersection between this line and another (using the infinite line, not the segment)"
+    #     xdiff = (self.start.x - self.end.x, other.start.x - other.end.x)
+    #     ydiff = (self.start.y - self.end.y, other.start.y - other.end.y)
+
+    #     def det(a, b):
+    #         return a[0] * b[1] - a[1] * b[0]
+
+    #     div = det(xdiff, ydiff)
+    #     if div == 0:
+    #        raise Exception('lines do not intersect')
+
+    #     d = (det(self.start.tuple, self.end.tuple), det(other.start.tuple, other.end.tuple))
+    #     x = det(d, xdiff) / div
+    #     y = det(d, ydiff) / div
+    #     return vec2(x, y)

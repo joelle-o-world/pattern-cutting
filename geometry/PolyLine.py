@@ -259,7 +259,7 @@ class PolyLine:
         return [intersection.meeting for intersection in self.intersections() if abs(intersection.angle) > threshholdAngle]
 
 
-    def parallel(self, distance):
+    def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment
         first = self.firstPoint() + self.firstSegment().normal().withLength(distance)
 
@@ -270,6 +270,19 @@ class PolyLine:
         inbetween = [ intersection.bisect().withLength(distance).end for intersection in self.intersections() ]
 
         return PolyLine([first, *inbetween,  last])
+
+
+    def parallel(self, distance):
+        # First point is drawn at a normal to the first segment
+        first = self.firstSegment().parallel(distance).start
+
+        # Same for the last point
+        last = self.lastSegment().parallel(distance).end
+
+        inbetween = [ intersection.parallel(distance).meeting for intersection in self.intersections()]
+        return PolyLine([first, *inbetween, last])
+            
+
 
 
 if __name__ == "__main__":
