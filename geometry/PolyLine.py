@@ -80,6 +80,8 @@ class PolyLine:
             group = draw.Group()
             group.append(marker.svg())
             group.append(label)
+
+
             return group
 
         # TODO: Use a boundingRect() method instead
@@ -173,7 +175,12 @@ class PolyLine:
 
     def svg(self):
         "drawSvg object representation"
-        return draw.Lines(*self.interleavedCoordinates(), close=False);
+        group = draw.Group()
+        for labelledPoint in [point for point in self.points if point.labelText() != None]:
+            group.append(labelledPoint.svg())
+        shape = draw.Lines(*self.interleavedCoordinates(), close=False);
+        group.append(shape)
+        return group
 
     def __str__(self):
         points = ["{}".format(point) for point in self.points]

@@ -12,17 +12,17 @@ sliced = square.slice(25, 175).translate(vec2(0, 200))
 markers = square.evenlySpacedMeasurements()
 
 circle = Circle(vec2(500, 500), 100).polyline(50)
+circle.points[3].label = "Fourth point"
 
 drawing = render([
     square,
-    square.points[0],
     *square.evenlySpacedMeasurements(),
     *square.corners(),
     sliced,
     *sliced.evenlySpacedMeasurements(),
     circle,
     *circle.corners(),
-    *circle.evenlySpacedMeasurements()
+    *circle.evenlySpacedMeasurements(25)
 ])
 drawing.saveSvg("Simple Example.svg")
 print("Done!")
