@@ -15,7 +15,9 @@ markers = square.evenlySpacedMeasurements()
 circle = Circle(vec2(500, 500), 100).polyline(50)
 circle.points[3].label = "Fourth point"
 
-distanceMarker = DistanceMarker([vec2(0,0), vec2(0, 500)])
+circle.label = "Its a ciiircle"
+
+distanceMarker = DistanceMarker([vec2(150, 100), vec2(110, 200)])
 
 drawing = render([
     square,

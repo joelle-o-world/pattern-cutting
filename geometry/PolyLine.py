@@ -183,6 +183,10 @@ class PolyLine:
             yield point.x
             yield point.y
 
+    label: str | None = None;
+    def labelText(self) -> str | None:
+        return self.label
+
     def svg(self):
         "drawSvg object representation"
         group = draw.Group()
@@ -191,8 +195,14 @@ class PolyLine:
         for labelledPoint in [point for point in self.points if point.labelText() != None]:
             group.append(labelledPoint.svg())
 
+
         shape = draw.Lines(*self.interleavedCoordinates(), close=False);
         group.append(shape)
+
+        if self.labelText():
+            label = draw.Text(self.labelText(), 5, stroke="none", fill="#000000", path=shape, startOffset=10, lineOffset=-1)
+            group.append(label)
+
         return group
 
     def __str__(self):
