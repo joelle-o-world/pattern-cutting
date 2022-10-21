@@ -2,6 +2,7 @@
 
 from geometry.Circle import Circle
 from geometry.PolyLine import PolyLine
+from geometry.DistanceMarker import DistanceMarker
 from geometry.vec2 import vec2
 from render import render
 
@@ -14,6 +15,8 @@ markers = square.evenlySpacedMeasurements()
 circle = Circle(vec2(500, 500), 100).polyline(50)
 circle.points[3].label = "Fourth point"
 
+distanceMarker = DistanceMarker([vec2(0,0), vec2(0, 500)])
+
 drawing = render([
     square,
     *square.evenlySpacedMeasurements(),
@@ -22,7 +25,8 @@ drawing = render([
     *sliced.evenlySpacedMeasurements(),
     circle,
     *circle.corners(),
-    *circle.evenlySpacedMeasurements(25)
+    *circle.evenlySpacedMeasurements(25),
+    distanceMarker
 ])
 drawing.saveSvg("Simple Example.svg")
 print("Done!")

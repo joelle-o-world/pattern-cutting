@@ -36,6 +36,16 @@ class PolyLine:
             end = self.points[index+1]
         )
 
+    def firstSegment(self):
+        return self.segment(0)
+
+    @property
+    def numberOfSegments(self):
+        return len(self.points)- 1
+
+    def lastSegment(self):
+        return self.segment(self.numberOfSegments - 1)
+
     def intersections(self):
         for start,meeting,end in zip(self.points, self.points[1:], self.points[2:]):
             yield Intersection(start,meeting,end)
@@ -176,8 +186,11 @@ class PolyLine:
     def svg(self):
         "drawSvg object representation"
         group = draw.Group()
+
+        # Plot any labelled points
         for labelledPoint in [point for point in self.points if point.labelText() != None]:
             group.append(labelledPoint.svg())
+
         shape = draw.Lines(*self.interleavedCoordinates(), close=False);
         group.append(shape)
         return group
