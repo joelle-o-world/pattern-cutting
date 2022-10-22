@@ -2,7 +2,8 @@ import drawSvg as svg
 from geometry.Shape import Shape
 from render import render
 
-demo = svg.Drawing(100, 100)
+demo = svg.Drawing(300, 300)
+
 
 # Rendering a point with a Shape instance
 p = Shape([[50, 50, 0]])
@@ -16,6 +17,9 @@ demo.append(segment.svg())
 # Rendering a path with interim points
 path = Shape([10, 10, 0, 10, 20, 0, 90, 20, 0], close=True)
 demo.append(path.svg())
+
+threeDee = Shape([100, 0, 0, 100, 100, 0, 100, 100, 100, 200, 100, 100, 200, 0, 100, 100, 100, 0 ])
+demo.append(threeDee.svg())
 
 demo.saveSvg("DEMO.svg")
 
