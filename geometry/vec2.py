@@ -160,3 +160,7 @@ class vec2:
             group.append(label)
 
         return group
+
+
+def midpoint(a: vec2, b: vec2):
+    return (a + b) * .5
