@@ -1,4 +1,6 @@
 import math
+from multimethod import multimethod
+from multipledispatch import dispatch
 import drawSvg as draw
 
 class vec2:
@@ -99,6 +101,48 @@ class vec2:
     @property
     def right(self):
         return self.x
+
+    @multimethod    
+    def squareDown(self, amount: float):
+        return self + vec2(0, -amount)
+
+    @squareDown.register
+    def squareDownToPoint(self, point: "vec2"):
+        return vec2(self.x, point.y)
+
+    @multimethod    
+    def squareUp(self, amount: float):
+        return self + vec2(0, amount)
+
+    @squareUp.register
+    def squareUpToPoint(self, point: "vec2"):
+        return vec2(self.x, point.y)
+
+    @multimethod    
+    def squareRight(self, amount: float):
+        return self + vec2(amount, 0)
+
+    @squareRight.register
+    def squareRightToPoint(self, point: "vec2"):
+        return vec2(point.x, self.y)
+
+    @multimethod    
+    def squareLeft(self, amount: float):
+        return self + vec2(-amount, 0)
+
+    @squareLeft.register
+    def squareLeftToPoint(self, point: "vec2"):
+        return vec2(point.x, self.y)
+
+    def moveLeft(self, amount: float):
+        return self + vec2(-amount, 0)
+    def moveRight(self, amount: float):
+        return self + vec2(amount, 0)
+    def moveUp(self, amount: float):
+        return self + vec2(0, amount)
+    def moveDown(self, amount: float):
+        return self + vec2(0, -amount)
+
 
     label: str | None = None
     def labelText(self):
