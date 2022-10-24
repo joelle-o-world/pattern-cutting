@@ -116,6 +116,13 @@ class PolyLine:
         def right(self): 
             return self.point.x
 
+        @property
+        def height(self):
+            return self.top - self.bottom
+        @property
+        def width(self):
+            return self.right - self.left
+
     def measureAlong(self, w):
         sum = 0
         i = 0
@@ -177,6 +184,15 @@ class PolyLine:
     def right(self) -> float:
         "x coordinate of the right-most point"
         return max([point.x for point in self.points])
+    
+    @property
+    def width(self) -> float:
+        return self.right - self.left
+
+    @property
+    def height(self) -> float:
+        return  self.top - self.bottom
+
 
     def start(self) -> vec2:
         return self.points[0]
@@ -222,6 +238,9 @@ class PolyLine:
 
     def translate(self, t):
         return PolyLine([point + t for point in self.points])
+
+    def move(self, x, y):
+        return self.translate(vec2(x, y))
 
     def slice(self, start, end):
         startMeasurement = self.measureAlong(start)

@@ -6,6 +6,7 @@ from geometry.PolyLine import PolyLine
 from geometry.DistanceMarker import DistanceMarker
 from geometry.vec2 import vec2
 from render import render
+from layout import layout
 
 square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
 square.points[0].label = "first point"
@@ -32,7 +33,9 @@ drawing = render([
     *circle.corners(),
     *circle.evenlySpacedMeasurements(25),
     distanceMarker,
-    *[thing.moveRight(300) for thing in trousers]
+    *[thing.moveRight(300) for thing in trousers],
+
+    *layout([circle, square, circle])
 ])
 
 drawing.saveSvg("Simple Example.svg")
