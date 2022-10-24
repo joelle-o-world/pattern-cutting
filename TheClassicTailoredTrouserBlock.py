@@ -1,6 +1,7 @@
 from geometry.vec2 import vec2, midpoint
 from geometry.PolyLine import PolyLine
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
+from geometry.Group import Group
 
 def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220):
     "Create a trouser block according to Winnifred Owen instructions"
@@ -106,4 +107,4 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     shape.lineTo(p[6])
     shape.curveTo(p[9])
 
-    return [shape, *p]
+    return Group(shape, *p)

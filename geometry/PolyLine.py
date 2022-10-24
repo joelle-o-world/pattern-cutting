@@ -72,6 +72,7 @@ class PolyLine:
 
 
     # TODO: Probably doesnt make sense for this to be a subclass any more
+    # TODO: Define this class as a point a certain length along a line
     class MeasurementAlongPolyLine:
         def __init__(self, parent, lengthAlong: float, index, remainder):
             self.parent = parent
@@ -98,8 +99,6 @@ class PolyLine:
             group = draw.Group()
             group.append(marker.svg())
             group.append(label)
-
-
             return group
 
         # TODO: Use a boundingRect() method instead

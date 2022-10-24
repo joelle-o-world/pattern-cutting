@@ -7,6 +7,7 @@ from geometry.DistanceMarker import DistanceMarker
 from geometry.vec2 import vec2
 from render import render
 from layout import layout
+from geometry.Group import Group
 
 square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
 square.points[0].label = "first point"
@@ -24,18 +25,25 @@ distanceMarker = DistanceMarker([vec2(150, 100), vec2(110, 200)])
 trousers = TheClassicTailoredTrouserBlock()
 
 drawing = render([
-    square,
-    *square.evenlySpacedMeasurements(),
-    *square.corners(),
-    sliced,
-    *sliced.evenlySpacedMeasurements(),
-    circle,
-    *circle.corners(),
-    *circle.evenlySpacedMeasurements(25),
-    distanceMarker,
-    *[thing.moveRight(300) for thing in trousers],
 
-    *layout([circle, square, circle])
+    *layout([
+        Group(
+            square,
+            *square.evenlySpacedMeasurements(),
+            *square.corners(),
+        ),
+        Group(
+            circle, 
+            *circle.corners(), 
+            *circle.evenlySpacedMeasurements(25)
+        ),
+        Group(
+            sliced,
+            *sliced.evenlySpacedMeasurements(),
+        ),
+        distanceMarker,
+        square, 
+        trousers])
 ])
 
 drawing.saveSvg("Simple Example.svg")
