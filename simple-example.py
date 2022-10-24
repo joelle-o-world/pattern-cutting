@@ -1,5 +1,6 @@
 # This simple example draws a nice square
 
+from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 from geometry.Circle import Circle
 from geometry.PolyLine import PolyLine
 from geometry.DistanceMarker import DistanceMarker
@@ -19,6 +20,8 @@ circle.label = "Its a ciiircle"
 
 distanceMarker = DistanceMarker([vec2(150, 100), vec2(110, 200)])
 
+trousers = TheClassicTailoredTrouserBlock()
+
 drawing = render([
     square,
     *square.evenlySpacedMeasurements(),
@@ -28,7 +31,10 @@ drawing = render([
     circle,
     *circle.corners(),
     *circle.evenlySpacedMeasurements(25),
-    distanceMarker
+    distanceMarker,
+    *trousers,
 ])
+
 drawing.saveSvg("Simple Example.svg")
+
 print("Done!")
