@@ -209,6 +209,9 @@ class PolyLine:
         points = ["{}".format(point) for point in self.points]
         return " -> ".join(points)
 
+    def moveRight(self, amount):
+        return self.translate(vec2(amount,0))
+
     def translate(self, t):
         return PolyLine([point + t for point in self.points])
 

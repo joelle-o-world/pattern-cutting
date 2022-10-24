@@ -1,4 +1,5 @@
 from geometry.vec2 import vec2, midpoint
+from geometry.PolyLine import PolyLine
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
 
 def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220):
@@ -82,4 +83,26 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     for i in range(0, len(p)):
         p[i].label = "{}".format(i)
 
-    return p
+
+
+    shape = PolyLine([])
+    shape.append(p[9])
+    # TODO: Curve inwards
+    shape.append(p[15])
+
+    shape.append(p[14])
+
+    # TODO: Curve outwards
+    shape.append(p[12])
+
+    shape.append(p[13])
+    shape.append(p[8])
+
+    # TODO: curve outwards
+    shape.append(p[11])
+
+    shape.append(p[10])
+    shape.append(p[6])
+    shape.append(p[9])
+
+    return [shape, *p]

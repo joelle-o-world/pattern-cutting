@@ -32,7 +32,7 @@ drawing = render([
     *circle.corners(),
     *circle.evenlySpacedMeasurements(25),
     distanceMarker,
-    *trousers,
+    *[thing.moveRight(300) for thing in trousers]
 ])
 
 drawing.saveSvg("Simple Example.svg")

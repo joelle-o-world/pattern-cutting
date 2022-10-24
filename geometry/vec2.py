@@ -134,14 +134,19 @@ class vec2:
     def squareLeftToPoint(self, point: "vec2"):
         return vec2(point.x, self.y)
 
+    def move(self, x, y):
+        new = vec2(self.x + x, self.y +y)
+        new.label = self.label
+        return new
+
     def moveLeft(self, amount: float):
-        return self + vec2(-amount, 0)
+        return self.move(-amount, 0)
     def moveRight(self, amount: float):
-        return self + vec2(amount, 0)
+        return self.move(amount, 0)
     def moveUp(self, amount: float):
-        return self + vec2(0, amount)
+        return self.move(0, amount)
     def moveDown(self, amount: float):
-        return self + vec2(0, -amount)
+        return self.move(0, -amount)
 
 
     label: str | None = None
