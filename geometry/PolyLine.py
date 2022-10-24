@@ -20,6 +20,14 @@ class PolyLine:
     def append(self, p):
         self.points.append(vec2(p.x, p.y))
 
+    def startAt(self, p):
+        self.points = [p.copy()]
+    def lineTo(self, p):
+        self.append(p)
+    def curveTo(self, p: vec2, curve=0):
+        # TODO: Create the actual curve
+        self.append(p)
+
 
     def close(self):
         self.append(self.start())

@@ -3,6 +3,7 @@ from geometry.PolyLine import PolyLine
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
 
 def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220):
+    "Create a trouser block according to Winnifred Owen instructions"
     p = [vec2(0,0)] * 16
 
     # Front
@@ -86,23 +87,23 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
 
 
     shape = PolyLine([])
-    shape.append(p[9])
+    shape.startAt(p[9])
     # TODO: Curve inwards
-    shape.append(p[15])
+    shape.curveTo(p[15])
 
-    shape.append(p[14])
+    shape.lineTo(p[14])
 
     # TODO: Curve outwards
-    shape.append(p[12])
+    shape.curveTo(p[12])
 
-    shape.append(p[13])
-    shape.append(p[8])
+    shape.lineTo(p[13])
+    shape.lineTo(p[8])
 
     # TODO: curve outwards
-    shape.append(p[11])
+    shape.curveTo(p[11])
 
-    shape.append(p[10])
-    shape.append(p[6])
-    shape.append(p[9])
+    shape.lineTo(p[10])
+    shape.lineTo(p[6])
+    shape.curveTo(p[9])
 
     return [shape, *p]
