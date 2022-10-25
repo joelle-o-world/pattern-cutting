@@ -2,3 +2,6 @@ __pycache__
 *.svg
 env
 .idea
+
+notebook.ipynb
+.ipynb_checkpoints/
