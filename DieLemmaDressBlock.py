@@ -23,8 +23,8 @@ for width in widthMeasurements:
     y -= inch
 varyingSide.append(vec2(varyingSide.end().x, 0))
 
-shape = PolyLine([*varyingSide.points, vec2(0,0), vec2(0, varyingSide.top), varyingSide.start()])
+DieLemmaDressBlock = PolyLine([*varyingSide.points, vec2(0,0), vec2(0, varyingSide.top), varyingSide.start()])
 
 if __name__ == "__main__":
-    print(shape)
-    render(shape, *shape.points).saveSvg("Die Lemma Dress Block.svg")
+    print(DieLemmaDressBlock)
+    render(DieLemmaDressBlock, *DieLemmaDressBlock.points).saveSvg("Die Lemma Dress Block.svg")
