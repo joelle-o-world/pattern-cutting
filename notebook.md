@@ -34,6 +34,59 @@ square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(
 render(square)
 ```
 
+You can draw measurement markers along a polyline:
+
+```code
+render(
+  square, 
+  *square.evenlySpacedMeasurements()
+)
+```
+
+Or automatically detect corners:
+```code
+corners = square.corners()
+for corner in corners:
+  corner.label = "Here is a corner!"
+
+render(
+  square,
+  *corners
+)
+```
+
+You can slice out a certain portion of a line:
+```code
+
+render(
+  square.slice(25, 175)
+)
+```
+
+The circle class can be used to generate regular polygons with so many sides they look like a circle:
+
+```code
+from geometry.Circle import Circle
+
+circle = Circle(vec2(0, 0), 100)
+triangle = circle.polyline(3)
+hexagon = circle.polyline(6)
+almostCircle = circle.polyline(50)
+
+from layout import layout
+render(*layout([triangle, hexagon, almostCircle]))
+```
+
+We can put this together to get good approximations of measurements along a curve:
+```code
+arc = circle.polyline(100).slice(0, 150)
+render(
+  arc,
+  *arc.evenlySpacedMeasurements()
+  )
+```
+
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for east london drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
@@ -44,4 +97,14 @@ A dress block for Die was created and digitised into this library:
 from DieLemmaDressBlock import DieLemmaDressBlock
 
 render(DieLemmaDressBlock)
+```
+
+## Winnifred Owen pattern blocks
+
+### Trouser block
+
+```code
+from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
+
+render(TheClassicTailoredTrouserBlock())
 ```

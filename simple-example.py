@@ -27,11 +27,6 @@ trousers = TheClassicTailoredTrouserBlock()
 drawing = render(
         *layout([
             Group(
-                square,
-                *square.evenlySpacedMeasurements(),
-                *square.corners(),
-                ),
-            Group(
                 circle, 
                 *circle.corners(), 
                 *circle.evenlySpacedMeasurements(25)
@@ -41,8 +36,7 @@ drawing = render(
                 *sliced.evenlySpacedMeasurements(),
                 ),
             distanceMarker,
-            square, 
-            trousers])
+            ])
         )
 
 drawing.saveSvg("Simple Example.svg")
