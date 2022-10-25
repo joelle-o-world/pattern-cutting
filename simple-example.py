@@ -24,27 +24,26 @@ distanceMarker = DistanceMarker([vec2(150, 100), vec2(110, 200)])
 
 trousers = TheClassicTailoredTrouserBlock()
 
-drawing = render([
-
-    *layout([
-        Group(
-            square,
-            *square.evenlySpacedMeasurements(),
-            *square.corners(),
-        ),
-        Group(
-            circle, 
-            *circle.corners(), 
-            *circle.evenlySpacedMeasurements(25)
-        ),
-        Group(
-            sliced,
-            *sliced.evenlySpacedMeasurements(),
-        ),
-        distanceMarker,
-        square, 
-        trousers])
-])
+drawing = render(
+        *layout([
+            Group(
+                square,
+                *square.evenlySpacedMeasurements(),
+                *square.corners(),
+                ),
+            Group(
+                circle, 
+                *circle.corners(), 
+                *circle.evenlySpacedMeasurements(25)
+                ),
+            Group(
+                sliced,
+                *sliced.evenlySpacedMeasurements(),
+                ),
+            distanceMarker,
+            square, 
+            trousers])
+        )
 
 drawing.saveSvg("Simple Example.svg")
 

@@ -27,4 +27,4 @@ shape = PolyLine([*varyingSide.points, vec2(0,0), vec2(0, varyingSide.top), vary
 
 if __name__ == "__main__":
     print(shape)
-    render([shape, *shape.points]).saveSvg("Die Lemma Dress Block.svg")
+    render(shape, *shape.points).saveSvg("Die Lemma Dress Block.svg")

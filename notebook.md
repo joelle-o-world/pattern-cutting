@@ -19,7 +19,7 @@ You can use the render function to generate an SVG representation of the geometr
 
 ```code
 from render import render
-render([origin])
+render(origin)
 ```
 
 ## PolyLine
@@ -31,5 +31,5 @@ from geometry.PolyLine import PolyLine
 
 square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
 
-render([square])
+render(square)
 ```

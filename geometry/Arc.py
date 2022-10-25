@@ -22,4 +22,4 @@ class Arc:
 
 if __name__ == "__main__":
     myArc = Arc(center = vec2(0, 50), radius=20, startAngle = 0, endAngle = math.pi)
-    render([myArc.polyline()]).saveSvg("Arc example.svg")
+    render(myArc.polyline()).saveSvg("Arc example.svg")
