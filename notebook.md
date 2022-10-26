@@ -99,6 +99,24 @@ from DieLemmaDressBlock import DieLemmaDressBlock
 render(DieLemmaDressBlock)
 ```
 
+Drawing parallels to a complex polyline:
+
+```code
+render(
+  DieLemmaDressBlock,
+  DieLemmaDressBlock.parallel(50)
+)
+```
+
+or drawing inside the shape instead of outside,
+
+```code
+render(
+  DieLemmaDressBlock,
+  DieLemmaDressBlock.parallel(-25)
+)
+```
+
 ## Winnifred Owen pattern blocks
 
 ### Trouser block
