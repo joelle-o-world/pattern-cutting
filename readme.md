@@ -88,6 +88,21 @@ render(
   )
 ```
 
+## Finding the closest point on a polyline
+We can find the closest point on a polyline to any given coordinate:
+```code
+shape = arc
+X = vec2(90, 100)
+X.label = "X"
+Y = shape.closestPoint(X)
+Y.label = "Y"
+render(
+  shape,
+  X,
+  Y
+)
+```
+
 
 ## Die Lemma dress block
 

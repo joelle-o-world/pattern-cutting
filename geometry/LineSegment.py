@@ -2,7 +2,7 @@
 import math
 import drawSvg as draw
 
-from geometry.vec2 import vec2
+from geometry.vec2 import vec2, distance
 from geometry.Line import StraightLine
 
 
@@ -71,7 +71,7 @@ class LineSegment:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
 
-    def normal(self):
+    def normal(self) -> vec2:
         return self.vector.normal()
 
     def normalAlong(self, lengthAlong):
@@ -144,6 +144,40 @@ class LineSegment:
             return vec2(x,y)
         else:
             return False
+
+    def closestPoint(self, X: vec2) -> vec2:
+        # TODO: there is so much that could be more efficient here!
+        normal = self.normal()
+        Y = self.extrapolatedIntersection(LineSegment(X, X + normal))
+        if not Y:
+            raise Exception("Something unexpected went wrong")
+        XY = distance(X, Y)
+
+        P = self.start
+        Q = self.end
+        x = (Y.x - P.x) / (Q.x - P.x)
+
+        # y = (Y.y - P.y) / (Q.y - P.y)
+        # if x != y:
+        #     print("Something went wrong", x, y)
+
+        if x < 0:
+            return P
+        elif x > 1:
+            return Q
+        else:
+            return Y
+       
+
+        return Y
+
+
+
+        
+
+
+
+
 
 
     # def extrapolatedIntersection(self, other: "LineSegment"):

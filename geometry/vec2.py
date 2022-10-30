@@ -173,3 +173,5 @@ class vec2:
 
 def midpoint(a: vec2, b: vec2):
     return (a + b) * .5
+def distance(a: vec2, b: vec2):
+    return (a - b).length

@@ -6,7 +6,7 @@ import numpy as np
 
 from geometry.Intersection import Intersection
 from geometry.LineSegment import LineSegment
-from geometry.vec2 import vec2
+from geometry.vec2 import vec2, distance
 
 
 class PolyLine:
@@ -281,6 +281,19 @@ class PolyLine:
 
         inbetween = [ intersection.parallel(distance).meeting for intersection in self.intersections()]
         return PolyLine([first, *inbetween, last])
+
+    def closestPoint(self, X):
+        Y = self.points[0]
+        winningDistance = distance(X, Y)
+        for segment in self.segments():
+            P = segment.closestPoint(X)
+            dist = distance(P, X)
+            if dist < winningDistance:
+                Y = P
+                winningDistance = dist
+        return Y
+
+
             
 
 
