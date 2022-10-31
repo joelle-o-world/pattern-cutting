@@ -248,6 +248,8 @@ class PolyLine:
         "drawSvg object representation"
         if self.style == "line":
             return self.svg_line()
+        elif self.style == "dashed":
+            return self.svg_dashed()
         elif self.style == "pointset":
             return self.svg_pointset()
         elif self.style == "tape":
@@ -265,6 +267,14 @@ class PolyLine:
     def svg_line_only(self):
         "Draw only the line as an svg <lines> element"
         return draw.Lines(*self.interleavedCoordinates(), close=False)
+
+    def svg_dashed(self):
+        g = draw.Group()
+        line = draw.Lines(*self.interleavedCoordinates(), close=False, stroke_dasharray="10")
+        if self.label:
+            g.append(self.svg_parallel_label())
+        g.append(line)
+        return g
 
     def svg_parallel_label(self):
         "Draw the label parallel to the line itself"

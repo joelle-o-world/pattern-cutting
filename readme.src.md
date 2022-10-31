@@ -45,9 +45,10 @@ shape = PolyLine([vec2(0, 0), vec2(100, 50), vec2(200, -50), vec2(300, 0)])
 
 render(
   *topToBottom(
-    shape.with_style("line").with_label("'line' - A simple line"),
-    shape.with_style("pointset").with_label("'pointset' - a set of points"),
-    shape.with_style("tape").with_label("'tape' - a tape measure")
+    shape.with_style("line").with_label("line"),
+    shape.with_style("dashed").with_label("dashed"),
+    shape.with_style("pointset").with_label("pointset"),
+    shape.with_style("tape").with_label("tape")
   )
 )
 ```
