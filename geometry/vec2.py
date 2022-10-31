@@ -6,10 +6,12 @@ import drawSvg as draw
 class vec2:
     x: float
     y: float
+    label: str | None
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, label=None):
         self.x = x
         self.y = y
+        self.label = label
 
     def __eq__(self, other) -> None:
         return self.x == other.x and self.y == other.y
@@ -59,6 +61,9 @@ class vec2:
 
     def copy(self):
         return vec2(self.x, self.y)
+
+    def with_label(self, label: str):
+        return vec2(self.x, self.y, label=label)
 
     def withAngle(self, angle):
         "Make a new vector with the same length but different angle"
@@ -147,7 +152,6 @@ class vec2:
         return self.move(0, -amount)
 
 
-    label: str | None = None
     def labelText(self):
         # TODO: automatically add coordinates if flag is set
         return self.label

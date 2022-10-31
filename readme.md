@@ -116,12 +116,10 @@ Or automatically detect corners:
 
 ```python
 corners = square.corners()
-for corner in corners:
-  corner.label = "Here is a corner!"
 
 render(
   square,
-  *corners
+  *[corner.with_label("Here is a corner!") for corner in corners]
 )
 ```
 
@@ -205,16 +203,16 @@ We can find the closest point on a polyline to any given coordinate:
 
 
 ```python
+from geometry.PolyLine import dashed_arrow
 shape = arc
 X = vec2(90, 100)
-X.label = "X"
 Y = shape.closestPoint(X)
-Y.label = "Y"
+
 render(
   shape,
-  X,
-  Y,
-  PolyLine([ X, Y ]).with_style("dashed_arrow")
+  X.with_label("X"),
+  Y.with_label("Y"),
+  dashed_arrow(X, Y)
 )
 ```
 
@@ -233,12 +231,17 @@ You can use closest points in other methods too, such as `slice`
 ```python
 shape = arc
 P = vec2(90, 100)
-P.label = "P"
 Q = vec2(100, 0)
-Q.label = "Q"
 sliced = shape.slice(P, Q).moveRight(150)
 sliced.label = "sliced"
-render(P, Q, shape, sliced, *sliced.points)
+render(
+  P.with_label("P"),
+  Q.with_label("Q"), 
+  dashed_arrow(P, shape.at(P).point),
+  shape.with_label("Original"), 
+  sliced.with_label("sliced"), 
+  *sliced.points
+  )
 ```
 
 

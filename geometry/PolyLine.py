@@ -274,7 +274,7 @@ class PolyLine:
 
     def svg_dashed(self):
         g = draw.Group()
-        line = self.svg_line_only(stroke_dasharray = "10")
+        line = self.svg_line_only(stroke_dasharray = "3")
         if self.label:
             g.append(self.svg_parallel_label())
         g.append(line)
@@ -328,7 +328,7 @@ class PolyLine:
         return g
 
     def svg_dashed_arrow(self):
-        return self.svg_arrow(stroke_dasharray="10")
+        return self.svg_arrow(stroke_dasharray="3")
 
     def svg_perpendicular_notchthrough(self, at):
         position = self.at(at)
@@ -445,6 +445,8 @@ class PolyLine:
             return self.closest(p)
 
 
+def dashed_arrow(*points, label=None):
+    return PolyLine(points, style="dashed_arrow", label=label)
             
 
 

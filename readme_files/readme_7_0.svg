@@ -44,7 +44,7 @@
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
 <tspan dy="-1em">dashed</tspan>
 </textPath></text>
-<path d="M50,150 L150,100 L250,200 L350,150" fill="none" stroke="black" stroke-dasharray="10" />
+<path d="M50,150 L150,100 L250,200 L350,150" fill="none" stroke="black" stroke-dasharray="3" />
 </g>
 <g>
 <path d="M50,300 L150,250 L250,350 L350,300" fill="none" stroke="black" marker-end="url(#d2)" />
@@ -53,7 +53,7 @@
 </textPath></text>
 </g>
 <g>
-<path d="M50,450 L150,400 L250,500 L350,450" fill="none" stroke="black" marker-end="url(#d4)" stroke-dasharray="10" />
+<path d="M50,450 L150,400 L250,500 L350,450" fill="none" stroke="black" marker-end="url(#d4)" stroke-dasharray="3" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d5" startOffset="10">
 <tspan dy="-1em">dashed_arrow</tspan>
 </textPath></text>
