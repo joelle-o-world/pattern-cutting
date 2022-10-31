@@ -131,7 +131,7 @@ class PolyLine:
         def width(self):
             return self.right - self.left
 
-    def measureAlong(self, w):
+    def measureAlong(self, w: float | int):
         sum = 0
         i = 0
         for segment in self.segments():
@@ -250,10 +250,15 @@ class PolyLine:
     def move(self, x, y):
         return self.translate(vec2(x, y))
 
-    def slice(self, start, end):
-        startMeasurement = self.measureAlong(start)
-        endMeasurement = self.measureAlong(end)
-        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1]
+    def slice(self, start: int|float | vec2, end: int|float | vec2):
+        startMeasurement = self.at(start)
+        endMeasurement = self.at(end)
+        if startMeasurement.index > endMeasurement.index:
+            # Swap them
+            swap = startMeasurement
+            startMeasurement = endMeasurement
+            endMeasurement = swap
+        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index ]
         return PolyLine([startMeasurement.point, *middlePoints, endMeasurement.point])
 
     def corners(self, threshholdAngle=math.radians(15)):
@@ -285,7 +290,7 @@ class PolyLine:
         return PolyLine([first, *inbetween, last])
 
 
-    def closest(self, X) -> MeasurementAlongPolyLine:
+    def closest(self, X: vec2) -> MeasurementAlongPolyLine:
         # TODO: This needs to be simplified a lot
         Y = self.points[0]
         winningDistance = distance(X, Y)
@@ -311,12 +316,13 @@ class PolyLine:
         return self.closest(X).point
 
 
-    def at(self, p: float | vec2) -> MeasurementAlongPolyLine:
+    def at(self, p: int| float | vec2) -> MeasurementAlongPolyLine:
         "Find the point closest to the given coordinate, or a certain duration along the line"
-        if type(p) == "float":
+        if isinstance(p, float) or isinstance(p, int):
             return self.measureAlong(p)
         else:
             return self.closest(p)
+
 
             
 

@@ -103,10 +103,23 @@ render(
 )
 ```
 
+You can use closest points in other methods too, such as `slice`
+
+```code
+shape = arc
+P = vec2(90, 100)
+P.label = "P"
+Q = vec2(100, 0)
+Q.label = "Q"
+sliced = shape.slice(P, Q).moveRight(150)
+sliced.label = "sliced"
+render(P, Q, shape, sliced, *sliced.points)
+```
+
 
 ## Die Lemma dress block
 
-One of the main applications of this library is to create outfits for east london drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
+One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
 
 A dress block for Die was created and digitised into this library:
 
