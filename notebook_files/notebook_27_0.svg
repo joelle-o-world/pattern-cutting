@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="363.75" height="1100.0" viewBox="-187.08333333333331 -30.0 363.75 1100.0" stroke="black" fill="none">
+<defs>
+</defs>
+<g>
+<g>
+<path d="M-157.08333333333331,280.0 L-106.3,610.0 L-105.0,1040.0 L105.0,1040.0 L106.3,610.0 L146.66666666666669,206.0 L109.16666666666667,0 L-83.33333333333333,0 L-93.33333333333333,206.0 L-157.08333333333331,280.0" />
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">0</text>
+</g>
+<g>
+<circle cx="0" cy="280.0" r="1" fill="black" />
+<text x="2" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">1</text>
+</g>
+<g>
+<circle cx="0" cy="206.0" r="1" fill="black" />
+<text x="2" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">2</text>
+</g>
+<g>
+<circle cx="0" cy="1040.0" r="1" fill="black" />
+<text x="2" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">3</text>
+</g>
+<g>
+<circle cx="0.0" cy="610.0" r="1" fill="black" />
+<text x="2.0" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">4</text>
+</g>
+<g>
+<circle cx="-93.33333333333333" cy="280.0" r="1" fill="black" />
+<text x="-91.33333333333333" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">5</text>
+</g>
+<g>
+<circle cx="-93.33333333333333" cy="206.0" r="1" fill="black" />
+<text x="-91.33333333333333" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">6</text>
+</g>
+<g>
+<circle cx="-93.33333333333333" cy="0" r="1" fill="black" />
+<text x="-91.33333333333333" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">7</text>
+</g>
+<g>
+<circle cx="146.66666666666669" cy="206.0" r="1" fill="black" />
+<text x="148.66666666666669" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">8</text>
+</g>
+<g>
+<circle cx="-157.08333333333331" cy="280.0" r="1" fill="black" />
+<text x="-155.08333333333331" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">9</text>
+</g>
+<g>
+<circle cx="-83.33333333333333" cy="0" r="1" fill="black" />
+<text x="-81.33333333333333" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">10</text>
+</g>
+<g>
+<circle cx="109.16666666666667" cy="0" r="1" fill="black" />
+<text x="111.16666666666667" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">11</text>
+</g>
+<g>
+<circle cx="105.0" cy="1040.0" r="1" fill="black" />
+<text x="107.0" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">12</text>
+</g>
+<g>
+<circle cx="106.3" cy="610.0" r="1" fill="black" />
+<text x="108.3" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">13</text>
+</g>
+<g>
+<circle cx="-105.0" cy="1040.0" r="1" fill="black" />
+<text x="-103.0" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="-106.3" cy="610.0" r="1" fill="black" />
+<text x="-104.3" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">15</text>
+</g>
+</g>
+</svg>

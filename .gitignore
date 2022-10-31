@@ -1,7 +1,6 @@
 __pycache__
-*.svg
 env
 .idea
-
+readme.html
 notebook.ipynb
 .ipynb_checkpoints/

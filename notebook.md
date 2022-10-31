@@ -32,7 +32,7 @@ render(origin)
 
 
     
-![svg](readme_files/readme_3_0.svg)
+![svg](notebook_files/notebook_3_0.svg)
     
 
 
@@ -55,7 +55,7 @@ render(square)
 
 
     
-![svg](readme_files/readme_5_0.svg)
+![svg](notebook_files/notebook_5_0.svg)
     
 
 
@@ -74,7 +74,7 @@ render(
 
 
     
-![svg](readme_files/readme_7_0.svg)
+![svg](notebook_files/notebook_7_0.svg)
     
 
 
@@ -97,7 +97,7 @@ render(
 
 
     
-![svg](readme_files/readme_9_0.svg)
+![svg](notebook_files/notebook_9_0.svg)
     
 
 
@@ -116,7 +116,7 @@ render(
 
 
     
-![svg](readme_files/readme_11_0.svg)
+![svg](notebook_files/notebook_11_0.svg)
     
 
 
@@ -141,7 +141,7 @@ render(*layout([triangle, hexagon, almostCircle]))
 
 
     
-![svg](readme_files/readme_13_0.svg)
+![svg](notebook_files/notebook_13_0.svg)
     
 
 
@@ -162,7 +162,7 @@ render(
 
 
     
-![svg](readme_files/readme_15_0.svg)
+![svg](notebook_files/notebook_15_0.svg)
     
 
 
@@ -189,7 +189,7 @@ render(
 
 
     
-![svg](readme_files/readme_17_0.svg)
+![svg](notebook_files/notebook_17_0.svg)
     
 
 
@@ -212,7 +212,7 @@ render(P, Q, shape, sliced, *sliced.points)
 
 
     
-![svg](readme_files/readme_19_0.svg)
+![svg](notebook_files/notebook_19_0.svg)
     
 
 
@@ -236,7 +236,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_21_0.svg)
+![svg](notebook_files/notebook_21_0.svg)
     
 
 
@@ -255,7 +255,7 @@ render(
 
 
     
-![svg](readme_files/readme_23_0.svg)
+![svg](notebook_files/notebook_23_0.svg)
     
 
 
@@ -274,7 +274,7 @@ render(
 
 
     
-![svg](readme_files/readme_25_0.svg)
+![svg](notebook_files/notebook_25_0.svg)
     
 
 
@@ -294,7 +294,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_27_0.svg)
+![svg](notebook_files/notebook_27_0.svg)
     
 
 
