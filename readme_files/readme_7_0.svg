@@ -24,7 +24,7 @@
 <g>
 <circle cx="350" cy="150" r="1" fill="black" />
 </g>
-<text x="200.0" y="150.0" font-size="12" stroke="none" fill="black" dy="0em">'pointset' - a set of points</text>
+<text x="200.0" y="150.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">'pointset' - a set of points</text>
 </g>
 <g>
 <path d="M50,300 L150,250 L250,350 L350,300" />

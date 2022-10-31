@@ -18,6 +18,9 @@ body {
 
 figure {
   background-color: #F7F8FA;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 50px
 }
 
 figcaption {

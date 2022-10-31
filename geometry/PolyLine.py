@@ -283,7 +283,7 @@ class PolyLine:
             g.append(point.svg())
         if self.label:
             labelPosition = midpoint(*self.points)
-            g.append(draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black"))
+            g.append(draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black", text_anchor="middle"))
         return g
 
     def svg_tape(self):
@@ -298,7 +298,7 @@ class PolyLine:
             startOffset = 10, 
             lineOffset = -1,
             stroke="none",
-            fill="black"
+            fill="black",
         ))
         return g
 
