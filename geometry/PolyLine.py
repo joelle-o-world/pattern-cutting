@@ -109,8 +109,6 @@ class PolyLine:
             "Unit vector line segment perpendicular to the parent at this point"
             return self.segment.normalAlong(self.remainder)
 
-        
-
         def svg(self):
             marker = self.normal().withLength(-3)
             textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
@@ -254,6 +252,8 @@ class PolyLine:
             return self.svg_pointset()
         elif self.style == "tape":
             return self.svg_tape()
+        elif self.style == "ruler":
+            return self.svg_ruler()
         elif self.style == "arrow":
             return self.svg_arrow()
         elif self.style == "dashed_arrow":
@@ -330,10 +330,6 @@ class PolyLine:
     def svg_dashed_arrow(self):
         return self.svg_arrow(stroke_dasharray="10")
 
-
-
-
-
     def svg_perpendicular_notchthrough(self, at):
         position = self.at(at)
         normal = position.normal().unitVector() * 5
@@ -343,12 +339,24 @@ class PolyLine:
 
     def svg_start_notch(self):
         return self.svg_perpendicular_notchthrough(0)
+
     def svg_end_notch(self):
         return self.svg_perpendicular_notchthrough(self.length)
 
-        
+    def svg_ruler(self, step=20):
+        group = draw.Group()
+        group.append(self.svg_line())
+        for w in np.arange(0, self.length, step):
+            m = self.at(w)
+            marker = m.normal().withLength(-3)
+            group.append(marker.svg())
+            textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
+            label = draw.Text("{:.0f}mm".format(w), 12, stroke='none', fill="#000000", path = textPath.svg())
+            group.append(label)
+        return group
 
-            
+
+
 
     def __str__(self):
         points = ["{}".format(point) for point in self.points]

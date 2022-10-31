@@ -76,7 +76,8 @@ render(
     shape.with_style("arrow").with_label("arrow"),
     shape.with_style("dashed_arrow").with_label("dashed_arrow"),
     shape.with_style("pointset").with_label("pointset"),
-    shape.with_style("tape").with_label("tape")
+    shape.with_style("tape").with_label("tape"),
+    shape.with_style("ruler").with_label("ruler")
     
   )
 )
