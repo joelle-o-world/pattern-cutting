@@ -7,7 +7,7 @@ def render(*objects):
     rect = minimumBoundingRect(objects)
 
     # Add a margin
-    rect = rect.enlarge(30)
+    rect = rect.enlarge(100)
 
     d = draw.Drawing(rect.width, rect.height, origin=(rect.left,rect.bottom), stroke='black', fill='none')
     
