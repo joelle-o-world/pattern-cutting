@@ -60,6 +60,29 @@ render(square)
 
 
 
+Using the `style` property, a polyline can be rendered as many different
+kinds of shapes.
+
+
+```python
+from layout import topToBottom
+render(
+  *topToBottom(
+    square.with_style("line").with_label("A simple line"),
+    square.with_style("pointset").with_label("As a set of points")
+  )
+)
+```
+
+
+
+
+    
+![svg](readme_files/readme_7_0.svg)
+    
+
+
+
 You can draw measurement markers along a polyline:
 
 
@@ -74,7 +97,7 @@ render(
 
 
     
-![svg](readme_files/readme_7_0.svg)
+![svg](readme_files/readme_9_0.svg)
     
 
 
@@ -97,7 +120,7 @@ render(
 
 
     
-![svg](readme_files/readme_9_0.svg)
+![svg](readme_files/readme_11_0.svg)
     
 
 
@@ -116,7 +139,7 @@ render(
 
 
     
-![svg](readme_files/readme_11_0.svg)
+![svg](readme_files/readme_13_0.svg)
     
 
 
@@ -133,15 +156,15 @@ triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import layout
-render(*layout([triangle, hexagon, almostCircle]))
+from layout import sideBySide
+render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
 
 
 
     
-![svg](readme_files/readme_13_0.svg)
+![svg](readme_files/readme_15_0.svg)
     
 
 
@@ -162,7 +185,7 @@ render(
 
 
     
-![svg](readme_files/readme_15_0.svg)
+![svg](readme_files/readme_17_0.svg)
     
 
 
@@ -189,7 +212,7 @@ render(
 
 
     
-![svg](readme_files/readme_17_0.svg)
+![svg](readme_files/readme_19_0.svg)
     
 
 
@@ -212,7 +235,7 @@ render(P, Q, shape, sliced, *sliced.points)
 
 
     
-![svg](readme_files/readme_19_0.svg)
+![svg](readme_files/readme_21_0.svg)
     
 
 
@@ -236,7 +259,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_21_0.svg)
+![svg](readme_files/readme_23_0.svg)
     
 
 
@@ -255,7 +278,7 @@ render(
 
 
     
-![svg](readme_files/readme_23_0.svg)
+![svg](readme_files/readme_25_0.svg)
     
 
 
@@ -274,7 +297,7 @@ render(
 
 
     
-![svg](readme_files/readme_25_0.svg)
+![svg](readme_files/readme_27_0.svg)
     
 
 
@@ -294,7 +317,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_27_0.svg)
+![svg](readme_files/readme_29_0.svg)
     
 
 

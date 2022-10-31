@@ -6,30 +6,38 @@ import numpy as np
 
 from geometry.Intersection import Intersection
 from geometry.LineSegment import LineSegment
-from geometry.vec2 import vec2, distance
+from geometry.vec2 import vec2, distance, midpoint
 
 
 class PolyLine:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[vec2]
+    style: str 
+    label: str | None = None;
+
+
+
+    # Construction
+    def __init__(self, points = [], label=None, style="line"):
+        self.label = label
+        self.style = style
+        self.points = [point.copy() for point in points]
 
     def firstPoint(self):
         return self.points[0]
+
     def lastPoint(self):
         return self.points[-1]
-
-
-    # Constrction
-    def __init__(self, points = []):
-        self.points = points
 
     def append(self, p):
         self.points.append(vec2(p.x, p.y))
 
     def startAt(self, p):
         self.points = [p.copy()]
+
     def lineTo(self, p):
         self.append(p)
+
     def curveTo(self, p: vec2, curve=0):
         # TODO: Create the actual curve
         self.append(p)
@@ -100,6 +108,8 @@ class PolyLine:
         def normal(self):
             "Unit vector line segment perpendicular to the parent at this point"
             return self.segment.normalAlong(self.remainder)
+
+        
 
         def svg(self):
             marker = self.normal().withLength(-3)
@@ -215,27 +225,65 @@ class PolyLine:
             yield point.x
             yield point.y
 
-    label: str | None = None;
     def labelText(self) -> str | None:
         return self.label
 
+    def with_style(self, style: str):
+        "Create a copy using a different style"
+        return PolyLine(
+                points = self.points,
+                label = self.label,
+                style = style
+            )
+
+    def with_label(self, label: str):
+        "Create a copy with a new label applied"
+        return PolyLine(
+                points = self.points,
+                label = label,
+                style = self.style
+            )
+
     def svg(self):
         "drawSvg object representation"
+        if self.style == "line":
+            return self.svg_line()
+        elif self.style == "pointset":
+            return self.svg_pointset()
+        else:
+            raise ValueError("Unable to render unexpected polyline style:", self.style)
+
+    def svg_line(self):
         group = draw.Group()
-
-        # Plot any labelled points
-        for labelledPoint in [point for point in self.points if point.labelText() != None]:
-            group.append(labelledPoint.svg())
-
-
-        shape = draw.Lines(*self.interleavedCoordinates(), close=False);
-        group.append(shape)
-
-        if self.labelText():
-            label = draw.Text(self.labelText(), 12, stroke="none", fill="#000000", path=shape, startOffset=10, lineOffset=-1)
-            group.append(label)
-
+        group.append(self.svg_line_only())
+        if self.label:
+            group.append(self.svg_parallel_label())
         return group
+
+    def svg_line_only(self):
+        "Draw only the line as an svg <lines> element"
+        return draw.Lines(*self.interleavedCoordinates(), close=False)
+
+    def svg_parallel_label(self):
+        "Draw the label parallel to the line itself"
+        return draw.Text(
+                self.label, 12, 
+                stroke = "none",
+                fill = "#000000", 
+                path = self.svg_line_only(), 
+                startOffset = 10, 
+                lineOffset = -1
+            )
+
+    def svg_pointset(self):
+        g = draw.Group()
+        for point in self.points:
+            g.append(point.svg())
+        if self.label:
+            labelPosition = midpoint(*self.points)
+            g.append(draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black"))
+        return g
+            
 
     def __str__(self):
         points = ["{}".format(point) for point in self.points]
@@ -245,7 +293,7 @@ class PolyLine:
         return self.translate(vec2(amount,0))
 
     def translate(self, t):
-        return PolyLine([point + t for point in self.points])
+        return PolyLine([point + t for point in self.points], label=self.label, style=self.style)
 
     def move(self, x, y):
         return self.translate(vec2(x, y))

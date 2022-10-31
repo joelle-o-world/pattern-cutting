@@ -26,7 +26,7 @@ class vec2:
     def __str__(self) -> str:
         return "({}, {})".format(self.x, self.y)
 
-    def __truediv__(self, divisor) -> "vec2":
+    def __truediv__(self, divisor: float) -> "vec2":
         return self * ( 1 / divisor)
 
 
@@ -171,7 +171,12 @@ class vec2:
 
 
 
-def midpoint(a: vec2, b: vec2):
-    return (a + b) * .5
+def midpoint(*points):
+    summed = vec2(0,0)
+    for point in points:
+        summed = summed + point
+    return summed / len(points)
+    
+
 def distance(a: vec2, b: vec2):
     return (a - b).length

@@ -36,6 +36,18 @@ square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(
 render(square)
 ```
 
+Using the `style` property, a polyline can be rendered as many different kinds of shapes.
+
+```code
+from layout import topToBottom
+render(
+  *topToBottom(
+    square.with_style("line").with_label("A simple line"),
+    square.with_style("pointset").with_label("As a set of points")
+  )
+)
+```
+
 You can draw measurement markers along a polyline:
 
 ```code
@@ -75,8 +87,8 @@ triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import layout
-render(*layout([triangle, hexagon, almostCircle]))
+from layout import sideBySide
+render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
 We can put this together to get good approximations of measurements along a curve:
