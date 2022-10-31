@@ -4,12 +4,12 @@
 <defs>
 <path d="M50,0 L150,-50 L250,50 L350,0" fill="none" stroke="black" id="d0" />
 <path d="M50,150 L150,100 L250,200 L350,150" fill="none" stroke="black" id="d1" />
-<marker markerWidth="8.0" markerHeight="8.0" viewBox="-0.1 -0.5 1.0 1.0" orient="auto" id="d2">
-<path d="M-0.1,0.5 L-0.1,-0.5 L0.9,0 Z" fill="black" stroke="none" />
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d2">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
 </marker>
 <path d="M50,300 L150,250 L250,350 L350,300" fill="none" stroke="black" id="d3" />
-<marker markerWidth="8.0" markerHeight="8.0" viewBox="-0.1 -0.5 1.0 1.0" orient="auto" id="d4">
-<path d="M-0.1,0.5 L-0.1,-0.5 L0.9,0 Z" fill="black" stroke="none" />
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d4">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
 </marker>
 <path d="M50,450 L150,400 L250,500 L350,450" fill="none" stroke="black" id="d5" />
 <path d="M50,750 L150,700 L250,800 L350,750" fill="none" stroke="black" id="d6" />

@@ -319,8 +319,8 @@ class PolyLine:
 
     def svg_arrow(self, **kwargs):
         g = draw.Group()
-        arrow = draw.Marker(-0.1, -0.5, 0.9, 0.5, scale=8, orient='auto')
-        arrow.append(draw.Lines(-0.1, -0.5, -0.1, 0.5, 0.9, 0, fill='black', stroke="none", close=True))
+        arrow = draw.Marker(-1.0, -0.5, 0.9, 0.5, scale=8, orient='auto')
+        arrow.append(draw.Lines(-1.0, -0.5, -1.0, 0.5, 0.0, 0, fill='black', stroke="none", close=True))
         line = self.svg_line_only(marker_end=arrow, **kwargs)
         g.append(line)
         if self.label:
