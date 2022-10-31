@@ -250,6 +250,8 @@ class PolyLine:
             return self.svg_dashed()
         elif self.style == "pointset":
             return self.svg_pointset()
+        elif self.style == "polygon":
+            return self.svg_polygon()
         elif self.style == "tape":
             return self.svg_tape()
         elif self.style == "ruler":
@@ -268,9 +270,9 @@ class PolyLine:
             group.append(self.svg_parallel_label())
         return group
 
-    def svg_line_only(self, **kwargs):
+    def svg_line_only(self, close=False, fill="none", **kwargs):
         "Draw only the line as an svg <lines> element"
-        return draw.Lines(*self.interleavedCoordinates(), close=False, fill="none", stroke="black", **kwargs)
+        return draw.Lines(*self.interleavedCoordinates(), close=close, fill=fill, stroke="black", **kwargs)
 
     def svg_dashed(self):
         g = draw.Group()
@@ -297,9 +299,19 @@ class PolyLine:
         for point in self.points:
             g.append(point.svg())
         if self.label:
-            labelPosition = midpoint(*self.points)
-            g.append(draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black", text_anchor="middle"))
+            g.append(self.svg_centered_label())
         return g
+
+    def svg_centered_label(self):
+        labelPosition = midpoint(*self.points)
+        return draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black", text_anchor="middle")
+
+    def svg_polygon(self):
+        group = draw.Group()
+        group.append(self.svg_line_only( fill="#E6E6FA"))
+        if self.label:
+            group.append(self.svg_centered_label())
+        return group
 
     def svg_tape(self):
         g = draw.Group()
@@ -354,6 +366,7 @@ class PolyLine:
             label = draw.Text("{:.0f}mm".format(w), 12, stroke='none', fill="#000000", path = textPath.svg())
             group.append(label)
         return group
+
 
 
 
