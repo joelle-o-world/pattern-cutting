@@ -325,7 +325,9 @@ Drawing parallels to a complex polyline:
 ```python
 render(
   DieLemmaDressBlock,
-  DieLemmaDressBlock.parallel(50)
+  DieLemmaDressBlock.parallel(50),
+  *[dashed_arrow(P, Q) for P,Q in zip(DieLemmaDressBlock.points, DieLemmaDressBlock.parallel(50).points)],
+  *DieLemmaDressBlock.points
 )
 ```
 
@@ -344,7 +346,9 @@ or drawing inside the shape instead of outside,
 ```python
 render(
   DieLemmaDressBlock,
-  DieLemmaDressBlock.parallel(-25)
+  DieLemmaDressBlock.parallel(-25),
+  *[dashed_arrow(P, Q) for P,Q in zip(DieLemmaDressBlock.points, DieLemmaDressBlock.parallel(-25).points)],
+  *DieLemmaDressBlock.points
 )
 ```
 
