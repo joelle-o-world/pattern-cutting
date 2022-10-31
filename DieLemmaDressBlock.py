@@ -23,7 +23,7 @@ for width in widthMeasurements:
     y -= inch
 varyingSide.append(vec2(varyingSide.end().x, 0))
 
-DieLemmaDressBlock = PolyLine([*varyingSide.points, vec2(0,0), vec2(0, varyingSide.top), varyingSide.start()])
+DieLemmaDressBlock = PolyLine([*varyingSide.points, vec2(0,0), vec2(0, varyingSide.top), varyingSide.start()], style="polygon", label="Die Lemma Dress Block")
 
 if __name__ == "__main__":
     print(DieLemmaDressBlock)

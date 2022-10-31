@@ -87,7 +87,7 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
 
 
 
-    shape = PolyLine([])
+    shape = PolyLine([]).with_style("polygon")
     shape.startAt(p[9])
     # TODO: Curve inwards
     shape.curveTo(p[15])

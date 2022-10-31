@@ -31,7 +31,13 @@ A `PolyLine` object is defined by multiple points which are joined by line segem
 ```code
 from geometry.PolyLine import PolyLine
 
-square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
+square = PolyLine([
+  vec2(0, 0), 
+  vec2(100, 0), 
+  vec2(100, 100), 
+  vec2(0, 100), 
+  vec2(0, 0)]
+).with_label("a square").with_style("polygon")
 
 render(square)
 ```
@@ -78,9 +84,25 @@ render(
 
 You can slice out a certain portion of a line:
 ```code
+from layout import process
+from geometry.Group import Group
+
+P = square.at(25).point.with_label("P")
+Q = square.at(175).point.with_label("Q")
 
 render(
-  square.slice(25, 175)
+  *process(
+    Group(
+      square,
+      P,
+      Q,
+    ),
+
+    Group(
+      square.slice(25, 175),
+      P, Q
+    )
+  )
 )
 ```
 
@@ -127,17 +149,22 @@ You can use closest points in other methods too, such as `slice`
 
 ```code
 shape = arc
-P = vec2(90, 100)
-Q = vec2(100, 0)
-sliced = shape.slice(P, Q).moveRight(150)
-sliced.label = "sliced"
+P = vec2(90, 100).with_label("P")
+Q = vec2(100, 0).with_label("Q")
+sliced = shape.slice(P, Q)
 render(
-  P.with_label("P"),
-  Q.with_label("Q"), 
-  dashed_arrow(P, shape.at(P).point),
-  shape.with_label("Original"), 
-  sliced.with_label("sliced"), 
-  *sliced.points
+  *process(
+    Group(
+      P,
+      Q,
+      dashed_arrow(P, shape.at(P).point),
+      shape.with_label("Original"), 
+    ),
+    Group(
+      sliced.with_label("sliced"), 
+      *sliced.points, P, Q
+    )
+  )
   )
 ```
 

@@ -392,7 +392,7 @@ class PolyLine:
             swap = startMeasurement
             startMeasurement = endMeasurement
             endMeasurement = swap
-        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index ]
+        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1 ]
         return PolyLine([startMeasurement.point, *middlePoints, endMeasurement.point])
 
     def corners(self, threshholdAngle=math.radians(15)):
@@ -457,6 +457,9 @@ class PolyLine:
         else:
             return self.closest(p)
 
+
+def arrow(*points, label=None):
+    return PolyLine(points, style="arrow", label=label)
 
 def dashed_arrow(*points, label=None):
     return PolyLine(points, style="dashed_arrow", label=label)

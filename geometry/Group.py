@@ -2,6 +2,8 @@ import drawSvg as svg
 from geometry.isMovable import isMovable
 
 class Group:
+    label = None
+
     def __init__(self, *objects):
         self.objects = objects
 
