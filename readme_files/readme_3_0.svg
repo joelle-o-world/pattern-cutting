@@ -5,6 +5,6 @@
 </defs>
 <g>
 <circle cx="0" cy="0" r="1" fill="black" />
-<text x="2" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">Origin</text>
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">Origin</text>
 </g>
 </svg>

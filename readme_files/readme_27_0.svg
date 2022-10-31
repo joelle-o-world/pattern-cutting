@@ -9,67 +9,67 @@
 </g>
 <g>
 <circle cx="0" cy="0" r="1" fill="black" />
-<text x="2" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">0</text>
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">0</text>
 </g>
 <g>
 <circle cx="0" cy="280.0" r="1" fill="black" />
-<text x="2" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">1</text>
+<text x="2" y="278.0" font-size="12" fill="#000000" stroke="none" dy="0em">1</text>
 </g>
 <g>
 <circle cx="0" cy="206.0" r="1" fill="black" />
-<text x="2" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">2</text>
+<text x="2" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">2</text>
 </g>
 <g>
 <circle cx="0" cy="1040.0" r="1" fill="black" />
-<text x="2" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">3</text>
+<text x="2" y="1038.0" font-size="12" fill="#000000" stroke="none" dy="0em">3</text>
 </g>
 <g>
 <circle cx="0.0" cy="610.0" r="1" fill="black" />
-<text x="2.0" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">4</text>
+<text x="2.0" y="608.0" font-size="12" fill="#000000" stroke="none" dy="0em">4</text>
 </g>
 <g>
 <circle cx="-93.33333333333333" cy="280.0" r="1" fill="black" />
-<text x="-91.33333333333333" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">5</text>
+<text x="-91.33333333333333" y="278.0" font-size="12" fill="#000000" stroke="none" dy="0em">5</text>
 </g>
 <g>
 <circle cx="-93.33333333333333" cy="206.0" r="1" fill="black" />
-<text x="-91.33333333333333" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">6</text>
+<text x="-91.33333333333333" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">6</text>
 </g>
 <g>
 <circle cx="-93.33333333333333" cy="0" r="1" fill="black" />
-<text x="-91.33333333333333" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">7</text>
+<text x="-91.33333333333333" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">7</text>
 </g>
 <g>
 <circle cx="146.66666666666669" cy="206.0" r="1" fill="black" />
-<text x="148.66666666666669" y="204.0" font-size="5" fill="#000000" stroke="none" dy="0em">8</text>
+<text x="148.66666666666669" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">8</text>
 </g>
 <g>
 <circle cx="-157.08333333333331" cy="280.0" r="1" fill="black" />
-<text x="-155.08333333333331" y="278.0" font-size="5" fill="#000000" stroke="none" dy="0em">9</text>
+<text x="-155.08333333333331" y="278.0" font-size="12" fill="#000000" stroke="none" dy="0em">9</text>
 </g>
 <g>
 <circle cx="-83.33333333333333" cy="0" r="1" fill="black" />
-<text x="-81.33333333333333" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">10</text>
+<text x="-81.33333333333333" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">10</text>
 </g>
 <g>
 <circle cx="109.16666666666667" cy="0" r="1" fill="black" />
-<text x="111.16666666666667" y="-2" font-size="5" fill="#000000" stroke="none" dy="0em">11</text>
+<text x="111.16666666666667" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">11</text>
 </g>
 <g>
 <circle cx="105.0" cy="1040.0" r="1" fill="black" />
-<text x="107.0" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">12</text>
+<text x="107.0" y="1038.0" font-size="12" fill="#000000" stroke="none" dy="0em">12</text>
 </g>
 <g>
 <circle cx="106.3" cy="610.0" r="1" fill="black" />
-<text x="108.3" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">13</text>
+<text x="108.3" y="608.0" font-size="12" fill="#000000" stroke="none" dy="0em">13</text>
 </g>
 <g>
 <circle cx="-105.0" cy="1040.0" r="1" fill="black" />
-<text x="-103.0" y="1038.0" font-size="5" fill="#000000" stroke="none" dy="0em">14</text>
+<text x="-103.0" y="1038.0" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
 </g>
 <g>
 <circle cx="-106.3" cy="610.0" r="1" fill="black" />
-<text x="-104.3" y="608.0" font-size="5" fill="#000000" stroke="none" dy="0em">15</text>
+<text x="-104.3" y="608.0" font-size="12" fill="#000000" stroke="none" dy="0em">15</text>
 </g>
 </g>
 </svg>

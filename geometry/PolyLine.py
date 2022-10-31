@@ -104,7 +104,7 @@ class PolyLine:
         def svg(self):
             marker = self.normal().withLength(-3)
             textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
-            label = draw.Text("{:.0f}mm".format(self.lengthAlong), 5, stroke='none', fill="#000000", path = textPath.svg())
+            label = draw.Text("{:.0f}mm".format(self.lengthAlong), 12, stroke='none', fill="#000000", path = textPath.svg())
             group = draw.Group()
             group.append(marker.svg())
             group.append(label)
@@ -232,7 +232,7 @@ class PolyLine:
         group.append(shape)
 
         if self.labelText():
-            label = draw.Text(self.labelText(), 5, stroke="none", fill="#000000", path=shape, startOffset=10, lineOffset=-1)
+            label = draw.Text(self.labelText(), 12, stroke="none", fill="#000000", path=shape, startOffset=10, lineOffset=-1)
             group.append(label)
 
         return group

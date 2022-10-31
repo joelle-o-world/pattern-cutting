@@ -159,7 +159,7 @@ class vec2:
         labelText = self.labelText()
         if labelText:
             # TODO: Get font size from a context object
-            label = draw.Text(labelText, 5, self.x + 2, self.y + 2, fill="#000000", stroke="none")
+            label = draw.Text(labelText, 12, self.x + 2, self.y + 2, fill="#000000", stroke="none")
             group.append(label)
 
         return group
