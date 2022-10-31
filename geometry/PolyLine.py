@@ -82,6 +82,8 @@ class PolyLine:
     # TODO: Define this class as a point a certain length along a line
     class MeasurementAlongPolyLine:
         def __init__(self, parent, lengthAlong: float, index, remainder):
+            if remainder < 0:
+                raise ValueError("Remainder should be greater than 0, got", remainder)
             self.parent = parent
             self.index = index
             self.remainder = remainder
@@ -282,17 +284,39 @@ class PolyLine:
         inbetween = [ intersection.parallel(distance).meeting for intersection in self.intersections()]
         return PolyLine([first, *inbetween, last])
 
-    def closestPoint(self, X):
+
+    def closest(self, X) -> MeasurementAlongPolyLine:
+        # TODO: This needs to be simplified a lot
         Y = self.points[0]
         winningDistance = distance(X, Y)
+        winningIndex = 0
+        remainder = 0
+        w = 0
+        sum = 0
+        i = 0
         for segment in self.segments():
             P = segment.closestPoint(X)
             dist = distance(P, X)
             if dist < winningDistance:
                 Y = P
                 winningDistance = dist
-        return Y
+                winningIndex = i
+                remainder = distance(segment.start, Y)
+                w = sum + remainder
+            i += 1
+            sum += segment.length
+        return self.MeasurementAlongPolyLine(self, w, winningIndex, remainder)
 
+    def closestPoint(self, X) -> vec2:
+        return self.closest(X).point
+
+
+    def at(self, p: float | vec2) -> MeasurementAlongPolyLine:
+        "Find the point closest to the given coordinate, or a certain duration along the line"
+        if type(p) == "float":
+            return self.measureAlong(p)
+        else:
+            return self.closest(p)
 
             
 

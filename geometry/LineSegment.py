@@ -66,7 +66,7 @@ class LineSegment:
 
     def pointAlong(self, lengthAlong) -> vec2:
         if lengthAlong < 0 or lengthAlong > self.length:
-            raise ValueError
+            raise ValueError("lengthAlong ({}) is out of bounds (0 to {})".format(lengthAlong, self.length))
         else:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
