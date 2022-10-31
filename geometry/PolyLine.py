@@ -254,6 +254,10 @@ class PolyLine:
             return self.svg_pointset()
         elif self.style == "tape":
             return self.svg_tape()
+        elif self.style == "arrow":
+            return self.svg_arrow()
+        elif self.style == "dashed_arrow":
+            return self.svg_dashed_arrow()
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
@@ -264,17 +268,18 @@ class PolyLine:
             group.append(self.svg_parallel_label())
         return group
 
-    def svg_line_only(self):
+    def svg_line_only(self, **kwargs):
         "Draw only the line as an svg <lines> element"
-        return draw.Lines(*self.interleavedCoordinates(), close=False)
+        return draw.Lines(*self.interleavedCoordinates(), close=False, fill="none", stroke="black", **kwargs)
 
     def svg_dashed(self):
         g = draw.Group()
-        line = draw.Lines(*self.interleavedCoordinates(), close=False, stroke_dasharray="10")
+        line = self.svg_line_only(stroke_dasharray = "10")
         if self.label:
             g.append(self.svg_parallel_label())
         g.append(line)
         return g
+
 
     def svg_parallel_label(self):
         "Draw the label parallel to the line itself"
@@ -311,6 +316,23 @@ class PolyLine:
             fill="black",
         ))
         return g
+
+    def svg_arrow(self, **kwargs):
+        g = draw.Group()
+        arrow = draw.Marker(-0.1, -0.5, 0.9, 0.5, scale=8, orient='auto')
+        arrow.append(draw.Lines(-0.1, -0.5, -0.1, 0.5, 0.9, 0, fill='black', stroke="none", close=True))
+        line = self.svg_line_only(marker_end=arrow, **kwargs)
+        g.append(line)
+        if self.label:
+            g.append(self.svg_parallel_label())
+        return g
+
+    def svg_dashed_arrow(self):
+        return self.svg_arrow(stroke_dasharray="10")
+
+
+
+
 
     def svg_perpendicular_notchthrough(self, at):
         position = self.at(at)

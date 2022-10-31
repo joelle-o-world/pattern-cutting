@@ -4,6 +4,6 @@
 <defs>
 </defs>
 <g>
-<path d="M0,0 L100,0 L100,-100 L0,-100 L0,0" />
+<path d="M0,0 L100,0 L100,-100 L0,-100 L0,0" fill="none" stroke="black" />
 </g>
 </svg>

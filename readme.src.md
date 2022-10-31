@@ -47,8 +47,11 @@ render(
   *topToBottom(
     shape.with_style("line").with_label("line"),
     shape.with_style("dashed").with_label("dashed"),
+    shape.with_style("arrow").with_label("arrow"),
+    shape.with_style("dashed_arrow").with_label("dashed_arrow"),
     shape.with_style("pointset").with_label("pointset"),
     shape.with_style("tape").with_label("tape")
+    
   )
 )
 ```
@@ -116,7 +119,8 @@ Y.label = "Y"
 render(
   shape,
   X,
-  Y
+  Y,
+  PolyLine([ X, Y ]).with_style("dashed_arrow")
 )
 ```
 

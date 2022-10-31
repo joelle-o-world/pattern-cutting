@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="500" height="750" viewBox="-50 -150 500 750" stroke="black" fill="none">
+     width="500" height="1050" viewBox="-50 -150 500 1050" stroke="black" fill="none">
 <defs>
-<path d="M50,0 L150,-50 L250,50 L350,0" id="d0" />
-<path d="M50,150 L150,100 L250,200 L350,150" id="d1" />
-<path d="M50,450 L150,400 L250,500 L350,450" id="d2" />
+<path d="M50,0 L150,-50 L250,50 L350,0" fill="none" stroke="black" id="d0" />
+<path d="M50,150 L150,100 L250,200 L350,150" fill="none" stroke="black" id="d1" />
+<marker markerWidth="8.0" markerHeight="8.0" viewBox="-0.1 -0.5 1.0 1.0" orient="auto" id="d2">
+<path d="M-0.1,0.5 L-0.1,-0.5 L0.9,0 Z" fill="black" stroke="none" />
+</marker>
+<path d="M50,300 L150,250 L250,350 L350,300" fill="none" stroke="black" id="d3" />
+<marker markerWidth="8.0" markerHeight="8.0" viewBox="-0.1 -0.5 1.0 1.0" orient="auto" id="d4">
+<path d="M-0.1,0.5 L-0.1,-0.5 L0.9,0 Z" fill="black" stroke="none" />
+</marker>
+<path d="M50,450 L150,400 L250,500 L350,450" fill="none" stroke="black" id="d5" />
+<path d="M50,750 L150,700 L250,800 L350,750" fill="none" stroke="black" id="d6" />
 </defs>
 <g>
-<path d="M50,0 L150,-50 L250,50 L350,0" />
+<path d="M50,0 L150,-50 L250,50 L350,0" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
 <tspan dy="-1em">line</tspan>
 </textPath></text>
@@ -16,28 +24,40 @@
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
 <tspan dy="-1em">dashed</tspan>
 </textPath></text>
-<path d="M50,150 L150,100 L250,200 L350,150" stroke-dasharray="10" />
+<path d="M50,150 L150,100 L250,200 L350,150" fill="none" stroke="black" stroke-dasharray="10" />
+</g>
+<g>
+<path d="M50,300 L150,250 L250,350 L350,300" fill="none" stroke="black" marker-end="url(#d2)" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
+<tspan dy="-1em">arrow</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M50,450 L150,400 L250,500 L350,450" fill="none" stroke="black" marker-end="url(#d4)" stroke-dasharray="10" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d5" startOffset="10">
+<tspan dy="-1em">dashed_arrow</tspan>
+</textPath></text>
 </g>
 <g>
 <g>
-<circle cx="50" cy="300" r="1" fill="black" />
+<circle cx="50" cy="600" r="1" fill="black" />
 </g>
 <g>
-<circle cx="150" cy="250" r="1" fill="black" />
+<circle cx="150" cy="550" r="1" fill="black" />
 </g>
 <g>
-<circle cx="250" cy="350" r="1" fill="black" />
+<circle cx="250" cy="650" r="1" fill="black" />
 </g>
 <g>
-<circle cx="350" cy="300" r="1" fill="black" />
+<circle cx="350" cy="600" r="1" fill="black" />
 </g>
-<text x="200.0" y="300.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">pointset</text>
+<text x="200.0" y="600.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">pointset</text>
 </g>
 <g>
-<path d="M50,450 L150,400 L250,500 L350,450" />
-<path d="M52.236067977499786,454.4721359549996 L47.763932022500214,445.5278640450004" stroke="black" />
-<path d="M352.23606797749966,454.47213595499966 L347.76393202250034,445.52786404500034" stroke="black" />
-<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d2" startOffset="10">
+<path d="M50,750 L150,700 L250,800 L350,750" fill="none" stroke="black" />
+<path d="M52.2360679774999,754.4721359549995 L47.7639320225001,745.5278640450005" stroke="black" />
+<path d="M352.2360679774998,754.4721359549995 L347.7639320225002,745.5278640450005" stroke="black" />
+<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d6" startOffset="10">
 <tspan dy="-1em">tape (365.0mm)</tspan>
 </textPath></text>
 </g>
