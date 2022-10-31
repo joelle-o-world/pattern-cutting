@@ -250,6 +250,8 @@ class PolyLine:
             return self.svg_line()
         elif self.style == "pointset":
             return self.svg_pointset()
+        elif self.style == "tape":
+            return self.svg_tape()
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
@@ -283,6 +285,37 @@ class PolyLine:
             labelPosition = midpoint(*self.points)
             g.append(draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black"))
         return g
+
+    def svg_tape(self):
+        g = draw.Group()
+        g.append(self.svg_line_only())
+        g.append(self.svg_start_notch())
+        g.append(self.svg_end_notch())
+        label = "{} ({:.1f}mm)".format(self.label, self.length) if self.label else "{:.1f}mm".format(self.length)
+        g.append( draw.Text(
+            label, 12, 
+            path = self.svg_line_only(), 
+            startOffset = 10, 
+            lineOffset = -1,
+            stroke="none",
+            fill="black"
+        ))
+        return g
+
+    def svg_perpendicular_notchthrough(self, at):
+        position = self.at(at)
+        normal = position.normal().unitVector() * 5
+        P = position.point - normal
+        Q = position.point + normal
+        return draw.Line(*P.tuple, *Q.tuple, stroke="black")
+
+    def svg_start_notch(self):
+        return self.svg_perpendicular_notchthrough(0)
+    def svg_end_notch(self):
+        return self.svg_perpendicular_notchthrough(self.length)
+
+        
+
             
 
     def __str__(self):

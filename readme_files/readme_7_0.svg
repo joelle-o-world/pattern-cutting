@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="300" height="450" viewBox="-50 -150 300 450" stroke="black" fill="none">
+     width="500" height="600" viewBox="-50 -150 500 600" stroke="black" fill="none">
 <defs>
-<path d="M50,50 L150,50 L150,-50 L50,-50 L50,50" id="d0" />
+<path d="M50,0 L150,-50 L250,50 L350,0" id="d0" />
+<path d="M50,300 L150,250 L250,350 L350,300" id="d1" />
 </defs>
 <g>
-<path d="M50,50 L150,50 L150,-50 L50,-50 L50,50" />
+<path d="M50,0 L150,-50 L250,50 L350,0" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
-<tspan dy="-1em">A simple line</tspan>
+<tspan dy="-1em">'line' - A simple line</tspan>
 </textPath></text>
 </g>
 <g>
 <g>
-<circle cx="50" cy="200" r="1" fill="black" />
-</g>
-<g>
-<circle cx="150" cy="200" r="1" fill="black" />
+<circle cx="50" cy="150" r="1" fill="black" />
 </g>
 <g>
 <circle cx="150" cy="100" r="1" fill="black" />
 </g>
 <g>
-<circle cx="50" cy="100" r="1" fill="black" />
+<circle cx="250" cy="200" r="1" fill="black" />
 </g>
 <g>
-<circle cx="50" cy="200" r="1" fill="black" />
+<circle cx="350" cy="150" r="1" fill="black" />
 </g>
-<text x="90.0" y="160.0" font-size="12" stroke="none" fill="black" dy="0em">As a set of points</text>
+<text x="200.0" y="150.0" font-size="12" stroke="none" fill="black" dy="0em">'pointset' - a set of points</text>
+</g>
+<g>
+<path d="M50,300 L150,250 L250,350 L350,300" />
+<path d="M52.236067977499786,304.4721359549996 L47.763932022500214,295.5278640450004" stroke="black" />
+<path d="M352.23606797749966,304.47213595499966 L347.76393202250034,295.52786404500034" stroke="black" />
+<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">'tape' - a tape measure (365.0mm)</tspan>
+</textPath></text>
 </g>
 </svg>

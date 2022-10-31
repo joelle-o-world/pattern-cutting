@@ -40,10 +40,14 @@ Using the `style` property, a polyline can be rendered as many different kinds o
 
 ```code
 from layout import topToBottom
+
+shape = PolyLine([vec2(0, 0), vec2(100, 50), vec2(200, -50), vec2(300, 0)])
+
 render(
   *topToBottom(
-    square.with_style("line").with_label("A simple line"),
-    square.with_style("pointset").with_label("As a set of points")
+    shape.with_style("line").with_label("'line' - A simple line"),
+    shape.with_style("pointset").with_label("'pointset' - a set of points"),
+    shape.with_style("tape").with_label("'tape' - a tape measure")
   )
 )
 ```
