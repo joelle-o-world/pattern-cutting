@@ -1,0 +1,25 @@
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
+}
+
+body {
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: JetBrainsMono;
+  font-size: 12px;
+}
+
+.sourceCode {
+  background-color: #F7F8FA;
+}
+
+figure {
+  background-color: #F7F8FA;
+}
+
+figcaption {
+  display: none;
+}
