@@ -63,6 +63,10 @@ class PolyLine:
     def numberOfSegments(self):
         return len(self.points) - 1
 
+    @property
+    def numberOfPoints(self):
+        return len(self.points)
+
     def firstSegment(self):
         return self.segment(0)
 
@@ -302,8 +306,20 @@ class PolyLine:
             g.append(self.svg_centered_label())
         return g
 
+    def center_of_mass(self):
+        numberOfSamples = self.numberOfPoints * 2
+        interval = self.length / numberOfSamples
+        summed = vec2(0,0)
+        n = 0.0
+        for w in np.arange(0, self.length, interval):
+            summed = summed + self.at(w).point
+            n += 1 
+        print(n)
+        return summed / n
+
+
     def svg_centered_label(self):
-        labelPosition = midpoint(*self.points)
+        labelPosition = self.center_of_mass()
         return draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black", text_anchor="middle")
 
     def svg_polygon(self):

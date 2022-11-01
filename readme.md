@@ -57,11 +57,14 @@ square = PolyLine([
 render(square)
 ```
 
+    10.0
+
+
 
 
 
     
-![svg](readme_files/readme_5_0.svg)
+![svg](readme_files/readme_5_1.svg)
     
 
 
@@ -89,11 +92,15 @@ render(
 )
 ```
 
+    8.0
+    8.0
+
+
 
 
 
     
-![svg](readme_files/readme_7_0.svg)
+![svg](readme_files/readme_7_1.svg)
     
 
 
@@ -108,11 +115,14 @@ render(
 )
 ```
 
+    10.0
+
+
 
 
 
     
-![svg](readme_files/readme_9_0.svg)
+![svg](readme_files/readme_9_1.svg)
     
 
 
@@ -129,11 +139,14 @@ render(
 )
 ```
 
+    10.0
+
+
 
 
 
     
-![svg](readme_files/readme_11_0.svg)
+![svg](readme_files/readme_11_1.svg)
     
 
 
@@ -167,6 +180,7 @@ render(
     None 100
     None 30
     None 75.0
+    10.0
 
 
 
@@ -310,11 +324,14 @@ from DieLemmaDressBlock import DieLemmaDressBlock
 render(DieLemmaDressBlock)
 ```
 
+    88.0
+
+
 
 
 
     
-![svg](readme_files/readme_23_0.svg)
+![svg](readme_files/readme_23_1.svg)
     
 
 
@@ -331,11 +348,14 @@ render(
 )
 ```
 
+    88.0
+
+
 
 
 
     
-![svg](readme_files/readme_25_0.svg)
+![svg](readme_files/readme_25_1.svg)
     
 
 
@@ -352,11 +372,14 @@ render(
 )
 ```
 
+    88.0
+
+
 
 
 
     
-![svg](readme_files/readme_27_0.svg)
+![svg](readme_files/readme_27_1.svg)
     
 
 

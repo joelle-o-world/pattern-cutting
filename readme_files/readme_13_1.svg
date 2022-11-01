@@ -9,7 +9,7 @@
 <g>
 <g>
 <path d="M75,25 L175,25 L175,-75 L75,-75 L75,25" fill="#E6E6FA" stroke="black" />
-<text x="115.0" y="-15.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">a square</text>
+<text x="125.0" y="-25.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">a square</text>
 </g>
 <g>
 <circle cx="100.0" cy="25.0" r="1" fill="black" />
