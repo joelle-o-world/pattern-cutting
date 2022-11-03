@@ -139,35 +139,18 @@ p3 = vec2(50, 100).with_label("p3")
 mycurve = BezierCurve(p0, p1, p2, p3)
 
 render(
-  *mycurve.points(20),
-  p0,
-  p1, 
-  dashed(p0, p1),
-  p2,
-  p3,
-  dashed(p2,p3)
+  mycurve.demo()
   )
-```
-
-```code
-render(
-  mycurve.shape(50),
-  p0,
-  p1, 
-  dashed(p0, p1),
-  p2,
-  p3,
-  dashed(p2,p3)
-)
 ```
 
 Interpolating a `Shape`
 
 ```code
 myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(300 , 300)])
+
 render(
   myshape.with_style("dashed"),
-  myshape.interpolate()
+  myshape.interpolate(50)
 )
 ```
 

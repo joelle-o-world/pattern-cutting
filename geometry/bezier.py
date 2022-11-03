@@ -1,5 +1,6 @@
 from geometry.vec2 import vec2
-from geometry.Shape import Shape
+from geometry.Shape import Shape, dashed
+from geometry.Group import Group
 
 class BezierCurve:
     
@@ -20,6 +21,15 @@ class BezierCurve:
 
     def shape(self, numberOfPoints):
         return Shape(self.points(numberOfPoints))
+
+
+    def demo(self): 
+        return Group(
+                self.shape(50),
+                *self.points(10),
+                dashed(self.p1, self.p0),
+                dashed(self.p2, self.p3),
+            )
 
 
 

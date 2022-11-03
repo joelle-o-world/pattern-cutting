@@ -253,13 +253,7 @@ p3 = vec2(50, 100).with_label("p3")
 mycurve = BezierCurve(p0, p1, p2, p3)
 
 render(
-  *mycurve.points(20),
-  p0,
-  p1, 
-  dashed(p0, p1),
-  p2,
-  p3,
-  dashed(p2,p3)
+  mycurve.demo()
   )
 ```
 
@@ -272,36 +266,15 @@ render(
 
 
 
-
-```python
-render(
-  mycurve.shape(50),
-  p0,
-  p1, 
-  dashed(p0, p1),
-  p2,
-  p3,
-  dashed(p2,p3)
-)
-```
-
-
-
-
-    
-![svg](readme_files/readme_20_0.svg)
-    
-
-
-
 Interpolating a `Shape`
 
 
 ```python
 myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(300 , 300)])
+
 render(
   myshape.with_style("dashed"),
-  myshape.interpolate()
+  myshape.interpolate(50)
 )
 ```
 
@@ -309,7 +282,7 @@ render(
 
 
     
-![svg](readme_files/readme_22_0.svg)
+![svg](readme_files/readme_21_0.svg)
     
 
 
@@ -337,7 +310,7 @@ render(
 
 
     
-![svg](readme_files/readme_24_0.svg)
+![svg](readme_files/readme_23_0.svg)
     
 
 
@@ -375,7 +348,7 @@ render(
 
 
     
-![svg](readme_files/readme_26_1.svg)
+![svg](readme_files/readme_25_1.svg)
     
 
 
@@ -402,7 +375,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_28_1.svg)
+![svg](readme_files/readme_27_1.svg)
     
 
 
@@ -426,7 +399,7 @@ render(
 
 
     
-![svg](readme_files/readme_30_1.svg)
+![svg](readme_files/readme_29_1.svg)
     
 
 
@@ -450,7 +423,7 @@ render(
 
 
     
-![svg](readme_files/readme_32_1.svg)
+![svg](readme_files/readme_31_1.svg)
     
 
 
@@ -473,7 +446,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_34_1.svg)
+![svg](readme_files/readme_33_1.svg)
     
 
 

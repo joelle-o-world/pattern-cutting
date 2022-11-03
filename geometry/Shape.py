@@ -7,6 +7,7 @@ import numpy as np
 from geometry.Intersection import Intersection
 from geometry.LineSegment import LineSegment
 from geometry.vec2 import vec2, distance, midpoint
+from geometry.Group import Group
 
 
 class Shape:
@@ -493,32 +494,38 @@ class Shape:
         return self
 
 
-    def interpolationCurves(self):
+    def interpolationCurves(self, curveSpeed=20):
         from geometry.bezier import BezierCurve
         q,r,s = self.points[:3]
         qrs = Intersection(q,r,s)
-        guide1 = (r - q).withLength(20)
-        guide2 = r + qrs.bisect().normal().withLength(20)
+        guide1 = q + (r - q).withLength(curveSpeed)
+        guide2 = r + qrs.bisect().normal().withLength(curveSpeed)
         yield BezierCurve(q, guide1, guide2, r)
 
         # Interpolate middle segments
-        for p,q,r,s in zip(self.points, self.points[1:], self.points[2:], self.points[:3]):
+        for i in range(3, len(self.points)):
+            p,q,r,s = self.points[i-3:i+1]
             pqr = Intersection(p,q,r)
             qrs = Intersection(q,r,s)
-            guide1 = q - pqr.bisect().normal().withLength(20)
-            guide2 = r + qrs.bisect().normal().withLength(20)
+            guide1 = q - pqr.bisect().normal().withLength(curveSpeed)
+            guide2 = r + qrs.bisect().normal().withLength(curveSpeed)
             yield BezierCurve(q, guide1, guide2, r)
-           
+
+        p,q,r = self.points[-3:]
+        pqr = Intersection(p,q,r)
+        guide1 = q - pqr.bisect().normal().withLength(curveSpeed)
+        guide2 = r + (q - r).withLength(curveSpeed)
+        yield BezierCurve(q, guide1, guide2, r)
 
 
-    def interpolate(self):
+    def interpolate(self, curveSpeed=20, upres=20):
         
         # For every angle, create guide points that discribe a perpendicular to the bisection of that angle
 
         points = []
 
-        for curve in self.interpolationCurves():
-            points += curve.points(10)
+        for curve in self.interpolationCurves(curveSpeed):
+            points += curve.points(upres)
         
         return Shape(points)
             
