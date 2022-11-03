@@ -167,16 +167,15 @@ render(
 )
 ```
 
-Aside, lets make a cool pattern
+Demonstrating different curve speeds
 ```code
-gen = [myshape.interpolate()]
-for i in range(0, 5):
-  next = gen[-1].resample(50).parallel(25).interpolate()
+gen = [myshape]
+for i in range(0, 20):
+  next = myshape.interpolate((i+1) / 4)
   gen.append(next)
   
 render(*gen)
 ```
-At the time of writing, this creates a very interesting buggy behaviour. I'll be sad when its fixed.
 
 ## Finding the closest point on a polyline
 We can find the closest point on a polyline to any given coordinate:
