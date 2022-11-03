@@ -13,7 +13,9 @@ class vec2:
         self.y = y
         self.label = label
 
-    def __eq__(self, other) -> None:
+    def __eq__(self, other):
+        if not isinstance(other, vec2):
+            return False
         return self.x == other.x and self.y == other.y
 
     def __mul__(self, scale: float) -> "vec2":

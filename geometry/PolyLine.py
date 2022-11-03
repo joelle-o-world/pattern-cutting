@@ -16,7 +16,6 @@ class PolyLine:
     label: str | None = None;
 
 
-
     # Construction
     def __init__(self, points = [], label=None, style="line"):
         self.label = label
@@ -400,7 +399,17 @@ class PolyLine:
     def move(self, x, y):
         return self.translate(vec2(x, y))
 
-    def slice(self, start: int|float | vec2, end: int|float | vec2):
+    def sliceAfter(self, start: int|float|vec2):
+        startMeasurement = self.at(start)
+        return PolyLine([
+                startMeasurement.point,
+                *self.points[startMeasurement.index + 1:]
+            ])
+
+
+    def slice(self, start: int|float | vec2, end: int|float | vec2 | None= None):
+        if end == None:
+            return self.sliceAfter(start)
         startMeasurement = self.at(start)
         endMeasurement = self.at(end)
         if startMeasurement.index > endMeasurement.index:
@@ -472,6 +481,17 @@ class PolyLine:
             return self.measureAlong(p)
         else:
             return self.closest(p)
+
+    def addDart(self, position: vec2 | float | int, depth: float, width: float):
+        at = self.at(position)
+        lengthAlong = at.lengthAlong
+        beforeDart = self.slice(0, lengthAlong - width/2)
+        afterDart = self.slice(lengthAlong + width/2)
+        dartPoint = at.normal().unitVector() * depth
+
+        self.points = [*beforeDart.points, dartPoint, *afterDart.points]
+        return self
+
 
 
 def arrow(*points, label=None):

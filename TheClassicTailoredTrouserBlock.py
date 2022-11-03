@@ -54,7 +54,6 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     # 10–11 quarter waist plus 2.25cm.
     p[11] = p[10].squareRight(body.waist / 4 + 22.5)
 
-    # TODO: Construct a dart on the line from 0; length 10cm, width 2cm.
 
     # 3–12 half trouser bottom width minus 0.5cm.
     p[12] = p[3].squareRight(bottomWidth / 2 - 5)
@@ -106,5 +105,8 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     shape.lineTo(p[10])
     shape.lineTo(p[6])
     shape.curveTo(p[9])
+
+    # TODO: Construct a dart on the line from 0; length 10cm, width 2cm.
+    shape.addDart(p[0], 100, 20)
 
     return Group(shape, *p)
