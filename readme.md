@@ -238,7 +238,7 @@ render(
 
 
 
-## BezierCurves
+## Bezier Curves
 
 
 ```python
@@ -266,7 +266,7 @@ render(
 
 
 
-Interpolating a `Shape`
+### Interpolating a `Shape` with Bizier Curves
 
 
 ```python
@@ -401,6 +401,44 @@ render(
 
 
 
+## Replacing a section of a shape
+
+Here are two shapes
+
+
+```python
+a = Shape([vec2(-100, 200), vec2(200, -100)])
+b = arc
+
+render(a.with_label("a simple shape"), b.with_label("replacement"))
+```
+
+
+
+
+    
+![svg](readme_files/readme_31_0.svg)
+    
+
+
+
+We can replace a region of one with the other
+
+
+```python
+render(a.replace(b))
+
+```
+
+
+
+
+    
+![svg](readme_files/readme_33_0.svg)
+    
+
+
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for
@@ -423,7 +461,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_31_1.svg)
+![svg](readme_files/readme_35_1.svg)
     
 
 
@@ -447,7 +485,7 @@ render(
 
 
     
-![svg](readme_files/readme_33_1.svg)
+![svg](readme_files/readme_37_1.svg)
     
 
 
@@ -471,7 +509,7 @@ render(
 
 
     
-![svg](readme_files/readme_35_1.svg)
+![svg](readme_files/readme_39_1.svg)
     
 
 
@@ -494,7 +532,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_37_1.svg)
+![svg](readme_files/readme_41_1.svg)
     
 
 

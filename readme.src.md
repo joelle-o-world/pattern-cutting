@@ -125,7 +125,7 @@ render(
   )
 ```
 
-## BezierCurves
+## Bezier Curves
 
 ```code
 from geometry.Shape import dashed
@@ -143,7 +143,7 @@ render(
   )
 ```
 
-Interpolating a `Shape`
+### Interpolating a `Shape` with Bizier Curves
 
 ```code
 myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(300 , 300)])
@@ -178,6 +178,7 @@ render(*gen)
 ```
 
 ## Finding the closest point on a polyline
+
 We can find the closest point on a polyline to any given coordinate:
 ```code
 from geometry.Shape import dashed_arrow
@@ -216,6 +217,23 @@ render(
   )
 ```
 
+
+## Replacing a section of a shape
+
+Here are two shapes
+```code
+a = Shape([vec2(-100, 200), vec2(200, -100)])
+b = arc
+
+render(a.with_label("a simple shape"), b.with_label("replacement"))
+```
+
+We can replace a region of one with the other
+
+```code
+render(a.replace(b))
+
+```
 
 ## Die Lemma dress block
 

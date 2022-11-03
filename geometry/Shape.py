@@ -1,3 +1,4 @@
+from os import replace
 from typing import List
 
 import drawSvg as draw
@@ -531,6 +532,11 @@ class Shape:
         for curve in self.interpolationCurves(curveSpeed):
             points += curve.points(upres)[:-1]
         return Shape(points)
+
+    def replace(self, replacementSection):
+        before = self.slice(0, replacementSection.start())
+        after = self.slice(replacementSection.end())
+        return Shape(before.points + replacementSection.points + after.points)
             
 
 
