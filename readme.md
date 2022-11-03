@@ -242,11 +242,25 @@ render(
 
 
 ```python
+from geometry.Shape import dashed
 from geometry.bezier import BezierCurve
+p0 = vec2(0,0).with_label("p0")
+p1 = vec2(0, 50).with_label("p1")
+p2 = vec2(50, 50).with_label("p2")
+p3 = vec2(50, 100).with_label("p3")
 
-mycurve = BezierCurve(vec2(0,0), vec2(0, 50), vec2(50,50), vec2(50, 100))
 
-render(*mycurve.points(20))
+mycurve = BezierCurve(p0, p1, p2, p3)
+
+render(
+  *mycurve.points(20),
+  p0,
+  p1, 
+  dashed(p0, p1),
+  p2,
+  p3,
+  dashed(p2,p3)
+  )
 ```
 
 
@@ -260,7 +274,15 @@ render(*mycurve.points(20))
 
 
 ```python
-render(mycurve.shape(50))
+render(
+  mycurve.shape(50),
+  p0,
+  p1, 
+  dashed(p0, p1),
+  p2,
+  p3,
+  dashed(p2,p3)
+)
 ```
 
 
