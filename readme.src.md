@@ -20,14 +20,14 @@ from render import render
 render(origin)
 ```
 
-## PolyLine
+## Shape
 
-A `PolyLine` object is defined by multiple points which are joined by line segemnts to create a complicated line or shape.
+A `Shape` object is defined by multiple points which are joined by line segemnts to create a complicated line or shape.
 
 ```code
-from geometry.PolyLine import PolyLine
+from geometry.Shape import Shape
 
-square = PolyLine([
+square = Shape([
   vec2(0, 0), 
   vec2(100, 0), 
   vec2(100, 100), 
@@ -43,7 +43,7 @@ Using the `style` property, a polyline can be rendered as many different kinds o
 ```code
 from layout import topToBottom
 
-shape = PolyLine([vec2(0, 0), vec2(100, 50), vec2(200, -50), vec2(300, 0)])
+shape = Shape([vec2(0, 0), vec2(100, 50), vec2(200, -50), vec2(300, 0)])
 
 render(
   *topToBottom(
@@ -128,7 +128,7 @@ render(
 ## Finding the closest point on a polyline
 We can find the closest point on a polyline to any given coordinate:
 ```code
-from geometry.PolyLine import dashed_arrow
+from geometry.Shape import dashed_arrow
 shape = arc
 X = vec2(90, 100)
 Y = shape.closestPoint(X)

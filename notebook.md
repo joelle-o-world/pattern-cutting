@@ -37,16 +37,16 @@ render(origin)
 
 
 
-## PolyLine
+## Shape
 
-A `PolyLine` object is defined by multiple points which are joined by
+A `Shape` object is defined by multiple points which are joined by
 line segemnts to create a complicated line or shape.
 
 
 ```python
-from geometry.PolyLine import PolyLine
+from geometry.Shape import Shape
 
-square = PolyLine([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
+square = Shape([vec2(0, 0), vec2(100, 0), vec2(100, 100), vec2(0, 100), vec2(0, 0)])
 
 render(square)
 ```

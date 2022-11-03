@@ -1,5 +1,5 @@
 from vec2 import vec2
-from PolyLine import PolyLine
+from Shape import Shape
 import numpy as np
 import math
 from render import render
@@ -17,7 +17,7 @@ class Arc:
 
     def polyline(self, resolution = 100):
         step = (self.endAngle - self.startAngle) / resolution
-        return PolyLine([self.pointAtAngle(angle) for angle in np.arange(self.startAngle, self.endAngle, step)])
+        return Shape([self.pointAtAngle(angle) for angle in np.arange(self.startAngle, self.endAngle, step)])
 
 
 if __name__ == "__main__":

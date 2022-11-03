@@ -1,7 +1,7 @@
 import math
 import numpy as np
 from geometry.vec2 import vec2
-from geometry.PolyLine import PolyLine
+from geometry.Shape import Shape
 
 
 class Circle:
@@ -25,7 +25,7 @@ class Circle:
             yield self.pointAtAngle(angle)
 
     def polyline(self, resolution):
-        shape = PolyLine([self.pointAtAngle(angle) for angle in np.arange(0, 2 * math.pi, 2*math.pi / resolution)])
+        shape = Shape([self.pointAtAngle(angle) for angle in np.arange(0, 2 * math.pi, 2*math.pi / resolution)])
         shape.close()
         return shape
 

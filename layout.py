@@ -1,5 +1,5 @@
 from geometry.vec2 import vec2
-from geometry.PolyLine import arrow
+from geometry.Shape import arrow
 
 def layout(objects, margin = 25):
     x = margin

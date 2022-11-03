@@ -45,12 +45,12 @@ measurements = [
 ]
 
 
-from geometry.PolyLine import vec2, PolyLine
+from geometry.Shape import vec2, Shape
 
 
 
 previous = vec2(0,0)
-points = PolyLine()
+points = Shape()
 for heightDownwards, x in measurements:
     radius = x + 85
     circumference = 2 * math.pi * radius

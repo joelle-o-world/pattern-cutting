@@ -9,7 +9,7 @@ from geometry.LineSegment import LineSegment
 from geometry.vec2 import vec2, distance, midpoint
 
 
-class PolyLine:
+class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[vec2]
     style: str 
@@ -91,7 +91,7 @@ class PolyLine:
 
     # TODO: Probably doesnt make sense for this to be a subclass any more
     # TODO: Define this class as a point a certain length along a line
-    class MeasurementAlongPolyLine:
+    class MeasurementAlongShape:
         def __init__(self, parent, lengthAlong: float, index, remainder):
             if remainder < 0:
                 raise ValueError("Remainder should be greater than 0, got", remainder)
@@ -149,7 +149,7 @@ class PolyLine:
             if sum + segment.length < w:
                 sum += segment.length
             else:
-                return self.MeasurementAlongPolyLine(self, w, i, w - sum)
+                return self.MeasurementAlongShape(self, w, i, w - sum)
             i += 1
         # otherwise
         raise ValueError
@@ -231,7 +231,7 @@ class PolyLine:
 
     def with_style(self, style: str):
         "Create a copy using a different style"
-        return PolyLine(
+        return Shape(
                 points = self.points,
                 label = self.label,
                 style = style
@@ -239,7 +239,7 @@ class PolyLine:
 
     def with_label(self, label: str):
         "Create a copy with a new label applied"
-        return PolyLine(
+        return Shape(
                 points = self.points,
                 label = label,
                 style = self.style
@@ -394,14 +394,14 @@ class PolyLine:
         return self.translate(vec2(amount,0))
 
     def translate(self, t):
-        return PolyLine([point + t for point in self.points], label=self.label, style=self.style)
+        return Shape([point + t for point in self.points], label=self.label, style=self.style)
 
     def move(self, x, y):
         return self.translate(vec2(x, y))
 
     def sliceAfter(self, start: int|float|vec2):
         startMeasurement = self.at(start)
-        return PolyLine([
+        return Shape([
                 startMeasurement.point,
                 *self.points[startMeasurement.index + 1:]
             ])
@@ -418,7 +418,7 @@ class PolyLine:
             startMeasurement = endMeasurement
             endMeasurement = swap
         middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1 ]
-        return PolyLine([startMeasurement.point, *middlePoints, endMeasurement.point])
+        return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
 
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
@@ -435,7 +435,7 @@ class PolyLine:
         # The inbetween points are drawn by bisecting the angle of the intersections 
         inbetween = [ intersection.bisect().withLength(distance).end for intersection in self.intersections() ]
 
-        return PolyLine([first, *inbetween,  last])
+        return Shape([first, *inbetween,  last])
 
 
     def parallel(self, distance):
@@ -446,10 +446,10 @@ class PolyLine:
         last = self.lastSegment().parallel(distance).end
 
         inbetween = [ intersection.parallel(distance).meeting for intersection in self.intersections()]
-        return PolyLine([first, *inbetween, last])
+        return Shape([first, *inbetween, last])
 
 
-    def closest(self, X: vec2) -> MeasurementAlongPolyLine:
+    def closest(self, X: vec2) -> MeasurementAlongShape:
         # TODO: This needs to be simplified a lot
         Y = self.points[0]
         winningDistance = distance(X, Y)
@@ -469,13 +469,13 @@ class PolyLine:
                 w = sum + remainder
             i += 1
             sum += segment.length
-        return self.MeasurementAlongPolyLine(self, w, winningIndex, remainder)
+        return self.MeasurementAlongShape(self, w, winningIndex, remainder)
 
     def closestPoint(self, X) -> vec2:
         return self.closest(X).point
 
 
-    def at(self, p: int| float | vec2) -> MeasurementAlongPolyLine:
+    def at(self, p: int| float | vec2) -> MeasurementAlongShape:
         "Find the point closest to the given coordinate, or a certain duration along the line"
         if isinstance(p, float) or isinstance(p, int):
             return self.measureAlong(p)
@@ -495,16 +495,16 @@ class PolyLine:
 
 
 def arrow(*points, label=None):
-    return PolyLine(points, style="arrow", label=label)
+    return Shape(points, style="arrow", label=label)
 
 def dashed_arrow(*points, label=None):
-    return PolyLine(points, style="dashed_arrow", label=label)
+    return Shape(points, style="dashed_arrow", label=label)
             
 
 
 
 if __name__ == "__main__":
-    square = PolyLine([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(1,1)])
+    square = Shape([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(1,1)])
     d = draw.Drawing(1000, 1000, origin='center',  stroke='black', fill='none')
 
     for angle in square.angles():

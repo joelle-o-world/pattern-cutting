@@ -1,5 +1,5 @@
 from geometry.vec2 import vec2, midpoint
-from geometry.PolyLine import PolyLine
+from geometry.Shape import Shape
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
 from geometry.Group import Group
 
@@ -86,7 +86,7 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
 
 
 
-    shape = PolyLine([]).with_style("polygon")
+    shape = Shape([]).with_style("polygon")
     shape.startAt(p[9])
     # TODO: Curve inwards
     shape.curveTo(p[15])
