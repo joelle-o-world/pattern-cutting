@@ -1,9 +1,4 @@
-# Pattern cutting
-
 This is a python library for pattern cutting.
-
-This readme can be converted into a Jupyter notebook and ran using the
-`run.sh` script.
 
 ## `vec2` class
 
@@ -395,11 +390,14 @@ from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 render(TheClassicTailoredTrouserBlock())
 ```
 
+    26.0
+
+
 
 
 
     
-![svg](readme_files/readme_29_0.svg)
+![svg](readme_files/readme_29_1.svg)
     
 
 

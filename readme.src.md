@@ -1,9 +1,5 @@
-# Pattern cutting
 
 This is a python library for pattern cutting.
-
-This readme can be converted into a Jupyter notebook and ran using the `run.sh` script.
-
 
 ## `vec2` class
 
