@@ -125,6 +125,20 @@ render(
   )
 ```
 
+## BezierCurves
+
+```code
+from geometry.bezier import BezierCurve
+
+mycurve = BezierCurve(vec2(0,0), vec2(0, 50), vec2(50,50), vec2(50, 100))
+
+render(*mycurve.points(20))
+```
+
+```code
+render(mycurve.shape(50))
+```
+
 ## Finding the closest point on a polyline
 We can find the closest point on a polyline to any given coordinate:
 ```code

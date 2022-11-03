@@ -238,6 +238,40 @@ render(
 
 
 
+## BezierCurves
+
+
+```python
+from geometry.bezier import BezierCurve
+
+mycurve = BezierCurve(vec2(0,0), vec2(0, 50), vec2(50,50), vec2(50, 100))
+
+render(*mycurve.points(20))
+```
+
+
+
+
+    
+![svg](readme_files/readme_19_0.svg)
+    
+
+
+
+
+```python
+render(mycurve.shape(50))
+```
+
+
+
+
+    
+![svg](readme_files/readme_20_0.svg)
+    
+
+
+
 ## Finding the closest point on a polyline
 
 We can find the closest point on a polyline to any given coordinate:
@@ -261,7 +295,7 @@ render(
 
 
     
-![svg](readme_files/readme_19_0.svg)
+![svg](readme_files/readme_22_0.svg)
     
 
 
@@ -299,7 +333,7 @@ render(
 
 
     
-![svg](readme_files/readme_21_1.svg)
+![svg](readme_files/readme_24_1.svg)
     
 
 
@@ -326,7 +360,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_23_1.svg)
+![svg](readme_files/readme_26_1.svg)
     
 
 
@@ -350,7 +384,7 @@ render(
 
 
     
-![svg](readme_files/readme_25_1.svg)
+![svg](readme_files/readme_28_1.svg)
     
 
 
@@ -374,7 +408,7 @@ render(
 
 
     
-![svg](readme_files/readme_27_1.svg)
+![svg](readme_files/readme_30_1.svg)
     
 
 
@@ -397,7 +431,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_29_1.svg)
+![svg](readme_files/readme_32_1.svg)
     
 
 
