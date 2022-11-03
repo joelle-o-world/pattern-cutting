@@ -10,6 +10,8 @@ from geometry.LineSegment import LineSegment
 from geometry.vec2 import vec2, distance, midpoint
 from geometry.Group import Group
 
+from geometry.vec3 import vec3
+
 
 class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
@@ -537,6 +539,12 @@ class Shape:
         before = self.slice(0, replacementSection.start())
         after = self.slice(replacementSection.end())
         return Shape(before.points + replacementSection.points + after.points)
+
+
+    def to3D(self):
+        from geometry.Shape3d import Shape3d
+        points = [vec3(point.x, point.y, 0) for point in self.points]
+        return Shape3d(points)
             
 
 

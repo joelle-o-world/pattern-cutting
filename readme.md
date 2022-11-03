@@ -536,3 +536,23 @@ render(TheClassicTailoredTrouserBlock())
     
 
 
+
+## Working in 3D
+
+Turn a 2d shape into 3d one (and back again to render it):
+
+
+```python
+square3d = square.to3D()
+
+render(square3d.isometric())
+```
+
+
+
+
+    
+![svg](readme_files/readme_43_0.svg)
+    
+
+

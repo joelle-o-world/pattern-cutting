@@ -278,3 +278,13 @@ from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 
 render(TheClassicTailoredTrouserBlock())
 ```
+
+## Working in 3D
+
+Turn a 2d shape into 3d one (and back again to render it):
+
+```code
+square3d = square.to3D()
+
+render(square3d.isometric())
+```
