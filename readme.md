@@ -274,7 +274,7 @@ myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(30
 
 render(
   myshape.with_style("dashed"),
-  myshape.interpolate(50)
+  myshape.interpolate(50),
 )
 ```
 
@@ -283,6 +283,54 @@ render(
 
     
 ![svg](readme_files/readme_21_0.svg)
+    
+
+
+
+This makes a lot of points apear, so it might be a good idea to resample
+the curve at lower resolution:
+
+
+```python
+interpolated = myshape.interpolate(50)
+downsampled = interpolated.resample(25)
+render(
+  *topToBottom(
+    interpolated.with_style("pointset"),
+    downsampled.with_style("pointset").with_label("Re-sampled")
+  )
+)
+```
+
+    60.0
+
+
+
+
+
+    
+![svg](readme_files/readme_23_1.svg)
+    
+
+
+
+Aside, lets make a cool pattern
+
+
+```python
+gen = [myshape.interpolate(100)]
+for i in range(0, 5):
+  next = gen[-1].resample(50).parallel(25).interpolate(50)
+  gen.append(next)
+  
+render(*gen)
+```
+
+
+
+
+    
+![svg](readme_files/readme_25_0.svg)
     
 
 
@@ -310,7 +358,7 @@ render(
 
 
     
-![svg](readme_files/readme_23_0.svg)
+![svg](readme_files/readme_27_0.svg)
     
 
 
@@ -348,7 +396,7 @@ render(
 
 
     
-![svg](readme_files/readme_25_1.svg)
+![svg](readme_files/readme_29_1.svg)
     
 
 
@@ -375,7 +423,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_27_1.svg)
+![svg](readme_files/readme_31_1.svg)
     
 
 
@@ -399,7 +447,7 @@ render(
 
 
     
-![svg](readme_files/readme_29_1.svg)
+![svg](readme_files/readme_33_1.svg)
     
 
 
@@ -423,7 +471,7 @@ render(
 
 
     
-![svg](readme_files/readme_31_1.svg)
+![svg](readme_files/readme_35_1.svg)
     
 
 
@@ -446,7 +494,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_33_1.svg)
+![svg](readme_files/readme_37_1.svg)
     
 
 

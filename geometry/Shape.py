@@ -166,9 +166,14 @@ class Shape:
         "Interpolate between the points to create a new poly line with greater resolution"
         # TODO
 
-    def resample(self):
+    def resample(self, interval):
         "Increase the resolution of the line, but no gaurantee for keeping the original points"
-        # TODO
+        points = []
+        for l in np.arange(0, self.length, interval):
+            points.append(self.at(l).point)
+        if points[-1] != self.points[-1]:
+            points.append(self.points[-1].copy())
+        return Shape(points)
 
     def proximity(self, p):
         "How close is point, p, from the poly line"
@@ -519,20 +524,12 @@ class Shape:
 
 
     def interpolate(self, curveSpeed=20, upres=20):
-        
-        # For every angle, create guide points that discribe a perpendicular to the bisection of that angle
-
         points = []
-
         for curve in self.interpolationCurves(curveSpeed):
-            points += curve.points(upres)
-        
+            points += curve.points(upres)[:-1]
         return Shape(points)
             
 
-
-
-        # Interpolate last segment
 
 
 
