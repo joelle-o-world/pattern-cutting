@@ -109,4 +109,6 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     # TODO: Construct a dart on the line from 0; length 10cm, width 2cm.
     shape.addDart(p[0], 100, 20)
 
+    shape.label = "Classic Tailored Trouser Block - Front"
+
     return Group(shape, *p)
