@@ -150,14 +150,14 @@ myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(30
 
 render(
   myshape.with_style("dashed"),
-  myshape.interpolate(50),
+  myshape.interpolate(),
 )
 ```
 
 This makes a lot of points apear, so it might be a good idea to resample the curve at lower resolution:
 
 ```code
-interpolated = myshape.interpolate(50)
+interpolated = myshape.interpolate()
 downsampled = interpolated.resample(25)
 render(
   *topToBottom(
@@ -169,9 +169,9 @@ render(
 
 Aside, lets make a cool pattern
 ```code
-gen = [myshape.interpolate(100)]
+gen = [myshape.interpolate()]
 for i in range(0, 5):
-  next = gen[-1].resample(50).parallel(25).interpolate(50)
+  next = gen[-1].resample(50).parallel(25).interpolate()
   gen.append(next)
   
 render(*gen)

@@ -499,12 +499,13 @@ class Shape:
         return self
 
 
-    def interpolationCurves(self, curveSpeed=20):
+    def interpolationCurves(self, curveSpeed=1):
         from geometry.bezier import BezierCurve
         q,r,s = self.points[:3]
         qrs = Intersection(q,r,s)
-        guide1 = q + (r - q).withLength(curveSpeed)
-        guide2 = r + qrs.bisect().normal().withLength(curveSpeed)
+        qrDist = distance(q,r)
+        guide1 = q + (r - q).withLength(qrDist / 2 * curveSpeed)
+        guide2 = r + qrs.bisect().normal().withLength(qrDist / 2 * curveSpeed)
         yield BezierCurve(q, guide1, guide2, r)
 
         # Interpolate middle segments
@@ -512,18 +513,20 @@ class Shape:
             p,q,r,s = self.points[i-3:i+1]
             pqr = Intersection(p,q,r)
             qrs = Intersection(q,r,s)
-            guide1 = q - pqr.bisect().normal().withLength(curveSpeed)
-            guide2 = r + qrs.bisect().normal().withLength(curveSpeed)
+            qrDist = distance(q,r)
+            guide1 = q - pqr.bisect().normal().withLength(qrDist / 2 * curveSpeed)
+            guide2 = r + qrs.bisect().normal().withLength(qrDist / 2 * curveSpeed)
             yield BezierCurve(q, guide1, guide2, r)
 
         p,q,r = self.points[-3:]
         pqr = Intersection(p,q,r)
-        guide1 = q - pqr.bisect().normal().withLength(curveSpeed)
-        guide2 = r + (q - r).withLength(curveSpeed)
+        qrDist = distance(q,r)
+        guide1 = q - pqr.bisect().normal().withLength(qrDist / 2 * curveSpeed)
+        guide2 = r + (q - r).withLength(qrDist / 2 * curveSpeed)
         yield BezierCurve(q, guide1, guide2, r)
 
 
-    def interpolate(self, curveSpeed=20, upres=20):
+    def interpolate(self, curveSpeed=1, upres=20):
         points = []
         for curve in self.interpolationCurves(curveSpeed):
             points += curve.points(upres)[:-1]

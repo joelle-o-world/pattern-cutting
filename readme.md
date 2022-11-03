@@ -274,7 +274,7 @@ myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(30
 
 render(
   myshape.with_style("dashed"),
-  myshape.interpolate(50),
+  myshape.interpolate(),
 )
 ```
 
@@ -292,7 +292,7 @@ the curve at lower resolution:
 
 
 ```python
-interpolated = myshape.interpolate(50)
+interpolated = myshape.interpolate()
 downsampled = interpolated.resample(25)
 render(
   *topToBottom(
@@ -302,7 +302,7 @@ render(
 )
 ```
 
-    60.0
+    62.0
 
 
 
@@ -318,9 +318,9 @@ Aside, lets make a cool pattern
 
 
 ```python
-gen = [myshape.interpolate(100)]
+gen = [myshape.interpolate()]
 for i in range(0, 5):
-  next = gen[-1].resample(50).parallel(25).interpolate(50)
+  next = gen[-1].resample(50).parallel(25).interpolate()
   gen.append(next)
   
 render(*gen)
@@ -334,6 +334,9 @@ render(*gen)
     
 
 
+
+At the time of writing, this creates a very interesting buggy behaviour.
+I’ll be sad when its fixed.
 
 ## Finding the closest point on a polyline
 
