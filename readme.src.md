@@ -161,6 +161,16 @@ render(
 )
 ```
 
+Interpolating a `Shape`
+
+```code
+myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(300 , 300)])
+render(
+  myshape.with_style("dashed"),
+  myshape.interpolate()
+)
+```
+
 ## Finding the closest point on a polyline
 We can find the closest point on a polyline to any given coordinate:
 ```code

@@ -493,12 +493,50 @@ class Shape:
         return self
 
 
+    def interpolationCurves(self):
+        from geometry.bezier import BezierCurve
+        q,r,s = self.points[:3]
+        qrs = Intersection(q,r,s)
+        guide1 = (r - q).withLength(20)
+        guide2 = r + qrs.bisect().normal().withLength(20)
+        yield BezierCurve(q, guide1, guide2, r)
+
+        # Interpolate middle segments
+        for p,q,r,s in zip(self.points, self.points[1:], self.points[2:], self.points[:3]):
+            pqr = Intersection(p,q,r)
+            qrs = Intersection(q,r,s)
+            guide1 = q - pqr.bisect().normal().withLength(20)
+            guide2 = r + qrs.bisect().normal().withLength(20)
+            yield BezierCurve(q, guide1, guide2, r)
+           
+
+
+    def interpolate(self):
+        
+        # For every angle, create guide points that discribe a perpendicular to the bisection of that angle
+
+        points = []
+
+        for curve in self.interpolationCurves():
+            points += curve.points(10)
+        
+        return Shape(points)
+            
+
+
+
+        # Interpolate last segment
+
+
 
 def arrow(*points, label=None):
     return Shape(points, style="arrow", label=label)
 
 def dashed_arrow(*points, label=None):
     return Shape(points, style="dashed_arrow", label=label)
+
+def dashed(*points, label=None):
+    return Shape(points, style="dashed", label=label)
             
 
 
