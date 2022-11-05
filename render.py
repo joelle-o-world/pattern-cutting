@@ -1,5 +1,7 @@
-from geometry.Rectangle import minimumBoundingRect
 import drawSvg as draw
+
+from src.geometry.Rectangle import minimumBoundingRect
+
 
 def render(*objects):
     "Quickly render any number of objects as SVG"

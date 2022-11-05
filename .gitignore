@@ -5,3 +5,4 @@ readme.html
 notebook.ipynb
 .ipynb_checkpoints/
 .DS_Store
+.pytest_cache

@@ -1,5 +1,7 @@
 import drawSvg as svg
-from geometry.isMovable import isMovable
+
+from src.geometry.isMovable import isMovable
+
 
 class Group:
     label = None

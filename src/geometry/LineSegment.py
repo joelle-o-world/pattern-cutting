@@ -1,9 +1,7 @@
-
-import math
 import drawSvg as draw
 
-from geometry.Vector import Vector, distance
-from geometry.Line import StraightLine
+from src.geometry.Line import StraightLine
+from src.geometry.Vector import Vector, distance
 
 
 class LineSegment:

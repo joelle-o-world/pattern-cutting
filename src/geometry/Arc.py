@@ -1,7 +1,9 @@
-from Vector import Vector
-from Shape import Shape
-import numpy as np
 import math
+
+import numpy as np
+from Shape import Shape
+from Vector import Vector
+
 from render import render
 
 
