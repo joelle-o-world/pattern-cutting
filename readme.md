@@ -1,15 +1,15 @@
 This is a python library for pattern cutting.
 
-## `vec2` class
+## `Vector` class
 
 A class for 2d cartesian coordinates. Its used for point coordinates and
 also for 2d vectors
 
 
 ```python
-from geometry.vec2 import vec2
+from geometry.vec2 import Vector
 
-origin = vec2(0,0)
+origin = Vector(0,0)
 origin.label = "Origin"
 
 ```
@@ -42,11 +42,11 @@ segemnts to create a complicated line or shape.
 from geometry.Shape import Shape
 
 square = Shape([
-  vec2(0, 0), 
-  vec2(100, 0), 
-  vec2(100, 100), 
-  vec2(0, 100), 
-  vec2(0, 0)]
+  Vector(0, 0), 
+  Vector(100, 0), 
+  Vector(100, 100), 
+  Vector(0, 100), 
+  Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
 render(square)
@@ -71,7 +71,7 @@ kinds of shapes.
 ```python
 from layout import topToBottom
 
-shape = Shape([vec2(0, 0), vec2(100, 50), vec2(200, -50), vec2(300, 0)])
+shape = Shape([Vector(0, 0), Vector(100, 50), Vector(200, -50), Vector(300, 0)])
 
 render(
   *topToBottom(
@@ -194,7 +194,7 @@ sides they look like a circle:
 ```python
 from geometry.Circle import Circle
 
-circle = Circle(vec2(0, 0), 100)
+circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
@@ -244,10 +244,10 @@ render(
 ```python
 from geometry.Shape import dashed
 from geometry.bezier import BezierCurve
-p0 = vec2(0,0).with_label("p0")
-p1 = vec2(0, 50).with_label("p1")
-p2 = vec2(50, 50).with_label("p2")
-p3 = vec2(50, 100).with_label("p3")
+p0 = Vector(0,0).with_label("p0")
+p1 = Vector(0, 50).with_label("p1")
+p2 = Vector(50, 50).with_label("p2")
+p3 = Vector(50, 100).with_label("p3")
 
 
 mycurve = BezierCurve(p0, p1, p2, p3)
@@ -270,7 +270,7 @@ render(
 
 
 ```python
-myshape = Shape([vec2(0,0), vec2(0, 200), vec2(200,250), vec2(250, 150), vec2(300 , 300)])
+myshape = Shape([Vector(0,0), Vector(0, 200), Vector(200,250), Vector(250, 150), Vector(300 , 300)])
 
 render(
   myshape.with_style("dashed"),
@@ -343,7 +343,7 @@ We can find the closest point on a polyline to any given coordinate:
 ```python
 from geometry.Shape import dashed_arrow
 shape = arc
-X = vec2(90, 100)
+X = Vector(90, 100)
 Y = shape.closestPoint(X)
 
 render(
@@ -368,8 +368,8 @@ You can use closest points in other methods too, such as `slice`
 
 ```python
 shape = arc
-P = vec2(90, 100).with_label("P")
-Q = vec2(100, 0).with_label("Q")
+P = Vector(90, 100).with_label("P")
+Q = Vector(100, 0).with_label("Q")
 sliced = shape.slice(P, Q)
 render(
   *process(
@@ -407,7 +407,7 @@ Here are two shapes
 
 
 ```python
-a = Shape([vec2(-100, 200), vec2(200, -100)])
+a = Shape([Vector(-100, 200), Vector(200, -100)])
 b = arc
 
 render(a.with_label("a simple shape"), b.with_label("replacement"))

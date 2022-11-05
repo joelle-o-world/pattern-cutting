@@ -1,4 +1,4 @@
-from geometry.vec2 import vec2
+from geometry.vec2 import Vector
 
 class StraightLine:
     def __init__(self, gradient, intercept):
@@ -39,4 +39,4 @@ class StraightLine:
         else:
             x = (other.intercept - self.intercept) / (self.gradient - other.gradient)
             y = self.y(x)
-            return vec2(x, y)
+            return Vector(x, y)

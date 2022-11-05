@@ -3,7 +3,7 @@ from multimethod import multimethod
 from multipledispatch import dispatch
 import drawSvg as draw
 
-class vec2:
+class Vector:
     x: float
     y: float
     label: str | None
@@ -14,23 +14,23 @@ class vec2:
         self.label = label
 
     def __eq__(self, other):
-        if not isinstance(other, vec2):
+        if not isinstance(other, Vector):
             return False
         return self.x == other.x and self.y == other.y
 
-    def __mul__(self, scale: float) -> "vec2":
-        return vec2(self.x * scale, self.y * scale)
+    def __mul__(self, scale: float) -> "Vector":
+        return Vector(self.x * scale, self.y * scale)
 
-    def __add__(self, other) -> "vec2":
-        return vec2(self.x + other.x, self.y + other.y)
+    def __add__(self, other) -> "Vector":
+        return Vector(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other) -> "vec2": 
-        return vec2(self.x - other.x, self.y - other.y)
+    def __sub__(self, other) -> "Vector": 
+        return Vector(self.x - other.x, self.y - other.y)
 
     def __str__(self) -> str:
         return "({}, {})".format(self.x, self.y)
 
-    def __truediv__(self, divisor: float) -> "vec2":
+    def __truediv__(self, divisor: float) -> "Vector":
         return self * ( 1 / divisor)
 
 
@@ -62,10 +62,10 @@ class vec2:
         return self.unitVector()
 
     def copy(self):
-        return vec2(self.x, self.y)
+        return Vector(self.x, self.y)
 
     def with_label(self, label: str):
-        return vec2(self.x, self.y, label=label)
+        return Vector(self.x, self.y, label=label)
 
     def withAngle(self, angle):
         "Make a new vector with the same length but different angle"
@@ -88,7 +88,7 @@ class vec2:
     def normal(self):
         "Get a vector perpendicular to this one"
         # TODO: what about the normal in the other direction?
-        return vec2(-self.y, self.x)
+        return Vector(-self.y, self.x)
 
 
     @property
@@ -109,38 +109,38 @@ class vec2:
 
     @multimethod    
     def squareDown(self, amount: float):
-        return self + vec2(0, -amount)
+        return self + Vector(0, -amount)
 
     @squareDown.register
-    def squareDownToPoint(self, point: "vec2"):
-        return vec2(self.x, point.y)
+    def squareDownToPoint(self, point: "Vector"):
+        return Vector(self.x, point.y)
 
     @multimethod    
     def squareUp(self, amount: float):
-        return self + vec2(0, amount)
+        return self + Vector(0, amount)
 
     @squareUp.register
-    def squareUpToPoint(self, point: "vec2"):
-        return vec2(self.x, point.y)
+    def squareUpToPoint(self, point: "Vector"):
+        return Vector(self.x, point.y)
 
     @multimethod    
     def squareRight(self, amount: float):
-        return self + vec2(amount, 0)
+        return self + Vector(amount, 0)
 
     @squareRight.register
-    def squareRightToPoint(self, point: "vec2"):
-        return vec2(point.x, self.y)
+    def squareRightToPoint(self, point: "Vector"):
+        return Vector(point.x, self.y)
 
     @multimethod    
     def squareLeft(self, amount: float):
-        return self + vec2(-amount, 0)
+        return self + Vector(-amount, 0)
 
     @squareLeft.register
-    def squareLeftToPoint(self, point: "vec2"):
-        return vec2(point.x, self.y)
+    def squareLeftToPoint(self, point: "Vector"):
+        return Vector(point.x, self.y)
 
     def move(self, x, y):
-        new = vec2(self.x + x, self.y +y)
+        new = Vector(self.x + x, self.y +y)
         new.label = self.label
         return new
 
@@ -178,11 +178,11 @@ class vec2:
 
 
 def midpoint(*points):
-    summed = vec2(0,0)
+    summed = Vector(0,0)
     for point in points:
         summed = summed + point
     return summed / len(points)
     
 
-def distance(a: vec2, b: vec2):
+def distance(a: Vector, b: Vector):
     return (a - b).length

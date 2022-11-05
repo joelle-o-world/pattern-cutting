@@ -1,10 +1,10 @@
-from geometry.vec2 import vec2
+from geometry.vec2 import Vector
 from geometry.Shape import Shape, dashed
 from geometry.Group import Group
 
 class BezierCurve:
     
-    def __init__(self, p0: vec2, p1: vec2, p2: vec2, p3: vec2):
+    def __init__(self, p0: Vector, p1: Vector, p2: Vector, p3: Vector):
         self.p0 = p0
         self.p1 = p1
         self.p2 = p2

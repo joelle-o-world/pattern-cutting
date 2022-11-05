@@ -1,15 +1,15 @@
 from geometry.LineSegment import LineSegment
 from geometry.angles import normalizeAngle
-from geometry.vec2 import vec2
+from geometry.vec2 import Vector
 import math
 from geometry.angles import clockwiseDifference, anticlockwiseDifference
 
 class Intersection:
     "Represents a point where two line segments meet"
 
-    start: vec2
-    meeting: vec2
-    end: vec2
+    start: Vector
+    meeting: Vector
+    end: Vector
 
     def __init__(self, start, meeting, end):
         self.start = start
@@ -37,7 +37,7 @@ class Intersection:
         return anticlockwiseDifference(self.first.angle, self.second.angle + math.pi)
 
     def bisect(self):
-        vector = vec2(1,0).withAngle( self.first.angle + self.clockwiseAngle / 2)
+        vector = Vector(1,0).withAngle( self.first.angle + self.clockwiseAngle / 2)
         return LineSegment(self.meeting, self.meeting + vector)
 
     def parallel(self, distance):

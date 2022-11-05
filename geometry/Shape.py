@@ -7,7 +7,7 @@ import numpy as np
 
 from geometry.Intersection import Intersection
 from geometry.LineSegment import LineSegment
-from geometry.vec2 import vec2, distance, midpoint
+from geometry.vec2 import Vector, distance, midpoint
 from geometry.Group import Group
 
 from geometry.vec3 import vec3
@@ -15,7 +15,7 @@ from geometry.vec3 import vec3
 
 class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
-    points: List[vec2]
+    points: List[Vector]
     style: str 
     label: str | None = None;
 
@@ -33,7 +33,7 @@ class Shape:
         return self.points[-1]
 
     def append(self, p):
-        self.points.append(vec2(p.x, p.y))
+        self.points.append(Vector(p.x, p.y))
 
     def startAt(self, p):
         self.points = [p.copy()]
@@ -41,7 +41,7 @@ class Shape:
     def lineTo(self, p):
         self.append(p)
 
-    def curveTo(self, p: vec2, curve=0):
+    def curveTo(self, p: Vector, curve=0):
         # TODO: Create the actual curve
         self.append(p)
 
@@ -158,7 +158,7 @@ class Shape:
         # otherwise
         raise ValueError
 
-    def pointAlong(self, w) -> vec2:
+    def pointAlong(self, w) -> Vector:
         "Find a point a certain distance along the polyline"
         return self.measureAlong(w).point
 
@@ -222,10 +222,10 @@ class Shape:
         return  self.top - self.bottom
 
 
-    def start(self) -> vec2:
+    def start(self) -> Vector:
         return self.points[0]
 
-    def end(self) -> vec2:
+    def end(self) -> Vector:
         return self.points[-1]
 
 
@@ -317,7 +317,7 @@ class Shape:
     def center_of_mass(self):
         numberOfSamples = self.numberOfPoints * 2
         interval = self.length / numberOfSamples
-        summed = vec2(0,0)
+        summed = Vector(0,0)
         n = 0.0
         for w in np.arange(0, self.length, interval):
             summed = summed + self.at(w).point
@@ -400,15 +400,15 @@ class Shape:
         return " -> ".join(points)
 
     def moveRight(self, amount):
-        return self.translate(vec2(amount,0))
+        return self.translate(Vector(amount,0))
 
     def translate(self, t):
         return Shape([point + t for point in self.points], label=self.label, style=self.style)
 
     def move(self, x, y):
-        return self.translate(vec2(x, y))
+        return self.translate(Vector(x, y))
 
-    def sliceAfter(self, start: int|float|vec2):
+    def sliceAfter(self, start: int|float|Vector):
         startMeasurement = self.at(start)
         return Shape([
                 startMeasurement.point,
@@ -416,7 +416,7 @@ class Shape:
             ])
 
 
-    def slice(self, start: int|float | vec2, end: int|float | vec2 | None= None):
+    def slice(self, start: int|float | Vector, end: int|float | Vector | None= None):
         if end == None:
             return self.sliceAfter(start)
         startMeasurement = self.at(start)
@@ -458,7 +458,7 @@ class Shape:
         return Shape([first, *inbetween, last])
 
 
-    def closest(self, X: vec2) -> MeasurementAlongShape:
+    def closest(self, X: Vector) -> MeasurementAlongShape:
         # TODO: This needs to be simplified a lot
         Y = self.points[0]
         winningDistance = distance(X, Y)
@@ -480,18 +480,18 @@ class Shape:
             sum += segment.length
         return self.MeasurementAlongShape(self, w, winningIndex, remainder)
 
-    def closestPoint(self, X) -> vec2:
+    def closestPoint(self, X) -> Vector:
         return self.closest(X).point
 
 
-    def at(self, p: int| float | vec2) -> MeasurementAlongShape:
+    def at(self, p: int| float | Vector) -> MeasurementAlongShape:
         "Find the point closest to the given coordinate, or a certain duration along the line"
         if isinstance(p, float) or isinstance(p, int):
             return self.measureAlong(p)
         else:
             return self.closest(p)
 
-    def addDart(self, position: vec2 | float | int, depth: float, width: float):
+    def addDart(self, position: Vector | float | int, depth: float, width: float):
         at = self.at(position)
         lengthAlong = at.lengthAlong
         beforeDart = self.slice(0, lengthAlong - width/2)
@@ -563,7 +563,7 @@ def dashed(*points, label=None):
 
 
 if __name__ == "__main__":
-    square = Shape([vec2(1,1), vec2(1,100), vec2(100,100), vec2(100,1), vec2(1,1)])
+    square = Shape([Vector(1,1), Vector(1,100), Vector(100,100), Vector(100,1), Vector(1,1)])
     d = draw.Drawing(1000, 1000, origin='center',  stroke='black', fill='none')
 
     for angle in square.angles():
@@ -572,7 +572,7 @@ if __name__ == "__main__":
     d.append(square.svg())
     d.saveSvg("example.svg")
 
-    up = vec2(0, 1)
+    up = Vector(0, 1)
     print(up.angle)
-    left = vec2(1,0)
+    left = Vector(1,0)
 

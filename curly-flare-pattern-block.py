@@ -45,17 +45,17 @@ measurements = [
 ]
 
 
-from geometry.Shape import vec2, Shape
+from geometry.Shape import Vector, Shape
 
 
 
-previous = vec2(0,0)
+previous = Vector(0,0)
 points = Shape()
 for heightDownwards, x in measurements:
     radius = x + 85
     circumference = 2 * math.pi * radius
     tenthCircumference= circumference * .1
-    points.append(vec2(tenthCircumference, heightDownwards))
+    points.append(Vector(tenthCircumference, heightDownwards))
 
 print (points)
 
@@ -83,8 +83,8 @@ for p in points.points:
 
 
 
-points.append(vec2(0, points.top))
-points.append(vec2(0, points.bottom))
+points.append(Vector(0, points.top))
+points.append(Vector(0, points.bottom))
 points.close()
 d.append(points.svg())
 
