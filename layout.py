@@ -1,4 +1,4 @@
-from src.geometry import Vector
+from src.geometry.Vector import Vector
 from src.geometry.Shape import arrow
 
 
