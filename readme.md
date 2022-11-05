@@ -5,11 +5,10 @@ This is a python library for pattern cutting.
 A class for 2d cartesian coordinates. Its used for point coordinates and
 also for 2d vectors
 
-
 ```python
-from geometry.Vector import Vector
+from src.geometry import Vector
 
-origin = Vector(0,0)
+origin = Vector(0, 0)
 origin.label = "Origin"
 
 ```
@@ -37,16 +36,15 @@ render(origin)
 A `Shape` object is defined by multiple points which are joined by line
 segemnts to create a complicated line or shape.
 
-
 ```python
-from geometry.Shape import Shape
+from src.geometry import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
-  Vector(0, 0)]
+    Vector(0, 0),
+    Vector(100, 0),
+    Vector(100, 100),
+    Vector(0, 100),
+    Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
 render(square)
@@ -148,27 +146,26 @@ render(
 
 You can slice out a certain portion of a line:
 
-
 ```python
 from layout import process
-from geometry.Group import Group
+from src.geometry import Group
 
 P = square.at(25).point.with_label("P")
 Q = square.at(175).point.with_label("Q")
 
 render(
-  *process(
-    Group(
-      square,
-      P,
-      Q,
-    ),
+    *process(
+        Group(
+            square,
+            P,
+            Q,
+        ),
 
-    Group(
-      square.slice(25, 175),
-      P, Q
+        Group(
+            square.slice(25, 175),
+            P, Q
+        )
     )
-  )
 )
 ```
 
@@ -190,9 +187,8 @@ render(
 The circle class can be used to generate regular polygons with so many
 sides they look like a circle:
 
-
 ```python
-from geometry.Circle import Circle
+from src.geometry import Circle
 
 circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
@@ -200,6 +196,7 @@ hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
 from layout import sideBySide
+
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
@@ -240,21 +237,20 @@ render(
 
 ## Bezier Curves
 
-
 ```python
-from geometry.Shape import dashed
-from geometry.bezier import BezierCurve
-p0 = Vector(0,0).with_label("p0")
+from src.geometry import dashed
+from src.geometry.bezier import BezierCurve
+
+p0 = Vector(0, 0).with_label("p0")
 p1 = Vector(0, 50).with_label("p1")
 p2 = Vector(50, 50).with_label("p2")
 p3 = Vector(50, 100).with_label("p3")
 
-
 mycurve = BezierCurve(p0, p1, p2, p3)
 
 render(
-  mycurve.demo()
-  )
+    mycurve.demo()
+)
 ```
 
 
@@ -339,18 +335,18 @@ render(*gen)
 
 We can find the closest point on a polyline to any given coordinate:
 
-
 ```python
-from geometry.Shape import dashed_arrow
+from src.geometry import dashed_arrow
+
 shape = arc
 X = Vector(90, 100)
 Y = shape.closestPoint(X)
 
 render(
-  shape,
-  X.with_label("X"),
-  Y.with_label("Y"),
-  dashed_arrow(X, Y)
+    shape,
+    X.with_label("X"),
+    Y.with_label("Y"),
+    dashed_arrow(X, Y)
 )
 ```
 

@@ -1,6 +1,7 @@
 import unittest
 
-from geometry.vec2 import Vector
+from src.geometry.Vector import Vector
+
 
 class TestVec2Methods(unittest.TestCase):
 

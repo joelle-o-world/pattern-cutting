@@ -1,7 +1,7 @@
 import math
 import numpy as np
-from geometry.Vector import Vector
-from geometry.Shape import Shape
+from src.geometry.Vector import Vector
+from src.geometry.Shape import Shape
 
 
 class Circle:

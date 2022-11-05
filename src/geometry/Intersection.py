@@ -1,8 +1,8 @@
-from geometry.LineSegment import LineSegment
-from geometry.angles import normalizeAngle
-from geometry.Vector import Vector
+from src.geometry.LineSegment import LineSegment
+from src.geometry.angles import normalizeAngle
+from src.geometry.Vector import Vector
 import math
-from geometry.angles import clockwiseDifference, anticlockwiseDifference
+from src.geometry.angles import clockwiseDifference, anticlockwiseDifference
 
 class Intersection:
     "Represents a point where two line segments meet"

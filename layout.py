@@ -1,5 +1,6 @@
-from geometry.Vector import Vector
-from geometry.Shape import arrow
+from src.geometry import Vector
+from src.geometry.Shape import arrow
+
 
 def layout(objects, margin = 25):
     x = margin

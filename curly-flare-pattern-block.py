@@ -5,6 +5,11 @@
 
 import math
 
+import drawSvg as draw
+
+from src.geometry.Shape import Shape
+from src.geometry.Vector import Vector
+
 measurements = [
     [0, -2],
     [30, 0],
@@ -45,7 +50,6 @@ measurements = [
 ]
 
 
-from geometry.Shape import Vector, Shape
 
 
 
@@ -63,7 +67,6 @@ print (points)
 # plot the graph
 
 
-import drawSvg as draw
 
 d = draw.Drawing(500, 1000, origin='center',  stroke='black', fill='none')
 

@@ -1,16 +1,14 @@
-from os import replace
 from typing import List
 
 import drawSvg as draw
 import math
 import numpy as np
 
-from geometry.Intersection import Intersection
-from geometry.LineSegment import LineSegment
-from geometry.Vector import Vector, distance, midpoint
-from geometry.Group import Group
+from src.geometry.Intersection import Intersection
+from src.geometry.LineSegment import LineSegment
+from src.geometry.Vector import Vector, distance
 
-from geometry.vec3 import vec3
+from src.geometry.vec3 import vec3
 
 
 class Shape:
@@ -503,7 +501,7 @@ class Shape:
 
 
     def interpolationCurves(self, curveSpeed=1):
-        from geometry.bezier import BezierCurve
+        from src.geometry.bezier import BezierCurve
         q,r,s = self.points[:3]
         qrs = Intersection(q,r,s)
         qrDist = distance(q,r)
@@ -542,7 +540,7 @@ class Shape:
 
 
     def to3D(self):
-        from geometry.Shape3d import Shape3d
+        from src.geometry.Shape3d import Shape3d
         points = [vec3(point.x, point.y, 0) for point in self.points]
         return Shape3d(points)
             
