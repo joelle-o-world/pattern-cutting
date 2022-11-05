@@ -4,13 +4,15 @@ from src.geometry.Shape import Shape
 from src.geometry.Vector import Vector, midpoint
 
 
-def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220):
+def TheClassicTailoredTrouserBlock(
+    body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220
+):
     "Create a trouser block according to Winnifred Owen instructions"
-    p = [Vector(0,0)] * 16
+    p = [Vector(0, 0)] * 16
 
     # Front
     # Square both ways from 0.
-    p[0] = Vector(0,0)
+    p[0] = Vector(0, 0)
 
     # 0–1 body rise; square across.
     p[1] = p[0].squareDown(body.bodyRise)
@@ -30,17 +32,17 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     p[5] = p[1].moveLeft(body.hip / 12 + 15)
     p[6] = p[5].squareUp(p[2])
     p[7] = p[5].squareUp(p[0])
-    p[8] = p[6].squareRight(body.hip/4 + 5)
-    p[9] = p[5].squareLeft(body.hip/16 + 5)
+    p[8] = p[6].squareRight(body.hip / 4 + 5)
+    p[9] = p[5].squareLeft(body.hip / 16 + 5)
 
-    # 7–10 -- 1cm; 
-    p[10] = p[7] .squareRight(10.0)
+    # 7–10 -- 1cm;
+    p[10] = p[7].squareRight(10.0)
 
     # TODO: join 10-6, join 6-9 with a curve touching a point:
-    if  body.size <= 8:
+    if body.size <= 8:
         27.5
         # sizes 6–8 2.75cm fro5
-    elif  body.size <= 14:
+    elif body.size <= 14:
         30.0
         # sizes 10–14 3cm from5:
     elif body.size <= 20:
@@ -55,7 +57,6 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
     # 10–11 quarter waist plus 2.25cm.
     p[11] = p[10].squareRight(body.waist / 4 + 22.5)
 
-
     # 3–12 half trouser bottom width minus 0.5cm.
     p[12] = p[3].squareRight(bottomWidth / 2 - 5)
 
@@ -68,24 +69,20 @@ def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasureme
         extraLittleBit = 1.7
     else:
         raise Exception("Unhandled size {}".format(body.size))
-    p[13] = p[4].squareRight(
-            (p[12]-p[3]).length + extraLittleBit
-            )
+    p[13] = p[4].squareRight((p[12] - p[3]).length + extraLittleBit)
 
     # TODO: Draw in side seam through points 11, 8, 13, 12; curve hipline outwards 0.5cm.
 
     # 3–14 half trouser bottom width minus 0.5cm.
-    p[14] = p[3].squareLeft(bottomWidth/2 - 5)
+    p[14] = p[3].squareLeft(bottomWidth / 2 - 5)
 
     # 4–15 the measurement 4–13.
-    p[15] = p[4].squareLeft((p[13]-p[4]).length)
+    p[15] = p[4].squareLeft((p[13] - p[4]).length)
 
     # TODO: Draw inside leg seam 9, 15, 14; curve 9–15 inwards 0.75 cm.
 
     for i in range(0, len(p)):
         p[i].label = "{}".format(i)
-
-
 
     shape = Shape([]).with_style("polygon")
     shape.startAt(p[9])

@@ -32,7 +32,7 @@ class LineSegment:
         "Alias for unitVector"
         return self.unitVector()
 
-    @property 
+    @property
     def length(self):
         return self.vector.length
 
@@ -64,7 +64,11 @@ class LineSegment:
 
     def pointAlong(self, lengthAlong) -> Vector:
         if lengthAlong < 0 or lengthAlong > self.length:
-            raise ValueError("lengthAlong ({}) is out of bounds (0 to {})".format(lengthAlong, self.length))
+            raise ValueError(
+                "lengthAlong ({}) is out of bounds (0 to {})".format(
+                    lengthAlong, self.length
+                )
+            )
         else:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
@@ -76,7 +80,6 @@ class LineSegment:
         start = self.pointAlong(lengthAlong)
         direction = self.direction.normal()
         return LineSegment(start=start, end=start + direction)
-        
 
     def svg(self):
         return draw.Line(self.start.x, self.start.y, self.end.x, self.end.y)
@@ -87,11 +90,11 @@ class LineSegment:
         return max([self.start.y, self.end.y])
 
     @property
-    def bottom(self): 
+    def bottom(self):
         return min([self.start.y, self.end.y])
-    
+
     @property
-    def left(self): 
+    def left(self):
         return min([self.start.x, self.end.x])
 
     @property
@@ -102,7 +105,7 @@ class LineSegment:
         return "{} -> {}".format(self.start, self.end)
 
     def translate(self, vec):
-        return LineSegment(start = self.start + vec, end = self.end + vec)
+        return LineSegment(start=self.start + vec, end=self.end + vec)
 
     def gradient(self):
         if self.start.x == self.end.x:
@@ -113,33 +116,33 @@ class LineSegment:
         return self.start.x == self.end.x
 
     def parallel(self, distance):
-        return self.translate( self.normal().withLength(distance))
+        return self.translate(self.normal().withLength(distance))
 
     def straightLine(self):
         if self.vertical():
             # Its vertical
-            return StraightLine(gradient = float("inf"), intercept = self.start.x)
+            return StraightLine(gradient=float("inf"), intercept=self.start.x)
         else:
             gradient = self.gradient()
             intercept = self.start.y - self.start.x * gradient
-            return StraightLine(gradient=gradient, intercept = intercept)
-
+            return StraightLine(gradient=gradient, intercept=intercept)
 
     def extrapolatedIntersection(self, other: "LineSegment"):
         def coeffs(line: LineSegment):
-            A = (line.start.y - line.end.y)
-            B = (line.end.x - line.start.x)
-            C = (line.start.x*line.end.y - line.end.x*line.start.y)
+            A = line.start.y - line.end.y
+            B = line.end.x - line.start.x
+            C = line.start.x * line.end.y - line.end.x * line.start.y
             return A, B, -C
+
         L1 = coeffs(self)
         L2 = coeffs(other)
-        D  = L1[0] * L2[1] - L1[1] * L2[0]
+        D = L1[0] * L2[1] - L1[1] * L2[0]
         Dx = L1[2] * L2[1] - L1[1] * L2[2]
         Dy = L1[0] * L2[2] - L1[2] * L2[0]
         if D != 0:
             x = Dx / D
             y = Dy / D
-            return Vector(x,y)
+            return Vector(x, y)
         else:
             return False
 
@@ -165,18 +168,8 @@ class LineSegment:
             return Q
         else:
             return Y
-       
 
         return Y
-
-
-
-        
-
-
-
-
-
 
     # def extrapolatedIntersection(self, other: "LineSegment"):
     #     "Find the intersection between this line and another (using the infinite line, not the segment)"

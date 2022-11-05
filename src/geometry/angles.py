@@ -8,6 +8,7 @@ def normalizeAngle(angle: float):
         angle += 2 * math.pi
     return angle
 
+
 def clockwiseDifference(a, b):
     while b > a + 2 * math.pi:
         b -= 2 * math.pi
@@ -17,4 +18,4 @@ def clockwiseDifference(a, b):
 
 
 def anticlockwiseDifference(a, b):
-    return clockwiseDifference(b,a) 
+    return clockwiseDifference(b, a)

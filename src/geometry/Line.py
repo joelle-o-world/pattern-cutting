@@ -32,11 +32,13 @@ class StraightLine:
     def intersectionPoint(self, other):
         if self == other:
             # They overlap
-            raise Exception("Lines are identical:", self,"and", other)
-            
+            raise Exception("Lines are identical:", self, "and", other)
+
         elif self.gradient == other.gradient:
-            # They are parallel 
-            raise Exception("Lines are parallel and do not overlap:", self,"and", other)
+            # They are parallel
+            raise Exception(
+                "Lines are parallel and do not overlap:", self, "and", other
+            )
         else:
             x = (other.intercept - self.intercept) / (self.gradient - other.gradient)
             y = self.y(x)
