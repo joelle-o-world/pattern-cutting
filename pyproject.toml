@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pattern-cutting"
+version = "0.1.0"
+description = "This is a python library for pattern cutting."
+authors = ["Joelle, Daara"]
+readme = "README.md"
+packages = [{include = "pattern_cutting"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.4"
+drawSvg = "^1.8.3"
+multimethod = "^1.9"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.10.1"
+black = "^22.10.0"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

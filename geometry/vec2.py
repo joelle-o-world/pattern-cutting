@@ -1,6 +1,5 @@
 import math
 from multimethod import multimethod
-from multipledispatch import dispatch
 import drawSvg as draw
 
 class vec2:
