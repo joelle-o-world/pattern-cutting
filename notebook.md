@@ -12,7 +12,7 @@ also for 2d vectors
 
 
 ```python
-from geometry.vec2 import vec2
+from geometry.Vector import vec2
 
 origin = vec2(0,0)
 origin.label = "Origin"

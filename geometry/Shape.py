@@ -7,7 +7,7 @@ import numpy as np
 
 from geometry.Intersection import Intersection
 from geometry.LineSegment import LineSegment
-from geometry.vec2 import Vector, distance, midpoint
+from geometry.Vector import Vector, distance, midpoint
 from geometry.Group import Group
 
 from geometry.vec3 import vec3

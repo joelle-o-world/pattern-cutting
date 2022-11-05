@@ -6,7 +6,7 @@ This is a python library for pattern cutting.
 A class for 2d cartesian coordinates. Its used for point coordinates and also for 2d vectors
 
 ```code
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 
 origin = Vector(0,0)
 origin.label = "Origin"

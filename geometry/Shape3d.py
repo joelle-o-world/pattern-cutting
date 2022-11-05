@@ -1,4 +1,4 @@
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 from geometry.vec3 import vec3
 from geometry.Shape import Shape
 

@@ -1,6 +1,6 @@
 import math
 import numpy as np
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 from geometry.Shape import Shape
 
 

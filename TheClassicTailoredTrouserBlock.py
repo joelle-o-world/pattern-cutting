@@ -1,4 +1,4 @@
-from geometry.vec2 import Vector, midpoint
+from geometry.Vector import Vector, midpoint
 from geometry.Shape import Shape
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
 from geometry.Group import Group

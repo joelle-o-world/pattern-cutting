@@ -1,6 +1,6 @@
 from geometry.LineSegment import LineSegment
 from geometry.angles import normalizeAngle
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 import math
 from geometry.angles import clockwiseDifference, anticlockwiseDifference
 

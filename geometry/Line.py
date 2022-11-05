@@ -1,4 +1,4 @@
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 
 class StraightLine:
     def __init__(self, gradient, intercept):

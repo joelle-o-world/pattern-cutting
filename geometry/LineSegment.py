@@ -2,7 +2,7 @@
 import math
 import drawSvg as draw
 
-from geometry.vec2 import Vector, distance
+from geometry.Vector import Vector, distance
 from geometry.Line import StraightLine
 
 

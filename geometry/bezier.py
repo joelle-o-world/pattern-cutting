@@ -1,4 +1,4 @@
-from geometry.vec2 import Vector
+from geometry.Vector import Vector
 from geometry.Shape import Shape, dashed
 from geometry.Group import Group
 
