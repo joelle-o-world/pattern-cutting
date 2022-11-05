@@ -1,5 +1,6 @@
 from src.geometry.Vector import Vector
 
+
 class StraightLine:
     def __init__(self, gradient, intercept):
         self.gradient = gradient

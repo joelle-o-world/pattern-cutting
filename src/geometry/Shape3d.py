@@ -1,5 +1,6 @@
-from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
+from src.geometry.Vector import Vector
+
 
 class Shape3d:
 

@@ -1,5 +1,5 @@
-
 import math
+
 
 def normalizeAngle(angle: float):
     while angle > math.pi:

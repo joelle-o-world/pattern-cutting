@@ -1,6 +1,8 @@
 import math
-from multimethod import multimethod
+
 import drawSvg as draw
+from multimethod import multimethod
+
 
 class Vector:
     x: float

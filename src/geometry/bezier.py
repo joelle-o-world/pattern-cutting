@@ -1,6 +1,7 @@
-from src.geometry.Vector import Vector
-from src.geometry.Shape import Shape, dashed
 from src.geometry.Group import Group
+from src.geometry.Shape import Shape, dashed
+from src.geometry.Vector import Vector
+
 
 class BezierCurve:
     

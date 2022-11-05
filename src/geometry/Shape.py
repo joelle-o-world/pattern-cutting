@@ -1,14 +1,13 @@
+import math
 from typing import List
 
 import drawSvg as draw
-import math
 import numpy as np
 
 from src.geometry.Intersection import Intersection
 from src.geometry.LineSegment import LineSegment
-from src.geometry.Vector import Vector, distance
-
 from src.geometry.vec3 import vec3
+from src.geometry.Vector import Vector, distance
 
 
 class Shape:
