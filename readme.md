@@ -1,6 +1,7 @@
 This is a python library for pattern cutting.
 
-## `Vector` class
+`Vector` class
+--------------
 
 A class for 2d cartesian coordinates. Its used for point coordinates and
 also for 2d vectors
@@ -32,7 +33,8 @@ render(origin)
 
 
 
-## Shape
+Shape
+-----
 
 A `Shape` object is defined by multiple points which are joined by line
 segemnts to create a complicated line or shape.
@@ -238,7 +240,8 @@ render(
 
 
 
-## Bezier Curves
+Bezier Curves
+-------------
 
 
 ```python
@@ -335,7 +338,8 @@ render(*gen)
 
 
 
-## Finding the closest point on a polyline
+Finding the closest point on a polyline
+---------------------------------------
 
 We can find the closest point on a polyline to any given coordinate:
 
@@ -401,7 +405,8 @@ render(
 
 
 
-## Replacing a section of a shape
+Replacing a section of a shape
+------------------------------
 
 Here are two shapes
 
@@ -439,7 +444,8 @@ render(a.replace(b))
 
 
 
-## Die Lemma dress block
+Die Lemma dress block
+---------------------
 
 One of the main applications of this library is to create outfits for
 East London drag queen [Die
@@ -514,7 +520,8 @@ render(
 
 
 
-## Winnifred Owen pattern blocks
+Winnifred Owen pattern blocks
+-----------------------------
 
 ### Trouser block
 
@@ -537,7 +544,8 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
-## Working in 3D
+Working in 3D
+-------------
 
 Turn a 2d shape into 3d one (and back again to render it):
 

@@ -25,20 +25,19 @@ class Vector:
     def __add__(self, other) -> "Vector":
         return Vector(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other) -> "Vector": 
+    def __sub__(self, other) -> "Vector":
         return Vector(self.x - other.x, self.y - other.y)
 
     def __str__(self) -> str:
         return "({}, {})".format(self.x, self.y)
 
     def __truediv__(self, divisor: float) -> "Vector":
-        return self * ( 1 / divisor)
-
+        return self * (1 / divisor)
 
     @property
     def angle(self) -> float:
         return math.atan2(self.y, self.x)
-    
+
     @angle.setter
     def angle(self, angle: float):
         m = self.length
@@ -56,7 +55,7 @@ class Vector:
         self.y *= scale
 
     def unitVector(self):
-        return self / self.length 
+        return self / self.length
 
     @property
     def direction(self):
@@ -72,7 +71,7 @@ class Vector:
         "Make a new vector with the same length but different angle"
         new = self.copy()
         new.angle = angle
-        return new 
+        return new
 
     def withLength(self, length):
         "Make a new vector with the same angle but different length"
@@ -91,13 +90,12 @@ class Vector:
         # TODO: what about the normal in the other direction?
         return Vector(-self.y, self.x)
 
-
     @property
-    def top(self): 
+    def top(self):
         return self.y
 
     @property
-    def bottom(self): 
+    def bottom(self):
         return self.y
 
     @property
@@ -108,7 +106,7 @@ class Vector:
     def right(self):
         return self.x
 
-    @multimethod    
+    @multimethod
     def squareDown(self, amount: float):
         return self + Vector(0, -amount)
 
@@ -116,7 +114,7 @@ class Vector:
     def squareDownToPoint(self, point: "Vector"):
         return Vector(self.x, point.y)
 
-    @multimethod    
+    @multimethod
     def squareUp(self, amount: float):
         return self + Vector(0, amount)
 
@@ -124,7 +122,7 @@ class Vector:
     def squareUpToPoint(self, point: "Vector"):
         return Vector(self.x, point.y)
 
-    @multimethod    
+    @multimethod
     def squareRight(self, amount: float):
         return self + Vector(amount, 0)
 
@@ -132,7 +130,7 @@ class Vector:
     def squareRightToPoint(self, point: "Vector"):
         return Vector(point.x, self.y)
 
-    @multimethod    
+    @multimethod
     def squareLeft(self, amount: float):
         return self + Vector(-amount, 0)
 
@@ -141,19 +139,21 @@ class Vector:
         return Vector(point.x, self.y)
 
     def move(self, x, y):
-        new = Vector(self.x + x, self.y +y)
+        new = Vector(self.x + x, self.y + y)
         new.label = self.label
         return new
 
     def moveLeft(self, amount: float):
         return self.move(-amount, 0)
+
     def moveRight(self, amount: float):
         return self.move(amount, 0)
+
     def moveUp(self, amount: float):
         return self.move(0, amount)
+
     def moveDown(self, amount: float):
         return self.move(0, -amount)
-
 
     def labelText(self):
         # TODO: automatically add coordinates if flag is set
@@ -166,24 +166,24 @@ class Vector:
         labelText = self.labelText()
         if labelText:
             # TODO: Get font size from a context object
-            label = draw.Text(labelText, 12, self.x + 2, self.y + 2, fill="#000000", stroke="none")
+            label = draw.Text(
+                labelText, 12, self.x + 2, self.y + 2, fill="#000000", stroke="none"
+            )
             group.append(label)
 
         return group
-    
+
     @property
     def tuple(self):
         return self.x, self.y
 
 
-
-
 def midpoint(*points):
-    summed = Vector(0,0)
+    summed = Vector(0, 0)
     for point in points:
         summed = summed + point
     return summed / len(points)
-    
+
 
 def distance(a: Vector, b: Vector):
     return (a - b).length

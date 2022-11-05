@@ -27,9 +27,11 @@ class Circle:
             yield self.pointAtAngle(angle)
 
     def polyline(self, resolution):
-        shape = Shape([self.pointAtAngle(angle) for angle in np.arange(0, 2 * math.pi, 2*math.pi / resolution)])
+        shape = Shape(
+            [
+                self.pointAtAngle(angle)
+                for angle in np.arange(0, 2 * math.pi, 2 * math.pi / resolution)
+            ]
+        )
         shape.close()
         return shape
-
-
-

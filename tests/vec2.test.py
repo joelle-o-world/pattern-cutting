@@ -4,7 +4,6 @@ from src.geometry.Vector import Vector
 
 
 class TestVec2Methods(unittest.TestCase):
-
     def test_setting_length_prop(self):
         v = Vector(20, 0)
         v.length = 10
@@ -21,5 +20,3 @@ class TestVec2Methods(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-

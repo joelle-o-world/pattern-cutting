@@ -31,14 +31,15 @@ class Group:
     @property
     def width(self):
         return self.right - self.left
-    
+
     @property
     def height(self):
         return self.top - self.bottom
-    
+
     def svg(self):
         return svg.Group([obj.svg() for obj in self.objects])
 
-    def move(self, x: float, y:float): 
-        return Group(*[obj.move(x, y) if isMovable(obj) else obj for obj in self.objects])
-
+    def move(self, x: float, y: float):
+        return Group(
+            *[obj.move(x, y) if isMovable(obj) else obj for obj in self.objects]
+        )

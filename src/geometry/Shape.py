@@ -13,12 +13,11 @@ from src.geometry.Vector import Vector, distance
 class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[Vector]
-    style: str 
-    label: str | None = None;
-
+    style: str
+    label: str | None = None
 
     # Construction
-    def __init__(self, points = [], label=None, style="line"):
+    def __init__(self, points=[], label=None, style="line"):
         self.label = label
         self.style = style
         self.points = [point.copy() for point in points]
@@ -42,7 +41,6 @@ class Shape:
         # TODO: Create the actual curve
         self.append(p)
 
-
     def close(self):
         self.append(self.start())
 
@@ -53,11 +51,7 @@ class Shape:
             yield LineSegment(start, end)
 
     def segment(self, index):
-        return LineSegment(
-            start = self.points[index],
-            end = self.points[index+1]
-        )
-
+        return LineSegment(start=self.points[index], end=self.points[index + 1])
 
     @property
     def numberOfSegments(self):
@@ -74,8 +68,8 @@ class Shape:
         return self.segment(self.numberOfSegments - 1)
 
     def intersections(self):
-        for start,meeting,end in zip(self.points, self.points[1:], self.points[2:]):
-            yield Intersection(start,meeting,end)
+        for start, meeting, end in zip(self.points, self.points[1:], self.points[2:]):
+            yield Intersection(start, meeting, end)
 
     def angles(self):
         "Iterate all the three point angles"
@@ -89,7 +83,6 @@ class Shape:
             sum += segment.length
         return sum
 
-
     # TODO: Probably doesnt make sense for this to be a subclass any more
     # TODO: Define this class as a point a certain length along a line
     class MeasurementAlongShape:
@@ -102,12 +95,12 @@ class Shape:
             self.lengthAlong = lengthAlong
 
         @property
-        def segment(self) ->  LineSegment:
-            return self.parent.segment( self.index )
+        def segment(self) -> LineSegment:
+            return self.parent.segment(self.index)
 
         @property
         def point(self):
-            return self.segment.pointAlong(self.remainder);
+            return self.segment.pointAlong(self.remainder)
 
         def normal(self):
             "Unit vector line segment perpendicular to the parent at this point"
@@ -115,8 +108,16 @@ class Shape:
 
         def svg(self):
             marker = self.normal().withLength(-3)
-            textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
-            label = draw.Text("{:.0f}mm".format(self.lengthAlong), 12, stroke='none', fill="#000000", path = textPath.svg())
+            textPath = marker.withLength(100).translate(
+                marker.vector.withLength(marker.length + 1)
+            )
+            label = draw.Text(
+                "{:.0f}mm".format(self.lengthAlong),
+                12,
+                stroke="none",
+                fill="#000000",
+                path=textPath.svg(),
+            )
             group = draw.Group()
             group.append(marker.svg())
             group.append(label)
@@ -124,21 +125,25 @@ class Shape:
 
         # TODO: Use a boundingRect() method instead
         @property
-        def top(self): 
+        def top(self):
             return self.point.y
+
         @property
-        def bottom(self): 
+        def bottom(self):
             return self.point.y
+
         @property
-        def left(self): 
+        def left(self):
             return self.point.x
+
         @property
-        def right(self): 
+        def right(self):
             return self.point.x
 
         @property
         def height(self):
             return self.top - self.bottom
+
         @property
         def width(self):
             return self.right - self.left
@@ -159,7 +164,7 @@ class Shape:
         "Find a point a certain distance along the polyline"
         return self.measureAlong(w).point
 
-    def evenlySpacedMeasurements(self, step = 10):
+    def evenlySpacedMeasurements(self, step=10):
         return [self.measureAlong(w) for w in np.arange(0, self.length, step)]
 
     def upsample(self):
@@ -209,22 +214,20 @@ class Shape:
     def right(self) -> float:
         "x coordinate of the right-most point"
         return max([point.x for point in self.points])
-    
+
     @property
     def width(self) -> float:
         return self.right - self.left
 
     @property
     def height(self) -> float:
-        return  self.top - self.bottom
-
+        return self.top - self.bottom
 
     def start(self) -> Vector:
         return self.points[0]
 
     def end(self) -> Vector:
         return self.points[-1]
-
 
     # Exporting
     def interleavedCoordinates(self):
@@ -237,19 +240,11 @@ class Shape:
 
     def with_style(self, style: str):
         "Create a copy using a different style"
-        return Shape(
-                points = self.points,
-                label = self.label,
-                style = style
-            )
+        return Shape(points=self.points, label=self.label, style=style)
 
     def with_label(self, label: str):
         "Create a copy with a new label applied"
-        return Shape(
-                points = self.points,
-                label = label,
-                style = self.style
-            )
+        return Shape(points=self.points, label=label, style=self.style)
 
     def svg(self):
         "drawSvg object representation"
@@ -281,27 +276,33 @@ class Shape:
 
     def svg_line_only(self, close=False, fill="none", **kwargs):
         "Draw only the line as an svg <lines> element"
-        return draw.Lines(*self.interleavedCoordinates(), close=close, fill=fill, stroke="black", **kwargs)
+        return draw.Lines(
+            *self.interleavedCoordinates(),
+            close=close,
+            fill=fill,
+            stroke="black",
+            **kwargs
+        )
 
     def svg_dashed(self):
         g = draw.Group()
-        line = self.svg_line_only(stroke_dasharray = "3")
+        line = self.svg_line_only(stroke_dasharray="3")
         if self.label:
             g.append(self.svg_parallel_label())
         g.append(line)
         return g
 
-
     def svg_parallel_label(self):
         "Draw the label parallel to the line itself"
         return draw.Text(
-                self.label, 12, 
-                stroke = "none",
-                fill = "#000000", 
-                path = self.svg_line_only(), 
-                startOffset = 10, 
-                lineOffset = -1
-            )
+            self.label,
+            12,
+            stroke="none",
+            fill="#000000",
+            path=self.svg_line_only(),
+            startOffset=10,
+            lineOffset=-1,
+        )
 
     def svg_pointset(self):
         g = draw.Group()
@@ -314,22 +315,29 @@ class Shape:
     def center_of_mass(self):
         numberOfSamples = self.numberOfPoints * 2
         interval = self.length / numberOfSamples
-        summed = Vector(0,0)
+        summed = Vector(0, 0)
         n = 0.0
         for w in np.arange(0, self.length, interval):
             summed = summed + self.at(w).point
-            n += 1 
+            n += 1
         print(n)
         return summed / n
 
-
     def svg_centered_label(self):
         labelPosition = self.center_of_mass()
-        return draw.Text(self.label, 12, labelPosition.x, labelPosition.y, stroke="none", fill="black", text_anchor="middle")
+        return draw.Text(
+            self.label,
+            12,
+            labelPosition.x,
+            labelPosition.y,
+            stroke="none",
+            fill="black",
+            text_anchor="middle",
+        )
 
     def svg_polygon(self):
         group = draw.Group()
-        group.append(self.svg_line_only( fill="#E6E6FA"))
+        group.append(self.svg_line_only(fill="#E6E6FA"))
         if self.label:
             group.append(self.svg_centered_label())
         return group
@@ -339,21 +347,32 @@ class Shape:
         g.append(self.svg_line_only())
         g.append(self.svg_start_notch())
         g.append(self.svg_end_notch())
-        label = "{} ({:.1f}mm)".format(self.label, self.length) if self.label else "{:.1f}mm".format(self.length)
-        g.append( draw.Text(
-            label, 12, 
-            path = self.svg_line_only(), 
-            startOffset = 10, 
-            lineOffset = -1,
-            stroke="none",
-            fill="black",
-        ))
+        label = (
+            "{} ({:.1f}mm)".format(self.label, self.length)
+            if self.label
+            else "{:.1f}mm".format(self.length)
+        )
+        g.append(
+            draw.Text(
+                label,
+                12,
+                path=self.svg_line_only(),
+                startOffset=10,
+                lineOffset=-1,
+                stroke="none",
+                fill="black",
+            )
+        )
         return g
 
     def svg_arrow(self, **kwargs):
         g = draw.Group()
-        arrow = draw.Marker(-1.0, -0.5, 0.9, 0.5, scale=8, orient='auto')
-        arrow.append(draw.Lines(-1.0, -0.5, -1.0, 0.5, 0.0, 0, fill='black', stroke="none", close=True))
+        arrow = draw.Marker(-1.0, -0.5, 0.9, 0.5, scale=8, orient="auto")
+        arrow.append(
+            draw.Lines(
+                -1.0, -0.5, -1.0, 0.5, 0.0, 0, fill="black", stroke="none", close=True
+            )
+        )
         line = self.svg_line_only(marker_end=arrow, **kwargs)
         g.append(line)
         if self.label:
@@ -383,37 +402,43 @@ class Shape:
             m = self.at(w)
             marker = m.normal().withLength(-3)
             group.append(marker.svg())
-            textPath = marker.withLength(100).translate(marker.vector.withLength(marker.length + 1))
-            label = draw.Text("{:.0f}mm".format(w), 12, stroke='none', fill="#000000", path = textPath.svg())
+            textPath = marker.withLength(100).translate(
+                marker.vector.withLength(marker.length + 1)
+            )
+            label = draw.Text(
+                "{:.0f}mm".format(w),
+                12,
+                stroke="none",
+                fill="#000000",
+                path=textPath.svg(),
+            )
             group.append(label)
         return group
-
-
-
-
 
     def __str__(self):
         points = ["{}".format(point) for point in self.points]
         return " -> ".join(points)
 
     def moveRight(self, amount):
-        return self.translate(Vector(amount,0))
+        return self.translate(Vector(amount, 0))
 
     def translate(self, t):
-        return Shape([point + t for point in self.points], label=self.label, style=self.style)
+        return Shape(
+            [point + t for point in self.points], label=self.label, style=self.style
+        )
 
     def move(self, x, y):
         return self.translate(Vector(x, y))
 
-    def sliceAfter(self, start: int|float|Vector):
+    def sliceAfter(self, start: int | float | Vector):
         startMeasurement = self.at(start)
-        return Shape([
-                startMeasurement.point,
-                *self.points[startMeasurement.index + 1:]
-            ])
+        return Shape(
+            [startMeasurement.point, *self.points[startMeasurement.index + 1 :]]
+        )
 
-
-    def slice(self, start: int|float | Vector, end: int|float | Vector | None= None):
+    def slice(
+        self, start: int | float | Vector, end: int | float | Vector | None = None
+    ):
         if end == None:
             return self.sliceAfter(start)
         startMeasurement = self.at(start)
@@ -423,13 +448,18 @@ class Shape:
             swap = startMeasurement
             startMeasurement = endMeasurement
             endMeasurement = swap
-        middlePoints = self.points[startMeasurement.index + 1 : endMeasurement.index + 1 ]
+        middlePoints = self.points[
+            startMeasurement.index + 1 : endMeasurement.index + 1
+        ]
         return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
 
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
-        return [intersection.meeting for intersection in self.intersections() if abs(intersection.angle) > threshholdAngle]
-
+        return [
+            intersection.meeting
+            for intersection in self.intersections()
+            if abs(intersection.angle) > threshholdAngle
+        ]
 
     def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment
@@ -438,11 +468,13 @@ class Shape:
         # Same for the last point
         last = self.lastPoint() + self.lastSegment().normal().withLength(distance)
 
-        # The inbetween points are drawn by bisecting the angle of the intersections 
-        inbetween = [ intersection.bisect().withLength(distance).end for intersection in self.intersections() ]
+        # The inbetween points are drawn by bisecting the angle of the intersections
+        inbetween = [
+            intersection.bisect().withLength(distance).end
+            for intersection in self.intersections()
+        ]
 
-        return Shape([first, *inbetween,  last])
-
+        return Shape([first, *inbetween, last])
 
     def parallel(self, distance):
         # First point is drawn at a normal to the first segment
@@ -451,9 +483,11 @@ class Shape:
         # Same for the last point
         last = self.lastSegment().parallel(distance).end
 
-        inbetween = [ intersection.parallel(distance).meeting for intersection in self.intersections()]
+        inbetween = [
+            intersection.parallel(distance).meeting
+            for intersection in self.intersections()
+        ]
         return Shape([first, *inbetween, last])
-
 
     def closest(self, X: Vector) -> MeasurementAlongShape:
         # TODO: This needs to be simplified a lot
@@ -480,8 +514,7 @@ class Shape:
     def closestPoint(self, X) -> Vector:
         return self.closest(X).point
 
-
-    def at(self, p: int| float | Vector) -> MeasurementAlongShape:
+    def at(self, p: int | float | Vector) -> MeasurementAlongShape:
         "Find the point closest to the given coordinate, or a certain duration along the line"
         if isinstance(p, float) or isinstance(p, int):
             return self.measureAlong(p)
@@ -491,40 +524,39 @@ class Shape:
     def addDart(self, position: Vector | float | int, depth: float, width: float):
         at = self.at(position)
         lengthAlong = at.lengthAlong
-        beforeDart = self.slice(0, lengthAlong - width/2)
-        afterDart = self.slice(lengthAlong + width/2)
+        beforeDart = self.slice(0, lengthAlong - width / 2)
+        afterDart = self.slice(lengthAlong + width / 2)
         dartPoint = at.normal().unitVector() * depth
 
         self.points = [*beforeDart.points, dartPoint, *afterDart.points]
         return self
 
-
     def interpolationCurves(self, curveSpeed=1):
         from src.geometry.bezier import BezierCurve
-        q,r,s = self.points[:3]
-        qrs = Intersection(q,r,s)
-        qrDist = distance(q,r)
+
+        q, r, s = self.points[:3]
+        qrs = Intersection(q, r, s)
+        qrDist = distance(q, r)
         guide1 = q + (r - q).withLength(qrDist / 2 * curveSpeed)
         guide2 = r + qrs.bisect().normal().withLength(qrDist / 2 * curveSpeed)
         yield BezierCurve(q, guide1, guide2, r)
 
         # Interpolate middle segments
         for i in range(3, len(self.points)):
-            p,q,r,s = self.points[i-3:i+1]
-            pqr = Intersection(p,q,r)
-            qrs = Intersection(q,r,s)
-            qrDist = distance(q,r)
+            p, q, r, s = self.points[i - 3 : i + 1]
+            pqr = Intersection(p, q, r)
+            qrs = Intersection(q, r, s)
+            qrDist = distance(q, r)
             guide1 = q - pqr.bisect().normal().withLength(qrDist / 2 * curveSpeed)
             guide2 = r + qrs.bisect().normal().withLength(qrDist / 2 * curveSpeed)
             yield BezierCurve(q, guide1, guide2, r)
 
-        p,q,r = self.points[-3:]
-        pqr = Intersection(p,q,r)
-        qrDist = distance(q,r)
+        p, q, r = self.points[-3:]
+        pqr = Intersection(p, q, r)
+        qrDist = distance(q, r)
         guide1 = q - pqr.bisect().normal().withLength(qrDist / 2 * curveSpeed)
         guide2 = r + (q - r).withLength(qrDist / 2 * curveSpeed)
         yield BezierCurve(q, guide1, guide2, r)
-
 
     def interpolate(self, curveSpeed=1, upres=20):
         points = []
@@ -537,31 +569,30 @@ class Shape:
         after = self.slice(replacementSection.end())
         return Shape(before.points + replacementSection.points + after.points)
 
-
     def to3D(self):
         from src.geometry.Shape3d import Shape3d
+
         points = [vec3(point.x, point.y, 0) for point in self.points]
         return Shape3d(points)
-            
-
-
 
 
 def arrow(*points, label=None):
     return Shape(points, style="arrow", label=label)
 
+
 def dashed_arrow(*points, label=None):
     return Shape(points, style="dashed_arrow", label=label)
 
+
 def dashed(*points, label=None):
     return Shape(points, style="dashed", label=label)
-            
-
 
 
 if __name__ == "__main__":
-    square = Shape([Vector(1,1), Vector(1,100), Vector(100,100), Vector(100,1), Vector(1,1)])
-    d = draw.Drawing(1000, 1000, origin='center',  stroke='black', fill='none')
+    square = Shape(
+        [Vector(1, 1), Vector(1, 100), Vector(100, 100), Vector(100, 1), Vector(1, 1)]
+    )
+    d = draw.Drawing(1000, 1000, origin="center", stroke="black", fill="none")
 
     for angle in square.angles():
         print("Angle", math.degrees(angle))
@@ -571,5 +602,4 @@ if __name__ == "__main__":
 
     up = Vector(0, 1)
     print(up.angle)
-    left = Vector(1,0)
-
+    left = Vector(1, 0)

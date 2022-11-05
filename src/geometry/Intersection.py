@@ -1,7 +1,10 @@
 import math
 
-from src.geometry.angles import (anticlockwiseDifference, clockwiseDifference,
-                                 normalizeAngle)
+from src.geometry.angles import (
+    anticlockwiseDifference,
+    clockwiseDifference,
+    normalizeAngle,
+)
 from src.geometry.LineSegment import LineSegment
 from src.geometry.Vector import Vector
 
@@ -39,7 +42,7 @@ class Intersection:
         return anticlockwiseDifference(self.first.angle, self.second.angle + math.pi)
 
     def bisect(self):
-        vector = Vector(1,0).withAngle( self.first.angle + self.clockwiseAngle / 2)
+        vector = Vector(1, 0).withAngle(self.first.angle + self.clockwiseAngle / 2)
         return LineSegment(self.meeting, self.meeting + vector)
 
     def parallel(self, distance):
@@ -50,14 +53,8 @@ class Intersection:
 
         meeting = self.first.parallel(distance).extrapolatedIntersection(self.bisect())
 
-
         # meeting = first.extrapolatedIntersection(second)
         if meeting:
-            return Intersection(start=first.start, meeting = meeting, end = second.end)
+            return Intersection(start=first.start, meeting=meeting, end=second.end)
         else:
             raise Exception()
-
-        
-
-
-
