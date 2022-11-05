@@ -1,15 +1,15 @@
-from geometry.vec2 import vec2, midpoint
+from geometry.Vector import Vector, midpoint
 from geometry.Shape import Shape
 from BodyMeasurements import exampleBodyMeasurements, BodyMeasurements
 from geometry.Group import Group
 
 def TheClassicTailoredTrouserBlock(body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220):
     "Create a trouser block according to Winnifred Owen instructions"
-    p = [vec2(0,0)] * 16
+    p = [Vector(0,0)] * 16
 
     # Front
     # Square both ways from 0.
-    p[0] = vec2(0,0)
+    p[0] = Vector(0,0)
 
     # 0–1 body rise; square across.
     p[1] = p[0].squareDown(body.bodyRise)

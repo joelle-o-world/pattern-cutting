@@ -1,11 +1,11 @@
 import math
 import numpy as np
-from geometry.vec2 import vec2
+from geometry.Vector import Vector
 from geometry.Shape import Shape
 
 
 class Circle:
-    def __init__(self, center: vec2, radius: float):
+    def __init__(self, center: Vector, radius: float):
         self.center = center
         self.radius = radius
 
@@ -14,7 +14,7 @@ class Circle:
         return 2 * math.pi * self.radius
 
     def pointAtAngle(self, angle):
-        return self.center + vec2(1, 0).withAngle(angle).withLength(self.radius)
+        return self.center + Vector(1, 0).withAngle(angle).withLength(self.radius)
 
     def pointAlong(self, w):
         angle = w / self.circumference * 2 * math.pi

@@ -1,4 +1,4 @@
-from geometry.vec2 import vec2
+from geometry.Vector import Vector
 from geometry.Shape import arrow
 
 def layout(objects, margin = 25):
@@ -32,7 +32,7 @@ def sideBySide(*objects, margin = 25):
 
 def process(*objects):
     l = []
-    then = arrow(vec2(0,0), vec2(30,0))
+    then = arrow(Vector(0,0), Vector(30,0))
     for o in objects[:-1]:
         l.append(o)
         l.append(then)

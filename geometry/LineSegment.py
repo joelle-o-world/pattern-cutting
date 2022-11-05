@@ -2,15 +2,15 @@
 import math
 import drawSvg as draw
 
-from geometry.vec2 import vec2, distance
+from geometry.Vector import Vector, distance
 from geometry.Line import StraightLine
 
 
 class LineSegment:
     "A line with a start and an end in 2d space"
 
-    start: vec2
-    end: vec2
+    start: Vector
+    end: Vector
 
     def __init__(self, start, end):
         if start == end:
@@ -23,7 +23,7 @@ class LineSegment:
         return self.end - self.start
 
     @vector.setter
-    def vector(self, vector: vec2):
+    def vector(self, vector: Vector):
         self.end = self.start + vector
 
     def unitVector(self):
@@ -64,14 +64,14 @@ class LineSegment:
         new.length = length
         return new
 
-    def pointAlong(self, lengthAlong) -> vec2:
+    def pointAlong(self, lengthAlong) -> Vector:
         if lengthAlong < 0 or lengthAlong > self.length:
             raise ValueError("lengthAlong ({}) is out of bounds (0 to {})".format(lengthAlong, self.length))
         else:
             progress = lengthAlong / self.length
             return self.start * (1.0 - progress) + self.end * progress
 
-    def normal(self) -> vec2:
+    def normal(self) -> Vector:
         return self.vector.normal()
 
     def normalAlong(self, lengthAlong):
@@ -141,11 +141,11 @@ class LineSegment:
         if D != 0:
             x = Dx / D
             y = Dy / D
-            return vec2(x,y)
+            return Vector(x,y)
         else:
             return False
 
-    def closestPoint(self, X: vec2) -> vec2:
+    def closestPoint(self, X: Vector) -> Vector:
         # TODO: there is so much that could be more efficient here!
         normal = self.normal()
         Y = self.extrapolatedIntersection(LineSegment(X, X + normal))
