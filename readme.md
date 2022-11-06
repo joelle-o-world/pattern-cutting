@@ -8,7 +8,7 @@ also for 2d vectors
 
 
 ```python
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 origin = Vector(0,0)
 origin.label = "Origin"
@@ -41,7 +41,7 @@ segemnts to create a complicated line or shape.
 
 
 ```python
-from pattern_cutting.geometry.Shape import Shape
+from pattern_cutting.geometry.shapes.Shape import Shape
 
 square = Shape([
   Vector(0, 0),
@@ -194,7 +194,7 @@ sides they look like a circle:
 
 
 ```python
-from pattern_cutting.geometry.Circle import Circle
+from pattern_cutting.geometry.shapes.Circle import Circle
 
 circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
@@ -245,7 +245,7 @@ Bezier Curves
 
 
 ```python
-from pattern_cutting.geometry.Shape import dashed
+from pattern_cutting.geometry.shapes.Shape import dashed
 from pattern_cutting.geometry.bezier import BezierCurve
 p0 = Vector(0,0).with_label("p0")
 p1 = Vector(0, 50).with_label("p1")
@@ -345,7 +345,7 @@ We can find the closest point on a polyline to any given coordinate:
 
 
 ```python
-from pattern_cutting.geometry.Shape import dashed_arrow
+from pattern_cutting.geometry.shapes.Shape import dashed_arrow
 shape = arc
 X = Vector(90, 100)
 Y = shape.closestPoint(X)

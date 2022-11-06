@@ -29,3 +29,11 @@ exampleBodyMeasurements = BodyMeasurements(
     waistToFloor=1040.0,
     waistToHip=206.0,
 )
+
+
+def isMovable(shape):
+    move_method = getattr(shape, "move", None)
+    if callable(move_method):
+        return True
+    else:
+        return False

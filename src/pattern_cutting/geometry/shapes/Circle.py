@@ -2,8 +2,8 @@ import math
 
 import numpy as np
 
-from pattern_cutting.geometry.Shape import Shape
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.shapes.Shape import Shape
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 
 class Circle:

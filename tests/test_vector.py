@@ -1,6 +1,6 @@
 import unittest
 
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 
 class TestVectorMethods(unittest.TestCase):

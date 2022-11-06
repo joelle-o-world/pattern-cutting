@@ -5,8 +5,8 @@ from pattern_cutting.geometry.angles import (
     clockwiseDifference,
     normalizeAngle,
 )
-from pattern_cutting.geometry.LineSegment import LineSegment
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.Line import LineSegment
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 
 class Intersection:

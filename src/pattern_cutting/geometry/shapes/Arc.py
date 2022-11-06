@@ -2,8 +2,8 @@ import math
 
 import numpy as np
 from Shape import Shape
-from Vector import Vector
 
+from pattern_cutting.geometry.vectors.Vector import Vector
 from pattern_cutting.render import render
 
 

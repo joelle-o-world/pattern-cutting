@@ -1,5 +1,5 @@
-from pattern_cutting.geometry.Shape import arrow
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.shapes.Shape import arrow
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 
 def layout(objects, margin=25):

@@ -5,9 +5,9 @@ import drawSvg as draw
 import numpy as np
 
 from pattern_cutting.geometry.Intersection import Intersection
-from pattern_cutting.geometry.LineSegment import LineSegment
-from pattern_cutting.geometry.vec3 import vec3
-from pattern_cutting.geometry.Vector import Vector, distance
+from pattern_cutting.geometry.Line import LineSegment
+from pattern_cutting.geometry.vectors.vec3 import vec3
+from pattern_cutting.geometry.vectors.Vector import Vector, distance
 
 
 class Shape:
@@ -570,7 +570,7 @@ class Shape:
         return Shape(before.points + replacementSection.points + after.points)
 
     def to3D(self):
-        from pattern_cutting.geometry.Shape3d import Shape3d
+        from pattern_cutting.geometry.shapes.Shape3d import Shape3d
 
         points = [vec3(point.x, point.y, 0) for point in self.points]
         return Shape3d(points)

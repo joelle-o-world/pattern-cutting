@@ -6,7 +6,7 @@ This is a python library for pattern cutting.
 A class for 2d cartesian coordinates. Its used for point coordinates and also for 2d vectors
 
 ```code
-from pattern_cutting.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 origin = Vector(0,0)
 origin.label = "Origin"
@@ -25,7 +25,7 @@ render(origin)
 A `Shape` object is defined by multiple points which are joined by line segemnts to create a complicated line or shape.
 
 ```code
-from pattern_cutting.geometry.Shape import Shape
+from pattern_cutting.geometry.shapes.Shape import Shape
 
 square = Shape([
   Vector(0, 0),
@@ -105,7 +105,7 @@ render(
 The circle class can be used to generate regular polygons with so many sides they look like a circle:
 
 ```code
-from pattern_cutting.geometry.Circle import Circle
+from pattern_cutting.geometry.shapes.Circle import Circle
 
 circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
@@ -128,7 +128,7 @@ render(
 ## Bezier Curves
 
 ```code
-from pattern_cutting.geometry.Shape import dashed
+from pattern_cutting.geometry.shapes.Shape import dashed
 from pattern_cutting.geometry.bezier import BezierCurve
 p0 = Vector(0,0).with_label("p0")
 p1 = Vector(0, 50).with_label("p1")
@@ -181,7 +181,7 @@ render(*gen)
 
 We can find the closest point on a polyline to any given coordinate:
 ```code
-from pattern_cutting.geometry.Shape import dashed_arrow
+from pattern_cutting.geometry.shapes.Shape import dashed_arrow
 shape = arc
 X = Vector(90, 100)
 Y = shape.closestPoint(X)
