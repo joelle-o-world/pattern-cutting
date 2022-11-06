@@ -2,7 +2,7 @@
 # I'm digitising it here based on measurements taken from the block
 from pattern_cutting.geometry.Shape import Shape
 from pattern_cutting.geometry.Vector import Vector
-from render import render
+from pattern_cutting.render import render
 
 inch = 25.4
 

@@ -16,7 +16,7 @@ origin.label = "Origin"
 You can use the render function to generate an SVG representation of the geometry
 
 ```code
-from render import render
+from pattern_cutting.render import render
 render(origin)
 ```
 
@@ -41,7 +41,7 @@ render(square)
 Using the `style` property, a polyline can be rendered as many different kinds of shapes.
 
 ```code
-from layout import topToBottom
+from pattern_cutting.layout import topToBottom
 
 shape = Shape([Vector(0, 0), Vector(100, 50), Vector(200, -50), Vector(300, 0)])
 
@@ -80,7 +80,7 @@ render(
 
 You can slice out a certain portion of a line:
 ```code
-from layout import process
+from pattern_cutting.layout import process
 from pattern_cutting.geometry.Group import Group
 
 P = square.at(25).point.with_label("P")
@@ -112,7 +112,7 @@ triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import sideBySide
+from pattern_cutting.layout import sideBySide
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
@@ -242,7 +242,7 @@ One of the main applications of this library is to create outfits for East Londo
 A dress block for Die was created and digitised into this library:
 
 ```code
-from DieLemmaDressBlock import DieLemmaDressBlock
+from scripts.DieLemmaDressBlock import DieLemmaDressBlock
 
 render(DieLemmaDressBlock)
 ```
@@ -274,7 +274,7 @@ render(
 ### Trouser block
 
 ```code
-from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
+from scripts.TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 
 render(TheClassicTailoredTrouserBlock())
 ```

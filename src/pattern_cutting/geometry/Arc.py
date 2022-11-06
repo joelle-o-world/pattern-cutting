@@ -4,7 +4,7 @@ import numpy as np
 from Shape import Shape
 from Vector import Vector
 
-from render import render
+from pattern_cutting.render import render
 
 
 class Arc:

@@ -20,7 +20,7 @@ geometry
 
 
 ```python
-from render import render
+from pattern_cutting.render import render
 render(origin)
 ```
 
@@ -71,7 +71,7 @@ kinds of shapes.
 
 
 ```python
-from layout import topToBottom
+from pattern_cutting.layout import topToBottom
 
 shape = Shape([Vector(0, 0), Vector(100, 50), Vector(200, -50), Vector(300, 0)])
 
@@ -152,7 +152,7 @@ You can slice out a certain portion of a line:
 
 
 ```python
-from layout import process
+from pattern_cutting.layout import process
 from pattern_cutting.geometry.Group import Group
 
 P = square.at(25).point.with_label("P")
@@ -201,7 +201,7 @@ triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import sideBySide
+from pattern_cutting.layout import sideBySide
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
@@ -455,7 +455,7 @@ A dress block for Die was created and digitised into this library:
 
 
 ```python
-from DieLemmaDressBlock import DieLemmaDressBlock
+from scripts.DieLemmaDressBlock import DieLemmaDressBlock
 
 render(DieLemmaDressBlock)
 ```
@@ -527,7 +527,7 @@ Winnifred Owen pattern blocks
 
 
 ```python
-from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
+from scripts.TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 
 render(TheClassicTailoredTrouserBlock())
 ```
