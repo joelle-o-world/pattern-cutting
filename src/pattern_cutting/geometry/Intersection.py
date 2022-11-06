@@ -1,9 +1,9 @@
 import math
 
 from pattern_cutting.geometry.angles import (
-    anticlockwiseDifference,
-    clockwiseDifference,
-    normalizeAngle,
+    anticlockwise_difference,
+    clockwise_difference,
+    normalize_angle,
 )
 from pattern_cutting.geometry.Line import LineSegment
 from pattern_cutting.geometry.vectors.Vector import Vector
@@ -31,15 +31,15 @@ class Intersection:
 
     @property
     def angle(self):
-        return normalizeAngle(self.second.angle - self.first.angle)
+        return normalize_angle(self.second.angle - self.first.angle)
 
     @property
     def clockwiseAngle(self):
-        return clockwiseDifference(self.first.angle, self.second.angle + math.pi)
+        return clockwise_difference(self.first.angle, self.second.angle + math.pi)
 
     @property
     def anticlockwiseAngle(self):
-        return anticlockwiseDifference(self.first.angle, self.second.angle + math.pi)
+        return anticlockwise_difference(self.first.angle, self.second.angle + math.pi)
 
     def bisect(self):
         vector = Vector(1, 0).withAngle(self.first.angle + self.clockwiseAngle / 2)
