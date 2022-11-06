@@ -7,8 +7,8 @@ import math
 
 import drawSvg as draw
 
-from src.geometry.Shape import Shape
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.Shape import Shape
+from pattern_cutting.geometry.Vector import Vector
 
 measurements = [
     [0, -2],

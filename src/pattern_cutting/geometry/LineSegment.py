@@ -1,7 +1,7 @@
 import drawSvg as draw
 
-from src.geometry.Line import StraightLine
-from src.geometry.Vector import Vector, distance
+from pattern_cutting.geometry.Line import StraightLine
+from pattern_cutting.geometry.Vector import Vector, distance
 
 
 class LineSegment:

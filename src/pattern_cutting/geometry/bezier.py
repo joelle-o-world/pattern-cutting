@@ -1,6 +1,6 @@
-from src.geometry.Group import Group
-from src.geometry.Shape import Shape, dashed
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.Group import Group
+from pattern_cutting.geometry.Shape import Shape, dashed
+from pattern_cutting.geometry.Vector import Vector
 
 
 class BezierCurve:

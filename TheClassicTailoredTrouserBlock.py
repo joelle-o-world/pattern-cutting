@@ -1,7 +1,7 @@
 from BodyMeasurements import BodyMeasurements, exampleBodyMeasurements
-from src.geometry.Group import Group
-from src.geometry.Shape import Shape
-from src.geometry.Vector import Vector, midpoint
+from pattern_cutting.geometry.Group import Group
+from pattern_cutting.geometry.Shape import Shape
+from pattern_cutting.geometry.Vector import Vector, midpoint
 
 
 def TheClassicTailoredTrouserBlock(

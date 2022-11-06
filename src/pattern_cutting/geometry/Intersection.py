@@ -1,12 +1,12 @@
 import math
 
-from src.geometry.angles import (
+from pattern_cutting.geometry.angles import (
     anticlockwiseDifference,
     clockwiseDifference,
     normalizeAngle,
 )
-from src.geometry.LineSegment import LineSegment
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.LineSegment import LineSegment
+from pattern_cutting.geometry.Vector import Vector
 
 
 class Intersection:

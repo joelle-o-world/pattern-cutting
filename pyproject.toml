@@ -3,8 +3,8 @@ name = "pattern-cutting"
 version = "0.1.0"
 description = "This is a python library for pattern cutting."
 authors = ["Joelle, Daara"]
-readme = "README.md"
-packages = [{include = "pattern_cutting"}]
+#readme = "README.md" # todo move readme files to docs, recreate readme
+packages = [{include = "pattern_cutting", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

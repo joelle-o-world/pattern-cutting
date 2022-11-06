@@ -4,10 +4,10 @@ from typing import List
 import drawSvg as draw
 import numpy as np
 
-from src.geometry.Intersection import Intersection
-from src.geometry.LineSegment import LineSegment
-from src.geometry.vec3 import vec3
-from src.geometry.Vector import Vector, distance
+from pattern_cutting.geometry.Intersection import Intersection
+from pattern_cutting.geometry.LineSegment import LineSegment
+from pattern_cutting.geometry.vec3 import vec3
+from pattern_cutting.geometry.Vector import Vector, distance
 
 
 class Shape:
@@ -532,7 +532,7 @@ class Shape:
         return self
 
     def interpolationCurves(self, curveSpeed=1):
-        from src.geometry.bezier import BezierCurve
+        from pattern_cutting.geometry.bezier import BezierCurve
 
         q, r, s = self.points[:3]
         qrs = Intersection(q, r, s)
@@ -570,7 +570,7 @@ class Shape:
         return Shape(before.points + replacementSection.points + after.points)
 
     def to3D(self):
-        from src.geometry.Shape3d import Shape3d
+        from pattern_cutting.geometry.Shape3d import Shape3d
 
         points = [vec3(point.x, point.y, 0) for point in self.points]
         return Shape3d(points)
