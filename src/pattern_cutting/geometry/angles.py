@@ -1,7 +1,10 @@
 import math
 
 
-def normalizeAngle(angle: float):
+def normalize_angle(angle: float):
+    """
+    Normalize an angle in radians
+    """
     while angle > math.pi:
         angle -= 2 * math.pi
     while angle < -math.pi:
@@ -9,7 +12,7 @@ def normalizeAngle(angle: float):
     return angle
 
 
-def clockwiseDifference(a, b):
+def clockwise_difference(a, b):
     while b > a + 2 * math.pi:
         b -= 2 * math.pi
     while b < a:
@@ -17,5 +20,5 @@ def clockwiseDifference(a, b):
     return b - a
 
 
-def anticlockwiseDifference(a, b):
-    return clockwiseDifference(b, a)
+def anticlockwise_difference(a, b):
+    return clockwise_difference(b, a)

@@ -1,9 +1,9 @@
 import unittest
 
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 
-class TestVec2Methods(unittest.TestCase):
+class TestVectorMethods(unittest.TestCase):
     def test_setting_length_prop(self):
         v = Vector(20, 0)
         v.length = 10

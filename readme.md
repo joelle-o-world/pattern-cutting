@@ -8,7 +8,7 @@ also for 2d vectors
 
 
 ```python
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 origin = Vector(0,0)
 origin.label = "Origin"
@@ -20,16 +20,16 @@ geometry
 
 
 ```python
-from render import render
+from pattern_cutting.render import render
 render(origin)
 ```
 
 
 
 
-    
+
 ![svg](readme_files/readme_3_0.svg)
-    
+
 
 
 
@@ -41,13 +41,13 @@ segemnts to create a complicated line or shape.
 
 
 ```python
-from src.geometry.Shape import Shape
+from pattern_cutting.geometry.shapes.Shape import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
+  Vector(0, 0),
+  Vector(100, 0),
+  Vector(100, 100),
+  Vector(0, 100),
   Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
@@ -60,9 +60,9 @@ render(square)
 
 
 
-    
+
 ![svg](readme_files/readme_5_1.svg)
-    
+
 
 
 
@@ -71,7 +71,7 @@ kinds of shapes.
 
 
 ```python
-from layout import topToBottom
+from pattern_cutting.layout import topToBottom
 
 shape = Shape([Vector(0, 0), Vector(100, 50), Vector(200, -50), Vector(300, 0)])
 
@@ -96,9 +96,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_7_1.svg)
-    
+
 
 
 
@@ -107,7 +107,7 @@ You can draw measurement markers along a polyline:
 
 ```python
 render(
-  square, 
+  square,
   *square.evenlySpacedMeasurements()
 )
 ```
@@ -118,9 +118,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_9_1.svg)
-    
+
 
 
 
@@ -142,9 +142,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_11_1.svg)
-    
+
 
 
 
@@ -152,8 +152,8 @@ You can slice out a certain portion of a line:
 
 
 ```python
-from layout import process
-from src.geometry.Group import Group
+from pattern_cutting.layout import process
+from pattern_cutting.geometry.Group import Group
 
 P = square.at(25).point.with_label("P")
 Q = square.at(175).point.with_label("Q")
@@ -183,9 +183,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_13_1.svg)
-    
+
 
 
 
@@ -194,14 +194,14 @@ sides they look like a circle:
 
 
 ```python
-from src.geometry.Circle import Circle
+from pattern_cutting.geometry.shapes.Circle import Circle
 
 circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import sideBySide
+from pattern_cutting.layout import sideBySide
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
@@ -213,9 +213,9 @@ render(*sideBySide(triangle, hexagon, almostCircle))
 
 
 
-    
+
 ![svg](readme_files/readme_15_1.svg)
-    
+
 
 
 
@@ -234,9 +234,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_17_0.svg)
-    
+
 
 
 
@@ -245,8 +245,8 @@ Bezier Curves
 
 
 ```python
-from src.geometry.Shape import dashed
-from src.geometry.bezier import BezierCurve
+from pattern_cutting.geometry.shapes.Shape import dashed
+from pattern_cutting.geometry.bezier import BezierCurve
 p0 = Vector(0,0).with_label("p0")
 p1 = Vector(0, 50).with_label("p1")
 p2 = Vector(50, 50).with_label("p2")
@@ -263,9 +263,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_19_0.svg)
-    
+
 
 
 
@@ -284,9 +284,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_21_0.svg)
-    
+
 
 
 
@@ -311,9 +311,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_23_1.svg)
-    
+
 
 
 
@@ -325,16 +325,16 @@ gen = [myshape]
 for i in range(0, 20):
   next = myshape.interpolate((i+1) / 4)
   gen.append(next)
-  
+
 render(*gen)
 ```
 
 
 
 
-    
+
 ![svg](readme_files/readme_25_0.svg)
-    
+
 
 
 
@@ -345,7 +345,7 @@ We can find the closest point on a polyline to any given coordinate:
 
 
 ```python
-from src.geometry.Shape import dashed_arrow
+from pattern_cutting.geometry.shapes.Shape import dashed_arrow
 shape = arc
 X = Vector(90, 100)
 Y = shape.closestPoint(X)
@@ -361,9 +361,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_27_0.svg)
-    
+
 
 
 
@@ -381,10 +381,10 @@ render(
       P,
       Q,
       dashed_arrow(P, shape.at(P).point),
-      shape.with_label("Original"), 
+      shape.with_label("Original"),
     ),
     Group(
-      sliced.with_label("sliced"), 
+      sliced.with_label("sliced"),
       *sliced.points, P, Q
     )
   )
@@ -399,9 +399,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_29_1.svg)
-    
+
 
 
 
@@ -421,9 +421,9 @@ render(a.with_label("a simple shape"), b.with_label("replacement"))
 
 
 
-    
+
 ![svg](readme_files/readme_31_0.svg)
-    
+
 
 
 
@@ -438,9 +438,9 @@ render(a.replace(b))
 
 
 
-    
+
 ![svg](readme_files/readme_33_0.svg)
-    
+
 
 
 
@@ -455,7 +455,7 @@ A dress block for Die was created and digitised into this library:
 
 
 ```python
-from DieLemmaDressBlock import DieLemmaDressBlock
+from scripts.DieLemmaDressBlock import DieLemmaDressBlock
 
 render(DieLemmaDressBlock)
 ```
@@ -466,9 +466,9 @@ render(DieLemmaDressBlock)
 
 
 
-    
+
 ![svg](readme_files/readme_35_1.svg)
-    
+
 
 
 
@@ -490,9 +490,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_37_1.svg)
-    
+
 
 
 
@@ -514,9 +514,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_39_1.svg)
-    
+
 
 
 
@@ -527,7 +527,7 @@ Winnifred Owen pattern blocks
 
 
 ```python
-from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
+from scripts.TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 
 render(TheClassicTailoredTrouserBlock())
 ```
@@ -538,9 +538,9 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
-    
+
 ![svg](readme_files/readme_41_1.svg)
-    
+
 
 
 
@@ -559,8 +559,5 @@ render(square3d.isometric())
 
 
 
-    
+
 ![svg](readme_files/readme_43_0.svg)
-    
-
-

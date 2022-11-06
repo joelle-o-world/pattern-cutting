@@ -1,6 +1,6 @@
 import drawSvg as draw
 
-from src.geometry.Rectangle import minimumBoundingRect
+from pattern_cutting.geometry.shapes.Rectangle import minimumBoundingRect
 
 
 def render(*objects):

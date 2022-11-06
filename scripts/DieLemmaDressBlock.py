@@ -1,9 +1,8 @@
 # This is a pattern Jane made when we were working on The Chicken Dress for Die Lemma (August 2022)
 # I'm digitising it here based on measurements taken from the block
-
-from render import render
-from src.geometry.Shape import Shape
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.shapes.Shape import Shape
+from pattern_cutting.geometry.vectors.Vector import Vector
+from pattern_cutting.render import render
 
 inch = 25.4
 

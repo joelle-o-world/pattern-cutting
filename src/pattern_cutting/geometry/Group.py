@@ -1,6 +1,6 @@
 import drawSvg as svg
 
-from src.geometry.isMovable import isMovable
+from pattern_cutting.geometry.utilities import isMovable
 
 
 class Group:

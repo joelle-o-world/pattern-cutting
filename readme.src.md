@@ -6,7 +6,7 @@ This is a python library for pattern cutting.
 A class for 2d cartesian coordinates. Its used for point coordinates and also for 2d vectors
 
 ```code
-from src.geometry.Vector import Vector
+from pattern_cutting.geometry.vectors.Vector import Vector
 
 origin = Vector(0,0)
 origin.label = "Origin"
@@ -16,7 +16,7 @@ origin.label = "Origin"
 You can use the render function to generate an SVG representation of the geometry
 
 ```code
-from render import render
+from pattern_cutting.render import render
 render(origin)
 ```
 
@@ -25,13 +25,13 @@ render(origin)
 A `Shape` object is defined by multiple points which are joined by line segemnts to create a complicated line or shape.
 
 ```code
-from src.geometry.Shape import Shape
+from pattern_cutting.geometry.shapes.Shape import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
+  Vector(0, 0),
+  Vector(100, 0),
+  Vector(100, 100),
+  Vector(0, 100),
   Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
@@ -41,7 +41,7 @@ render(square)
 Using the `style` property, a polyline can be rendered as many different kinds of shapes.
 
 ```code
-from layout import topToBottom
+from pattern_cutting.layout import topToBottom
 
 shape = Shape([Vector(0, 0), Vector(100, 50), Vector(200, -50), Vector(300, 0)])
 
@@ -63,7 +63,7 @@ You can draw measurement markers along a polyline:
 
 ```code
 render(
-  square, 
+  square,
   *square.evenlySpacedMeasurements()
 )
 ```
@@ -80,8 +80,8 @@ render(
 
 You can slice out a certain portion of a line:
 ```code
-from layout import process
-from src.geometry.Group import Group
+from pattern_cutting.layout import process
+from pattern_cutting.geometry.Group import Group
 
 P = square.at(25).point.with_label("P")
 Q = square.at(175).point.with_label("Q")
@@ -105,14 +105,14 @@ render(
 The circle class can be used to generate regular polygons with so many sides they look like a circle:
 
 ```code
-from src.geometry.Circle import Circle
+from pattern_cutting.geometry.shapes.Circle import Circle
 
 circle = Circle(Vector(0, 0), 100)
 triangle = circle.polyline(3)
 hexagon = circle.polyline(6)
 almostCircle = circle.polyline(50)
 
-from layout import sideBySide
+from pattern_cutting.layout import sideBySide
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
@@ -128,8 +128,8 @@ render(
 ## Bezier Curves
 
 ```code
-from src.geometry.Shape import dashed
-from src.geometry.bezier import BezierCurve
+from pattern_cutting.geometry.shapes.Shape import dashed
+from pattern_cutting.geometry.bezier import BezierCurve
 p0 = Vector(0,0).with_label("p0")
 p1 = Vector(0, 50).with_label("p1")
 p2 = Vector(50, 50).with_label("p2")
@@ -173,7 +173,7 @@ gen = [myshape]
 for i in range(0, 20):
   next = myshape.interpolate((i+1) / 4)
   gen.append(next)
-  
+
 render(*gen)
 ```
 
@@ -181,7 +181,7 @@ render(*gen)
 
 We can find the closest point on a polyline to any given coordinate:
 ```code
-from src.geometry.Shape import dashed_arrow
+from pattern_cutting.geometry.shapes.Shape import dashed_arrow
 shape = arc
 X = Vector(90, 100)
 Y = shape.closestPoint(X)
@@ -207,10 +207,10 @@ render(
       P,
       Q,
       dashed_arrow(P, shape.at(P).point),
-      shape.with_label("Original"), 
+      shape.with_label("Original"),
     ),
     Group(
-      sliced.with_label("sliced"), 
+      sliced.with_label("sliced"),
       *sliced.points, P, Q
     )
   )
@@ -242,7 +242,7 @@ One of the main applications of this library is to create outfits for East Londo
 A dress block for Die was created and digitised into this library:
 
 ```code
-from DieLemmaDressBlock import DieLemmaDressBlock
+from scripts.DieLemmaDressBlock import DieLemmaDressBlock
 
 render(DieLemmaDressBlock)
 ```
@@ -274,7 +274,7 @@ render(
 ### Trouser block
 
 ```code
-from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
+from scripts.TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 
 render(TheClassicTailoredTrouserBlock())
 ```
