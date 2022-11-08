@@ -1,6 +1,6 @@
 # All measurements here are in cm
 # Source: Winnfred Owen page 13
-women_size_table = {
+women_size_table_cm = {
     "bust": [76, 80, 84, 88, 92, 96, 100, 104, 110, 116, 122],
     "waist": [60, 64, 68, 72, 76, 80, 84, 88, 94, 100, 106],
     "low_waist": [70, 74, 78, 82, 86, 90, 94, 98, 104, 110, 116],
@@ -51,4 +51,9 @@ women_size_table = {
     ],
     "trouser_bottom_width": [20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5],
     "jeans_bottom_width": [18, 18.5, 18.5, 19, 19, 19.5, 19.5, 20, 20, 21, 21],
+}
+
+women_size_table = {
+    key: [measurement * 10 for measurement in women_size_table_cm[key]]
+    for key in women_size_table_cm
 }
