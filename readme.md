@@ -516,6 +516,45 @@ render(
 
 ## Winnifred Owen pattern blocks
 
+One application of this library is quickly producing pattern blocks from
+Winnfred Owen’s book. To do that, we have to be able to use describe
+body measurements:
+
+
+```python
+from BodyMeasurements import example_body_measurements
+print(example_body_measurements)
+```
+
+    Size 12:
+    	waist	= 680.0mm	(-40.00mm)
+    	body_rise	= 280.0mm
+    	hips	= 940.0mm	(-20.00mm)
+    	waist_to_floor	= 1040.0mm
+    	waist_to_hip	= 206.0mm
+    	bust	= 880.0mm
+    	low_waist	= 820.0mm
+    	back_width	= 344.0mm
+    	chest	= 324.0mm
+    	shoulder	= 122.5mm
+    	neck_size	= 370.0mm
+    	dart	= 70.0mm
+    	top_arm	= 284.0mm
+    	wrist	= 160.0mm
+    	ankle	= 240.0mm
+    	high_ankle	= 210.0mm
+    	nape_to_waist	= 410.0mm
+    	front_shoulder_to_waist	= 410.0mm
+    	armscye_depth	= 210.0mm
+    	waist_to_knee	= 585.0mm
+    	sleeve_length	= 5885.0mm
+    	sleeve_length_jersey	= 545.0mm
+    	cuff_size_shirts	= 215.0mm
+    	cuff_size_two_piece_sleeve	= 137.5mm
+    	trouser_bottom_width	= 220.0mm
+    	jeans_bottom_width	= 190.0mm
+
+
 ### Trouser block
 
 
@@ -532,7 +571,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
-![svg](readme_files/readme_41_1.svg)
+![svg](readme_files/readme_43_1.svg)
 
 
 
@@ -552,4 +591,4 @@ render(square3d.isometric())
 
 
 
-![svg](readme_files/readme_43_0.svg)
+![svg](readme_files/readme_45_0.svg)
