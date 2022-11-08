@@ -274,7 +274,7 @@ render(
 One application of this library is quickly producing pattern blocks from Winnfred Owen's book. To do that, we have to be able to use describe body measurements:
 
 ```code
-from BodyMeasurements import example_body_measurements
+from src.sizing.BodyMeasurements import example_body_measurements
 print(example_body_measurements)
 ```
 

@@ -522,7 +522,7 @@ body measurements:
 
 
 ```python
-from BodyMeasurements import example_body_measurements
+from src.sizing.BodyMeasurements import example_body_measurements
 print(example_body_measurements)
 ```
 
