@@ -1,11 +1,11 @@
-from BodyMeasurements import BodyMeasurements, exampleBodyMeasurements
 from src.geometry.Group import Group
 from src.geometry.Shape import Shape
 from src.geometry.Vector import Vector, midpoint
+from src.sizing.BodyMeasurements import BodyMeasurements, example_body_measurements
 
 
 def TheClassicTailoredTrouserBlock(
-    body: BodyMeasurements = exampleBodyMeasurements, bottomWidth: float = 220
+    body: BodyMeasurements = example_body_measurements, bottomWidth: float = 220
 ):
     "Create a trouser block according to Winnifred Owen instructions"
     p = [Vector(0, 0)] * 16
@@ -15,13 +15,13 @@ def TheClassicTailoredTrouserBlock(
     p[0] = Vector(0, 0)
 
     # 0–1 body rise; square across.
-    p[1] = p[0].squareDown(body.bodyRise)
+    p[1] = p[0].squareDown(body.body_rise)
 
     # 0–2 waist to hip; square across.
-    p[2] = p[0].squareDown(body.waistToHip)
+    p[2] = p[0].squareDown(body.waist_to_hip)
 
     # 0–3 waist to floor measurement; square across.
-    p[3] = p[0].squareDown(body.waistToFloor)
+    p[3] = p[0].squareDown(body.waist_to_floor)
 
     # 1–4 half the measurement 1–3 minus 5cm; square across.
     p[4] = midpoint(p[1], p[3]).squareUp(50.0)

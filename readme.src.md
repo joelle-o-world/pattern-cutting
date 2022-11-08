@@ -28,10 +28,10 @@ A `Shape` object is defined by multiple points which are joined by line segemnts
 from src.geometry.Shape import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
+  Vector(0, 0),
+  Vector(100, 0),
+  Vector(100, 100),
+  Vector(0, 100),
   Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
@@ -63,7 +63,7 @@ You can draw measurement markers along a polyline:
 
 ```code
 render(
-  square, 
+  square,
   *square.evenlySpacedMeasurements()
 )
 ```
@@ -173,7 +173,7 @@ gen = [myshape]
 for i in range(0, 20):
   next = myshape.interpolate((i+1) / 4)
   gen.append(next)
-  
+
 render(*gen)
 ```
 
@@ -207,10 +207,10 @@ render(
       P,
       Q,
       dashed_arrow(P, shape.at(P).point),
-      shape.with_label("Original"), 
+      shape.with_label("Original"),
     ),
     Group(
-      sliced.with_label("sliced"), 
+      sliced.with_label("sliced"),
       *sliced.points, P, Q
     )
   )
@@ -270,6 +270,13 @@ render(
 ```
 
 ## Winnifred Owen pattern blocks
+
+One application of this library is quickly producing pattern blocks from Winnfred Owen's book. To do that, we have to be able to use describe body measurements:
+
+```code
+from src.sizing.BodyMeasurements import example_body_measurements
+print(example_body_measurements)
+```
 
 ### Trouser block
 
