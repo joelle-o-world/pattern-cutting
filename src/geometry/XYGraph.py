@@ -14,6 +14,8 @@ class XYGraph:
                 intercept=self.intercept + other.intercept,
                 gradient=self.gradient + other.gradient,
             )
+        else:
+            raise TypeError()
 
     def __mul__(self, other: float | int):
         return XYGraph(gradient=self.gradient * other, intercept=self.intercept * other)
@@ -23,3 +25,7 @@ class XYGraph:
 
     def x(self, y: float):
         return (y - self.intercept) / self.gradient
+
+
+identity = XYGraph()
+x = XYGraph()

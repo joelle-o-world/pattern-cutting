@@ -8,6 +8,10 @@ class BodyMeasurements:
         waistToFloor: float,
         waistToHip: float,
     ):
+        if size == None:
+            # TODO If to size is given, approximate from other measurements
+            pass
+
         self.size = size
         self.waist = waist
         self.bodyRise = bodyRise
@@ -19,6 +23,14 @@ class BodyMeasurements:
     def hip(self):
         "Alias for self.hips"
         return self.hips
+
+
+from src.geometry.XYGraph import x
+
+size_to_bust = x * 4 + 52
+size_to_waist = x * 4 + 36
+size_to_low_waist = x * 4 + 46
+size_to_hips = x * 4 + 60
 
 
 exampleBodyMeasurements = BodyMeasurements(
