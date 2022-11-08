@@ -26,9 +26,9 @@ render(origin)
 
 
 
-
+    
 ![svg](readme_files/readme_3_0.svg)
-
+    
 
 
 
@@ -55,9 +55,9 @@ render(square)
 
 
 
-
+    
 ![svg](readme_files/readme_5_0.svg)
-
+    
 
 
 
@@ -87,9 +87,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_7_0.svg)
-
+    
 
 
 
@@ -106,9 +106,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_9_0.svg)
-
+    
 
 
 
@@ -127,9 +127,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_11_0.svg)
-
+    
 
 
 
@@ -167,9 +167,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_13_1.svg)
-
+    
 
 
 
@@ -197,9 +197,9 @@ render(*sideBySide(triangle, hexagon, almostCircle))
 
 
 
-
+    
 ![svg](readme_files/readme_15_1.svg)
-
+    
 
 
 
@@ -218,9 +218,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_17_0.svg)
-
+    
 
 
 
@@ -246,9 +246,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_19_0.svg)
-
+    
 
 
 
@@ -267,9 +267,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_21_0.svg)
-
+    
 
 
 
@@ -291,9 +291,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_23_0.svg)
-
+    
 
 
 
@@ -312,9 +312,9 @@ render(*gen)
 
 
 
-
+    
 ![svg](readme_files/readme_25_0.svg)
-
+    
 
 
 
@@ -340,9 +340,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_27_0.svg)
-
+    
 
 
 
@@ -378,9 +378,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_29_1.svg)
-
+    
 
 
 
@@ -399,9 +399,9 @@ render(a.with_label("a simple shape"), b.with_label("replacement"))
 
 
 
-
+    
 ![svg](readme_files/readme_31_0.svg)
-
+    
 
 
 
@@ -416,9 +416,9 @@ render(a.replace(b))
 
 
 
-
+    
 ![svg](readme_files/readme_33_0.svg)
-
+    
 
 
 
@@ -440,9 +440,9 @@ render(DieLemmaDressBlock)
 
 
 
-
+    
 ![svg](readme_files/readme_35_0.svg)
-
+    
 
 
 
@@ -461,9 +461,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_37_0.svg)
-
+    
 
 
 
@@ -482,9 +482,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_39_0.svg)
-
+    
 
 
 
@@ -502,9 +502,9 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
-
+    
 ![svg](readme_files/readme_41_0.svg)
-
+    
 
 
 
@@ -522,9 +522,9 @@ render(square3d.isometric())
 
 
 
-
+    
 ![svg](readme_files/readme_43_0.svg)
-
+    
 
 
 
@@ -576,9 +576,9 @@ render(
 
 
 
-
+    
 ![svg](readme_files/readme_49_0.svg)
-
+    
 
 
 
@@ -597,9 +597,9 @@ render(skirt_radius_graph)
 
 
 
-
+    
 ![svg](readme_files/readme_51_0.svg)
-
+    
 
 
 
@@ -616,9 +616,9 @@ render(skirt_radius_graph)
 
 
 
-
+    
 ![svg](readme_files/readme_53_0.svg)
-
+    
 
 
 
@@ -639,9 +639,9 @@ render(final_radius_graph.close_against_y_axis())
 
 
 
-
+    
 ![svg](readme_files/readme_55_0.svg)
-
+    
 
 
 
@@ -659,9 +659,9 @@ render(final_circumference_graph.close_against_y_axis())
 
 
 
-
+    
 ![svg](readme_files/readme_57_0.svg)
-
+    
 
 
 
@@ -676,5 +676,8 @@ render(pattern_piece)
 
 
 
-
+    
 ![svg](readme_files/readme_59_0.svg)
+    
+
+
