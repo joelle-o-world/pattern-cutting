@@ -609,24 +609,18 @@ Now I’ll add the scroll
 
 
 ```python
-from src.geometry.Circle import arc
-
-
-scroll = arc(
-  center= skirt_radius_graph.end() + Vector(85, 0),
-  radius = 85,
-  startAngle=-math.pi,
-  angleSize=2*math.pi
-)
-
-render(skirt_radius_graph, scroll )
+skirt_radius_graph.continue_with_arc(175, 2*math.pi)
+render(skirt_radius_graph)
 ```
 
+    (364.6206630269312, -623.1830322777797)
 
 
 
 
-![svg](readme_files/readme_53_0.svg)
+
+
+![svg](readme_files/readme_53_1.svg)
 
 
 

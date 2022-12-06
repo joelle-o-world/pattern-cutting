@@ -48,6 +48,17 @@ class Shape:
         self.append(p)
         return self
 
+    def continue_with_arc(self, radius, angleSize):
+        normal = self.lastSegment().normal().unitVector()
+        center = normal * radius + self.end()
+        startAngle = normal.angle - math.pi
+        from src.geometry.Circle import arc
+
+        shape = arc(center, radius, startAngle, angleSize)
+        for point in shape.points:
+            self.lineTo(point)
+        return self
+
     def close(self):
         if self.end() != self.start():
             self.append(self.start())
@@ -216,6 +227,11 @@ class Shape:
         point = measurement.point
         direction = measurement.segment.unitVector()
         return LineSegment(point, point + direction)
+
+    def normal(self, w):
+        tangent: LineSegment = self.tangent(w)
+        normal = tangent.normal()
+        return normal
 
     def findCorners(self, threshholdAngle):
         "Find sharp corners in the line"
