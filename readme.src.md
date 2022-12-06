@@ -28,10 +28,10 @@ A `Shape` object is defined by multiple points which are joined by line segemnts
 from src.geometry.Shape import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
+  Vector(0, 0),
+  Vector(100, 0),
+  Vector(100, 100),
+  Vector(0, 100),
   Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
@@ -63,7 +63,7 @@ You can draw measurement markers along a polyline:
 
 ```code
 render(
-  square, 
+  square,
   *square.evenlySpacedMeasurements()
 )
 ```
@@ -173,7 +173,7 @@ gen = [myshape]
 for i in range(0, 20):
   next = myshape.interpolate((i+1) / 4)
   gen.append(next)
-  
+
 render(*gen)
 ```
 
@@ -207,10 +207,10 @@ render(
       P,
       Q,
       dashed_arrow(P, shape.at(P).point),
-      shape.with_label("Original"), 
+      shape.with_label("Original"),
     ),
     Group(
-      sliced.with_label("sliced"), 
+      sliced.with_label("sliced"),
       *sliced.points, P, Q
     )
   )
@@ -287,4 +287,44 @@ Turn a 2d shape into 3d one (and back again to render it):
 square3d = square.to3D()
 
 render(square3d.isometric())
+```
+
+## Making a skirt for myself
+
+I would like a skirt. To get one, I've measured my body a little bit:
+
+```code
+joelle_waist = 725
+joelle_hips = 900
+joelle_waist_to_hips = 265
+```
+
+I've also decided a few dimensions of the skirt I'd like to make:
+
+```code
+skirt_length_below_the_hips = 380
+skirt_bottom_radius = 1200
+```
+
+Here is  a graph plotting the radius of the skirt over height:
+
+```code
+from src.geometry.Shape import measurement_from_y_axis
+skirt_radius_graph = Shape()
+
+origin = Vector(0,0)
+waist_point = Vector(joelle_waist, 0)
+hips_point = Vector(joelle_hips, -joelle_waist_to_hips)
+
+skirt_radius_graph.lineTo(waist_point)
+skirt_radius_graph.lineTo(hips_point)
+skirt_radius_graph.lineTo(Vector(skirt_bottom_radius, -joelle_waist_to_hips - skirt_length_below_the_hips))
+
+render(
+  skirt_radius_graph,
+  origin,
+  measurement_from_y_axis(waist_point),
+  measurement_from_y_axis(hips_point)
+  )
+
 ```

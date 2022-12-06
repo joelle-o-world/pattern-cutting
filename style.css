@@ -25,6 +25,10 @@ figure {
   overflow: auto;
 }
 
+figure img {
+  max-width: 100%
+}
+
 figcaption {
   display: none;
 }

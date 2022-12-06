@@ -1,7 +1,6 @@
 This is a python library for pattern cutting.
 
-`Vector` class
---------------
+## `Vector` class
 
 A class for 2d cartesian coordinates. Its used for point coordinates and
 also for 2d vectors
@@ -27,14 +26,13 @@ render(origin)
 
 
 
-    
+
 ![svg](readme_files/readme_3_0.svg)
-    
 
 
 
-Shape
------
+
+## Shape
 
 A `Shape` object is defined by multiple points which are joined by line
 segemnts to create a complicated line or shape.
@@ -44,10 +42,10 @@ segemnts to create a complicated line or shape.
 from src.geometry.Shape import Shape
 
 square = Shape([
-  Vector(0, 0), 
-  Vector(100, 0), 
-  Vector(100, 100), 
-  Vector(0, 100), 
+  Vector(0, 0),
+  Vector(100, 0),
+  Vector(100, 100),
+  Vector(0, 100),
   Vector(0, 0)]
 ).with_label("a square").with_style("polygon")
 
@@ -60,9 +58,9 @@ render(square)
 
 
 
-    
+
 ![svg](readme_files/readme_5_1.svg)
-    
+
 
 
 
@@ -96,9 +94,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_7_1.svg)
-    
+
 
 
 
@@ -107,7 +105,7 @@ You can draw measurement markers along a polyline:
 
 ```python
 render(
-  square, 
+  square,
   *square.evenlySpacedMeasurements()
 )
 ```
@@ -118,9 +116,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_9_1.svg)
-    
+
 
 
 
@@ -142,9 +140,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_11_1.svg)
-    
+
 
 
 
@@ -183,9 +181,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_13_1.svg)
-    
+
 
 
 
@@ -213,9 +211,9 @@ render(*sideBySide(triangle, hexagon, almostCircle))
 
 
 
-    
+
 ![svg](readme_files/readme_15_1.svg)
-    
+
 
 
 
@@ -234,14 +232,13 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_17_0.svg)
-    
 
 
 
-Bezier Curves
--------------
+
+## Bezier Curves
 
 
 ```python
@@ -263,9 +260,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_19_0.svg)
-    
+
 
 
 
@@ -284,9 +281,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_21_0.svg)
-    
+
 
 
 
@@ -311,9 +308,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_23_1.svg)
-    
+
 
 
 
@@ -325,21 +322,20 @@ gen = [myshape]
 for i in range(0, 20):
   next = myshape.interpolate((i+1) / 4)
   gen.append(next)
-  
+
 render(*gen)
 ```
 
 
 
 
-    
+
 ![svg](readme_files/readme_25_0.svg)
-    
 
 
 
-Finding the closest point on a polyline
----------------------------------------
+
+## Finding the closest point on a polyline
 
 We can find the closest point on a polyline to any given coordinate:
 
@@ -361,9 +357,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_27_0.svg)
-    
+
 
 
 
@@ -381,10 +377,10 @@ render(
       P,
       Q,
       dashed_arrow(P, shape.at(P).point),
-      shape.with_label("Original"), 
+      shape.with_label("Original"),
     ),
     Group(
-      sliced.with_label("sliced"), 
+      sliced.with_label("sliced"),
       *sliced.points, P, Q
     )
   )
@@ -399,14 +395,13 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_29_1.svg)
-    
 
 
 
-Replacing a section of a shape
-------------------------------
+
+## Replacing a section of a shape
 
 Here are two shapes
 
@@ -421,9 +416,9 @@ render(a.with_label("a simple shape"), b.with_label("replacement"))
 
 
 
-    
+
 ![svg](readme_files/readme_31_0.svg)
-    
+
 
 
 
@@ -438,14 +433,13 @@ render(a.replace(b))
 
 
 
-    
+
 ![svg](readme_files/readme_33_0.svg)
-    
 
 
 
-Die Lemma dress block
----------------------
+
+## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for
 East London drag queen [Die
@@ -466,9 +460,9 @@ render(DieLemmaDressBlock)
 
 
 
-    
+
 ![svg](readme_files/readme_35_1.svg)
-    
+
 
 
 
@@ -490,9 +484,9 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_37_1.svg)
-    
+
 
 
 
@@ -514,14 +508,13 @@ render(
 
 
 
-    
+
 ![svg](readme_files/readme_39_1.svg)
-    
 
 
 
-Winnifred Owen pattern blocks
------------------------------
+
+## Winnifred Owen pattern blocks
 
 ### Trouser block
 
@@ -538,14 +531,13 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
-    
+
 ![svg](readme_files/readme_41_1.svg)
-    
 
 
 
-Working in 3D
--------------
+
+## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):
 
@@ -559,8 +551,57 @@ render(square3d.isometric())
 
 
 
-    
+
 ![svg](readme_files/readme_43_0.svg)
-    
 
 
+
+
+## Making a skirt for myself
+
+I would like a skirt. To get one, I’ve measured my body a little bit:
+
+
+```python
+joelle_waist = 725
+joelle_hips = 900
+joelle_waist_to_hips = 265
+```
+
+I’ve also decided a few dimensions of the skirt I’d like to make:
+
+
+```python
+skirt_length_below_the_hips = 380
+skirt_bottom_radius = 1200
+```
+
+Here is a graph plotting the radius of the skirt over height:
+
+
+```python
+from src.geometry.Shape import measurement_from_y_axis
+skirt_radius_graph = Shape()
+
+origin = Vector(0,0)
+waist_point = Vector(joelle_waist, 0)
+hips_point = Vector(joelle_hips, -joelle_waist_to_hips)
+
+skirt_radius_graph.lineTo(waist_point)
+skirt_radius_graph.lineTo(hips_point)
+skirt_radius_graph.lineTo(Vector(skirt_bottom_radius, -joelle_waist_to_hips - skirt_length_below_the_hips))
+
+render(
+  skirt_radius_graph,
+  origin,
+  measurement_from_y_axis(waist_point),
+  measurement_from_y_axis(hips_point)
+  )
+
+```
+
+
+
+
+
+![svg](readme_files/readme_49_0.svg)

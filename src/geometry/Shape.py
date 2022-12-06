@@ -33,16 +33,20 @@ class Shape:
 
     def startAt(self, p):
         self.points = [p.copy()]
+        return self
 
     def lineTo(self, p):
         self.append(p)
+        return self
 
     def curveTo(self, p: Vector, curve=0):
         # TODO: Create the actual curve
         self.append(p)
+        return self
 
     def close(self):
         self.append(self.start())
+        return self
 
     # Iteration
     def segments(self):
@@ -586,6 +590,10 @@ def dashed_arrow(*points, label=None):
 
 def dashed(*points, label=None):
     return Shape(points, style="dashed", label=label)
+
+
+def measurement_from_y_axis(p: Vector):
+    return Shape([Vector(0, p.y), p], style="tape")
 
 
 if __name__ == "__main__":
