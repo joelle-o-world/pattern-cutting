@@ -12,7 +12,9 @@ class LineSegment:
 
     def __init__(self, start, end):
         if start == end:
-            raise ValueError
+            raise ValueError(
+                "Cannot to create line segment of length 0. {} -> {}".format(start, end)
+            )
         self.start = start
         self.end = end
 

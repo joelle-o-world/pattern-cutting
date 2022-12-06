@@ -7,7 +7,7 @@
 <path d="M0,645 L1200,645" fill="none" stroke="black" id="d2" />
 </defs>
 <g>
-<path d="M0,0 L725,0 L900,265 L1200,645 L0,645 L0,0" fill="none" stroke="black" />
+<path d="M725,0 L900,265 L1200,645 L0,645 L0,0 L725,0" fill="none" stroke="black" />
 </g>
 <g>
 <circle cx="0" cy="0" r="1" fill="black" />

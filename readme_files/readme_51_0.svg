@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="390.9859317102744" height="845" viewBox="-100.0 -100 390.9859317102744 845" stroke="black" fill="none">
+     width="275.59859796865027" height="845" viewBox="15.387333741624118 -100 275.59859796865027 845" stroke="black" fill="none">
 <defs>
 </defs>
 <g>
-<path d="M0.0,0 L115.38733374162412,0 L143.2394487827058,265 L190.9859317102744,645 L0.0,645 L0.0,0" fill="none" stroke="black" />
+<path d="M115.38733374162412,0 L143.2394487827058,265 L190.9859317102744,645" fill="none" stroke="black" />
 </g>
 </svg>

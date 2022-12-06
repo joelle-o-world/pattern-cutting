@@ -22,6 +22,9 @@ class Shape:
         self.style = style
         self.points = [point.copy() for point in points]
 
+    def copy(self):
+        return Shape(points=self.points, label=self.label, style=self.style)
+
     def firstPoint(self):
         return self.points[0]
 
@@ -36,7 +39,8 @@ class Shape:
         return self
 
     def lineTo(self, p):
-        self.append(p)
+        if len(self.points) == 0 or self.lastPoint() != p:
+            self.append(p)
         return self
 
     def curveTo(self, p: Vector, curve=0):
@@ -45,12 +49,21 @@ class Shape:
         return self
 
     def close(self):
-        self.append(self.start())
+        if self.end() != self.start():
+            self.append(self.start())
         return self
 
     def square_to_y_axis(self):
         last_point = self.lastPoint()
         self.lineTo(Vector(0, last_point.y))
+        return self
+
+    def close_against_y_axis(self):
+        copy = self.copy()
+        copy.lineTo(Vector(0, self.lastPoint().y))
+        copy.lineTo(Vector(0, self.firstPoint().y))
+        copy.close()
+        return copy
 
     # Iteration
     def segments(self):
@@ -166,7 +179,11 @@ class Shape:
                 return self.MeasurementAlongShape(self, w, i, w - sum)
             i += 1
         # otherwise
-        raise ValueError
+        raise ValueError(
+            "shape.measureAlong out of bounds. Expected 0 to {}, got {}".format(
+                self.length, w
+            )
+        )
 
     def pointAlong(self, w) -> Vector:
         "Find a point a certain distance along the polyline"
