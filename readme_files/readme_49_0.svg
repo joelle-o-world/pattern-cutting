@@ -4,6 +4,7 @@
 <defs>
 <path d="M0,0 L725,0" fill="none" stroke="black" id="d0" />
 <path d="M0,265 L900,265" fill="none" stroke="black" id="d1" />
+<path d="M0,645 L1200,645" fill="none" stroke="black" id="d2" />
 </defs>
 <g>
 <path d="M0,0 L725,0 L900,265 L1200,645 L0,645 L0,0" fill="none" stroke="black" />
@@ -25,6 +26,14 @@
 <path d="M900.0,270.0 L900.0,260.0" stroke="black" />
 <text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d1" startOffset="10">
 <tspan dy="-1em">900.0mm</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M0,645 L1200,645" fill="none" stroke="black" />
+<path d="M0.0,650.0 L0.0,640.0" stroke="black" />
+<path d="M1200.0,650.0 L1200.0,640.0" stroke="black" />
+<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d2" startOffset="10">
+<tspan dy="-1em">1200.0mm</tspan>
 </textPath></text>
 </g>
 </svg>

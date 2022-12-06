@@ -303,38 +303,52 @@ I've also decided a few dimensions of the skirt I'd like to make:
 
 ```code
 skirt_length_below_the_hips = 380
-skirt_bottom_radius = 1200
+skirt_bottom_circumference = 1200
 ```
 
-Here is  a graph plotting the radius of the skirt over height:
+Here is  a graph plotting the circumference of the skirt over height:
 
 ```code
 from src.geometry.Shape import measurement_from_y_axis
-skirt_radius_graph = Shape()
+skirt_circumference_graph = Shape()
 
 origin = Vector(0,0)
 waist_point = Vector(joelle_waist, 0)
 hips_point = Vector(joelle_hips, -joelle_waist_to_hips)
+hem_point = Vector(skirt_bottom_circumference, -joelle_waist_to_hips - skirt_length_below_the_hips)
 
-skirt_radius_graph.startAt(origin)
-skirt_radius_graph.lineTo(waist_point)
-skirt_radius_graph.lineTo(hips_point)
-skirt_radius_graph.lineTo(Vector(skirt_bottom_radius, -joelle_waist_to_hips - skirt_length_below_the_hips))
-skirt_radius_graph.square_to_y_axis()
-skirt_radius_graph.close()
+skirt_circumference_graph.startAt(origin)
+skirt_circumference_graph.lineTo(waist_point)
+skirt_circumference_graph.lineTo(hips_point)
+skirt_circumference_graph.lineTo(hem_point)
+skirt_circumference_graph.square_to_y_axis()
+skirt_circumference_graph.close()
 
 render(
-  skirt_radius_graph,
+  skirt_circumference_graph,
   origin,
   measurement_from_y_axis(waist_point),
-  measurement_from_y_axis(hips_point)
+  measurement_from_y_axis(hips_point),
+  measurement_from_y_axis(hem_point)
   )
 
 ```
 
+This is the circumference of the skirt over elevation. But I think what I need (in order to get the scrolled hem I'm looking for) is the radius. To keep it simple I'll imagine the skirt as a circlular prism with radius varying across its length.
+
+```code
+import math
+skirt_radius_graph = Shape([Vector(p.x / (2*math.pi),  p.y) for p in skirt_circumference_graph.points])
+render(skirt_radius_graph)
+```
+
+This is a reasonable approximation for the silhouette of the skirt.
+
+
+
 Now lets subdivide this into 10 pattern pieces:
 
 ```code
-pattern_piece = skirt_radius_graph.subdivide_by_width(10)
+pattern_piece = skirt_circumference_graph.subdivide_by_width(10)
 render(pattern_piece.with_style("join_the_dots"))
 ```
