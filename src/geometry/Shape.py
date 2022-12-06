@@ -51,6 +51,7 @@ class Shape:
     def close(self):
         if self.end() != self.start():
             self.append(self.start())
+        self.style = "polygon"
         return self
 
     def square_to_y_axis(self):

@@ -605,6 +605,32 @@ render(skirt_radius_graph)
 
 This is a reasonable approximation for the silhouette of the skirt.
 
+Now I’ll add the scroll
+
+
+```python
+from src.geometry.Circle import arc
+
+
+scroll = arc(
+  center= skirt_radius_graph.end() + Vector(85, 0),
+  radius = 85,
+  startAngle=-math.pi,
+  angleSize=2*math.pi
+)
+
+render(skirt_radius_graph, scroll )
+```
+
+
+
+
+
+![svg](readme_files/readme_53_0.svg)
+
+
+
+
 Now lets subdivide this into 10 pattern pieces:
 
 
@@ -617,4 +643,4 @@ render(pattern_piece.with_style("join_the_dots"))
 
 
 
-![svg](readme_files/readme_53_0.svg)
+![svg](readme_files/readme_55_0.svg)
