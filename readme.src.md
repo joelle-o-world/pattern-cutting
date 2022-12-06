@@ -348,11 +348,31 @@ skirt_radius_graph.continue_with_arc(175, 2*math.pi)
 render(skirt_radius_graph)
 ```
 
-
-
-Now lets subdivide this into 10 pattern pieces:
+Now I've found a silhouette I like, I'll unwrap this by length onto the y-axis.
 
 ```code
-pattern_piece = skirt_circumference_graph.close_against_y_axis().subdivide_by_width(10)
-render(pattern_piece.with_style("join_the_dots"))
+import numpy as np
+final_radius_graph = Shape()
+for w in np.arange(0, skirt_radius_graph.length, 10):
+  x = skirt_radius_graph.pointAlong(w).x
+  p = Vector(x, -w)
+  final_radius_graph.lineTo(p)
+render(final_radius_graph.close_against_y_axis())
+```
+
+Next we transform this back into a circumference graph
+
+```code
+final_circumference_graph = Shape(
+  [Vector(x = p.x * 2*math.pi, y=p.y) for p in final_radius_graph.points]
+)
+
+render(final_circumference_graph.close_against_y_axis())
+```
+
+Wow mad. Finally, lets subdivide this into 10 pattern pieces:
+
+```code
+pattern_piece = final_circumference_graph.close_against_y_axis().subdivide_by_width(10)
+render(pattern_piece)
 ```
