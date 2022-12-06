@@ -48,6 +48,10 @@ class Shape:
         self.append(self.start())
         return self
 
+    def square_to_y_axis(self):
+        last_point = self.lastPoint()
+        self.lineTo(Vector(0, last_point.y))
+
     # Iteration
     def segments(self):
         "Iterate line segments"
@@ -223,6 +227,52 @@ class Shape:
     def width(self) -> float:
         return self.right - self.left
 
+    def leftmost_point_at_y_position(self, y):
+        winner = None
+        for segment in self.segments():
+            p = segment.leftmost_point_at_y_position(y)
+            if p and (winner == None or p.x < winner):
+                winner = p.x
+        if winner != None:
+            return Vector(winner, y)
+        else:
+            return None
+
+    def rightmost_at_y_position(self, y):
+        winner = None
+        for segment in self.segments():
+            p = segment.rightmost_at_y_position(y)
+            if p and (winner == None or p.x > winner):
+                winner = p.x
+        if winner != None:
+            return Vector(winner, y)
+        else:
+            return None
+
+    def width_at_y_position(self, y):
+        rightmost = self.rightmost_at_y_position(y)
+        leftmost = self.leftmost_point_at_y_position(y)
+        if rightmost and leftmost:
+            return rightmost.x - leftmost.x
+        else:
+            return 0.0
+
+    def subdivide_by_width(self, number_of_divisions=1, step=0):
+        if step == 0:
+            step = self.height / 100
+
+        shape = Shape()
+        shape.startAt(Vector(0, self.bottom))
+        for y in np.arange(self.bottom, self.top, step):
+            width = self.width_at_y_position(y)
+            x = width / number_of_divisions / 2
+            p = Vector(x, y)
+            shape.lineTo(p)
+
+        shape.square_to_y_axis()
+        shape.close()
+        return shape
+
     @property
     def height(self) -> float:
         return self.top - self.bottom
@@ -268,6 +318,8 @@ class Shape:
             return self.svg_arrow()
         elif self.style == "dashed_arrow":
             return self.svg_dashed_arrow()
+        elif self.style == "join_the_dots":
+            return self.svg_join_the_dots()
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
@@ -316,6 +368,13 @@ class Shape:
             g.append(self.svg_centered_label())
         return g
 
+    def svg_join_the_dots(self):
+        g = draw.Group()
+        for point in self.points:
+            g.append(point.svg())
+        g.append(self.svg_line())
+        return g
+
     def center_of_mass(self):
         numberOfSamples = self.numberOfPoints * 2
         interval = self.length / numberOfSamples
@@ -324,7 +383,6 @@ class Shape:
         for w in np.arange(0, self.length, interval):
             summed = summed + self.at(w).point
             n += 1
-        print(n)
         return summed / n
 
     def svg_centered_label(self):

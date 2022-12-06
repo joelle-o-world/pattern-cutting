@@ -97,6 +97,30 @@ class LineSegment:
     def left(self):
         return min([self.start.x, self.end.x])
 
+    def leftmost_point_at_y_position(self, y):
+        if self.top >= y and self.bottom <= y:
+            if self.start.y == self.end.y:
+                return Vector(self.left, y)
+            else:
+                x = self.start.x + (self.end.x - self.start.x) * (y - self.start.y) / (
+                    self.end.y - self.start.y
+                )
+                return Vector(x, y)
+        else:
+            return None
+
+    def rightmost_at_y_position(self, y):
+        if self.top >= y and self.bottom <= y:
+            if self.start.y == self.end.y:
+                return Vector(self.right, y)
+            else:
+                x = self.start.x + (self.end.x - self.start.x) * (y - self.start.y) / (
+                    self.end.y - self.start.y
+                )
+                return Vector(x, y)
+        else:
+            return None
+
     @property
     def right(self):
         return max([self.start.x, self.end.x])

@@ -52,14 +52,11 @@ square = Shape([
 render(square)
 ```
 
-    10.0
 
 
 
 
-
-
-![svg](readme_files/readme_5_1.svg)
+![svg](readme_files/readme_5_0.svg)
 
 
 
@@ -87,15 +84,11 @@ render(
 )
 ```
 
-    8.0
-    8.0
 
 
 
 
-
-
-![svg](readme_files/readme_7_1.svg)
+![svg](readme_files/readme_7_0.svg)
 
 
 
@@ -110,14 +103,11 @@ render(
 )
 ```
 
-    10.0
 
 
 
 
-
-
-![svg](readme_files/readme_9_1.svg)
+![svg](readme_files/readme_9_0.svg)
 
 
 
@@ -134,14 +124,11 @@ render(
 )
 ```
 
-    10.0
 
 
 
 
-
-
-![svg](readme_files/readme_11_1.svg)
+![svg](readme_files/readme_11_0.svg)
 
 
 
@@ -175,7 +162,6 @@ render(
     None 100
     None 30
     None 75.0
-    10.0
 
 
 
@@ -302,14 +288,11 @@ render(
 )
 ```
 
-    62.0
 
 
 
 
-
-
-![svg](readme_files/readme_23_1.svg)
+![svg](readme_files/readme_23_0.svg)
 
 
 
@@ -454,14 +437,11 @@ from DieLemmaDressBlock import DieLemmaDressBlock
 render(DieLemmaDressBlock)
 ```
 
-    88.0
 
 
 
 
-
-
-![svg](readme_files/readme_35_1.svg)
+![svg](readme_files/readme_35_0.svg)
 
 
 
@@ -478,14 +458,11 @@ render(
 )
 ```
 
-    88.0
 
 
 
 
-
-
-![svg](readme_files/readme_37_1.svg)
+![svg](readme_files/readme_37_0.svg)
 
 
 
@@ -502,14 +479,11 @@ render(
 )
 ```
 
-    88.0
 
 
 
 
-
-
-![svg](readme_files/readme_39_1.svg)
+![svg](readme_files/readme_39_0.svg)
 
 
 
@@ -525,14 +499,11 @@ from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 render(TheClassicTailoredTrouserBlock())
 ```
 
-    26.0
 
 
 
 
-
-
-![svg](readme_files/readme_41_1.svg)
+![svg](readme_files/readme_41_0.svg)
 
 
 
@@ -587,9 +558,12 @@ origin = Vector(0,0)
 waist_point = Vector(joelle_waist, 0)
 hips_point = Vector(joelle_hips, -joelle_waist_to_hips)
 
+skirt_radius_graph.startAt(origin)
 skirt_radius_graph.lineTo(waist_point)
 skirt_radius_graph.lineTo(hips_point)
 skirt_radius_graph.lineTo(Vector(skirt_bottom_radius, -joelle_waist_to_hips - skirt_length_below_the_hips))
+skirt_radius_graph.square_to_y_axis()
+skirt_radius_graph.close()
 
 render(
   skirt_radius_graph,
@@ -605,3 +579,20 @@ render(
 
 
 ![svg](readme_files/readme_49_0.svg)
+
+
+
+
+Now lets subdivide this into 10 pattern pieces:
+
+
+```python
+pattern_piece = skirt_radius_graph.subdivide_by_width(10)
+render(pattern_piece.with_style("join_the_dots"))
+```
+
+
+
+
+
+![svg](readme_files/readme_51_0.svg)

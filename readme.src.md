@@ -316,9 +316,12 @@ origin = Vector(0,0)
 waist_point = Vector(joelle_waist, 0)
 hips_point = Vector(joelle_hips, -joelle_waist_to_hips)
 
+skirt_radius_graph.startAt(origin)
 skirt_radius_graph.lineTo(waist_point)
 skirt_radius_graph.lineTo(hips_point)
 skirt_radius_graph.lineTo(Vector(skirt_bottom_radius, -joelle_waist_to_hips - skirt_length_below_the_hips))
+skirt_radius_graph.square_to_y_axis()
+skirt_radius_graph.close()
 
 render(
   skirt_radius_graph,
@@ -327,4 +330,11 @@ render(
   measurement_from_y_axis(hips_point)
   )
 
+```
+
+Now lets subdivide this into 10 pattern pieces:
+
+```code
+pattern_piece = skirt_radius_graph.subdivide_by_width(10)
+render(pattern_piece.with_style("join_the_dots"))
 ```

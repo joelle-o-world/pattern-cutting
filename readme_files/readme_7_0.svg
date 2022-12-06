@@ -71,11 +71,11 @@
 <g>
 <circle cx="350" cy="600" r="1" fill="black" />
 </g>
-<text x="162.5" y="600.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">pointset</text>
+<text x="181.25" y="600.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">pointset</text>
 </g>
 <g>
 <path d="M50,750 L150,700 L250,800 L350,750" fill="#E6E6FA" stroke="black" />
-<text x="162.5" y="750.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">polygon</text>
+<text x="181.25" y="750.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">polygon</text>
 </g>
 <g>
 <path d="M50,900 L150,850 L250,950 L350,900" fill="none" stroke="black" />
