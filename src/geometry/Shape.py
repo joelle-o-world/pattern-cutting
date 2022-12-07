@@ -77,6 +77,13 @@ class Shape:
         copy.close()
         return copy
 
+    def close_by_mirroring_over_y_axis(self):
+        copy = self.copy()
+        for point in reversed(self.points):
+            copy.lineTo(Vector(-point.x, point.y))
+        copy.close()
+        return copy
+
     # Iteration
     def segments(self):
         "Iterate line segments"
@@ -296,15 +303,13 @@ class Shape:
             step = self.height / 100
 
         shape = Shape()
-        shape.startAt(Vector(0, self.bottom))
         for y in np.arange(self.bottom, self.top, step):
             width = self.width_at_y_position(y)
             x = width / number_of_divisions / 2
             p = Vector(x, y)
             shape.lineTo(p)
 
-        shape.square_to_y_axis()
-        shape.close()
+        shape = shape.close_by_mirroring_over_y_axis()
         return shape
 
     @property
