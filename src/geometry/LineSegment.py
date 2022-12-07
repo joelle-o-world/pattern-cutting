@@ -83,8 +83,8 @@ class LineSegment:
         direction = self.direction.normal()
         return LineSegment(start=start, end=start + direction)
 
-    def svg(self):
-        return draw.Line(self.start.x, self.start.y, self.end.x, self.end.y)
+    def svg(self, **kwargs):
+        return draw.Line(self.start.x, self.start.y, self.end.x, self.end.y, **kwargs)
 
     # Bounding rectangle methods
     @property

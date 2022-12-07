@@ -348,6 +348,8 @@ class Shape:
             return self.svg_tape()
         elif self.style == "ruler":
             return self.svg_ruler()
+        elif self.style == "faint_ruler":
+            return self.svg_faint_ruler()
         elif self.style == "arrow":
             return self.svg_arrow()
         elif self.style == "dashed_arrow":
@@ -357,20 +359,20 @@ class Shape:
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
-    def svg_line(self):
+    def svg_line(self, **kwargs):
         group = draw.Group()
-        group.append(self.svg_line_only())
+        group.append(self.svg_line_only(**kwargs))
         if self.label:
             group.append(self.svg_parallel_label())
         return group
 
-    def svg_line_only(self, close=False, fill="none", **kwargs):
+    def svg_line_only(self, close=False, fill="none", stroke="black", **kwargs):
         "Draw only the line as an svg <lines> element"
         return draw.Lines(
             *self.interleavedCoordinates(),
             close=close,
             fill=fill,
-            stroke="black",
+            stroke=stroke,
             **kwargs
         )
 
@@ -506,6 +508,27 @@ class Shape:
                 12,
                 stroke="none",
                 fill="#000000",
+                path=textPath.svg(),
+            )
+            group.append(label)
+        return group
+
+    def svg_faint_ruler(self, step=20):
+        color = "#999999"
+        group = draw.Group()
+        group.append(self.svg_line(stroke=color))
+        for w in np.arange(0, self.length, step):
+            m = self.at(w)
+            marker = m.normal().withLength(-3)
+            group.append(marker.svg(stroke=color))
+            textPath = marker.withLength(100).translate(
+                marker.vector.withLength(marker.length + 1)
+            )
+            label = draw.Text(
+                "{:.0f}mm".format(w),
+                12,
+                stroke="none",
+                fill=color,
                 path=textPath.svg(),
             )
             group.append(label)
