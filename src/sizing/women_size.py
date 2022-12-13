@@ -61,11 +61,21 @@ women_size_table = {
 from scipy.interpolate import interp1d
 
 size_to_measurement = {
-    key: interp1d(range(6, 27, 2), women_size_table[key], bounds_error=False)
+    key: interp1d(
+        range(6, 27, 2),
+        women_size_table[key],
+        bounds_error=False,
+        fill_value="extrapolate",
+    )
     for key in women_size_table
 }
 
 measurement_to_size = {
-    key: interp1d(women_size_table[key], range(6, 27, 2), bounds_error=False)
+    key: interp1d(
+        women_size_table[key],
+        range(6, 27, 2),
+        bounds_error=False,
+        fill_value="extrapolate",
+    )
     for key in women_size_table
 }

@@ -11,7 +11,10 @@ class BodyMeasurements:
                 if key in measurement_to_size:
                     approximations.append(measurement_to_size[key](kwargs[key]))
 
-            size = mean(approximations)
+            if len(approximations):
+                size = mean(approximations)
+            else:
+                print("Cannot estimate size")
 
         self.size = size
 
@@ -33,9 +36,9 @@ class BodyMeasurements:
         str = "Size {}:".format(self.size)
         deviances = self.deviances()
         for key in self.all:
-            str += "\n\t{}\t= {}mm".format(key, self.all[key])
+            str += "\n\t{}\t= {:.1f}mm".format(key, self.all[key])
             if key in deviances and deviances[key] != 0:
-                str += "\t({:+.2f}mm)".format(deviances[key])
+                str += "\t({:+.1f}mm)".format(deviances[key])
         return str
 
     def deviances(self):
