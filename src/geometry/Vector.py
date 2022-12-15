@@ -22,6 +22,12 @@ class Vector:
     def __mul__(self, scale: float) -> "Vector":
         return Vector(self.x * scale, self.y * scale)
 
+    def scale_horizontally(self, scalefactor):
+        return Vector(self.x * scalefactor, self.y, label=self.label)
+
+    def scale_vertically(self, scalefactor):
+        return Vector(self.x, scalefactor * self.y, label=self.label)
+
     def __add__(self, other) -> "Vector":
         return Vector(self.x + other.x, self.y + other.y)
 

@@ -426,6 +426,10 @@ class Shape:
             n += 1
         return summed / n
 
+    def vertical_center_line(self):
+        x = (self.left + self.right) / 2
+        return Shape([Vector(x, self.top), Vector(x, self.bottom)], style="dashed")
+
     def svg_centered_label(self):
         labelPosition = self.center_of_mass()
         return draw.Text(
@@ -498,7 +502,7 @@ class Shape:
     def svg_end_notch(self):
         return self.svg_perpendicular_notchthrough(self.length)
 
-    def svg_ruler(self, step=20):
+    def svg_ruler(self, step=10):
         group = draw.Group()
         group.append(self.svg_line())
         for w in np.arange(0, self.length, step):
@@ -518,7 +522,7 @@ class Shape:
             group.append(label)
         return group
 
-    def svg_faint_ruler(self, step=20):
+    def svg_faint_ruler(self, step=10):
         color = "#999999"
         group = draw.Group()
         group.append(self.svg_line(stroke=color))
@@ -531,7 +535,7 @@ class Shape:
             )
             label = draw.Text(
                 "{:.0f}mm".format(w),
-                12,
+                6,
                 stroke="none",
                 fill=color,
                 path=textPath.svg(),
@@ -553,6 +557,27 @@ class Shape:
 
     def move(self, x, y):
         return self.translate(Vector(x, y))
+
+    def scale(self, scalefactor):
+        return Shape(
+            [point * scalefactor for point in self.points],
+            label=self.label,
+            style=self.style,
+        )
+
+    def scale_vertically(self, scalefactor):
+        return Shape(
+            [point.scale_vertically(scalefactor) for point in self.points],
+            label=self.label,
+            style=self.style,
+        )
+
+    def scale_horizontally(self, scalefactor):
+        return Shape(
+            [point.scale_horizontally(scalefactor) for point in self.points],
+            label=self.label,
+            style=self.style,
+        )
 
     def sliceAfter(self, start: int | float | Vector):
         startMeasurement = self.at(start)

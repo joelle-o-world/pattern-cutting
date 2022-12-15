@@ -383,3 +383,10 @@ Wow mad. Finally, lets subdivide this into 10 pattern pieces:
 pattern_piece = final_circumference_graph.close_against_y_axis().subdivide_by_width(10)
 render(pattern_piece)
 ```
+
+Hmm, I constructed this but it was way too small, turned out as a hat instead of a skirt. Rather than find the bug and get all technical, I'll just scale it up by a factor of two and that should do the trick!
+
+```code
+scaled_up = pattern_piece.scale_horizontally(2)
+render(scaled_up, scaled_up.vertical_center_line())
+```

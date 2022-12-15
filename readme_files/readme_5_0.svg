@@ -3,25 +3,45 @@
      width="400" height="400" viewBox="-150 -250 400 400" stroke="black" fill="none">
 <defs>
 <path d="M-50.0,54.0 L-50.0,154.0" id="d0" />
-<path d="M-30.0,54.0 L-30.0,154.0" id="d1" />
-<path d="M-10.0,54.0 L-10.0,154.0" id="d2" />
-<path d="M10.0,54.0 L10.0,154.0" id="d3" />
-<path d="M30.0,54.0 L30.0,154.0" id="d4" />
-<path d="M50.0,54.0 L50.0,154.0" id="d5" />
-<path d="M70.0,54.0 L70.0,154.0" id="d6" />
-<path d="M90.0,54.0 L90.0,154.0" id="d7" />
-<path d="M110.0,54.0 L110.0,154.0" id="d8" />
-<path d="M130.0,54.0 L130.0,154.0" id="d9" />
-<path d="M154.0,50.0 L254.0,50.0" id="d10" />
-<path d="M154.0,30.0 L254.0,30.0" id="d11" />
-<path d="M154.0,10.0 L254.0,10.0" id="d12" />
-<path d="M154.0,-10.0 L254.0,-10.0" id="d13" />
-<path d="M154.0,-30.0 L254.0,-30.0" id="d14" />
-<path d="M154.0,-50.0 L254.0,-50.0" id="d15" />
-<path d="M154.0,-70.0 L254.0,-70.0" id="d16" />
-<path d="M154.0,-90.0 L254.0,-90.0" id="d17" />
-<path d="M154.0,-110.0 L254.0,-110.0" id="d18" />
-<path d="M154.0,-130.0 L254.0,-130.0" id="d19" />
+<path d="M-40.0,54.0 L-40.0,154.0" id="d1" />
+<path d="M-30.0,54.0 L-30.0,154.0" id="d2" />
+<path d="M-20.0,54.0 L-20.0,154.0" id="d3" />
+<path d="M-10.0,54.0 L-10.0,154.0" id="d4" />
+<path d="M0.0,54.0 L0.0,154.0" id="d5" />
+<path d="M10.0,54.0 L10.0,154.0" id="d6" />
+<path d="M20.0,54.0 L20.0,154.0" id="d7" />
+<path d="M30.0,54.0 L30.0,154.0" id="d8" />
+<path d="M40.0,54.0 L40.0,154.0" id="d9" />
+<path d="M50.0,54.0 L50.0,154.0" id="d10" />
+<path d="M60.0,54.0 L60.0,154.0" id="d11" />
+<path d="M70.0,54.0 L70.0,154.0" id="d12" />
+<path d="M80.0,54.0 L80.0,154.0" id="d13" />
+<path d="M90.0,54.0 L90.0,154.0" id="d14" />
+<path d="M100.0,54.0 L100.0,154.0" id="d15" />
+<path d="M110.0,54.0 L110.0,154.0" id="d16" />
+<path d="M120.0,54.0 L120.0,154.0" id="d17" />
+<path d="M130.0,54.0 L130.0,154.0" id="d18" />
+<path d="M140.0,54.0 L140.0,154.0" id="d19" />
+<path d="M154.0,50.0 L254.0,50.0" id="d20" />
+<path d="M154.0,40.0 L254.0,40.0" id="d21" />
+<path d="M154.0,30.0 L254.0,30.0" id="d22" />
+<path d="M154.0,20.0 L254.0,20.0" id="d23" />
+<path d="M154.0,10.0 L254.0,10.0" id="d24" />
+<path d="M154.0,-0.0 L254.0,-0.0" id="d25" />
+<path d="M154.0,-10.0 L254.0,-10.0" id="d26" />
+<path d="M154.0,-20.0 L254.0,-20.0" id="d27" />
+<path d="M154.0,-30.0 L254.0,-30.0" id="d28" />
+<path d="M154.0,-40.0 L254.0,-40.0" id="d29" />
+<path d="M154.0,-50.0 L254.0,-50.0" id="d30" />
+<path d="M154.0,-60.0 L254.0,-60.0" id="d31" />
+<path d="M154.0,-70.0 L254.0,-70.0" id="d32" />
+<path d="M154.0,-80.0 L254.0,-80.0" id="d33" />
+<path d="M154.0,-90.0 L254.0,-90.0" id="d34" />
+<path d="M154.0,-100.0 L254.0,-100.0" id="d35" />
+<path d="M154.0,-110.0 L254.0,-110.0" id="d36" />
+<path d="M154.0,-120.0 L254.0,-120.0" id="d37" />
+<path d="M154.0,-130.0 L254.0,-130.0" id="d38" />
+<path d="M154.0,-140.0 L254.0,-140.0" id="d39" />
 </defs>
 <g>
 <path d="M0,0 L100,0 L100,-100 L0,-100 L0,0" fill="#E6E6FA" stroke="black" />
@@ -32,44 +52,84 @@
 <path d="M-50,50 L150,50" fill="none" stroke="#999999" />
 </g>
 <path d="M-50.0,50.0 L-50.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d0">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d0">
 <tspan dy="0em">0mm</tspan>
 </textPath></text>
+<path d="M-40.0,50.0 L-40.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d1">
+<tspan dy="0em">10mm</tspan>
+</textPath></text>
 <path d="M-30.0,50.0 L-30.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d1">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d2">
 <tspan dy="0em">20mm</tspan>
 </textPath></text>
+<path d="M-20.0,50.0 L-20.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d3">
+<tspan dy="0em">30mm</tspan>
+</textPath></text>
 <path d="M-10.0,50.0 L-10.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d2">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d4">
 <tspan dy="0em">40mm</tspan>
 </textPath></text>
+<path d="M0.0,50.0 L0.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d5">
+<tspan dy="0em">50mm</tspan>
+</textPath></text>
 <path d="M10.0,50.0 L10.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d3">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d6">
 <tspan dy="0em">60mm</tspan>
 </textPath></text>
+<path d="M20.0,50.0 L20.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d7">
+<tspan dy="0em">70mm</tspan>
+</textPath></text>
 <path d="M30.0,50.0 L30.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d4">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d8">
 <tspan dy="0em">80mm</tspan>
 </textPath></text>
+<path d="M40.0,50.0 L40.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d9">
+<tspan dy="0em">90mm</tspan>
+</textPath></text>
 <path d="M50.0,50.0 L50.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d5">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d10">
 <tspan dy="0em">100mm</tspan>
 </textPath></text>
+<path d="M60.0,50.0 L60.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d11">
+<tspan dy="0em">110mm</tspan>
+</textPath></text>
 <path d="M70.0,50.0 L70.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d6">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d12">
 <tspan dy="0em">120mm</tspan>
 </textPath></text>
+<path d="M80.0,50.0 L80.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d13">
+<tspan dy="0em">130mm</tspan>
+</textPath></text>
 <path d="M90.0,50.0 L90.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d7">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d14">
 <tspan dy="0em">140mm</tspan>
 </textPath></text>
+<path d="M100.0,50.0 L100.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d15">
+<tspan dy="0em">150mm</tspan>
+</textPath></text>
 <path d="M110.0,50.0 L110.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d8">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d16">
 <tspan dy="0em">160mm</tspan>
 </textPath></text>
+<path d="M120.0,50.0 L120.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d17">
+<tspan dy="0em">170mm</tspan>
+</textPath></text>
 <path d="M130.0,50.0 L130.0,53.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d9">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d18">
 <tspan dy="0em">180mm</tspan>
+</textPath></text>
+<path d="M140.0,50.0 L140.0,53.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d19">
+<tspan dy="0em">190mm</tspan>
 </textPath></text>
 </g>
 <g>
@@ -77,44 +137,84 @@
 <path d="M150,50 L150,-150" fill="none" stroke="#999999" />
 </g>
 <path d="M150.0,50.0 L153.0,50.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d10">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d20">
 <tspan dy="0em">0mm</tspan>
 </textPath></text>
+<path d="M150.0,40.0 L153.0,40.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d21">
+<tspan dy="0em">10mm</tspan>
+</textPath></text>
 <path d="M150.0,30.0 L153.0,30.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d11">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d22">
 <tspan dy="0em">20mm</tspan>
 </textPath></text>
+<path d="M150.0,20.0 L153.0,20.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d23">
+<tspan dy="0em">30mm</tspan>
+</textPath></text>
 <path d="M150.0,10.0 L153.0,10.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d12">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d24">
 <tspan dy="0em">40mm</tspan>
 </textPath></text>
+<path d="M150.0,-0.0 L153.0,-0.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d25">
+<tspan dy="0em">50mm</tspan>
+</textPath></text>
 <path d="M150.0,-10.0 L153.0,-10.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d13">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d26">
 <tspan dy="0em">60mm</tspan>
 </textPath></text>
+<path d="M150.0,-20.0 L153.0,-20.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d27">
+<tspan dy="0em">70mm</tspan>
+</textPath></text>
 <path d="M150.0,-30.0 L153.0,-30.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d14">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d28">
 <tspan dy="0em">80mm</tspan>
 </textPath></text>
+<path d="M150.0,-40.0 L153.0,-40.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d29">
+<tspan dy="0em">90mm</tspan>
+</textPath></text>
 <path d="M150.0,-50.0 L153.0,-50.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d15">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d30">
 <tspan dy="0em">100mm</tspan>
 </textPath></text>
+<path d="M150.0,-60.0 L153.0,-60.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d31">
+<tspan dy="0em">110mm</tspan>
+</textPath></text>
 <path d="M150.0,-70.0 L153.0,-70.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d16">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d32">
 <tspan dy="0em">120mm</tspan>
 </textPath></text>
+<path d="M150.0,-80.0 L153.0,-80.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d33">
+<tspan dy="0em">130mm</tspan>
+</textPath></text>
 <path d="M150.0,-90.0 L153.0,-90.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d17">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d34">
 <tspan dy="0em">140mm</tspan>
 </textPath></text>
+<path d="M150.0,-100.0 L153.0,-100.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d35">
+<tspan dy="0em">150mm</tspan>
+</textPath></text>
 <path d="M150.0,-110.0 L153.0,-110.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d18">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d36">
 <tspan dy="0em">160mm</tspan>
 </textPath></text>
+<path d="M150.0,-120.0 L153.0,-120.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d37">
+<tspan dy="0em">170mm</tspan>
+</textPath></text>
 <path d="M150.0,-130.0 L153.0,-130.0" stroke="#999999" />
-<text font-size="12" stroke="none" fill="#999999"><textPath xlink:href="#d19">
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d38">
 <tspan dy="0em">180mm</tspan>
+</textPath></text>
+<path d="M150.0,-140.0 L153.0,-140.0" stroke="#999999" />
+<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d39">
+<tspan dy="0em">190mm</tspan>
 </textPath></text>
 </g>
 </svg>
