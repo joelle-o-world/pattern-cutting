@@ -1,43 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="350.0" height="400.0" viewBox="-150.0 -250.0 350.0 400.0" stroke="black" fill="none">
+     width="250.0" height="300.0" viewBox="-100.0 -200.0 250.0 300.0" stroke="black" fill="none">
 <defs>
-<path d="M-50.0,54.0 L-50.0,154.0" id="d0" />
-<path d="M-40.0,54.0 L-40.0,154.0" id="d1" />
-<path d="M-30.0,54.0 L-30.0,154.0" id="d2" />
-<path d="M-20.0,54.0 L-20.0,154.0" id="d3" />
-<path d="M-10.000000000000004,54.00000000000001 L-10.000000000000004,154.0" id="d4" />
-<path d="M-7.105427357601002e-15,54.0 L-7.105427357601002e-15,154.0" id="d5" />
-<path d="M10.0,54.0 L10.0,154.0" id="d6" />
-<path d="M19.999999999999996,54.0 L19.999999999999996,154.0" id="d7" />
-<path d="M30.000000000000004,54.0 L30.000000000000004,154.0" id="d8" />
-<path d="M40.0,54.0 L40.0,154.0" id="d9" />
-<path d="M49.999999999999986,54.0 L49.999999999999986,154.0" id="d10" />
-<path d="M59.99999999999999,54.0 L59.99999999999999,154.0" id="d11" />
-<path d="M70.0,54.0 L70.0,154.0" id="d12" />
-<path d="M80.0,54.0 L80.0,154.0" id="d13" />
-<path d="M90.0,54.0 L90.0,154.0" id="d14" />
-<path d="M104.0,50.0 L204.0,50.0" id="d15" />
-<path d="M104.0,40.0 L204.0,40.0" id="d16" />
-<path d="M104.0,30.0 L204.0,30.0" id="d17" />
-<path d="M104.0,20.0 L204.0,20.0" id="d18" />
-<path d="M104.0,10.0 L204.0,10.0" id="d19" />
-<path d="M104.0,-0.0 L204.0,-0.0" id="d20" />
-<path d="M104.0,-10.0 L204.0,-10.0" id="d21" />
-<path d="M104.0,-20.0 L204.0,-20.0" id="d22" />
-<path d="M104.0,-30.0 L204.0,-30.0" id="d23" />
-<path d="M104.0,-40.0 L204.0,-40.0" id="d24" />
-<path d="M104.0,-50.0 L204.0,-50.0" id="d25" />
-<path d="M104.0,-60.0 L204.0,-60.0" id="d26" />
-<path d="M104.0,-70.0 L204.0,-70.0" id="d27" />
-<path d="M104.0,-80.0 L204.0,-80.0" id="d28" />
-<path d="M104.0,-90.0 L204.0,-90.0" id="d29" />
-<path d="M104.0,-100.0 L204.0,-100.0" id="d30" />
-<path d="M104.0,-110.0 L204.0,-110.0" id="d31" />
-<path d="M104.0,-120.0 L204.0,-120.0" id="d32" />
-<path d="M104.0,-130.0 L204.0,-130.0" id="d33" />
-<path d="M104.0,-140.0 L204.0,-140.0" id="d34" />
 </defs>
+<path d="M-100.0,100.0 L150.0,100.0" stroke="#dddddd" />
+<path d="M-100.0,50.0 L150.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-0.0 L150.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-50.0 L150.0,-50.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-100.0 L150.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-150.0 L150.0,-150.0" stroke="#dddddd" />
+<path d="M-100.0,100.0 L-100.0,-200.0" stroke="#dddddd" />
+<path d="M-50.0,100.0 L-50.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M0.0,100.0 L0.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M50.0,100.0 L50.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M100.0,100.0 L100.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
 <g>
 <g>
 <path d="M0.0,-0.0 L0.061623983204277116,-2.9996005065916407 L0.24309598891618284,-5.879352990675653 L0.5393161012843289,-8.644357368103426 L0.9451844044573263,-11.299713554726347 L1.4556009825837877,-13.850521466395806 L2.0654659198123233,-16.301881018963183 L2.7696793002915454,-18.658892128279884 L3.5631412081700646,-20.926654710197283 L4.440751727596495,-23.110268680566772 L5.397410942719445,-25.214833955239737 L6.428018937687528,-27.245450450067572 L7.527475796649354,-29.20721808090166 L8.690681603753537,-31.1052367635934 L9.912536443148687,-32.94460641399417 L11.187940398983416,-34.73042694795536 L12.511793555406335,-36.46779828132836 L13.878995996566058,-38.161820329964556 L15.284447806611194,-39.817593009715345 L16.72304906969035,-41.4402162364321 L18.189699869952147,-43.03478992596622 L19.67930029154519,-44.60641399416909 L21.18675041861809,-46.16018835689211 L22.706950335319465,-47.701212929986646 L24.234800125797925,-49.234587629304116 L25.765199874202075,-50.765412370695884 L27.29304966468053,-52.29878707001335 L28.813249581381903,-53.839811643107886 L30.32069970845481,-55.393586005830905 L31.810300130047853,-56.96521007403378 L33.27695093030965,-58.55978376356791 L34.71555219338881,-60.18240699028466 L36.12100400343394,-61.838179670035444 L37.488206444593665,-63.532201718671644 L38.812059601016585,-65.26957305204465 L40.08746355685131,-67.05539358600583 L41.30931839624647,-68.8947632364066 L42.472524203350645,-70.79278191909833 L43.57198106231247,-72.75454954993242 L44.602589057280554,-74.78516604476026 L45.55924827240351,-76.88973131943324 L46.436858791829934,-79.07334528980272 L47.23032069970846,-81.34110787172011 L47.934534080187674,-83.6981189810368 L48.54439901741622,-86.1494785336042 L49.05481559554267,-88.70028644527365 L49.46068389871567,-91.35564263189659 L49.75690401108382,-94.12064700932434 L49.93837601679572,-97.00039949340835 L50.0,-100.0" fill="none" stroke="black" />
@@ -78,155 +54,5 @@
 <g>
 <path d="M50,-50 L50,-100" fill="none" stroke="black" stroke-dasharray="3" />
 </g>
-</g>
-<g>
-<g>
-<path d="M-50.0,50.0 L100.0,50.0" fill="none" stroke="#999999" />
-</g>
-<path d="M-50.0,50.0 L-50.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d0">
-<tspan dy="0em">0mm</tspan>
-</textPath></text>
-<path d="M-40.0,50.0 L-40.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d1">
-<tspan dy="0em">10mm</tspan>
-</textPath></text>
-<path d="M-30.0,50.0 L-30.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d2">
-<tspan dy="0em">20mm</tspan>
-</textPath></text>
-<path d="M-20.0,50.0 L-20.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d3">
-<tspan dy="0em">30mm</tspan>
-</textPath></text>
-<path d="M-10.000000000000004,50.00000000000001 L-10.000000000000004,53.00000000000001" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d4">
-<tspan dy="0em">40mm</tspan>
-</textPath></text>
-<path d="M-7.105427357601002e-15,50.0 L-7.105427357601002e-15,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d5">
-<tspan dy="0em">50mm</tspan>
-</textPath></text>
-<path d="M10.0,50.0 L10.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d6">
-<tspan dy="0em">60mm</tspan>
-</textPath></text>
-<path d="M19.999999999999996,50.0 L19.999999999999996,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d7">
-<tspan dy="0em">70mm</tspan>
-</textPath></text>
-<path d="M30.000000000000004,50.0 L30.000000000000004,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d8">
-<tspan dy="0em">80mm</tspan>
-</textPath></text>
-<path d="M40.0,50.0 L40.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d9">
-<tspan dy="0em">90mm</tspan>
-</textPath></text>
-<path d="M49.999999999999986,50.0 L49.999999999999986,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d10">
-<tspan dy="0em">100mm</tspan>
-</textPath></text>
-<path d="M59.99999999999999,50.0 L59.99999999999999,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d11">
-<tspan dy="0em">110mm</tspan>
-</textPath></text>
-<path d="M70.0,50.0 L70.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d12">
-<tspan dy="0em">120mm</tspan>
-</textPath></text>
-<path d="M80.0,50.0 L80.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d13">
-<tspan dy="0em">130mm</tspan>
-</textPath></text>
-<path d="M90.0,50.0 L90.0,53.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d14">
-<tspan dy="0em">140mm</tspan>
-</textPath></text>
-</g>
-<g>
-<g>
-<path d="M100.0,50.0 L100.0,-150.0" fill="none" stroke="#999999" />
-</g>
-<path d="M100.0,50.0 L103.0,50.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d15">
-<tspan dy="0em">0mm</tspan>
-</textPath></text>
-<path d="M100.0,40.0 L103.0,40.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d16">
-<tspan dy="0em">10mm</tspan>
-</textPath></text>
-<path d="M100.0,30.0 L103.0,30.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d17">
-<tspan dy="0em">20mm</tspan>
-</textPath></text>
-<path d="M100.0,20.0 L103.0,20.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d18">
-<tspan dy="0em">30mm</tspan>
-</textPath></text>
-<path d="M100.0,10.0 L103.0,10.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d19">
-<tspan dy="0em">40mm</tspan>
-</textPath></text>
-<path d="M100.0,-0.0 L103.0,-0.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d20">
-<tspan dy="0em">50mm</tspan>
-</textPath></text>
-<path d="M100.0,-10.0 L103.0,-10.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d21">
-<tspan dy="0em">60mm</tspan>
-</textPath></text>
-<path d="M100.0,-20.0 L103.0,-20.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d22">
-<tspan dy="0em">70mm</tspan>
-</textPath></text>
-<path d="M100.0,-30.0 L103.0,-30.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d23">
-<tspan dy="0em">80mm</tspan>
-</textPath></text>
-<path d="M100.0,-40.0 L103.0,-40.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d24">
-<tspan dy="0em">90mm</tspan>
-</textPath></text>
-<path d="M100.0,-50.0 L103.0,-50.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d25">
-<tspan dy="0em">100mm</tspan>
-</textPath></text>
-<path d="M100.0,-60.0 L103.0,-60.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d26">
-<tspan dy="0em">110mm</tspan>
-</textPath></text>
-<path d="M100.0,-70.0 L103.0,-70.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d27">
-<tspan dy="0em">120mm</tspan>
-</textPath></text>
-<path d="M100.0,-80.0 L103.0,-80.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d28">
-<tspan dy="0em">130mm</tspan>
-</textPath></text>
-<path d="M100.0,-90.0 L103.0,-90.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d29">
-<tspan dy="0em">140mm</tspan>
-</textPath></text>
-<path d="M100.0,-100.0 L103.0,-100.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d30">
-<tspan dy="0em">150mm</tspan>
-</textPath></text>
-<path d="M100.0,-110.0 L103.0,-110.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d31">
-<tspan dy="0em">160mm</tspan>
-</textPath></text>
-<path d="M100.0,-120.0 L103.0,-120.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d32">
-<tspan dy="0em">170mm</tspan>
-</textPath></text>
-<path d="M100.0,-130.0 L103.0,-130.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d33">
-<tspan dy="0em">180mm</tspan>
-</textPath></text>
-<path d="M100.0,-140.0 L103.0,-140.0" stroke="#999999" />
-<text font-size="6" stroke="none" fill="#999999"><textPath xlink:href="#d34">
-<tspan dy="0em">190mm</tspan>
-</textPath></text>
 </g>
 </svg>

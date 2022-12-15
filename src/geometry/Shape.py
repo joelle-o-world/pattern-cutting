@@ -444,7 +444,7 @@ class Shape:
 
     def svg_polygon(self):
         group = draw.Group()
-        group.append(self.svg_line_only(fill="#E6E6FA"))
+        group.append(self.svg_line_only(fill="#E6E6FA66"))
         if self.label:
             group.append(self.svg_centered_label())
         return group
