@@ -488,10 +488,10 @@ render(
 
 
 
-## Winnifred Owen pattern blocks
+## Winnifred Aldrich pattern blocks
 
 One application of this library is quickly producing pattern blocks from
-Winnfred Owen’s book. To do that, we have to be able to use describe
+Winnfred Aldrich’s book. To do that, we have to be able to use describe
 body measurements:
 
 

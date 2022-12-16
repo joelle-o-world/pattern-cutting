@@ -7,7 +7,7 @@ from src.sizing.BodyMeasurements import BodyMeasurements, example_body_measureme
 def TheClassicTailoredTrouserBlock(
     body: BodyMeasurements = example_body_measurements, bottomWidth: float = 220
 ):
-    "Create a trouser block according to Winnifred Owen instructions"
+    "Create a trouser block according to Winnifred Aldrich instructions"
     p = [Vector(0, 0)] * 16
 
     # Front
