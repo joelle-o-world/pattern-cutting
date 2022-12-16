@@ -4,16 +4,21 @@
 <defs>
 </defs>
 <path d="M-150.0,100.0 L100.0,100.0" stroke="#dddddd" />
-<path d="M-150.0,50.0 L100.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-0.0 L100.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-50.0 L100.0,-50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-100.0 L100.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-150.0 L100.0,-150.0" stroke="#dddddd" />
+<path d="M-150.0,-197.0 L100.0,-197.0" stroke="#dddddd" />
 <path d="M-150.0,100.0 L-150.0,-200" stroke="#dddddd" />
-<path d="M-100.0,100.0 L-100.0,-200" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-50.0,100.0 L-50.0,-200" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M0.0,100.0 L0.0,-200" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M50.0,100.0 L50.0,-200" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M60.0,100.0 L60.0,-200" stroke="#dddddd" />
+<text x="-45.0" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<path d="M-150.0,100.0 L100.0,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,50.0 L100.0,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-0.0 L100.0,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-50.0 L100.0,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-100.0 L100.0,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-150.0 L100.0,-150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,100.0 L-150.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,100.0 L-100.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-50.0,100.0 L-50.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M0.0,100.0 L0.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M50.0,100.0 L50.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
 <g>
 <path d="M0.0,-0.0 L0.0,-40.0 L-50.0,-50.0 L0.0,-60.0 L0,-100" fill="none" stroke="black" />
 </g>

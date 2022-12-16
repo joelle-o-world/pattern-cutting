@@ -12,22 +12,29 @@
 <path d="M380.8199138250138,25.0 L380.622586667841,18.720948047068664 L380.0313839564616,12.466676643569574 L379.0486388978827,6.2618685414275355 L377.67822993787695,0.13101128351452118 L375.9255654545292,-5.901699437494745 L373.797562413839,-11.8124552684678 L371.30261907161577,-17.577929156507274 L368.4505818294002,-23.175367410171532 L365.2527063752153,-28.58267949789967 L361.7216132625086,-33.778525229247315 L357.87123810259277,-38.742398974868976 L353.71677656715497,-43.45471059286888 L349.2746244178827,-47.89686274214115 L347.9527290535526,-49.062270272493265" fill="none" stroke="black" id="d3" />
 </defs>
 <path d="M-25.0,125 L480.8199138250138,125" stroke="#dddddd" />
-<path d="M-25.0,75 L480.8199138250138,75" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-25.0,25 L480.8199138250138,25" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-25.0,-25 L480.8199138250138,-25" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-25.0,-75 L480.8199138250138,-75" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-25.0,-125 L480.8199138250138,-125" stroke="#dddddd" />
+<path d="M-25.0,-172 L480.8199138250138,-172" stroke="#dddddd" />
 <path d="M-25.0,125 L-25.0,-175" stroke="#dddddd" />
-<path d="M25.0,125 L25.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M75.0,125 L75.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M125.0,125 L125.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M175.0,125 L175.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M225.0,125 L225.0,-175" stroke="#dddddd" />
-<path d="M275.0,125 L275.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M325.0,125 L325.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M375.0,125 L375.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M425.0,125 L425.0,-175" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M475.0,125 L475.0,-175" stroke="#dddddd" />
+<path d="M185.0,125 L185.0,-175" stroke="#dddddd" />
+<path d="M395.0,125 L395.0,-175" stroke="#dddddd" />
+<text x="80.0" y="-23.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="290.0" y="-23.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<path d="M-25.0,125 L480.8199138250138,125" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,75 L480.8199138250138,75" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,25 L480.8199138250138,25" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,-25 L480.8199138250138,-25" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,-75 L480.8199138250138,-75" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,-125 L480.8199138250138,-125" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-25.0,125 L-25.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M25.0,125 L25.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M75.0,125 L75.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M125.0,125 L125.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M175.0,125 L175.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M225.0,125 L225.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M275.0,125 L275.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M325.0,125 L325.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M375.0,125 L375.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M425.0,125 L425.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M475.0,125 L475.0,-175" stroke="#ffcccc66" stroke-dasharray="5" />
 <g>
 <g>
 <circle cx="157.95272905355262" cy="-75" r="1" fill="black" />

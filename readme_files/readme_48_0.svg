@@ -4,36 +4,52 @@
 <defs>
 </defs>
 <path d="M-100.0,700.0 L585.0,700.0" stroke="#dddddd" />
-<path d="M-100.0,650.0 L585.0,650.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,600.0 L585.0,600.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,550.0 L585.0,550.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,500.0 L585.0,500.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,450.0 L585.0,450.0" stroke="#dddddd" />
-<path d="M-100.0,400.0 L585.0,400.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,350.0 L585.0,350.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,300.0 L585.0,300.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,250.0 L585.0,250.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,200.0 L585.0,200.0" stroke="#dddddd" />
-<path d="M-100.0,150.0 L585.0,150.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,100.0 L585.0,100.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,50.0 L585.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-0.0 L585.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-50.0 L585.0,-50.0" stroke="#dddddd" />
-<path d="M-100.0,-100.0 L585.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,403.0 L585.0,403.0" stroke="#dddddd" />
+<path d="M-100.0,106.0 L585.0,106.0" stroke="#dddddd" />
 <path d="M-100.0,700.0 L-100.0,-112.5" stroke="#dddddd" />
-<path d="M-50.0,700.0 L-50.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M0.0,700.0 L0.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M50.0,700.0 L50.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M100.0,700.0 L100.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M150.0,700.0 L150.0,-112.5" stroke="#dddddd" />
-<path d="M200.0,700.0 L200.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M250.0,700.0 L250.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M300.0,700.0 L300.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M350.0,700.0 L350.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M400.0,700.0 L400.0,-112.5" stroke="#dddddd" />
-<path d="M450.0,700.0 L450.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M500.0,700.0 L500.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M550.0,700.0 L550.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M110.0,700.0 L110.0,-112.5" stroke="#dddddd" />
+<path d="M320.0,700.0 L320.0,-112.5" stroke="#dddddd" />
+<path d="M530.0,700.0 L530.0,-112.5" stroke="#dddddd" />
+<text x="5.0" y="551.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="5.0" y="254.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="5.0" y="-42.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="215.0" y="551.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="215.0" y="254.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="215.0" y="-42.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
+<text x="425.0" y="551.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
+<text x="425.0" y="254.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
+<text x="425.0" y="-42.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C2</text>
+<path d="M-100.0,700.0 L585.0,700.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,650.0 L585.0,650.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,600.0 L585.0,600.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,550.0 L585.0,550.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,500.0 L585.0,500.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,450.0 L585.0,450.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,400.0 L585.0,400.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,350.0 L585.0,350.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,300.0 L585.0,300.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,250.0 L585.0,250.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,200.0 L585.0,200.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,150.0 L585.0,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,100.0 L585.0,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,50.0 L585.0,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,-0.0 L585.0,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,-50.0 L585.0,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,-100.0 L585.0,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,700.0 L-100.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-50.0,700.0 L-50.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M0.0,700.0 L0.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M50.0,700.0 L50.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M100.0,700.0 L100.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M150.0,700.0 L150.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M200.0,700.0 L200.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M250.0,700.0 L250.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M300.0,700.0 L300.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M350.0,700.0 L350.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M400.0,700.0 L400.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M450.0,700.0 L450.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M500.0,700.0 L500.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M550.0,700.0 L550.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
 <g>
 <g>
 <path d="M0.0,-0.0 L0,600.0 L485.0,600.0 L485.0,0 L366.64565029271466,-7.685347383589959 L350.1868071692346,91.45650292714731 L346.68768304061854,-8.981319283076719 L292.5,-12.5 L250.0,206.0 L212.5,-12.5 L151.6494103984168,-8.920553552848046 L149.00691941060015,116.45096331354118 L131.68392293491686,-7.746113113818639 L80.81607706508312,-4.753886886181361 L79.05441640653878,135.5917455778328 L60.8505896015832,-3.579446447151953 L0,0" fill="none" stroke="black" />

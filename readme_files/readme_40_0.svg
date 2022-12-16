@@ -136,45 +136,65 @@
 </marker>
 </defs>
 <path d="M-150.0,150.0 L459.88,150.0" stroke="#dddddd" />
-<path d="M-150.0,100.0 L459.88,100.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,50.0 L459.88,50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-0.0 L459.88,-0.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-50.0 L459.88,-50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-100.0 L459.88,-100.0" stroke="#dddddd" />
-<path d="M-150.0,-150.0 L459.88,-150.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-200.0 L459.88,-200.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-250.0 L459.88,-250.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-300.0 L459.88,-300.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-350.0 L459.88,-350.0" stroke="#dddddd" />
-<path d="M-150.0,-400.0 L459.88,-400.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-450.0 L459.88,-450.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-500.0 L459.88,-500.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-550.0 L459.88,-550.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-600.0 L459.88,-600.0" stroke="#dddddd" />
-<path d="M-150.0,-650.0 L459.88,-650.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-700.0 L459.88,-700.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-750.0 L459.88,-750.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-800.0 L459.88,-800.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-850.0 L459.88,-850.0" stroke="#dddddd" />
-<path d="M-150.0,-900.0 L459.88,-900.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-950.0 L459.88,-950.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-1000.0 L459.88,-1000.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-1050.0 L459.88,-1050.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-150.0,-1100.0 L459.88,-1100.0" stroke="#dddddd" />
-<path d="M-150.0,-1150.0 L459.88,-1150.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-150.0,-147.0 L459.88,-147.0" stroke="#dddddd" />
+<path d="M-150.0,-444.0 L459.88,-444.0" stroke="#dddddd" />
+<path d="M-150.0,-741.0 L459.88,-741.0" stroke="#dddddd" />
+<path d="M-150.0,-1038.0 L459.88,-1038.0" stroke="#dddddd" />
 <path d="M-150.0,150.0 L-150.0,-1153.3000000000004" stroke="#dddddd" />
-<path d="M-100.0,150.0 L-100.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-50.0,150.0 L-50.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M0.0,150.0 L0.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M50.0,150.0 L50.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M100.0,150.0 L100.0,-1153.3000000000004" stroke="#dddddd" />
-<path d="M150.0,150.0 L150.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M200.0,150.0 L200.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M250.0,150.0 L250.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M300.0,150.0 L300.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M350.0,150.0 L350.0,-1153.3000000000004" stroke="#dddddd" />
-<path d="M400.0,150.0 L400.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M450.0,150.0 L450.0,-1153.3000000000004" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M60.0,150.0 L60.0,-1153.3000000000004" stroke="#dddddd" />
+<path d="M270.0,150.0 L270.0,-1153.3000000000004" stroke="#dddddd" />
+<text x="-45.0" y="1.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="-45.0" y="-295.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="-45.0" y="-592.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="-45.0" y="-889.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
+<text x="165.0" y="1.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="165.0" y="-295.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="165.0" y="-592.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
+<text x="165.0" y="-889.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
+<text x="375.0" y="1.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
+<text x="375.0" y="-295.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
+<text x="375.0" y="-592.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C2</text>
+<text x="375.0" y="-889.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C3</text>
+<path d="M-150.0,150.0 L459.88,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,100.0 L459.88,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,50.0 L459.88,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-0.0 L459.88,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-50.0 L459.88,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-100.0 L459.88,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-150.0 L459.88,-150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-200.0 L459.88,-200.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-250.0 L459.88,-250.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-300.0 L459.88,-300.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-350.0 L459.88,-350.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-400.0 L459.88,-400.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-450.0 L459.88,-450.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-500.0 L459.88,-500.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-550.0 L459.88,-550.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-600.0 L459.88,-600.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-650.0 L459.88,-650.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-700.0 L459.88,-700.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-750.0 L459.88,-750.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-800.0 L459.88,-800.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-850.0 L459.88,-850.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-900.0 L459.88,-900.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-950.0 L459.88,-950.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-1000.0 L459.88,-1000.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-1050.0 L459.88,-1050.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-1100.0 L459.88,-1100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,-1150.0 L459.88,-1150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-150.0,150.0 L-150.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-100.0,150.0 L-100.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M-50.0,150.0 L-50.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M0.0,150.0 L0.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M50.0,150.0 L50.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M100.0,150.0 L100.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M150.0,150.0 L150.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M200.0,150.0 L200.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M250.0,150.0 L250.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M300.0,150.0 L300.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M350.0,150.0 L350.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M400.0,150.0 L400.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<path d="M450.0,150.0 L450.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
 <g>
 <path d="M264.15999999999997,-1003.3 L264.15999999999997,-977.9 L261.62,-952.5 L261.62,-927.1 L259.08,-901.7 L256.53999999999996,-876.3000000000001 L248.92000000000002,-850.9000000000001 L241.29999999999998,-825.5000000000001 L231.14,-800.1000000000001 L220.97999999999996,-774.7000000000002 L210.82,-749.3000000000002 L208.27999999999997,-723.9000000000002 L210.82,-698.5000000000002 L215.89999999999998,-673.1000000000003 L220.97999999999996,-647.7000000000003 L233.67999999999998,-622.3000000000003 L246.37999999999997,-596.9000000000003 L259.08,-571.5000000000003 L271.78,-546.1000000000004 L281.94,-520.7000000000004 L292.09999999999997,-495.3000000000004 L297.17999999999995,-469.90000000000043 L297.17999999999995,-444.50000000000045 L299.72,-419.1000000000005 L299.72,-393.7000000000005 L299.72,-368.3000000000005 L302.26,-342.90000000000055 L304.79999999999995,-317.50000000000057 L304.79999999999995,-292.1000000000006 L304.79999999999995,-266.7000000000006 L304.79999999999995,-241.3000000000006 L304.79999999999995,-215.9000000000006 L304.79999999999995,-190.5000000000006 L304.79999999999995,-165.1000000000006 L307.34,-139.70000000000059 L307.34,-114.30000000000058 L309.87999999999994,-88.90000000000057 L309.87999999999994,-63.500000000000576 L309.87999999999994,-38.10000000000058 L309.87999999999994,-12.700000000000578 L309.87999999999994,0 L0,0 L0,-1003.3 L264.15999999999997,-1003.3" fill="#E6E6FA66" stroke="black" />
 <text x="139.70159211934052" y="-494.4032361434292" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">Die Lemma Dress Block</text>
