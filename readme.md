@@ -547,6 +547,24 @@ render(TheClassicTailoredTrouserBlock())
 
 
 
+### Skirt block
+
+
+```python
+from aldrich.tailored_skirt_block import tailored_skirt_block
+
+render(tailored_skirt_block())
+```
+
+
+
+
+    
+![svg](readme_files/readme_45_0.svg)
+    
+
+
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):
@@ -562,7 +580,7 @@ render(square3d.isometric())
 
 
     
-![svg](readme_files/readme_45_0.svg)
+![svg](readme_files/readme_47_0.svg)
     
 
 
@@ -616,7 +634,7 @@ render(
 
 
     
-![svg](readme_files/readme_51_0.svg)
+![svg](readme_files/readme_53_0.svg)
     
 
 
@@ -637,7 +655,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_53_0.svg)
+![svg](readme_files/readme_55_0.svg)
     
 
 
@@ -656,7 +674,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_55_0.svg)
+![svg](readme_files/readme_57_0.svg)
     
 
 
@@ -679,7 +697,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_57_0.svg)
+![svg](readme_files/readme_59_0.svg)
     
 
 
@@ -699,7 +717,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_59_0.svg)
+![svg](readme_files/readme_61_0.svg)
     
 
 
@@ -716,7 +734,7 @@ render(pattern_piece)
 
 
     
-![svg](readme_files/readme_61_0.svg)
+![svg](readme_files/readme_63_0.svg)
     
 
 

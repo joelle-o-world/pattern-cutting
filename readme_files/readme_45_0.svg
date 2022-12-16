@@ -1,21 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="300.0" height="300.0" viewBox="-100.0 -200.0 300.0 300.0" stroke="black" fill="none">
+     width="685.0" height="812.5" viewBox="-100.0 -112.5 685.0 812.5" stroke="black" fill="none">
 <defs>
 </defs>
-<path d="M-100.0,100.0 L200.0,100.0" stroke="#dddddd" />
-<path d="M-100.0,50.0 L200.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-0.0 L200.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-50.0 L200.0,-50.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-100.0 L200.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M-100.0,-150.0 L200.0,-150.0" stroke="#dddddd" />
-<path d="M-100.0,100.0 L-100.0,-200.0" stroke="#dddddd" />
-<path d="M-50.0,100.0 L-50.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M0.0,100.0 L0.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M50.0,100.0 L50.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M100.0,100.0 L100.0,-200.0" stroke="#dddddd" stroke-dasharray="5" />
-<path d="M150.0,100.0 L150.0,-200.0" stroke="#dddddd" />
+<path d="M-100.0,700.0 L585.0,700.0" stroke="#dddddd" />
+<path d="M-100.0,650.0 L585.0,650.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,600.0 L585.0,600.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,550.0 L585.0,550.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,500.0 L585.0,500.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,450.0 L585.0,450.0" stroke="#dddddd" />
+<path d="M-100.0,400.0 L585.0,400.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,350.0 L585.0,350.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,300.0 L585.0,300.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,250.0 L585.0,250.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,200.0 L585.0,200.0" stroke="#dddddd" />
+<path d="M-100.0,150.0 L585.0,150.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,100.0 L585.0,100.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,50.0 L585.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-0.0 L585.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,-50.0 L585.0,-50.0" stroke="#dddddd" />
+<path d="M-100.0,-100.0 L585.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-100.0,700.0 L-100.0,-112.5" stroke="#dddddd" />
+<path d="M-50.0,700.0 L-50.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M0.0,700.0 L0.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M50.0,700.0 L50.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M100.0,700.0 L100.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M150.0,700.0 L150.0,-112.5" stroke="#dddddd" />
+<path d="M200.0,700.0 L200.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M250.0,700.0 L250.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M300.0,700.0 L300.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M350.0,700.0 L350.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M400.0,700.0 L400.0,-112.5" stroke="#dddddd" />
+<path d="M450.0,700.0 L450.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M500.0,700.0 L500.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M550.0,700.0 L550.0,-112.5" stroke="#dddddd" stroke-dasharray="5" />
 <g>
-<path d="M0.0,-0.0 L100.0,-0.0 L100.0,-100.0 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<g>
+<path d="M0.0,-0.0 L0,600.0 L485.0,600.0 L485.0,0 L292.5,-12.5 L250.0,206.0 L212.5,-12.5 L80.81607706508312,-4.753886886181361 L8.221083073205477,139.75841224449945 L60.8505896015832,-3.579446447151953 L0,0" fill="none" stroke="black" />
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">1</text>
+</g>
+<g>
+<circle cx="485.0" cy="0" r="1" fill="black" />
+<text x="487.0" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">2</text>
+</g>
+<g>
+<circle cx="0" cy="600.0" r="1" fill="black" />
+<text x="2" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">3</text>
+</g>
+<g>
+<circle cx="485.0" cy="600.0" r="1" fill="black" />
+<text x="487.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">4</text>
+</g>
+<g>
+<circle cx="0" cy="206.0" r="1" fill="black" />
+<text x="2" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">5</text>
+</g>
+<g>
+<circle cx="485.0" cy="206.0" r="1" fill="black" />
+<text x="487.0" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">6</text>
+</g>
+<g>
+<circle cx="250.0" cy="206.0" r="1" fill="black" />
+<text x="252.0" y="204.0" font-size="12" fill="#000000" stroke="none" dy="0em">7</text>
+</g>
+<g>
+<circle cx="250.0" cy="600.0" r="1" fill="black" />
+<text x="252.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">8</text>
+</g>
+<g>
+<circle cx="212.5" cy="0" r="1" fill="black" />
+<text x="214.5" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">9</text>
+</g>
+<g>
+<circle cx="212.5" cy="-12.5" r="1" fill="black" />
+<text x="214.5" y="-14.5" font-size="12" fill="#000000" stroke="none" dy="0em">10</text>
+</g>
+<g>
+<circle cx="70.83333333333333" cy="-4.166666666666666" r="1" fill="black" />
+<text x="72.83333333333333" y="-6.166666666666666" font-size="12" fill="#000000" stroke="none" dy="0em">11</text>
+</g>
+<g>
+<circle cx="141.66666666666666" cy="-8.333333333333332" r="1" fill="black" />
+<text x="143.66666666666666" y="-10.333333333333332" font-size="12" fill="#000000" stroke="none" dy="0em">12</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="292.5" cy="0" r="1" fill="black" />
+<text x="294.5" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">15</text>
+</g>
+<g>
+<circle cx="292.5" cy="-12.5" r="1" fill="black" />
+<text x="294.5" y="-14.5" font-size="12" fill="#000000" stroke="none" dy="0em">16</text>
+</g>
+<g>
+<circle cx="356.66666666666663" cy="-8.333333333333334" r="1" fill="black" />
+<text x="358.66666666666663" y="-10.333333333333334" font-size="12" fill="#000000" stroke="none" dy="0em">17</text>
+</g>
 </g>
 </svg>

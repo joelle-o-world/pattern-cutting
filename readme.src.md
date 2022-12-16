@@ -286,6 +286,14 @@ from TheClassicTailoredTrouserBlock import TheClassicTailoredTrouserBlock
 render(TheClassicTailoredTrouserBlock())
 ```
 
+### Skirt block
+
+```code
+from aldrich.tailored_skirt_block import tailored_skirt_block
+
+render(tailored_skirt_block())
+```
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):
