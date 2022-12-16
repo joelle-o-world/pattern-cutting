@@ -143,7 +143,7 @@ render(
   )
 ```
 
-### Interpolating a `Shape` with Bizier Curves
+### Interpolating a `Shape` with Bezier Curves
 
 ```code
 myshape = Shape([Vector(0,0), Vector(0, 200), Vector(200,250), Vector(250, 150), Vector(300 , 300)])
@@ -233,6 +233,19 @@ We can replace a region of one with the other
 ```code
 render(a.replace(b))
 
+```
+
+## Adding darts
+```code
+shape = Shape([Vector(0,0), Vector(100, 0)])
+shape.addDart(Vector(50, 0), 50, 20)
+render(shape)
+```
+
+```code
+shape = Shape([Vector(0,0), Vector(0, 100)])
+shape.addDart(Vector(0, 50), 50, 20)
+render(shape)
 ```
 
 ## Die Lemma dress block

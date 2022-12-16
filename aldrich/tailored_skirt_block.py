@@ -59,10 +59,14 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
 
     shape = Shape([p[i] for i in [1,3,4,2,16,7,10,1]])
 
-    # shape.addDart(p[11], 140, 20)
-    # TODO: add a dart at p[11] 14 cm, 2cm wide
-    # TODO: dart at p[12] 12.5cm, 2cm wide
-    # TODO: Contsruct a dart at 17, length 10c; width 2cm
+    # add a dart at p[11] 14 cm, 2cm wide
+    shape.addDart(p[11], 140, 20)
+
+    #  dart at p[12] 12.5cm, 2cm wide
+    shape.addDart(p[12], 125, 20)
+
+    #  Contsruct a dart at 17, length 10c; width 2cm
+    shape.addDart(p[17], 100, 20)
 
 
     return Group(shape, *p)

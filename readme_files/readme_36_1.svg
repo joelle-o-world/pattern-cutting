@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="250.0" height="300.0" viewBox="-150.0 -200.0 250.0 300.0" stroke="black" fill="none">
+<defs>
+</defs>
+<path d="M-150.0,100.0 L100.0,100.0" stroke="#dddddd" />
+<path d="M-150.0,50.0 L100.0,50.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-150.0,-0.0 L100.0,-0.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-150.0,-50.0 L100.0,-50.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-150.0,-100.0 L100.0,-100.0" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-150.0,-150.0 L100.0,-150.0" stroke="#dddddd" />
+<path d="M-150.0,100.0 L-150.0,-200" stroke="#dddddd" />
+<path d="M-100.0,100.0 L-100.0,-200" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M-50.0,100.0 L-50.0,-200" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M0.0,100.0 L0.0,-200" stroke="#dddddd" stroke-dasharray="5" />
+<path d="M50.0,100.0 L50.0,-200" stroke="#dddddd" stroke-dasharray="5" />
+<g>
+<path d="M0.0,-0.0 L0.0,-40.0 L-50.0,-0.0 L0.0,-60.0 L0,-100" fill="none" stroke="black" />
+</g>
+</svg>

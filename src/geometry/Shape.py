@@ -675,7 +675,7 @@ class Shape:
         lengthAlong = at.lengthAlong
         beforeDart = self.slice(0, lengthAlong - width / 2)
         afterDart = self.slice(lengthAlong + width / 2)
-        dartPoint = at.normal().unitVector() * depth
+        dartPoint = at.point + at.normal().unitVector() * depth
 
         self.points = [*beforeDart.points, dartPoint, *afterDart.points]
         return self

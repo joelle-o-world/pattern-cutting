@@ -252,7 +252,7 @@ render(
 
 
 
-### Interpolating a `Shape` with Bizier Curves
+### Interpolating a `Shape` with Bezier Curves
 
 
 ```python
@@ -422,6 +422,40 @@ render(a.replace(b))
 
 
 
+## Adding darts
+
+
+```python
+shape = Shape([Vector(0,0), Vector(100, 0)])
+shape.addDart(Vector(50, 0), 50, 20)
+render(shape)
+```
+
+
+
+
+    
+![svg](readme_files/readme_35_0.svg)
+    
+
+
+
+
+```python
+shape = Shape([Vector(0,0), Vector(0, 100)])
+shape.addDart(Vector(0, 50), 50, 20)
+render(shape)
+```
+
+
+
+
+    
+![svg](readme_files/readme_36_0.svg)
+    
+
+
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for
@@ -441,7 +475,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_35_0.svg)
+![svg](readme_files/readme_38_0.svg)
     
 
 
@@ -462,7 +496,7 @@ render(
 
 
     
-![svg](readme_files/readme_37_0.svg)
+![svg](readme_files/readme_40_0.svg)
     
 
 
@@ -483,7 +517,7 @@ render(
 
 
     
-![svg](readme_files/readme_39_0.svg)
+![svg](readme_files/readme_42_0.svg)
     
 
 
@@ -542,7 +576,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_43_0.svg)
+![svg](readme_files/readme_46_0.svg)
     
 
 
@@ -560,7 +594,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_45_0.svg)
+![svg](readme_files/readme_48_0.svg)
     
 
 
@@ -580,7 +614,7 @@ render(square3d.isometric())
 
 
     
-![svg](readme_files/readme_47_0.svg)
+![svg](readme_files/readme_50_0.svg)
     
 
 
@@ -634,7 +668,7 @@ render(
 
 
     
-![svg](readme_files/readme_53_0.svg)
+![svg](readme_files/readme_56_0.svg)
     
 
 
@@ -655,7 +689,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_55_0.svg)
+![svg](readme_files/readme_58_0.svg)
     
 
 
@@ -674,7 +708,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_57_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -697,7 +731,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_59_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -717,7 +751,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_61_0.svg)
+![svg](readme_files/readme_64_0.svg)
     
 
 
@@ -734,7 +768,7 @@ render(pattern_piece)
 
 
     
-![svg](readme_files/readme_63_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 

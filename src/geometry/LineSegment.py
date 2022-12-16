@@ -174,19 +174,24 @@ class LineSegment:
 
     def closestPoint(self, X: Vector) -> Vector:
         # TODO: there is so much that could be more efficient here!
+        if self.is_vertical():
+            x = self.start.x
+            if X.y < self.bottom:
+                return Vector(x, self.bottom)
+            elif X.y > self.top:
+                return Vector(x, self.top)
+            else:
+                return Vector(self.start.x, X.y)
+
         normal = self.normal()
         Y = self.extrapolatedIntersection(LineSegment(X, X + normal))
         if not Y:
             raise Exception("Something unexpected went wrong")
-        XY = distance(X, Y)
+
 
         P = self.start
         Q = self.end
         x = (Y.x - P.x) / (Q.x - P.x)
-
-        # y = (Y.y - P.y) / (Q.y - P.y)
-        # if x != y:
-        #     print("Something went wrong", x, y)
 
         if x < 0:
             return P
@@ -195,7 +200,10 @@ class LineSegment:
         else:
             return Y
 
-        return Y
+    def is_vertical(self):
+        return self.start.x == self.end.x
+    def is_horizontal(self):
+        return self.start.y == self.end.y
 
     # def extrapolatedIntersection(self, other: "LineSegment"):
     #     "Find the intersection between this line and another (using the infinite line, not the segment)"
