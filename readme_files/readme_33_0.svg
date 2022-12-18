@@ -4,14 +4,14 @@
 <defs>
 </defs>
 <path d="M-200.0,200.0 L300,200.0" stroke="#dddddd" />
-<path d="M-200.0,-97.0 L300,-97.0" stroke="#dddddd" />
+<path d="M-200.0,-10.0 L300,-10.0" stroke="#dddddd" />
+<path d="M-200.0,-220.0 L300,-220.0" stroke="#dddddd" />
 <path d="M-200.0,200 L-200.0,-300.0" stroke="#dddddd" />
-<path d="M10.0,200 L10.0,-300.0" stroke="#dddddd" />
-<path d="M220.0,200 L220.0,-300.0" stroke="#dddddd" />
-<text x="-95.0" y="51.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-95.0" y="-245.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="115.0" y="51.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="115.0" y="-245.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<path d="M97.0,200 L97.0,-300.0" stroke="#dddddd" />
+<text x="-51.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="-51.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="245.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="245.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
 <path d="M-200.0,200.0 L300,200.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-200.0,150.0 L300,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-200.0,100.0 L300,100.0" stroke="#ffcccc66" stroke-dasharray="5" />

@@ -53,23 +53,26 @@
 <path d="M347.2915367352342,1055.8263675873825 L392.012896285227,1145.2690866873756" id="d44" />
 </defs>
 <path d="M-50,1200 L450,1200" stroke="#dddddd" />
-<path d="M-50,903 L450,903" stroke="#dddddd" />
-<path d="M-50,606 L450,606" stroke="#dddddd" />
-<path d="M-50,309 L450,309" stroke="#dddddd" />
-<path d="M-50,12 L450,12" stroke="#dddddd" />
+<path d="M-50,990 L450,990" stroke="#dddddd" />
+<path d="M-50,780 L450,780" stroke="#dddddd" />
+<path d="M-50,570 L450,570" stroke="#dddddd" />
+<path d="M-50,360 L450,360" stroke="#dddddd" />
+<path d="M-50,150 L450,150" stroke="#dddddd" />
+<path d="M-50,-60 L450,-60" stroke="#dddddd" />
 <path d="M-50,1200 L-50,-150" stroke="#dddddd" />
-<path d="M160,1200 L160,-150" stroke="#dddddd" />
-<path d="M370,1200 L370,-150" stroke="#dddddd" />
-<text x="55.0" y="1051.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="55.0" y="754.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="55.0" y="457.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
-<text x="55.0" y="160.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
-<text x="55.0" y="-136.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A4</text>
-<text x="265.0" y="1051.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="265.0" y="754.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="265.0" y="457.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
-<text x="265.0" y="160.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
-<text x="265.0" y="-136.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
+<path d="M247,1200 L247,-150" stroke="#dddddd" />
+<text x="98.5" y="1095.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="98.5" y="885.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="98.5" y="675.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="98.5" y="465.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
+<text x="98.5" y="255.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A4</text>
+<text x="98.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A5</text>
+<text x="395.5" y="1095.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="395.5" y="885.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="395.5" y="675.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
+<text x="395.5" y="465.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
+<text x="395.5" y="255.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
+<text x="395.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B5</text>
 <path d="M-50,1200 L450,1200" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-50,1150 L450,1150" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-50,1100 L450,1100" stroke="#ffcccc66" stroke-dasharray="5" />

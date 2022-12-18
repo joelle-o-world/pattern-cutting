@@ -4,20 +4,21 @@
 <defs>
 </defs>
 <path d="M-236.4691603005426,100.0 L511.09213469442716,100.0" stroke="#dddddd" />
-<path d="M-236.4691603005426,-197.0 L511.09213469442716,-197.0" stroke="#dddddd" />
-<path d="M-236.4691603005426,-494.0 L511.09213469442716,-494.0" stroke="#dddddd" />
+<path d="M-236.4691603005426,-110.0 L511.09213469442716,-110.0" stroke="#dddddd" />
+<path d="M-236.4691603005426,-320.0 L511.09213469442716,-320.0" stroke="#dddddd" />
+<path d="M-236.4691603005426,-530.0 L511.09213469442716,-530.0" stroke="#dddddd" />
 <path d="M-236.4691603005426,100 L-236.4691603005426,-559.2355883884893" stroke="#dddddd" />
-<path d="M-26.469160300542597,100 L-26.469160300542597,-559.2355883884893" stroke="#dddddd" />
-<path d="M183.5308396994574,100 L183.5308396994574,-559.2355883884893" stroke="#dddddd" />
-<path d="M393.5308396994574,100 L393.5308396994574,-559.2355883884893" stroke="#dddddd" />
-<text x="-131.4691603005426" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-131.4691603005426" y="-345.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="78.5308396994574" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="78.5308396994574" y="-345.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="288.5308396994574" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
-<text x="288.5308396994574" y="-345.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
-<text x="498.5308396994574" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">D0</text>
-<text x="498.5308396994574" y="-345.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">D1</text>
+<path d="M60.5308396994574,100 L60.5308396994574,-559.2355883884893" stroke="#dddddd" />
+<path d="M357.5308396994574,100 L357.5308396994574,-559.2355883884893" stroke="#dddddd" />
+<text x="-87.9691603005426" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="-87.9691603005426" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="-87.9691603005426" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="209.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="209.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="209.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
+<text x="506.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
+<text x="506.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
+<text x="506.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C2</text>
 <path d="M-236.4691603005426,100.0 L511.09213469442716,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-236.4691603005426,50.0 L511.09213469442716,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-236.4691603005426,-0.0 L511.09213469442716,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />

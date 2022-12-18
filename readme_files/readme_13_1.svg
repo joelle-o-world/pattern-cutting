@@ -7,13 +7,11 @@
 </marker>
 </defs>
 <path d="M-25,125 L530.0,125" stroke="#dddddd" />
-<path d="M-25,-172 L530.0,-172" stroke="#dddddd" />
+<path d="M-25,-85 L530.0,-85" stroke="#dddddd" />
 <path d="M-25.0,125 L-25.0,-175" stroke="#dddddd" />
-<path d="M185.0,125 L185.0,-175" stroke="#dddddd" />
-<path d="M395.0,125 L395.0,-175" stroke="#dddddd" />
-<text x="80.0" y="-23.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="290.0" y="-23.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="500.0" y="-23.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
+<path d="M272.0,125 L272.0,-175" stroke="#dddddd" />
+<text x="123.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="420.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
 <path d="M-25,125 L530.0,125" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-25,75 L530.0,75" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-25,25 L530.0,25" stroke="#ffcccc66" stroke-dasharray="5" />

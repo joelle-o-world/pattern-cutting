@@ -410,7 +410,9 @@ Now I just need to add some seam & hem allowances
 ```code
 render(
   pattern_piece,
-  pattern_piece.allowance(-20)
+  pattern_piece.sides()[1].allowance(-20),
+  pattern_piece.sides()[2].allowance(-20, "right side seam"),
+  pattern_piece.vertical_center_line()
 )
 ```
 

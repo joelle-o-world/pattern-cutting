@@ -43,8 +43,13 @@ class Shape:
     def firstPoint(self):
         return self.points[0]
 
-    def lastPoint(self):
+    @property
+    def last_point(self):
         return self.points[-1]
+
+    # deprecated
+    def lastPoint(self):
+        return self.last_point
 
     def append(self, p):
         self.points.append(Vector(p.x, p.y))
@@ -258,10 +263,6 @@ class Shape:
         tangent: LineSegment = self.tangent(w)
         normal = tangent.normal()
         return normal
-
-    def findCorners(self, threshholdAngle):
-        "Find sharp corners in the line"
-        # TODO
 
     @property
     def top(self) -> float:
@@ -621,7 +622,7 @@ class Shape:
         ]
         return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
 
-    def allowance(self, allowance = 25.6,label="seam allowance"):
+    def allowance(self, allowance = 25.4,label="seam allowance"):
         sliced_section = self.copy()
         parallel = sliced_section.parallel(allowance)
         result = Shape([], label=label, style="polygon")
@@ -640,6 +641,14 @@ class Shape:
             for intersection in self.intersections()
             if abs(intersection.angle) > threshholdAngle
         ]
+
+    def sides(self, threshholdAngle=math.radians(15)):
+        corners = self.corners(threshholdAngle)
+        sides = []
+        for a, b in zip(corners, [*corners[1:], self.last_point]):
+            sides.append( self.slice(a, b))
+        return sides
+
 
     def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment

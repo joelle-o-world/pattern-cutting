@@ -4,13 +4,15 @@
 <defs>
 </defs>
 <path d="M15.387333741624118,745 L290.9859317102744,745" stroke="#dddddd" />
-<path d="M15.387333741624118,448 L290.9859317102744,448" stroke="#dddddd" />
-<path d="M15.387333741624118,151 L290.9859317102744,151" stroke="#dddddd" />
+<path d="M15.387333741624118,535 L290.9859317102744,535" stroke="#dddddd" />
+<path d="M15.387333741624118,325 L290.9859317102744,325" stroke="#dddddd" />
+<path d="M15.387333741624118,115 L290.9859317102744,115" stroke="#dddddd" />
+<path d="M15.387333741624118,-95 L290.9859317102744,-95" stroke="#dddddd" />
 <path d="M15.387333741624118,745 L15.387333741624118,-100" stroke="#dddddd" />
-<path d="M225.3873337416241,745 L225.3873337416241,-100" stroke="#dddddd" />
-<text x="120.38733374162412" y="596.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="120.38733374162412" y="299.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="120.38733374162412" y="2.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="163.8873337416241" y="640.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="163.8873337416241" y="430.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="163.8873337416241" y="220.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="163.8873337416241" y="10.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
 <path d="M15.387333741624118,745 L290.9859317102744,745" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M15.387333741624118,695 L290.9859317102744,695" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M15.387333741624118,645 L290.9859317102744,645" stroke="#ffcccc66" stroke-dasharray="5" />

@@ -44,10 +44,10 @@
 <path d="M-4.0,-9.999999999999998 L-104.0,-9.999999999999998" id="d39" />
 </defs>
 <path d="M-100,100 L200,100" stroke="#dddddd" />
-<path d="M-100,-197 L200,-197" stroke="#dddddd" />
+<path d="M-100,-110 L200,-110" stroke="#dddddd" />
 <path d="M-100,100 L-100,-200" stroke="#dddddd" />
-<path d="M110,100 L110,-200" stroke="#dddddd" />
-<text x="5.0" y="-48.5" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<path d="M197,100 L197,-200" stroke="#dddddd" />
+<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
 <path d="M-100,100 L200,100" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-100,50 L200,50" stroke="#ffcccc66" stroke-dasharray="5" />
 <path d="M-100,0 L200,0" stroke="#ffcccc66" stroke-dasharray="5" />
