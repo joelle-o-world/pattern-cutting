@@ -772,3 +772,22 @@ render(pattern_piece)
     
 
 
+
+Now I just need to add some seam & hem allowances
+
+
+```python
+render(
+  pattern_piece,
+  pattern_piece.allowance(-20)
+)
+```
+
+
+
+
+    
+![svg](readme_files/readme_68_0.svg)
+    
+
+

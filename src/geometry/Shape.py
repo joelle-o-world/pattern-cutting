@@ -21,6 +21,21 @@ class Shape:
         self.label = label
         self.style = style
         self.points = [point.copy() for point in points]
+        self.fix_points()
+
+    def check_points(self):
+        for a, b, i in zip(self.points, self.points[1:], range(0, len(self.points))):
+            if a == b:
+                raise Exception ("We have duplicate points at position {}".format(i))
+
+    def fix_points(self):
+        points = []
+        for p in self.points:
+            if len(points) == 0 or p != points[len(points)-1]:
+                points.append(p)
+        self.points = points
+
+
 
     def copy(self):
         return Shape(points=self.points, label=self.label, style=self.style)
@@ -77,6 +92,9 @@ class Shape:
         copy.close()
         return copy
 
+    def reverse(self):
+        return Shape(reversed(self.points), label=self.label, style=self.style)
+
     def close_by_mirroring_over_y_axis(self):
         copy = self.copy()
         for point in reversed(self.points):
@@ -88,7 +106,8 @@ class Shape:
     def segments(self):
         "Iterate line segments"
         for start, end in zip(self.points, self.points[1:]):
-            yield LineSegment(start, end)
+            if start != end:
+                yield LineSegment(start, end)
 
     def segment(self, index):
         return LineSegment(start=self.points[index], end=self.points[index + 1])
@@ -601,6 +620,18 @@ class Shape:
             startMeasurement.index + 1 : endMeasurement.index + 1
         ]
         return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
+
+    def allowance(self, allowance = 25.6,label="seam allowance"):
+        sliced_section = self.copy()
+        parallel = sliced_section.parallel(allowance)
+        result = Shape([], label=label, style="polygon")
+        for point in sliced_section.points:
+            result.lineTo(point)
+        for point in parallel.reverse().points:
+            result.lineTo(point)
+        result.close()
+        return result
+
 
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"

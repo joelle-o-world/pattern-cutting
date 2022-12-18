@@ -405,4 +405,12 @@ pattern_piece = final_circumference_graph.close_against_y_axis().subdivide_by_wi
 render(pattern_piece)
 ```
 
+Now I just need to add some seam & hem allowances
+
+```code
+render(
+  pattern_piece,
+  pattern_piece.allowance(-20)
+)
+```
 
