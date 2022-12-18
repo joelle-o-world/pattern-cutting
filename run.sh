@@ -11,5 +11,5 @@ fi
 
 for file in readme_files/*.svg ; do
   echo "Converting $file"
-  rsvg-convert -f pdf -o "$file.pdf" "$file"
+  rsvg-convert --dpi-x 25.6 --dpi-y 25.4 -f pdf -o "$file.pdf" "$file"
 done
