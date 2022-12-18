@@ -28,7 +28,7 @@ def render(*objects):
 
     # Draw horizontal A4 lines
     gridColor = "#dddddd"
-    for y in np.arange(rect.bottom, rect.top, 297):
+    for y in np.arange(rect.bottom, rect.top, 210):
         d.append(
             draw.Line(
                 rect.left,
@@ -40,7 +40,7 @@ def render(*objects):
         )
 
     # Draw vertical A4 lines
-    for x in np.arange(rect.left, rect.right, 210):
+    for x in np.arange(rect.left, rect.right, 297):
         d.append(
             draw.Line(
                 x,
@@ -53,9 +53,9 @@ def render(*objects):
 
     # Draw A4 labels
     col = 0
-    for x in np.arange(rect.left + 210/2, rect.right, 210):
+    for x in np.arange(rect.left + 297/2, rect.right, 297):
         row = 0
-        for y in np.arange(rect.bottom + 297/2, rect.top, 297):
+        for y in np.arange(rect.bottom + 210/2, rect.top, 210):
             label = "{}{}".format(n2a(col), row)
             d.append(
                     draw.Text(label, 10, x, y, stroke="none", fill=gridColor)
