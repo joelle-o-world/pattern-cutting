@@ -1,3 +1,5 @@
+rm -rf readme_files
+mkdir readme_files
 pandoc readme.src.md -o readme.ipynb
 jupyter nbconvert readme.ipynb --execute --to markdown
 rm readme.ipynb
