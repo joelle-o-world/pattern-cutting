@@ -13,10 +13,10 @@ def n2a(n,b=string.ascii_uppercase):
 def render(*objects):
     "Quickly render any number of objects as SVG"
 
-    rect = minimumBoundingRect(objects)
+    actual_rect = minimumBoundingRect(objects)
 
     # Add a margin
-    rect = rect.enlarge(100)
+    rect = actual_rect.enlarge(100)
 
     d = draw.Drawing(
         rect.width,
@@ -81,6 +81,9 @@ def render(*objects):
                 stroke_dasharray=5
             )
         )
+        d.append(
+                draw.Text("{:.0f}mm".format(y-actual_rect.bottom), 8, rect.left+1, y+2, stroke="none", fill=gridColor)
+            )
 
     # Draw vertical A4 lines
     for x in np.arange(rect.left, rect.right, gridSize):
@@ -94,6 +97,9 @@ def render(*objects):
                 stroke_dasharray=5
             )
         )
+        d.append(
+                draw.Text("{:.0f}mm".format(x-actual_rect.left), 8, x+2, rect.bottom+1, stroke="none", fill=gridColor)
+                )
 
     for object in objects:
         d.append(object.svg())

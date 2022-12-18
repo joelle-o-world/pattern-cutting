@@ -24,41 +24,77 @@
 <text x="188.41666666666669" y="195.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
 <text x="188.41666666666669" y="-15.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B5</text>
 <path d="M-257.0833333333333,1140.0 L246.66666666666669,1140.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="1138.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-257.0833333333333,1090.0 L246.66666666666669,1090.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="1088.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M-257.0833333333333,1040.0 L246.66666666666669,1040.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="1038.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M-257.0833333333333,990.0 L246.66666666666669,990.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="988.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M-257.0833333333333,940.0 L246.66666666666669,940.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="938.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <path d="M-257.0833333333333,890.0 L246.66666666666669,890.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="888.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <path d="M-257.0833333333333,840.0 L246.66666666666669,840.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="838.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
 <path d="M-257.0833333333333,790.0 L246.66666666666669,790.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="788.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
 <path d="M-257.0833333333333,740.0 L246.66666666666669,740.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="738.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <path d="M-257.0833333333333,690.0 L246.66666666666669,690.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="688.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
 <path d="M-257.0833333333333,640.0 L246.66666666666669,640.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="638.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
 <path d="M-257.0833333333333,590.0 L246.66666666666669,590.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="588.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
 <path d="M-257.0833333333333,540.0 L246.66666666666669,540.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="538.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
 <path d="M-257.0833333333333,490.0 L246.66666666666669,490.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="488.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">550mm</text>
 <path d="M-257.0833333333333,440.0 L246.66666666666669,440.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="438.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">600mm</text>
 <path d="M-257.0833333333333,390.0 L246.66666666666669,390.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="388.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">650mm</text>
 <path d="M-257.0833333333333,340.0 L246.66666666666669,340.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="338.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">700mm</text>
 <path d="M-257.0833333333333,290.0 L246.66666666666669,290.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="288.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">750mm</text>
 <path d="M-257.0833333333333,240.0 L246.66666666666669,240.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="238.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">800mm</text>
 <path d="M-257.0833333333333,190.0 L246.66666666666669,190.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="188.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">850mm</text>
 <path d="M-257.0833333333333,140.0 L246.66666666666669,140.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="138.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">900mm</text>
 <path d="M-257.0833333333333,90.0 L246.66666666666669,90.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="88.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">950mm</text>
 <path d="M-257.0833333333333,40.0 L246.66666666666669,40.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="38.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1000mm</text>
 <path d="M-257.0833333333333,-10.0 L246.66666666666669,-10.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="-12.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1050mm</text>
 <path d="M-257.0833333333333,-60.0 L246.66666666666669,-60.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-256.0833333333333" y="-62.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1100mm</text>
 <path d="M-257.0833333333333,1140.0 L-257.0833333333333,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-255.08333333333331" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-207.08333333333331,1140.0 L-207.08333333333331,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-205.08333333333331" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M-157.08333333333331,1140.0 L-157.08333333333331,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-155.08333333333331" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M-107.08333333333331,1140.0 L-107.08333333333331,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-105.08333333333331" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M-57.083333333333314,1140.0 L-57.083333333333314,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-55.083333333333314" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <path d="M-7.083333333333314,1140.0 L-7.083333333333314,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-5.083333333333314" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <path d="M42.916666666666686,1140.0 L42.916666666666686,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="44.916666666666686" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
 <path d="M92.91666666666669,1140.0 L92.91666666666669,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="94.91666666666669" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
 <path d="M142.91666666666669,1140.0 L142.91666666666669,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="144.91666666666669" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <path d="M192.91666666666669,1140.0 L192.91666666666669,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="194.91666666666669" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
 <path d="M242.91666666666669,1140.0 L242.91666666666669,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="244.91666666666669" y="1139.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
 <g>
 <g>
 <path d="M-157.08333333333331,280.0 L-106.3,610.0 L-105.0,1040.0 L105.0,1040.0 L106.3,610.0 L146.66666666666669,206.0 L109.16666666666667,0 L10.000000000000156,-0.0 L7.105427357601002e-15,100.0 L-9.99999999999985,-0.0 L-83.33333333333333,0 L-93.33333333333333,206.0 L-157.08333333333331,280.0" fill="#E6E6FA66" stroke="black" />

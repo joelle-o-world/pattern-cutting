@@ -8,16 +8,27 @@
 <path d="M-150.0,100.0 L-150.0,-200" stroke="#dddddd" />
 <text x="-1.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
 <path d="M-150.0,100.0 L100.0,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-150.0,50.0 L100.0,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="48.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M-150.0,-0.0 L100.0,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-2.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M-150.0,-50.0 L100.0,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-52.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M-150.0,-100.0 L100.0,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-102.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <path d="M-150.0,-150.0 L100.0,-150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-152.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <path d="M-150.0,100.0 L-150.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-148.0" y="99.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-100.0,100.0 L-100.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-98.0" y="99.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M-50.0,100.0 L-50.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48.0" y="99.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M0.0,100.0 L0.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2.0" y="99.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M50.0,100.0 L50.0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52.0" y="99.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <g>
 <path d="M0.0,-0.0 L0.0,-40.0 L-50.0,-50.0 L0.0,-60.0 L0,-100" fill="none" stroke="black" />
 </g>

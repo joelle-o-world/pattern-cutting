@@ -74,42 +74,79 @@
 <text x="395.5" y="255.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
 <text x="395.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B5</text>
 <path d="M-50,1200 L450,1200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="1198" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-50,1150 L450,1150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="1148" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M-50,1100 L450,1100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="1098" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M-50,1050 L450,1050" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="1048" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M-50,1000 L450,1000" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="998" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <path d="M-50,950 L450,950" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="948" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <path d="M-50,900 L450,900" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="898" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
 <path d="M-50,850 L450,850" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="848" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
 <path d="M-50,800 L450,800" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="798" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <path d="M-50,750 L450,750" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="748" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
 <path d="M-50,700 L450,700" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="698" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
 <path d="M-50,650 L450,650" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="648" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
 <path d="M-50,600 L450,600" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="598" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
 <path d="M-50,550 L450,550" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="548" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">550mm</text>
 <path d="M-50,500 L450,500" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="498" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">600mm</text>
 <path d="M-50,450 L450,450" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="448" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">650mm</text>
 <path d="M-50,400 L450,400" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="398" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">700mm</text>
 <path d="M-50,350 L450,350" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="348" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">750mm</text>
 <path d="M-50,300 L450,300" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="298" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">800mm</text>
 <path d="M-50,250 L450,250" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="248" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">850mm</text>
 <path d="M-50,200 L450,200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="198" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">900mm</text>
 <path d="M-50,150 L450,150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="148" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">950mm</text>
 <path d="M-50,100 L450,100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="98" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1000mm</text>
 <path d="M-50,50 L450,50" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="48" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1050mm</text>
 <path d="M-50,0 L450,0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="-2" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1100mm</text>
 <path d="M-50,-50 L450,-50" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="-52" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1150mm</text>
 <path d="M-50,-100 L450,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-49" y="-102" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1200mm</text>
 <path d="M-50,1200 L-50,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M0,1200 L0,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
 <path d="M50,1200 L50,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
 <path d="M100,1200 L100,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="102" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
 <path d="M150,1200 L150,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="152" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
 <path d="M200,1200 L200,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="202" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <path d="M250,1200 L250,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="252" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
 <path d="M300,1200 L300,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="302" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
 <path d="M350,1200 L350,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="352" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <path d="M400,1200 L400,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="402" y="1199" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
 <g>
 <path d="M50,0 L150,-50 L250,50 L350,0" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
