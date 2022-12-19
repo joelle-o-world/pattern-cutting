@@ -622,7 +622,9 @@ class Shape:
         ]
         return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
 
-    def allowance(self, allowance = 25.4,label="seam allowance"):
+    def allowance(self, allowance = 25.4,label=None):
+        if label == None:
+            label = "{:.1f}mm allowance".format(math.fabs(allowance))
         sliced_section = self.copy()
         parallel = sliced_section.parallel(allowance)
         result = Shape([], label=label, style="polygon")
