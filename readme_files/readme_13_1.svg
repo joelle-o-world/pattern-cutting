@@ -2,7 +2,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="555.0" height="300" viewBox="-25 -175 555.0 300" stroke="black" fill="none">
 <defs>
-<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d0">
+<path d="M75,25 L175,25 L175,-75 L75,-75 L75,25" fill="none" stroke="black" id="d0" />
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d1">
 <path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
 </marker>
 </defs>
@@ -51,7 +52,9 @@
 <g>
 <g>
 <path d="M75,25 L175,25 L175,-75 L75,-75 L75,25" fill="#E6E6FA66" stroke="black" />
-<text x="125.0" y="-25.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">a square</text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
 <circle cx="100.0" cy="25.0" r="1" fill="black" />
@@ -63,7 +66,7 @@
 </g>
 </g>
 <g>
-<path d="M250,-75 L280,-75" fill="none" stroke="black" marker-end="url(#d0)" />
+<path d="M250,-75 L280,-75" fill="none" stroke="black" marker-end="url(#d1)" />
 </g>
 <g>
 <g>

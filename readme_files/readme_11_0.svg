@@ -2,6 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="300" height="300" viewBox="-100 -200 300 300" stroke="black" fill="none">
 <defs>
+<path d="M0,0 L100,0 L100,-100 L0,-100 L0,0" fill="none" stroke="black" id="d0" />
 </defs>
 <path d="M-100,100 L200,100" stroke="#dddddd" />
 <path d="M-100,-110 L200,-110" stroke="#dddddd" />
@@ -34,7 +35,9 @@
 <text x="152" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <g>
 <path d="M0,0 L100,0 L100,-100 L0,-100 L0,0" fill="#E6E6FA66" stroke="black" />
-<text x="50.0" y="-50.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">a square</text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
 <circle cx="0" cy="0" r="1" fill="black" />

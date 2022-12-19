@@ -466,7 +466,7 @@ class Shape:
         group = draw.Group()
         group.append(self.svg_line_only(fill="#E6E6FA66"))
         if self.label:
-            group.append(self.svg_centered_label())
+            group.append(self.svg_parallel_label())
         return group
 
     def svg_tape(self):
