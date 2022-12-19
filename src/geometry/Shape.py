@@ -636,11 +636,15 @@ class Shape:
 
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
-        return [
+        return [self.firstPoint()] + [
             intersection.meeting
             for intersection in self.intersections()
             if abs(intersection.angle) > threshholdAngle
         ]
+
+    def numbered_corners(self, threshholdAngle=math.radians(15)):
+        corners = self.corners(threshholdAngle)
+        return [corner.with_label("{}".format(i)) for corner, i in zip(corners, range(0, len(corners)))]
 
     def sides(self, threshholdAngle=math.radians(15)):
         corners = self.corners(threshholdAngle)

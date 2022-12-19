@@ -37,6 +37,10 @@
 <text x="50.0" y="-50.0" font-size="12" stroke="none" fill="black" text-anchor="middle" dy="0em">a square</text>
 </g>
 <g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">Here is a corner!</text>
+</g>
+<g>
 <circle cx="100" cy="0" r="1" fill="black" />
 <text x="102" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">Here is a corner!</text>
 </g>
