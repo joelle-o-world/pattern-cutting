@@ -446,8 +446,10 @@ class Shape:
             n += 1
         return summed / n
 
+    def x_center(self):
+        return (self.left + self.right) / 2
     def vertical_center_line(self):
-        x = (self.left + self.right) / 2
+        x = self.x_center()
         return Shape([Vector(x, self.top), Vector(x, self.bottom)], style="dashed")
 
     def svg_centered_label(self):
@@ -785,6 +787,9 @@ def dashed(*points, label=None):
 
 def measurement_from_y_axis(p: Vector):
     return Shape([Vector(0, p.y), p], style="tape")
+
+def rectangle(x, y, width, height):
+    return Shape([Vector(x, y), Vector(x + width, y), Vector(x + width, y + height), Vector(x, y + height)]).close()
 
 
 if __name__ == "__main__":

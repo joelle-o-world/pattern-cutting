@@ -773,24 +773,41 @@ render(pattern_piece)
 
 
 
-Now I just need to add some seam & hem allowances
+Now I just need to add some seam & hem allowances. While I’m at it, I’ll
+make a pattern for the boning channel.
 
 
 ```python
+from src.geometry.Shape import rectangle
+
+boning = rectangle(pattern_piece.x_center() - 6, pattern_piece.bottom, 12, pattern_piece.height).with_label("12mm boning channel")
+
 render(
-  pattern_piece,
-  pattern_piece.sides()[0].allowance(-20),
-  pattern_piece.sides()[2].allowance(-20),
-  pattern_piece.vertical_center_line(),
-  *pattern_piece.numbered_corners()
+  *sideBySide(
+    Group(
+      pattern_piece,
+      pattern_piece.sides()[0].allowance(-20),
+      pattern_piece.sides()[2].allowance(-20),
+      pattern_piece.vertical_center_line(),
+      *pattern_piece.numbered_corners()
+    ),
+    Group(
+      boning,
+      boning.allowance(-12)
+    )
+  )
 )
 ```
+
+    None 378.9709544364373
+    None 36.00000000000067
+
 
 
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_68_1.svg)
     
 
 

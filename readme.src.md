@@ -405,15 +405,27 @@ pattern_piece = final_circumference_graph.close_against_y_axis().subdivide_by_wi
 render(pattern_piece)
 ```
 
-Now I just need to add some seam & hem allowances
+Now I just need to add some seam & hem allowances. While I'm at it, I'll make a pattern for the boning channel.
 
 ```code
+from src.geometry.Shape import rectangle
+
+boning = rectangle(pattern_piece.x_center() - 6, pattern_piece.bottom, 12, pattern_piece.height).with_label("12mm boning channel")
+
 render(
-  pattern_piece,
-  pattern_piece.sides()[0].allowance(-20),
-  pattern_piece.sides()[2].allowance(-20),
-  pattern_piece.vertical_center_line(),
-  *pattern_piece.numbered_corners()
+  *sideBySide(
+    Group(
+      pattern_piece,
+      pattern_piece.sides()[0].allowance(-20),
+      pattern_piece.sides()[2].allowance(-20),
+      pattern_piece.vertical_center_line(),
+      *pattern_piece.numbered_corners()
+    ),
+    Group(
+      boning,
+      boning.allowance(-12)
+    )
+  )
 )
 ```
 
