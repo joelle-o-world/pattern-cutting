@@ -12,3 +12,4 @@ class Shape3d:
             for point in self.points
         ]
         return Shape(points)
+    

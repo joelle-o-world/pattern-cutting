@@ -7,7 +7,7 @@ class Group:
     label = None
 
     def __init__(self, *objects):
-        self.objects = objects
+        self.objects = [*objects]
 
     def append(self, obj):
         self.objects.append(obj)

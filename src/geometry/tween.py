@@ -1,8 +1,9 @@
 from layout import side_by_side
 from src.geometry.Group import Group
+from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
 import numpy as np
-from src.geometry.Vector import polar
+from src.geometry.Vector import Vector, polar
 
 from src.geometry.angles import shortest_turn
 
@@ -23,7 +24,7 @@ def tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
     step = resolution / larger_length
 
     shape = Shape()
-    shape.startAt(a.first_point * (phase-1) + b.first_point * phase)
+    shape.start_at(a.first_point * (1.0-phase) + b.first_point * phase)
 
     last_p = None
     last_q = None
@@ -38,18 +39,23 @@ def tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
             shape.append(shape.last_point + polar(turn, length))
         last_p = p
         last_q = q
+
+
     return shape
 
 
 
 def tween_demo(a: Shape, b:Shape):
-    step = .2
+    b = b.translate(Vector(750, 0))
+    step = .05
     shapes = []
     shapes.append(a.with_label("A").with_style("arrow"))
-    for phase in np.arange(step, 1.0-step, step):
-       shapes.append(tween(a, b, phase).with_label("phase = {}".format(phase)).with_style("arrow"))
+    for phase in np.arange(step, 1.0, step):
+        shapes.append(tween(a, b, phase).with_label("{:.0f}%".format(phase*100)).with_style("arrow"))
 
     shapes.append(b.with_label("B").with_style("arrow"))
 
-    return Group(*side_by_side(*shapes))
+    g = Group(*shapes)
+
+    return g
 

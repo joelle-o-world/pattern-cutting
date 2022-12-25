@@ -58,9 +58,12 @@ class Shape:
     def append(self, p):
         self.points.append(Vector(p.x, p.y))
 
-    def startAt(self, p):
+    def start_at(self, p):
         self.points = [p.copy()]
         return self
+    def startAt(self, p):
+        "deprecated alias for start_at"
+        return self.start_at(p)
 
     def line_to(self, p):
         if len(self.points) == 0 or self.lastPoint() != p:
