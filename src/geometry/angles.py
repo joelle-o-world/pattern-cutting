@@ -9,7 +9,7 @@ def normalizeAngle(angle: float):
     return angle
 
 
-def clockwiseDifference(a, b):
+def clockwiseDifference(a, b) -> float:
     while b > a + 2 * math.pi:
         b -= 2 * math.pi
     while b < a:
@@ -19,3 +19,12 @@ def clockwiseDifference(a, b):
 
 def anticlockwiseDifference(a, b):
     return clockwiseDifference(b, a)
+
+def shortest_turn(a: float, b: float):
+    clockwise = clockwiseDifference(a,b)
+    anticlockwise= anticlockwiseDifference(a,b)
+    if abs(clockwise) < abs(anticlockwise):
+        return clockwise
+    else:
+        return anticlockwise
+

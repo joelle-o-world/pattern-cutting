@@ -44,6 +44,10 @@ class Shape:
         return self.points[0]
 
     @property
+    def first_point(self):
+        return self.points[0]
+
+    @property
     def last_point(self):
         return self.points[-1]
 

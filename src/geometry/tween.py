@@ -2,8 +2,11 @@ from layout import side_by_side
 from src.geometry.Group import Group
 from src.geometry.Shape import Shape
 import numpy as np
+from src.geometry.Vector import polar
 
-def tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
+from src.geometry.angles import shortest_turn
+
+def pointwise_tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
     larger_length = max(a.length, b.length)
 
     shape = Shape()
@@ -13,6 +16,31 @@ def tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
         r = p + (q-p) * phase
         shape.line_to(r)
     return shape
+
+
+def tween(a: Shape, b: Shape, phase: float, resolution = 1.0) -> Shape:
+    larger_length = max(a.length, b.length)
+    step = resolution / larger_length
+
+    shape = Shape()
+    shape.startAt(a.first_point * (phase-1) + b.first_point * phase)
+
+    last_p = None
+    last_q = None
+    for w in np.arange(step, 1.0, step):
+        p = a.pointAlong(w * a.length)
+        q = b.pointAlong(w * b.length)
+        if last_p:
+            vP = p - last_p
+            vQ = q - last_q
+            turn = vP.angle + shortest_turn(vQ.angle, vP.angle) * phase
+            length = vP.length * (1.0-phase) + phase * vQ.length
+            shape.append(shape.last_point + polar(turn, length))
+        last_p = p
+        last_q = q
+    return shape
+
+
 
 def tween_demo(a: Shape, b:Shape):
     step = .2

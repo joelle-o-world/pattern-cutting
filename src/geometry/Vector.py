@@ -73,11 +73,15 @@ class Vector:
     def with_label(self, label: str):
         return Vector(self.x, self.y, label=label)
 
-    def withAngle(self, angle):
+    def with_angle(self, angle):
         "Make a new vector with the same length but different angle"
         new = self.copy()
         new.angle = angle
         return new
+
+    def withAngle(self, angle):
+        "deprecated alias to with_angle"
+        return self.with_angle(angle)
 
     def withLength(self, length):
         "Make a new vector with the same angle but different length"
@@ -193,3 +197,6 @@ def midpoint(*points):
 
 def distance(a: Vector, b: Vector):
     return (a - b).length
+
+def polar(angle, length):
+    return Vector(length,0).with_angle(angle)
