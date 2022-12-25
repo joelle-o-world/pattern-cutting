@@ -410,7 +410,6 @@ We can replace a region of one with the other
 
 ```python
 render(a.replace(b))
-
 ```
 
 
@@ -418,6 +417,61 @@ render(a.replace(b))
 
     
 ![svg](readme_files/readme_33_0.svg)
+    
+
+
+
+## Tweening between shapes
+
+Tweening lets you morph one shape smoothly into another:
+
+
+```python
+from src.geometry.tween import tween, tween_demo
+
+a = Shape([Vector(-100, 200), Vector(200, -100)])
+b = arc
+
+render(tween_demo(a, b))
+```
+
+    A 300
+    phase = 0.2 221.27866397633986
+    phase = 0.4 142.74405272958353
+    phase = 0.6000000000000001 64.20944148282722
+    phase = 0.8 24.530652680782055
+    B 92.95272905355262
+
+
+
+
+
+    
+![svg](readme_files/readme_35_1.svg)
+    
+
+
+
+A circle becoming a square,
+
+
+```python
+render(tween_demo(square, circle.polyline(100)))
+```
+
+    A 100
+    phase = 0.2 79.93340597770359
+    phase = 0.4 60.72009668926026
+    phase = 0.6000000000000001 90.97744918824382
+    phase = 0.8 141.96200382239755
+    B 200.0
+
+
+
+
+
+    
+![svg](readme_files/readme_37_1.svg)
     
 
 
@@ -435,7 +489,7 @@ render(shape)
 
 
     
-![svg](readme_files/readme_35_0.svg)
+![svg](readme_files/readme_39_0.svg)
     
 
 
@@ -451,7 +505,7 @@ render(shape)
 
 
     
-![svg](readme_files/readme_36_0.svg)
+![svg](readme_files/readme_40_0.svg)
     
 
 
@@ -475,7 +529,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_38_0.svg)
+![svg](readme_files/readme_42_0.svg)
     
 
 
@@ -496,7 +550,7 @@ render(
 
 
     
-![svg](readme_files/readme_40_0.svg)
+![svg](readme_files/readme_44_0.svg)
     
 
 
@@ -517,7 +571,7 @@ render(
 
 
     
-![svg](readme_files/readme_42_0.svg)
+![svg](readme_files/readme_46_0.svg)
     
 
 
@@ -576,7 +630,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_46_0.svg)
+![svg](readme_files/readme_50_0.svg)
     
 
 
@@ -594,7 +648,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_48_0.svg)
+![svg](readme_files/readme_52_0.svg)
     
 
 
@@ -614,7 +668,7 @@ render(square3d.isometric())
 
 
     
-![svg](readme_files/readme_50_0.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -668,7 +722,7 @@ render(
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -689,7 +743,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -708,7 +762,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_60_0.svg)
+![svg](readme_files/readme_64_0.svg)
     
 
 
@@ -731,7 +785,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_62_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -751,7 +805,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -768,7 +822,7 @@ render(pattern_piece)
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -807,7 +861,7 @@ render(
 
 
     
-![svg](readme_files/readme_68_1.svg)
+![svg](readme_files/readme_72_1.svg)
     
 
 

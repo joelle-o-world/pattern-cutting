@@ -58,10 +58,14 @@ class Shape:
         self.points = [p.copy()]
         return self
 
-    def lineTo(self, p):
+    def line_to(self, p):
         if len(self.points) == 0 or self.lastPoint() != p:
             self.append(p)
         return self
+
+    def lineTo(self, p):
+        "deprecated alias for line_to"
+        return self.line_to(p)
 
     def curveTo(self, p: Vector, curve=0):
         # TODO: Create the actual curve

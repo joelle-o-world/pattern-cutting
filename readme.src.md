@@ -232,7 +232,24 @@ We can replace a region of one with the other
 
 ```code
 render(a.replace(b))
+```
 
+## Tweening between shapes
+
+Tweening lets you morph one shape smoothly into another:
+
+```code
+from src.geometry.tween import tween, tween_demo
+
+a = Shape([Vector(-100, 200), Vector(200, -100)])
+b = arc
+
+render(tween_demo(a, b))
+```
+
+A circle becoming a square,
+```code
+render(tween_demo(square, circle.polyline(100)))
 ```
 
 ## Adding darts

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="609.88" height="1303.3000000000004" viewBox="-150.0 -1153.3000000000004 609.88 1303.3000000000004" stroke="black" fill="none">
+<defs>
+<path d="M264.15999999999997,-1003.3 L264.15999999999997,-977.9 L261.62,-952.5 L261.62,-927.1 L259.08,-901.7 L256.53999999999996,-876.3000000000001 L248.92000000000002,-850.9000000000001 L241.29999999999998,-825.5000000000001 L231.14,-800.1000000000001 L220.97999999999996,-774.7000000000002 L210.82,-749.3000000000002 L208.27999999999997,-723.9000000000002 L210.82,-698.5000000000002 L215.89999999999998,-673.1000000000003 L220.97999999999996,-647.7000000000003 L233.67999999999998,-622.3000000000003 L246.37999999999997,-596.9000000000003 L259.08,-571.5000000000003 L271.78,-546.1000000000004 L281.94,-520.7000000000004 L292.09999999999997,-495.3000000000004 L297.17999999999995,-469.90000000000043 L297.17999999999995,-444.50000000000045 L299.72,-419.1000000000005 L299.72,-393.7000000000005 L299.72,-368.3000000000005 L302.26,-342.90000000000055 L304.79999999999995,-317.50000000000057 L304.79999999999995,-292.1000000000006 L304.79999999999995,-266.7000000000006 L304.79999999999995,-241.3000000000006 L304.79999999999995,-215.9000000000006 L304.79999999999995,-190.5000000000006 L304.79999999999995,-165.1000000000006 L307.34,-139.70000000000059 L307.34,-114.30000000000058 L309.87999999999994,-88.90000000000057 L309.87999999999994,-63.500000000000576 L309.87999999999994,-38.10000000000058 L309.87999999999994,-12.700000000000578 L309.87999999999994,0 L0,0 L0,-1003.3 L264.15999999999997,-1003.3" fill="none" stroke="black" id="d0" />
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d1">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d2">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d3">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d4">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d5">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d6">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d7">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d8">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d9">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d10">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d11">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d12">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d13">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d14">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d15">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d16">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d17">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d18">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d19">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d20">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d21">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d22">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d23">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d24">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d25">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d26">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d27">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d28">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d29">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d30">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d31">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d32">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d33">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d34">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d35">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d36">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d37">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d38">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d39">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d40">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d41">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d42">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d43">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+<marker markerWidth="15.2" markerHeight="8.0" viewBox="-1.0 -0.5 1.9 1.0" orient="auto" id="d44">
+<path d="M-1.0,0.5 L-1.0,-0.5 L0.0,0 Z" fill="black" stroke="none" />
+</marker>
+</defs>
+<path d="M-150.0,150.0 L459.88,150.0" stroke="#dddddd" />
+<path d="M-150.0,-60.0 L459.88,-60.0" stroke="#dddddd" />
+<path d="M-150.0,-270.0 L459.88,-270.0" stroke="#dddddd" />
+<path d="M-150.0,-480.0 L459.88,-480.0" stroke="#dddddd" />
+<path d="M-150.0,-690.0 L459.88,-690.0" stroke="#dddddd" />
+<path d="M-150.0,-900.0 L459.88,-900.0" stroke="#dddddd" />
+<path d="M-150.0,-1110.0 L459.88,-1110.0" stroke="#dddddd" />
+<path d="M-150.0,150.0 L-150.0,-1153.3000000000004" stroke="#dddddd" />
+<path d="M147.0,150.0 L147.0,-1153.3000000000004" stroke="#dddddd" />
+<path d="M444.0,150.0 L444.0,-1153.3000000000004" stroke="#dddddd" />
+<text x="-1.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="-1.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="-1.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
+<text x="-1.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
+<text x="-1.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A4</text>
+<text x="-1.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A5</text>
+<text x="295.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="295.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="295.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
+<text x="295.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
+<text x="295.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
+<text x="295.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B5</text>
+<path d="M-150.0,150.0 L459.88,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="148.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-150.0,100.0 L459.88,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M-150.0,50.0 L459.88,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="48.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M-150.0,-0.0 L459.88,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-2.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M-150.0,-50.0 L459.88,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-52.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M-150.0,-100.0 L459.88,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-102.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M-150.0,-150.0 L459.88,-150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-152.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M-150.0,-200.0 L459.88,-200.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-202.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<path d="M-150.0,-250.0 L459.88,-250.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-252.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
+<path d="M-150.0,-300.0 L459.88,-300.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-302.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
+<path d="M-150.0,-350.0 L459.88,-350.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-352.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
+<path d="M-150.0,-400.0 L459.88,-400.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-402.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
+<path d="M-150.0,-450.0 L459.88,-450.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-452.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
+<path d="M-150.0,-500.0 L459.88,-500.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-502.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">550mm</text>
+<path d="M-150.0,-550.0 L459.88,-550.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-552.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">600mm</text>
+<path d="M-150.0,-600.0 L459.88,-600.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-602.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">650mm</text>
+<path d="M-150.0,-650.0 L459.88,-650.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-652.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">700mm</text>
+<path d="M-150.0,-700.0 L459.88,-700.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-702.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">750mm</text>
+<path d="M-150.0,-750.0 L459.88,-750.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-752.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">800mm</text>
+<path d="M-150.0,-800.0 L459.88,-800.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-802.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">850mm</text>
+<path d="M-150.0,-850.0 L459.88,-850.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-852.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">900mm</text>
+<path d="M-150.0,-900.0 L459.88,-900.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-902.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">950mm</text>
+<path d="M-150.0,-950.0 L459.88,-950.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-952.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1000mm</text>
+<path d="M-150.0,-1000.0 L459.88,-1000.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-1002.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1050mm</text>
+<path d="M-150.0,-1050.0 L459.88,-1050.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-1052.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1100mm</text>
+<path d="M-150.0,-1100.0 L459.88,-1100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-1102.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1150mm</text>
+<path d="M-150.0,-1150.0 L459.88,-1150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-149.0" y="-1152.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">1200mm</text>
+<path d="M-150.0,150.0 L-150.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-148.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-100.0,150.0 L-100.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-98.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M-50.0,150.0 L-50.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M0.0,150.0 L0.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M50.0,150.0 L50.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M100.0,150.0 L100.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="102.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M150.0,150.0 L150.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="152.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M200.0,150.0 L200.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="202.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<path d="M250.0,150.0 L250.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="252.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
+<path d="M300.0,150.0 L300.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="302.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
+<path d="M350.0,150.0 L350.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="352.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
+<path d="M400.0,150.0 L400.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="402.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
+<path d="M450.0,150.0 L450.0,-1153.3000000000004" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="452.0" y="149.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
+<g>
+<path d="M264.15999999999997,-1003.3 L264.15999999999997,-977.9 L261.62,-952.5 L261.62,-927.1 L259.08,-901.7 L256.53999999999996,-876.3000000000001 L248.92000000000002,-850.9000000000001 L241.29999999999998,-825.5000000000001 L231.14,-800.1000000000001 L220.97999999999996,-774.7000000000002 L210.82,-749.3000000000002 L208.27999999999997,-723.9000000000002 L210.82,-698.5000000000002 L215.89999999999998,-673.1000000000003 L220.97999999999996,-647.7000000000003 L233.67999999999998,-622.3000000000003 L246.37999999999997,-596.9000000000003 L259.08,-571.5000000000003 L271.78,-546.1000000000004 L281.94,-520.7000000000004 L292.09999999999997,-495.3000000000004 L297.17999999999995,-469.90000000000043 L297.17999999999995,-444.50000000000045 L299.72,-419.1000000000005 L299.72,-393.7000000000005 L299.72,-368.3000000000005 L302.26,-342.90000000000055 L304.79999999999995,-317.50000000000057 L304.79999999999995,-292.1000000000006 L304.79999999999995,-266.7000000000006 L304.79999999999995,-241.3000000000006 L304.79999999999995,-215.9000000000006 L304.79999999999995,-190.5000000000006 L304.79999999999995,-165.1000000000006 L307.34,-139.70000000000059 L307.34,-114.30000000000058 L309.87999999999994,-88.90000000000057 L309.87999999999994,-63.500000000000576 L309.87999999999994,-38.10000000000058 L309.87999999999994,-12.700000000000578 L309.87999999999994,0 L0,0 L0,-1003.3 L264.15999999999997,-1003.3" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">Die Lemma Dress Block</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M314.15999999999997,-1003.3 L314.15999999999985,-975.406218943962 L311.62,-950.0062189439537 L311.6199999999998,-924.6062189439483 L308.8318595104978,-896.7248140489321 L305.81330088613004,-866.5392278052549 L296.8113142610546,-836.5326057216731 L288.5511859641713,-808.9988447320598 L277.5638345442542,-781.5304661822743 L267.403834544263,-756.1304661822965 L259.8686214503513,-737.2924334475157 L258.52937810560326,-723.8999999999941 L260.3285610752831,-705.9081703032119 L264.9290337845476,-682.9058067569064 L268.69585893488374,-664.0716810052197 L278.40135954999494,-644.6606797749987 L291.101359549989,-619.2606797750104 L303.80135954999696,-593.8606797749968 L317.43144260675086,-566.6005136614892 L328.3638345442639,-539.2695338177025 L340.22874220051216,-509.60726467708207 L347.1799999999984,-474.8509756796503 L347.1800000000004,-446.99378105603887 L349.7199999999999,-421.5937810560453 L349.7199999999994,-393.70000000001164 L349.72000000000054,-370.79378105604894 L352.0118595104983,-347.87518595105956 L354.7999999999995,-319.99378105604717 L354.80000000000024,-292.1000000000058 L354.79999999999967,-266.6999999999971 L354.79999999999984,-241.29999999998836 L354.79999999999984,-215.90000000000876 L354.8000000000004,-190.5 L354.79999999999984,-167.5937810560433 L357.34000000000026,-142.19378105604244 L357.34,-116.79378105604641 L359.87999999999977,-91.39378105604553 L359.87999999999994,-63.5 L359.88,-38.100000000000364 L359.87999999999994,-12.700000000000728 L359.87999999999994,49.99999999999958 L-50.000000000000014,50.0 L-50.00000000000001,-1053.3000000000004 L264.15999999999997,-1053.3" fill="none" stroke="black" />
+</g>
+<g>
+<path d="M264.15999999999997,-1003.3 L314.15999999999997,-1003.3" fill="none" stroke="black" marker-end="url(#d1)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M264.15999999999997,-977.9 L314.15999999999985,-975.406218943962" fill="none" stroke="black" marker-end="url(#d2)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M261.62,-952.5 L311.62,-950.0062189439537" fill="none" stroke="black" marker-end="url(#d3)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M261.62,-927.1 L311.6199999999998,-924.6062189439483" fill="none" stroke="black" marker-end="url(#d4)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M259.08,-901.7 L308.8318595104978,-896.7248140489321" fill="none" stroke="black" marker-end="url(#d5)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M256.53999999999996,-876.3000000000001 L305.81330088613004,-866.5392278052549" fill="none" stroke="black" marker-end="url(#d6)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M248.92000000000002,-850.9000000000001 L296.8113142610546,-836.5326057216731" fill="none" stroke="black" marker-end="url(#d7)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M241.29999999999998,-825.5000000000001 L288.5511859641713,-808.9988447320598" fill="none" stroke="black" marker-end="url(#d8)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M231.14,-800.1000000000001 L277.5638345442542,-781.5304661822743" fill="none" stroke="black" marker-end="url(#d9)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M220.97999999999996,-774.7000000000002 L267.403834544263,-756.1304661822965" fill="none" stroke="black" marker-end="url(#d10)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M210.82,-749.3000000000002 L259.8686214503513,-737.2924334475157" fill="none" stroke="black" marker-end="url(#d11)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M208.27999999999997,-723.9000000000002 L258.52937810560326,-723.8999999999941" fill="none" stroke="black" marker-end="url(#d12)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M210.82,-698.5000000000002 L260.3285610752831,-705.9081703032119" fill="none" stroke="black" marker-end="url(#d13)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M215.89999999999998,-673.1000000000003 L264.9290337845476,-682.9058067569064" fill="none" stroke="black" marker-end="url(#d14)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M220.97999999999996,-647.7000000000003 L268.69585893488374,-664.0716810052197" fill="none" stroke="black" marker-end="url(#d15)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M233.67999999999998,-622.3000000000003 L278.40135954999494,-644.6606797749987" fill="none" stroke="black" marker-end="url(#d16)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M246.37999999999997,-596.9000000000003 L291.101359549989,-619.2606797750104" fill="none" stroke="black" marker-end="url(#d17)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M259.08,-571.5000000000003 L303.80135954999696,-593.8606797749968" fill="none" stroke="black" marker-end="url(#d18)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M271.78,-546.1000000000004 L317.43144260675086,-566.6005136614892" fill="none" stroke="black" marker-end="url(#d19)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M281.94,-520.7000000000004 L328.3638345442639,-539.2695338177025" fill="none" stroke="black" marker-end="url(#d20)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M292.09999999999997,-495.3000000000004 L340.22874220051216,-509.60726467708207" fill="none" stroke="black" marker-end="url(#d21)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M297.17999999999995,-469.90000000000043 L347.1799999999984,-474.8509756796503" fill="none" stroke="black" marker-end="url(#d22)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M297.17999999999995,-444.50000000000045 L347.1800000000004,-446.99378105603887" fill="none" stroke="black" marker-end="url(#d23)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M299.72,-419.1000000000005 L349.7199999999999,-421.5937810560453" fill="none" stroke="black" marker-end="url(#d24)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M299.72,-393.7000000000005 L349.7199999999994,-393.70000000001164" fill="none" stroke="black" marker-end="url(#d25)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M299.72,-368.3000000000005 L349.72000000000054,-370.79378105604894" fill="none" stroke="black" marker-end="url(#d26)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M302.26,-342.90000000000055 L352.0118595104983,-347.87518595105956" fill="none" stroke="black" marker-end="url(#d27)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-317.50000000000057 L354.7999999999995,-319.99378105604717" fill="none" stroke="black" marker-end="url(#d28)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-292.1000000000006 L354.80000000000024,-292.1000000000058" fill="none" stroke="black" marker-end="url(#d29)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-266.7000000000006 L354.79999999999967,-266.6999999999971" fill="none" stroke="black" marker-end="url(#d30)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-241.3000000000006 L354.79999999999984,-241.29999999998836" fill="none" stroke="black" marker-end="url(#d31)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-215.9000000000006 L354.79999999999984,-215.90000000000876" fill="none" stroke="black" marker-end="url(#d32)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-190.5000000000006 L354.8000000000004,-190.5" fill="none" stroke="black" marker-end="url(#d33)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M304.79999999999995,-165.1000000000006 L354.79999999999984,-167.5937810560433" fill="none" stroke="black" marker-end="url(#d34)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M307.34,-139.70000000000059 L357.34000000000026,-142.19378105604244" fill="none" stroke="black" marker-end="url(#d35)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M307.34,-114.30000000000058 L357.34,-116.79378105604641" fill="none" stroke="black" marker-end="url(#d36)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M309.87999999999994,-88.90000000000057 L359.87999999999977,-91.39378105604553" fill="none" stroke="black" marker-end="url(#d37)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M309.87999999999994,-63.500000000000576 L359.87999999999994,-63.5" fill="none" stroke="black" marker-end="url(#d38)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M309.87999999999994,-38.10000000000058 L359.88,-38.100000000000364" fill="none" stroke="black" marker-end="url(#d39)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M309.87999999999994,-12.700000000000578 L359.87999999999994,-12.700000000000728" fill="none" stroke="black" marker-end="url(#d40)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M309.87999999999994,0 L359.87999999999994,49.99999999999958" fill="none" stroke="black" marker-end="url(#d41)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M0,0 L-50.000000000000014,50.0" fill="none" stroke="black" marker-end="url(#d42)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M0,-1003.3 L-50.00000000000001,-1053.3000000000004" fill="none" stroke="black" marker-end="url(#d43)" stroke-dasharray="3" />
+</g>
+<g>
+<path d="M264.15999999999997,-1003.3 L264.15999999999997,-1053.3" fill="none" stroke="black" marker-end="url(#d44)" stroke-dasharray="3" />
+</g>
+<g>
+<circle cx="264.15999999999997" cy="-1003.3" r="1" fill="black" />
+</g>
+<g>
+<circle cx="264.15999999999997" cy="-977.9" r="1" fill="black" />
+</g>
+<g>
+<circle cx="261.62" cy="-952.5" r="1" fill="black" />
+</g>
+<g>
+<circle cx="261.62" cy="-927.1" r="1" fill="black" />
+</g>
+<g>
+<circle cx="259.08" cy="-901.7" r="1" fill="black" />
+</g>
+<g>
+<circle cx="256.53999999999996" cy="-876.3000000000001" r="1" fill="black" />
+</g>
+<g>
+<circle cx="248.92000000000002" cy="-850.9000000000001" r="1" fill="black" />
+</g>
+<g>
+<circle cx="241.29999999999998" cy="-825.5000000000001" r="1" fill="black" />
+</g>
+<g>
+<circle cx="231.14" cy="-800.1000000000001" r="1" fill="black" />
+</g>
+<g>
+<circle cx="220.97999999999996" cy="-774.7000000000002" r="1" fill="black" />
+</g>
+<g>
+<circle cx="210.82" cy="-749.3000000000002" r="1" fill="black" />
+</g>
+<g>
+<circle cx="208.27999999999997" cy="-723.9000000000002" r="1" fill="black" />
+</g>
+<g>
+<circle cx="210.82" cy="-698.5000000000002" r="1" fill="black" />
+</g>
+<g>
+<circle cx="215.89999999999998" cy="-673.1000000000003" r="1" fill="black" />
+</g>
+<g>
+<circle cx="220.97999999999996" cy="-647.7000000000003" r="1" fill="black" />
+</g>
+<g>
+<circle cx="233.67999999999998" cy="-622.3000000000003" r="1" fill="black" />
+</g>
+<g>
+<circle cx="246.37999999999997" cy="-596.9000000000003" r="1" fill="black" />
+</g>
+<g>
+<circle cx="259.08" cy="-571.5000000000003" r="1" fill="black" />
+</g>
+<g>
+<circle cx="271.78" cy="-546.1000000000004" r="1" fill="black" />
+</g>
+<g>
+<circle cx="281.94" cy="-520.7000000000004" r="1" fill="black" />
+</g>
+<g>
+<circle cx="292.09999999999997" cy="-495.3000000000004" r="1" fill="black" />
+</g>
+<g>
+<circle cx="297.17999999999995" cy="-469.90000000000043" r="1" fill="black" />
+</g>
+<g>
+<circle cx="297.17999999999995" cy="-444.50000000000045" r="1" fill="black" />
+</g>
+<g>
+<circle cx="299.72" cy="-419.1000000000005" r="1" fill="black" />
+</g>
+<g>
+<circle cx="299.72" cy="-393.7000000000005" r="1" fill="black" />
+</g>
+<g>
+<circle cx="299.72" cy="-368.3000000000005" r="1" fill="black" />
+</g>
+<g>
+<circle cx="302.26" cy="-342.90000000000055" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-317.50000000000057" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-292.1000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-266.7000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-241.3000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-215.9000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-190.5000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="304.79999999999995" cy="-165.1000000000006" r="1" fill="black" />
+</g>
+<g>
+<circle cx="307.34" cy="-139.70000000000059" r="1" fill="black" />
+</g>
+<g>
+<circle cx="307.34" cy="-114.30000000000058" r="1" fill="black" />
+</g>
+<g>
+<circle cx="309.87999999999994" cy="-88.90000000000057" r="1" fill="black" />
+</g>
+<g>
+<circle cx="309.87999999999994" cy="-63.500000000000576" r="1" fill="black" />
+</g>
+<g>
+<circle cx="309.87999999999994" cy="-38.10000000000058" r="1" fill="black" />
+</g>
+<g>
+<circle cx="309.87999999999994" cy="-12.700000000000578" r="1" fill="black" />
+</g>
+<g>
+<circle cx="309.87999999999994" cy="0" r="1" fill="black" />
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+</g>
+<g>
+<circle cx="0" cy="-1003.3" r="1" fill="black" />
+</g>
+<g>
+<circle cx="264.15999999999997" cy="-1003.3" r="1" fill="black" />
+</g>
+</svg>
