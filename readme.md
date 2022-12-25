@@ -159,16 +159,11 @@ render(
 )
 ```
 
-    None 100
-    None 30
-    None 75.0
-
-
 
 
 
     
-![svg](readme_files/readme_13_1.svg)
+![svg](readme_files/readme_13_0.svg)
     
 
 
@@ -189,16 +184,11 @@ from layout import sideBySide
 render(*sideBySide(triangle, hexagon, almostCircle))
 ```
 
-    None 150.00000000000006
-    None 200.0
-    None 200.0
-
-
 
 
 
     
-![svg](readme_files/readme_15_1.svg)
+![svg](readme_files/readme_15_0.svg)
     
 
 
@@ -370,16 +360,11 @@ render(
   )
 ```
 
-    None 92.95272905355262
-    None 30
-    None 32.867184771461226
-
-
 
 
 
     
-![svg](readme_files/readme_29_1.svg)
+![svg](readme_files/readme_29_0.svg)
     
 
 
@@ -435,19 +420,11 @@ b = arc
 render(tween_demo(a, b))
 ```
 
-    A 300
-    phase = 0.2 358.1076706499113
-    phase = 0.4 296.4196703125311
-    phase = 0.6000000000000001 164.56074759084686
-    phase = 0.8 28.535339721273942
-    B 92.95272905355262
-
-
 
 
 
     
-![svg](readme_files/readme_35_1.svg)
+![svg](readme_files/readme_35_0.svg)
     
 
 
@@ -459,19 +436,11 @@ A circle becoming a square,
 render(tween_demo(square, circle.polyline(100)))
 ```
 
-    A 100
-    phase = 0.2 149.10752665443803
-    phase = 0.4 168.68965982786168
-    phase = 0.6000000000000001 161.86165099527787
-    phase = 0.8 183.007534020462
-    B 200.0
-
-
 
 
 
     
-![svg](readme_files/readme_37_1.svg)
+![svg](readme_files/readme_37_0.svg)
     
 
 
@@ -853,15 +822,11 @@ render(
 )
 ```
 
-    None 378.9709544364373
-    None 36.00000000000067
-
-
 
 
 
     
-![svg](readme_files/readme_72_1.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 

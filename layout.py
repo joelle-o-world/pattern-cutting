@@ -25,7 +25,6 @@ def side_by_side(*objects, margin=25):
     x = margin
     l = []
     for object in objects:
-        print(object.label, object.width)
         l.append(object.move(x - object.left, margin - object.top))
         x += object.width
         x += margin
