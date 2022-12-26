@@ -329,7 +329,7 @@ render(tailored_skirt_block())
 Turn a 2d shape into 3d one (and back again to render it):
 
 ```code
-square3d = square.to3D()
+square3d = square.to_3D()
 
 render(square3d.isometric())
 ```

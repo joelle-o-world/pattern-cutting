@@ -777,7 +777,7 @@ class Shape:
         after = self.slice(replacementSection.end())
         return Shape(before.points + replacementSection.points + after.points)
 
-    def to3D(self):
+    def to_3D(self):
         from src.geometry.Shape3d import Shape3d
 
         points = [vec3(point.x, point.y, 0) for point in self.points]
