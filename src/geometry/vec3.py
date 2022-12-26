@@ -1,3 +1,5 @@
+import numpy as np
+
 class vec3:
     "Cartesian coordinate/vector with 3 dimensions"
 
@@ -12,3 +14,12 @@ class vec3:
 
     def __str__(self):
         return "({}, {}, {})".format(self.x, self.y, self.z)
+
+    @property
+    def matrix(self):
+        return [self.x, self.y, self.z]
+
+    def transform(self, matrix):
+        m = np.matmul(self.matrix,  matrix)
+        return vec3(x = m[0], y=m[1], z=m[2])
+        

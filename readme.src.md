@@ -329,9 +329,25 @@ render(tailored_skirt_block())
 Turn a 2d shape into 3d one (and back again to render it):
 
 ```code
+import numpy as np
 square3d = square.to_3D()
 
-render(square3d.isometric())
+render(
+  *[
+    square3d.rotate(pitch=angle).isometric() for angle in np.arange(0, 6.28, 0.3)
+    ]
+)
+```
+
+Tweening radially,
+
+```code
+shape_1 = Shape([Vector(0,0), Vector(50, -100)])
+shape_2 = Shape([Vector(0,0), Vector(50, -15), Vector(50, -200)])
+
+render(*[
+  tween(shape_1, shape_2, phase).to_3D().rotate(pitch=phase * 3.14).isometric() for phase in np.arange(0, 1, .05)
+])
 ```
 
 ## Making a skirt for myself
@@ -396,7 +412,6 @@ render(skirt_radius_graph)
 Now I've found a silhouette I like, I'll unwrap this by length onto the y-axis.
 
 ```code
-import numpy as np
 final_radius_graph = Shape()
 for w in np.arange(0, skirt_radius_graph.length, 10):
   x = skirt_radius_graph.pointAlong(w).x

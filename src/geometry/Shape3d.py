@@ -1,3 +1,4 @@
+from src.geometry.matrix_transformations import general_rotation
 from src.geometry.Shape import Shape
 from src.geometry.Vector import Vector
 
@@ -12,4 +13,10 @@ class Shape3d:
             for point in self.points
         ]
         return Shape(points)
-    
+
+    def transform(self, matrix):
+        return Shape3d([point.transform(matrix) for point in self.points])
+
+    def rotate(self, yaw=0.0, pitch=0.0, roll=0.0):
+        matrix = general_rotation(yaw, pitch, roll)
+        return self.transform(matrix)

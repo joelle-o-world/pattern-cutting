@@ -628,9 +628,14 @@ Turn a 2d shape into 3d one (and back again to render it):
 
 
 ```python
+import numpy as np
 square3d = square.to_3D()
 
-render(square3d.isometric())
+render(
+  *[
+    square3d.rotate(pitch=angle).isometric() for angle in np.arange(0, 6.28, 0.3)
+    ]
+)
 ```
 
 
@@ -638,6 +643,27 @@ render(square3d.isometric())
 
     
 ![svg](readme_files/readme_54_0.svg)
+    
+
+
+
+Tweening radially,
+
+
+```python
+shape_1 = Shape([Vector(0,0), Vector(50, -100)])
+shape_2 = Shape([Vector(0,0), Vector(50, -15), Vector(50, -200)])
+
+render(*[
+  tween(shape_1, shape_2, phase).to_3D().rotate(pitch=phase * 3.14).isometric() for phase in np.arange(0, 1, .05)
+])
+```
+
+
+
+
+    
+![svg](readme_files/readme_56_0.svg)
     
 
 
@@ -691,7 +717,7 @@ render(
 
 
     
-![svg](readme_files/readme_60_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -712,7 +738,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_62_0.svg)
+![svg](readme_files/readme_64_0.svg)
     
 
 
@@ -731,7 +757,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -741,7 +767,6 @@ y-axis.
 
 
 ```python
-import numpy as np
 final_radius_graph = Shape()
 for w in np.arange(0, skirt_radius_graph.length, 10):
   x = skirt_radius_graph.pointAlong(w).x
@@ -754,7 +779,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -774,7 +799,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -791,7 +816,7 @@ render(pattern_piece)
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -826,7 +851,7 @@ render(
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
