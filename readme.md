@@ -762,6 +762,24 @@ render(skirt_radius_graph)
 
 
 
+Here’s what it should look like in 3d:
+
+
+```python
+render(*[
+  skirt_radius_graph.to_3D().rotate(pitch=angle).isometric() for angle in np.arange(0, math.pi*2, .1)
+])
+```
+
+
+
+
+    
+![svg](readme_files/readme_68_0.svg)
+    
+
+
+
 Now I’ve found a silhouette I like, I’ll unwrap this by length onto the
 y-axis.
 
@@ -779,7 +797,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -799,7 +817,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -816,7 +834,7 @@ render(pattern_piece)
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -851,7 +869,7 @@ render(
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 

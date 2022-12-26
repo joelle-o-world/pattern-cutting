@@ -409,6 +409,14 @@ skirt_radius_graph.continue_with_arc(175, 2*math.pi)
 render(skirt_radius_graph)
 ```
 
+Here's what it should look like in 3d:
+
+```code
+render(*[
+  skirt_radius_graph.to_3D().rotate(pitch=angle).isometric() for angle in np.arange(0, math.pi*2, .1)
+])
+```
+
 Now I've found a silhouette I like, I'll unwrap this by length onto the y-axis.
 
 ```code
