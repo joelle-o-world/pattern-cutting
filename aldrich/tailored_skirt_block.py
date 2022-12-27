@@ -68,8 +68,10 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     #  Contsruct a dart at 17, length 10c; width 2cm
     shape.addDart(p[17], 100, 20)
 
-
-    return Group(shape, *p)
+    g = Group(skirt_block=shape)
+    for i in range(0, len(p)):
+        g["p{}".format(i)] = p[i]
+    return g
     
     # Special note for individual figures
     # If the waist is small in proportion to the hip size of the standard block, increase the width of the darts to 2.5cm. This will require you to draft:

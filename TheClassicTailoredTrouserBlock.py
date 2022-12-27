@@ -109,4 +109,7 @@ def TheClassicTailoredTrouserBlock(
 
     shape.label = "Classic Tailored Trouser Block - Front"
 
-    return Group(shape, *p)
+    g = Group(front=shape)
+    for i in range(0, len(p)):
+        g["p{}".format(i)] = p[i]
+    return g
