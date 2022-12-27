@@ -6,8 +6,11 @@ from src.geometry.isMovable import isMovable
 class Group:
     label = None
 
-    def __init__(self, *objects):
+    def __init__(self, *objects, **kwargs):
         self.objects = {}
+        for key in kwargs:
+            self[key] = kwargs[key]
+
         for object in objects:
             self.append(object)
 
@@ -16,6 +19,13 @@ class Group:
         while "{}{}".format(prefix, i) in self.objects:
             i += 1
         return "{}{}".format(prefix, i)
+
+    def __getitem__(self, key: str):
+        return self.objects[key]
+    def __setitem__(self, key: str, value):
+        self.objects[key ] = value
+    def __delitem__(self, key):
+        del self.objects[key]
 
     def append(self, obj):
         self.objects[self.new_unused_key()] = obj
