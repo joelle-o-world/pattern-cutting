@@ -239,9 +239,13 @@ class Shape:
             )
         )
 
-    def pointAlong(self, w) -> Vector:
+    def point_along(self, w) -> Vector:
         "Find a point a certain distance along the polyline"
         return self.measureAlong(w).point
+
+    def pointAlong(self, w) -> Vector:
+        "deprecated alias for point_along"
+        return self.point_along(w)
 
     def evenlySpacedMeasurements(self, step=10):
         return [self.measureAlong(w) for w in np.arange(0, self.length, step)]

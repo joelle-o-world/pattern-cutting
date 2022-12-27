@@ -452,6 +452,8 @@ from src.geometry.Shape import rectangle
 
 pattern_piece = Group(
   shape=pattern_shape,
+  right_side = pattern_shape.sides()[0].with_style("line"),
+  left_side = pattern_shape.sides()[2].with_style("line").reverse(),
   right_allowance = pattern_shape.sides()[0].allowance(-20),
   left_allowance = pattern_shape.sides()[2].allowance(-20),
   center_line = pattern_shape.vertical_center_line(),
@@ -461,13 +463,7 @@ boning = rectangle(pattern_shape.x_center() - 6, pattern_shape.bottom, 12, patte
 
 render(
   *sideBySide(
-    Group(
-      pattern_shape,
-      pattern_shape.sides()[0].allowance(-20),
-      pattern_shape.sides()[2].allowance(-20),
-      pattern_shape.vertical_center_line(),
-      *pattern_shape.numbered_corners()
-    ),
+    pattern_piece,
     Group(
       boning,
       boning.allowance(-12)
@@ -484,5 +480,14 @@ pieces = []
 for phase in np.arange(0, 1, 1.0/10.0):
   pieces.append(pattern_piece_3d.translate(z=1000).rotate(pitch=phase * 2 * math.pi).isometric())
 
-render(*pieces)
+from src.geometry.seam_lines import seam_lines
+
+all = []
+for i in range(len(pieces)):
+  a = pieces[i]
+  b = pieces[(i+1)%len(pieces)]
+  all.append(a)
+  all.append(seam_lines(a["left_side"], b["right_side"]))
+
+render(*all)
 ```
