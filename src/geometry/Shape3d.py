@@ -24,3 +24,11 @@ class Shape3d:
     def translate(self, x=0.0, y=0.0, z=0.0):
         matrix = translate(x, y, z)
         return self.transform(matrix)
+
+    def is_flat(self) -> bool:
+        "If all the points are on the plane z=0 then the shape is 'flat'. This means it can be safely converted back to a 2d shape."
+        for point in self.points:
+            if point.z != 0:
+                return False
+        # Otherwise
+        return True
