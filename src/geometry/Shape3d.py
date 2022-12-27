@@ -4,18 +4,20 @@ from src.geometry.Vector import Vector
 
 
 class Shape3d:
-    def __init__(self, points):
+    def __init__(self, points, label=None, style="line"):
         self.points = points
+        self.label = label
+        self.style = style
 
     def isometric(self):
         points = [
             Vector(x=point.x + point.z * 0.5, y=point.y + point.z * 0.5)
             for point in self.points
         ]
-        return Shape(points)
+        return Shape(points, label=self.label, style=self.style)
 
     def transform(self, matrix):
-        return Shape3d([point.transform(matrix) for point in self.points])
+        return Shape3d([point.transform(matrix) for point in self.points], label=self.label, style=self.style)
 
     def rotate(self, yaw=0.0, pitch=0.0, roll=0.0):
         matrix = general_rotation(yaw, pitch, roll)

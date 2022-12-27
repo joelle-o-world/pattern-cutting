@@ -781,7 +781,7 @@ class Shape:
         from src.geometry.Shape3d import Shape3d
 
         points = [vec3(point.x, point.y, 0) for point in self.points]
-        return Shape3d(points)
+        return Shape3d(points, label=self.label, style=self.style)
 
 
 def arrow(*points, label=None):

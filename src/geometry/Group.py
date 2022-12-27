@@ -1,10 +1,9 @@
 import drawSvg as svg
+from src.geometry.Abstract_Group import Abstract_Group
 
 from src.geometry.isMovable import isMovable
 
-
-class Group:
-    label = None
+class Group(Abstract_Group):
 
     def __init__(self, *objects, **kwargs):
         self.objects = {}
@@ -13,26 +12,6 @@ class Group:
 
         for object in objects:
             self.append(object)
-
-    def new_unused_key(self, prefix="unlabeled_"):
-        i = 0
-        while "{}{}".format(prefix, i) in self.objects:
-            i += 1
-        return "{}{}".format(prefix, i)
-
-    def __getitem__(self, key: str):
-        return self.objects[key]
-    def __setitem__(self, key: str, value):
-        self.objects[key ] = value
-    def __delitem__(self, key):
-        del self.objects[key]
-
-    def append(self, obj):
-        self.objects[self.new_unused_key()] = obj
-
-    def iterate_objects(self):
-        for key in self.objects:
-            yield self.objects[key]
 
     @property
     def left(self) -> float:
@@ -65,3 +44,10 @@ class Group:
         return Group(
             *[obj.move(x, y) if isMovable(obj) else obj for obj in self.iterate_objects()]
         )
+
+    def to_3D(self):
+        from src.geometry.Group3d import Group3d
+        g = Group3d()
+        for name in self.objects:
+            g[name] = self.objects[name].to_3D()
+        return g

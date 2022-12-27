@@ -826,8 +826,8 @@ Wow mad. Finally, lets subdivide this into 10 pattern pieces:
 
 
 ```python
-pattern_piece = final_circumference_graph.close_against_y_axis().subdivide_by_width(10)
-render(pattern_piece)
+pattern_shape = final_circumference_graph.close_against_y_axis().subdivide_by_width(10)
+render(pattern_shape)
 ```
 
 
@@ -846,16 +846,23 @@ make a pattern for the boning channel.
 ```python
 from src.geometry.Shape import rectangle
 
-boning = rectangle(pattern_piece.x_center() - 6, pattern_piece.bottom, 12, pattern_piece.height).with_label("12mm boning channel")
+pattern_piece = Group(
+  shape=pattern_shape,
+  right_allowance = pattern_shape.sides()[0].allowance(-20),
+  left_allowance = pattern_shape.sides()[2].allowance(-20),
+  center_line = pattern_shape.vertical_center_line(),
+)
+
+boning = rectangle(pattern_shape.x_center() - 6, pattern_shape.bottom, 12, pattern_shape.height).with_label("12mm boning channel")
 
 render(
   *sideBySide(
     Group(
-      pattern_piece,
-      pattern_piece.sides()[0].allowance(-20),
-      pattern_piece.sides()[2].allowance(-20),
-      pattern_piece.vertical_center_line(),
-      *pattern_piece.numbered_corners()
+      pattern_shape,
+      pattern_shape.sides()[0].allowance(-20),
+      pattern_shape.sides()[2].allowance(-20),
+      pattern_shape.vertical_center_line(),
+      *pattern_shape.numbered_corners()
     ),
     Group(
       boning,
@@ -881,7 +888,7 @@ Here is a demo of the construction in 3D:
 pattern_piece_3d = pattern_piece.to_3D()
 pieces = []
 for phase in np.arange(0, 1, 1.0/10.0):
-  pieces.append(pattern_piece_3d.translate(z=1000).rotate(pitch=phase * 2 * math.pi).isometric().with_style("polygon"))
+  pieces.append(pattern_piece_3d.translate(z=1000).rotate(pitch=phase * 2 * math.pi).isometric())
 
 render(*pieces)
 ```

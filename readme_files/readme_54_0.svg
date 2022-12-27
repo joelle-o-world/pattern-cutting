@@ -2,6 +2,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="422.56754895887696" height="399.6829797719947" viewBox="-211.80186379815734 -249.8747493302027 422.56754895887696 399.6829797719947" stroke="black" fill="none">
 <defs>
+<path d="M0.0,-0.0 L100.0,-0.0 L100.0,-100.0 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d0" />
+<path d="M0.0,-0.0 L110.30965924562757,-14.776010333066978 L110.30965924562757,-114.77601033306698 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d1" />
+<path d="M0.0,-0.0 L110.7656851607196,-28.23212366975177 L110.7656851607196,-128.23212366975176 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d2" />
+<path d="M0.0,-0.0 L101.32734230844062,-39.166345481374165 L101.32734230844062,-139.16634548137415 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d3" />
+<path d="M0.0,-0.0 L82.83772974602869,-46.60195429836131 L82.83772974602869,-146.6019542983613 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d4" />
+<path d="M0.0,-0.0 L56.94846949697302,-49.874749330202725 L56.94846949697302,-149.87474933020272 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d5" />
+<path d="M0.0,-0.0 L25.972172074601072,-48.69238154390976 L25.972172074601072,-148.69238154390976 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d6" />
+<path d="M0.0,-0.0 L-7.324142127542075,-43.160468332443685 L-7.324142127542075,-143.16046833244368 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d7" />
+<path d="M0.0,-0.0 L-39.96621252656699,-33.773159027557554 L-39.96621252656699,-133.77315902755754 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d8" />
+<path d="M0.0,-0.0 L-69.03822019001458,-21.36899401169151 L-69.03822019001458,-121.36899401169151 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d9" />
+<path d="M0.0,-0.0 L-91.94324925705118,-7.0560004029933605 L-91.94324925705118,-107.05600040299336 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d10" />
+<path d="M0.0,-0.0 L-106.6352616980489,7.887284707162411 L-106.6352616980489,-92.11271529283759 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d11" />
+<path d="M0.0,-0.0 L-111.80186379815733,22.126022164742604 L-111.80186379815733,-77.87397783525739 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d12" />
+<path d="M0.0,-0.0 L-106.98153837921271,34.38830795919869 L-106.98153837921271,-65.6116920408013 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d13" />
+<path d="M0.0,-0.0 L-92.60487075474936,43.57878862067941 L-92.60487075474936,-56.42121137932059 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d14" />
+<path d="M0.0,-0.0 L-69.95608582633282,48.87650588325485 L-69.95608582633282,-51.12349411674515 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d15" />
+<path d="M0.0,-0.0 L-41.0583320978474,49.808230441792034 L-41.0583320978474,-50.191769558207966 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d16" />
+<path d="M0.0,-0.0 L-8.492959845088599,46.29073411638662 L-8.492959845088599,-53.70926588361338 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d17" />
+<path d="M0.0,-0.0 L24.831063216464017,38.63822437779938 L24.831063216464017,-61.36177562220062 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d18" />
+<path d="M0.0,-0.0 L55.9370013540341,27.53427712988188 L55.9370013540341,-72.46572287011813 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d19" />
+<path d="M0.0,-0.0 L82.0462537550903,13.970774909946293 L82.0462537550903,-86.0292250900537 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" id="d20" />
 </defs>
 <path d="M-211.80186379815734,149.80823044179203 L210.7656851607196,149.80823044179203" stroke="#dddddd" />
 <path d="M-211.80186379815734,-60.191769558207966 L210.7656851607196,-60.191769558207966" stroke="#dddddd" />
@@ -44,66 +65,129 @@
 <path d="M188.19813620184266,149.80823044179203 L188.19813620184266,-249.87474933020272" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="190.19813620184266" y="148.80823044179203" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <g>
-<path d="M0.0,-0.0 L100.0,-0.0 L100.0,-100.0 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L100.0,-0.0 L100.0,-100.0 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L110.30965924562757,-14.776010333066978 L110.30965924562757,-114.77601033306698 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L110.30965924562757,-14.776010333066978 L110.30965924562757,-114.77601033306698 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L110.7656851607196,-28.23212366975177 L110.7656851607196,-128.23212366975176 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L110.7656851607196,-28.23212366975177 L110.7656851607196,-128.23212366975176 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L101.32734230844062,-39.166345481374165 L101.32734230844062,-139.16634548137415 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L101.32734230844062,-39.166345481374165 L101.32734230844062,-139.16634548137415 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L82.83772974602869,-46.60195429836131 L82.83772974602869,-146.6019542983613 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L82.83772974602869,-46.60195429836131 L82.83772974602869,-146.6019542983613 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d4" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L56.94846949697302,-49.874749330202725 L56.94846949697302,-149.87474933020272 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L56.94846949697302,-49.874749330202725 L56.94846949697302,-149.87474933020272 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d5" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L25.972172074601072,-48.69238154390976 L25.972172074601072,-148.69238154390976 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L25.972172074601072,-48.69238154390976 L25.972172074601072,-148.69238154390976 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d6" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-7.324142127542075,-43.160468332443685 L-7.324142127542075,-143.16046833244368 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-7.324142127542075,-43.160468332443685 L-7.324142127542075,-143.16046833244368 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d7" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-39.96621252656699,-33.773159027557554 L-39.96621252656699,-133.77315902755754 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-39.96621252656699,-33.773159027557554 L-39.96621252656699,-133.77315902755754 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d8" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-69.03822019001458,-21.36899401169151 L-69.03822019001458,-121.36899401169151 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-69.03822019001458,-21.36899401169151 L-69.03822019001458,-121.36899401169151 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d9" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-91.94324925705118,-7.0560004029933605 L-91.94324925705118,-107.05600040299336 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-91.94324925705118,-7.0560004029933605 L-91.94324925705118,-107.05600040299336 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d10" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-106.6352616980489,7.887284707162411 L-106.6352616980489,-92.11271529283759 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-106.6352616980489,7.887284707162411 L-106.6352616980489,-92.11271529283759 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d11" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-111.80186379815733,22.126022164742604 L-111.80186379815733,-77.87397783525739 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-111.80186379815733,22.126022164742604 L-111.80186379815733,-77.87397783525739 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d12" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-106.98153837921271,34.38830795919869 L-106.98153837921271,-65.6116920408013 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-106.98153837921271,34.38830795919869 L-106.98153837921271,-65.6116920408013 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d13" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-92.60487075474936,43.57878862067941 L-92.60487075474936,-56.42121137932059 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-92.60487075474936,43.57878862067941 L-92.60487075474936,-56.42121137932059 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d14" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-69.95608582633282,48.87650588325485 L-69.95608582633282,-51.12349411674515 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-69.95608582633282,48.87650588325485 L-69.95608582633282,-51.12349411674515 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d15" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-41.0583320978474,49.808230441792034 L-41.0583320978474,-50.191769558207966 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-41.0583320978474,49.808230441792034 L-41.0583320978474,-50.191769558207966 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d16" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L-8.492959845088599,46.29073411638662 L-8.492959845088599,-53.70926588361338 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L-8.492959845088599,46.29073411638662 L-8.492959845088599,-53.70926588361338 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d17" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L24.831063216464017,38.63822437779938 L24.831063216464017,-61.36177562220062 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L24.831063216464017,38.63822437779938 L24.831063216464017,-61.36177562220062 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d18" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L55.9370013540341,27.53427712988188 L55.9370013540341,-72.46572287011813 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L55.9370013540341,27.53427712988188 L55.9370013540341,-72.46572287011813 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d19" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 <g>
-<path d="M0.0,-0.0 L82.0462537550903,13.970774909946293 L82.0462537550903,-86.0292250900537 L0.0,-100.0 L0.0,-0.0" fill="none" stroke="black" />
+<path d="M0.0,-0.0 L82.0462537550903,13.970774909946293 L82.0462537550903,-86.0292250900537 L0.0,-100.0 L0.0,-0.0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d20" startOffset="10">
+<tspan dy="-1em">a square</tspan>
+</textPath></text>
 </g>
 </svg>
