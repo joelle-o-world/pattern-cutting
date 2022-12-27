@@ -17,7 +17,7 @@ class vec3:
 
     @property
     def matrix(self):
-        return [self.x, self.y, self.z]
+        return [self.x, self.y, self.z, 1.0]
 
     def transform(self, matrix):
         m = np.matmul(self.matrix,  matrix)

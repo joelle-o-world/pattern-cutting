@@ -873,3 +873,24 @@ render(
     
 
 
+
+Here is a demo of the construction in 3D:
+
+
+```python
+pattern_piece_3d = pattern_piece.to_3D()
+pieces = []
+for phase in np.arange(0, 1, 1.0/10.0):
+  pieces.append(pattern_piece_3d.translate(z=1000).rotate(pitch=phase * 2 * math.pi).isometric().with_style("polygon"))
+
+render(*pieces)
+```
+
+
+
+
+    
+![svg](readme_files/readme_78_0.svg)
+    
+
+
