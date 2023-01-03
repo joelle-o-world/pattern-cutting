@@ -70,6 +70,21 @@ class Shape:
             self.append(p)
         return self
 
+    def line(self, x: float, y: float):
+        return self.line_to(self.last_point + Vector(x, y))
+
+    def line_down(self, amount):
+        return self.line(0, -amount)
+
+    def line_up(self, amount):
+        return self.line(0, amount)
+
+    def line_right(self, amount):
+        return self.line(amount, 0)
+
+    def line_left(self, amount):
+        return self.line(-amount, 0)
+
     def lineTo(self, p):
         "deprecated alias for line_to"
         return self.line_to(p)
