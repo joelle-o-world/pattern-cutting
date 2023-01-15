@@ -445,6 +445,26 @@ render(tween_demo(square, circle.polyline(100)))
 
 
 
+## Turtle/Spirograph curves
+
+
+```python
+import math
+from src.spirograph import spiro
+angle_over_length = lambda x : math.radians(x*.1)
+spiral = spiro(angle_over_length, 10000)
+render(spiral)
+```
+
+
+
+
+    
+![svg](readme_files/readme_39_0.svg)
+    
+
+
+
 ## Adding darts
 
 
@@ -458,7 +478,7 @@ render(shape)
 
 
     
-![svg](readme_files/readme_39_0.svg)
+![svg](readme_files/readme_41_0.svg)
     
 
 
@@ -474,7 +494,7 @@ render(shape)
 
 
     
-![svg](readme_files/readme_40_0.svg)
+![svg](readme_files/readme_42_0.svg)
     
 
 
@@ -498,7 +518,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_42_0.svg)
+![svg](readme_files/readme_44_0.svg)
     
 
 
@@ -519,7 +539,7 @@ render(
 
 
     
-![svg](readme_files/readme_44_0.svg)
+![svg](readme_files/readme_46_0.svg)
     
 
 
@@ -540,7 +560,7 @@ render(
 
 
     
-![svg](readme_files/readme_46_0.svg)
+![svg](readme_files/readme_48_0.svg)
     
 
 
@@ -599,7 +619,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_50_0.svg)
+![svg](readme_files/readme_52_0.svg)
     
 
 
@@ -617,7 +637,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_52_0.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -642,7 +662,7 @@ render(
 
 
     
-![svg](readme_files/readme_54_0.svg)
+![svg](readme_files/readme_56_0.svg)
     
 
 
@@ -663,7 +683,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_58_0.svg)
     
 
 
@@ -717,7 +737,7 @@ render(
 
 
     
-![svg](readme_files/readme_62_0.svg)
+![svg](readme_files/readme_64_0.svg)
     
 
 
@@ -729,7 +749,6 @@ radius varying across its length.
 
 
 ```python
-import math
 skirt_radius_graph = Shape([Vector(p.x / (2*math.pi),  p.y) for p in skirt_circumference_graph.points])
 render(skirt_radius_graph)
 ```
@@ -738,7 +757,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -757,7 +776,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -775,7 +794,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -797,7 +816,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -817,7 +836,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -834,7 +853,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -872,7 +891,7 @@ render(
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -902,7 +921,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 

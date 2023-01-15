@@ -148,14 +148,25 @@ class Shape:
         return len(self.points) - 1
 
     @property
-    def numberOfPoints(self):
+    def number_of_points(self):
         return len(self.points)
+
+    @property
+    def numberOfPoints(self):
+        "Deprecated alias for number_of_points"
+        return self.number_of_points
 
     def firstSegment(self):
         return self.segment(0)
 
-    def lastSegment(self):
+
+    @property
+    def last_segment(self):
         return self.segment(self.numberOfSegments - 1)
+
+    def lastSegment(self):
+        "deprecated alias for last_segment property"
+        return self.last_segment
 
     def intersections(self):
         for start, meeting, end in zip(self.points, self.points[1:], self.points[2:]):

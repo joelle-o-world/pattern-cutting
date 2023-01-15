@@ -252,6 +252,16 @@ A circle becoming a square,
 render(tween_demo(square, circle.polyline(100)))
 ```
 
+## Turtle/Spirograph curves
+
+```code
+import math
+from src.spirograph import spiro
+angle_over_length = lambda x : math.radians(x*.1)
+spiral = spiro(angle_over_length, 10000)
+render(spiral)
+```
+
 ## Adding darts
 ```code
 shape = Shape([Vector(0,0), Vector(100, 0)])
@@ -395,7 +405,6 @@ render(
 This is the circumference of the skirt over elevation. But I think what I need (in order to get the scrolled hem I'm looking for) is the radius. To keep it simple I'll imagine the skirt as a circlular prism with radius varying across its length.
 
 ```code
-import math
 skirt_radius_graph = Shape([Vector(p.x / (2*math.pi),  p.y) for p in skirt_circumference_graph.points])
 render(skirt_radius_graph)
 ```
