@@ -645,6 +645,16 @@ class Shape:
             style=self.style,
         )
 
+    def map_points(self, f):
+        return Shape(
+            points = [f(p) for p in self.points],
+            label=self.label,
+            style=self.style
+        )
+
+    def flipped_horizontally(self, mirror_x: float):
+        return self.map_points(lambda p : Vector(mirror_x - (p.x - mirror_x), p.y))
+
     def sliceAfter(self, start: int | float | Vector):
         startMeasurement = self.at(start)
         return Shape(

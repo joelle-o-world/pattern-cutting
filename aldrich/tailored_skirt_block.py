@@ -69,8 +69,10 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     #  Contsruct a dart at 17, length 10c; width 2cm
     front.addDart(p[17], 100, 20)
 
+    front_right = front.flipped_horizontally(front.right)
+    back_right = back.flipped_horizontally(back.left)
 
-    g = Group(front=front, back=back)
+    g = Group(front=front, back=back, front_right=front_right, back_right=back_right)
     g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(body.waist, body.hip, body.waist_to_hip, skirt_length)
     for i in range(0, len(p)):
         g["p{}".format(i)] = p[i]
