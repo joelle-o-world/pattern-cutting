@@ -1,6 +1,6 @@
 from numpy import mean
 
-from src.sizing.women_size import measurement_to_size, size_to_measurement
+from .women_size import measurement_to_size, size_to_measurement
 
 
 class BodyMeasurements:
@@ -14,7 +14,7 @@ class BodyMeasurements:
             if len(approximations):
                 size = mean(approximations)
             else:
-                print("Cannot estimate size")
+                raise Exception("Cannot estimate size")
 
         self.size = size
 
@@ -28,7 +28,7 @@ class BodyMeasurements:
         self.approximations = {}
         for key in size_to_measurement:
             if not key in self.known:
-                y = size_to_measurement[key](size)
+                y = float(size_to_measurement[key](size))
                 self.all[key] = y
                 self.approximations[key] = y
 
@@ -53,7 +53,7 @@ class BodyMeasurements:
         return self.all["hips"]
 
     @property
-    def body_rise(self):
+    def body_rise(self) -> float:
         return self.all["body_rise"]
 
     @property
@@ -69,11 +69,22 @@ class BodyMeasurements:
         return self.all["waist"]
 
 
-example_body_measurements = BodyMeasurements(
-    size=12,
-    waist=680.0,
-    body_rise=280.0,
-    hips=940.0,
-    waist_to_floor=1040.0,
-    waist_to_hip=206.0,
+# example_body_measurements = BodyMeasurements(
+#     size=12,
+#     waist=680.0,
+#     body_rise=280.0,
+#     hips=940.0,
+#     waist_to_floor=1040.0,
+#     waist_to_hip=206.0,
+# )
+
+
+joelle_measurements = BodyMeasurements(
+    waist=725,
+    hips=900,
+    waist_to_hip=265
 )
+
+example_body_measurements = joelle_measurements
+
+print(joelle_measurements)

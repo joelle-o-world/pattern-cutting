@@ -577,33 +577,60 @@ from src.sizing.BodyMeasurements import example_body_measurements
 print(example_body_measurements)
 ```
 
-    Size 12:
-    	waist	= 680.0mm	(-40.0mm)
-    	body_rise	= 280.0mm
-    	hips	= 940.0mm	(-20.0mm)
-    	waist_to_floor	= 1040.0mm
-    	waist_to_hip	= 206.0mm
-    	bust	= 880.0mm
-    	low_waist	= 820.0mm
-    	back_width	= 344.0mm
-    	chest	= 324.0mm
-    	shoulder	= 122.5mm
-    	neck_size	= 370.0mm
-    	dart	= 70.0mm
-    	top_arm	= 284.0mm
-    	wrist	= 160.0mm
-    	ankle	= 240.0mm
-    	high_ankle	= 210.0mm
-    	nape_to_waist	= 410.0mm
-    	front_shoulder_to_waist	= 410.0mm
-    	armscye_depth	= 210.0mm
-    	waist_to_knee	= 585.0mm
-    	sleeve_length	= 5885.0mm
-    	sleeve_length_jersey	= 545.0mm
-    	cuff_size_shirts	= 215.0mm
-    	cuff_size_two_piece_sleeve	= 137.5mm
-    	trouser_bottom_width	= 220.0mm
-    	jeans_bottom_width	= 190.0mm
+    Size 24.194444444444443:
+    	waist	= 725.0mm	(-280.8mm)
+    	hips	= 900.0mm	(-324.9mm)
+    	waist_to_hip	= 265.0mm	(+40.7mm)
+    	bust	= 1165.8mm
+    	low_waist	= 1105.8mm
+    	back_width	= 413.4mm
+    	chest	= 409.8mm
+    	shoulder	= 139.3mm
+    	neck_size	= 439.4mm
+    	dart	= 106.6mm
+    	top_arm	= 373.9mm
+    	wrist	= 194.7mm
+    	ankle	= 274.7mm
+    	high_ankle	= 244.7mm
+    	nape_to_waist	= 434.4mm
+    	front_shoulder_to_waist	= 459.9mm
+    	armscye_depth	= 238.6mm
+    	waist_to_knee	= 615.5mm
+    	waist_to_floor	= 1101.0mm
+    	body_rise	= 329.0mm
+    	sleeve_length	= 607.7mm
+    	sleeve_length_jersey	= 567.7mm
+    	cuff_size_shirts	= 240.5mm
+    	cuff_size_two_piece_sleeve	= 152.7mm
+    	trouser_bottom_width	= 250.5mm
+    	jeans_bottom_width	= 210.0mm
+    Size 24.194444444444443:
+    	waist	= 725.0mm	(-280.8mm)
+    	hips	= 900.0mm	(-324.9mm)
+    	waist_to_hip	= 265.0mm	(+40.7mm)
+    	bust	= 1165.8mm
+    	low_waist	= 1105.8mm
+    	back_width	= 413.4mm
+    	chest	= 409.8mm
+    	shoulder	= 139.3mm
+    	neck_size	= 439.4mm
+    	dart	= 106.6mm
+    	top_arm	= 373.9mm
+    	wrist	= 194.7mm
+    	ankle	= 274.7mm
+    	high_ankle	= 244.7mm
+    	nape_to_waist	= 434.4mm
+    	front_shoulder_to_waist	= 459.9mm
+    	armscye_depth	= 238.6mm
+    	waist_to_knee	= 615.5mm
+    	waist_to_floor	= 1101.0mm
+    	body_rise	= 329.0mm
+    	sleeve_length	= 607.7mm
+    	sleeve_length_jersey	= 567.7mm
+    	cuff_size_shirts	= 240.5mm
+    	cuff_size_two_piece_sleeve	= 152.7mm
+    	trouser_bottom_width	= 250.5mm
+    	jeans_bottom_width	= 210.0mm
 
 
 ### Trouser block

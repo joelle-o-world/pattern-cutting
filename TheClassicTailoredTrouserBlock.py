@@ -52,7 +52,8 @@ def TheClassicTailoredTrouserBlock(
         35.0
         # sizes 22–26 3.5cm from5
     else:
-        raise Exception("Unhandled size {}".format(body.size))
+        # raise Exception("Unhandled size {}".format(body.size))
+        print("Unhandled size {}".format(body.size))
 
     # 10–11 quarter waist plus 2.25cm.
     p[11] = p[10].squareRight(body.waist / 4 + 22.5)
@@ -62,13 +63,15 @@ def TheClassicTailoredTrouserBlock(
 
     # 4–13 the measurement 3–12 plus 1.3cm (sizes 16–20 1.5 cm; 22–24 1.7 cm).
     if body.size < 16:
-        extraLittleBit = 1.3
+        extraLittleBit = 13
     elif body.size <= 20:
-        extraLittleBit = 1.5
+        extraLittleBit = 15
     elif body.size <= 24:
-        extraLittleBit = 1.7
+        extraLittleBit = 17
     else:
-        raise Exception("Unhandled size {}".format(body.size))
+        # Estimation
+        extraLittleBit = 13 + (body.size - 16 )* 2
+        # raise Exception("Unhandled size {}".format(body.size))
     p[13] = p[4].squareRight((p[12] - p[3]).length + extraLittleBit)
 
     # TODO: Draw in side seam through points 11, 8, 13, 12; curve hipline outwards 0.5cm.

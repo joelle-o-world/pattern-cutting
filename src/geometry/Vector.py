@@ -116,11 +116,11 @@ class Vector:
     def right(self):
         return self.x
 
-    @multimethod
-    def squareDown(self, amount: float):
+    def squareDown(self, amount):
+        if isinstance(amount, Vector):
+            return self.squareDownToPoint(amount);
         return self + Vector(0, -amount)
 
-    @squareDown.register
     def squareDownToPoint(self, point: "Vector"):
         return Vector(self.x, point.y)
 
