@@ -186,6 +186,9 @@ class Vector:
     @property
     def tuple(self):
         return self.x, self.y
+    
+    def midpoint(self):
+        return Vector(self.x, self.y)
 
 
 def midpoint(*points):

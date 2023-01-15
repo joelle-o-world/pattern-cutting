@@ -1,12 +1,16 @@
 import drawSvg as svg
 from src.geometry.Abstract_Group import Abstract_Group
+from src.geometry.Vector import Vector
 
 from src.geometry.isMovable import isMovable
 
 class Group(Abstract_Group):
 
+    label: str | None
+
     def __init__(self, *objects, **kwargs):
         self.objects = {}
+        self.label = None
         for key in kwargs:
             self[key] = kwargs[key]
 
@@ -37,8 +41,25 @@ class Group(Abstract_Group):
     def height(self):
         return self.top - self.bottom
 
+    def midpoint(self):
+        sum = Vector(0,0)
+        for name in self.objects:
+            sum += self.objects[name].midpoint()
+        return sum / len(self.objects)
+
+
+    def svg_label(self): 
+        if self.label:
+            midpoint = self.midpoint()
+            return svg.Text(self.label, 12, midpoint.x, midpoint.y, fill="#000000", stroke="none")
+
     def svg(self):
-        return svg.Group([obj.svg() for obj in self.iterate_objects()])
+        g = svg.Group([obj.svg() for obj in self.iterate_objects()])
+        label = self.svg_label()
+        if label:
+            g.append(label)
+        return g
+
 
     def move(self, x: float, y: float):
         return Group(

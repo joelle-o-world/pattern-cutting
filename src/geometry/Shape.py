@@ -487,6 +487,9 @@ class Shape:
             n += 1
         return summed / n
 
+    def midpoint(self):
+        return self.center_of_mass()
+
     def x_center(self):
         return (self.left + self.right) / 2
     def vertical_center_line(self):
