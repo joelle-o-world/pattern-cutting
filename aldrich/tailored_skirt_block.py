@@ -58,6 +58,7 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     # TODO: draw in the side seam curving outwards 0.5cm.
 
     shape = Shape([p[i] for i in [1,3,4,2,16,7,10,1]], style="polygon")
+    shape.label = "Tailored Skirt Block    [waist={}, hips={}, waist_to_hip={}, skirt_length={}]".format(body.waist, body.hip, body.waist_to_hip, skirt_length)
 
     # add a dart at p[11] 14 cm, 2cm wide
     shape.addDart(p[11], 140, 20)

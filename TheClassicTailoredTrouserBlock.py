@@ -110,7 +110,7 @@ def TheClassicTailoredTrouserBlock(
     # TODO: Construct a dart on the line from 0; length 10cm, width 2cm.
     shape.addDart(p[0], 100, 20)
 
-    shape.label = "Classic Tailored Trouser Block - Front"
+    shape.label = "Classic Tailored Trouser Block - Front\n{}".format(body)
 
     g = Group(front=shape)
     for i in range(0, len(p)):
