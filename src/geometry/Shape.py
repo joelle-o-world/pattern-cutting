@@ -8,6 +8,7 @@ from src.geometry.Intersection import Intersection
 from src.geometry.LineSegment import LineSegment
 from src.geometry.vec3 import vec3
 from src.geometry.Vector import Vector, distance
+from src.competition import competition
 
 
 class Shape:
@@ -711,6 +712,9 @@ class Shape:
             sides.append( self.slice(a, b))
         return sides
 
+    def topmost_side(self):
+        sides = self.sides()
+        return competition(sides, lambda side: side.center_of_mass().y)
 
     def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment
