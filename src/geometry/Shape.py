@@ -71,6 +71,24 @@ class Shape:
             self.append(p)
         return self
 
+    def line_through_shape(self, other: "Shape"):
+        "Draw a line through all the points of another shape"
+        # First decide which side to start with
+        distance_to_first = distance(self.last_point, other.first_point)
+        distance_to_last = distance(self.last_point, other.last_point)
+        points_to_add = other.points if distance_to_last > distance_to_first else reversed(other.points)
+        # Then draw a line through all the points
+        for point in points_to_add:
+            self.line_to(point)
+        return self
+
+    def line_through(self, *shapes):
+        for shape in shapes:
+            self.line_through_shape(shape)
+        return self
+
+
+
     def line(self, x: float, y: float):
         return self.line_to(self.last_point + Vector(x, y))
 
