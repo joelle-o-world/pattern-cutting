@@ -2,6 +2,7 @@ import drawSvg as draw
 
 from src.geometry.Line import StraightLine
 from src.geometry.Vector import Vector, distance
+from src.constants import global_tolerance
 
 
 class LineSegment:
@@ -65,7 +66,7 @@ class LineSegment:
         return new
 
     def pointAlong(self, lengthAlong) -> Vector:
-        if lengthAlong < 0 or lengthAlong > self.length:
+        if lengthAlong < 0 or lengthAlong > self.length + global_tolerance:
             raise ValueError(
                 "lengthAlong ({}) is out of bounds (0 to {})".format(
                     lengthAlong, self.length

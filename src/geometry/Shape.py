@@ -50,6 +50,8 @@ class Shape:
 
     @property
     def last_point(self):
+        if len(self.points) == 0:
+            raise Exception("No points in the shape!")
         return self.points[-1]
 
     # deprecated
@@ -73,6 +75,10 @@ class Shape:
 
     def line_through_shape(self, other: "Shape"):
         "Draw a line through all the points of another shape"
+
+        if(self.has_no_points):
+            self.start_at(other.first_point)
+
         # First decide which side to start with
         distance_to_first = distance(self.last_point, other.first_point)
         distance_to_last = distance(self.last_point, other.last_point)
@@ -169,6 +175,10 @@ class Shape:
     @property
     def number_of_points(self):
         return len(self.points)
+
+    @property
+    def has_no_points(self):
+        return self.number_of_points == 0
 
     @property
     def numberOfPoints(self):
@@ -727,7 +737,11 @@ class Shape:
         corners = self.corners(threshholdAngle)
         sides = []
         for a, b in zip(corners, [*corners[1:], self.last_point]):
-            sides.append( self.slice(a, b))
+            side = self.slice(a,b)
+            if side.number_of_points > 0:
+                sides.append(side)
+            else:
+                print("Warning, found side with no points")
         return sides
 
     def topmost_side(self):

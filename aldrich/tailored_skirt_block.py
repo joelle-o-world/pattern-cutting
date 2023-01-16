@@ -2,6 +2,7 @@ from src.geometry.Group import Group
 from src.sizing.BodyMeasurements import BodyMeasurements, example_body_measurements
 from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
+from src.finishings import rolled_hem
 
 def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, skirt_length=600.0):
     p = [Vector(0,0)] *  18
@@ -72,10 +73,14 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     front_right = front.flipped_horizontally(front.right)
     back_right = back.flipped_horizontally(back.left)
 
-    g = Group(front=front, back=back, front_right=front_right, back_right=back_right)
+    waist_line = Shape().line_through(back_right.topmost_side(), back.topmost_side(), front.topmost_side(), front_right.topmost_side())
+    waist_hem = rolled_hem(waist_line, 20)
+
+    g = Group(front=front, back=back, front_right=front_right, back_right=back_right, waist_hem=waist_hem)
     g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(body.waist, body.hip, body.waist_to_hip, skirt_length)
     for i in range(0, len(p)):
         g["p{}".format(i)] = p[i]
+
     return g
     
     # Special note for individual figures
