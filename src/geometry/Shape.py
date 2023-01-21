@@ -136,6 +136,10 @@ class Shape:
         self.style = "polygon"
         return self
 
+    @property
+    def closed(self) -> bool:
+        return self.first_point == self.last_point
+
     def square_to_y_axis(self):
         last_point = self.lastPoint()
         self.lineTo(Vector(0, last_point.y))
