@@ -748,6 +748,11 @@ class Shape:
                 print("Warning, found side with no points")
         return sides
 
+    def numbered_sides(self, threshhold_angle=math.radians(15)):
+        sides = self.sides(threshhold_angle)
+        return [side.with_label("side {}".format(i)) for side, i in zip(sides, range(0, len(sides)))]
+
+
     def topmost_side(self):
         sides = self.sides()
         return competition(sides, lambda side: side.center_of_mass().y)
