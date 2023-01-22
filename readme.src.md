@@ -16,7 +16,7 @@ origin.label = "Origin"
 You can use the render function to generate an SVG representation of the geometry
 
 ```code
-from render import render
+from src.render import render
 render(origin)
 ```
 

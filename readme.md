@@ -19,7 +19,7 @@ geometry
 
 
 ```python
-from render import render
+from src.render import render
 render(origin)
 ```
 
