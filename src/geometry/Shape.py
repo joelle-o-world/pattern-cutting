@@ -11,6 +11,8 @@ from src.geometry.Vector import Vector, distance
 from src.competition import competition
 
 
+default_corner_threshold = math.radians(15)
+
 class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[Vector]
@@ -140,6 +142,17 @@ class Shape:
     def closed(self) -> bool:
         return self.first_point == self.last_point
 
+    @property
+    def is_closed(self):
+        return self.closed
+
+    def first_point_is_a_corner(self, threshhold=default_corner_threshold):
+        if self.is_closed:
+            intersection = Intersection(self.points[-2], self.points[0], self.points[1])
+            return abs(intersection.angle) > threshhold
+        else:
+            return False
+
     def square_to_y_axis(self):
         last_point = self.lastPoint()
         self.lineTo(Vector(0, last_point.y))
@@ -200,14 +213,6 @@ class Shape:
     def lastSegment(self):
         "deprecated alias for last_segment property"
         return self.last_segment
-
-    def intersections(self):
-        for start, meeting, end in zip(self.points, self.points[1:], self.points[2:]):
-            yield Intersection(start, meeting, end)
-
-    def angles(self):
-        "Iterate all the three point angles"
-        return [intersection.angle for intersection in self.intersections()]
 
     @property
     def length(self):
@@ -711,6 +716,12 @@ class Shape:
         ]
         return Shape([startMeasurement.point, *middlePoints, endMeasurement.point])
 
+    def slice_by_index(self, start_index: int, end_index: int):
+        new_shape = Shape()
+        for point in self.points[start_index : end_index]:
+            new_shape.line_to(point)
+        return new_shape
+
     def allowance(self, allowance = 25.4,label=None):
         if label == None:
             label = "{:.1f}mm allowance".format(math.fabs(allowance))
@@ -723,6 +734,25 @@ class Shape:
             result.lineTo(point)
         result.close()
         return result
+
+    def intersections(self):
+        for start, meeting, end in zip(self.points, self.points[1:], self.points[2:]):
+            yield Intersection(start, meeting, end)
+
+    def angles(self):
+        "Iterate all the three point angles"
+        return [intersection.angle for intersection in self.intersections()]
+
+
+    def corner_indices(self, threshhold_angle=default_corner_threshold):
+        for i in range(1, len(self.points)-1):
+            intersection = Intersection(
+                    self.points[i-1], 
+                    self.points[i], 
+                    self.points[i+1]
+                )
+            if abs(intersection.angle) > threshhold_angle:
+                yield i
 
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
@@ -737,15 +767,15 @@ class Shape:
         return [corner.with_label("{}".format(i)) for corner, i in zip(corners, range(0, len(corners)))]
 
     def sides(self, threshholdAngle=math.radians(15)):
-        corners = self.corners(threshholdAngle)
-        sides = []
-        for a, b in zip(corners, [*corners[1:], self.last_point]):
-            side = self.slice(a,b)
-            if side.number_of_points > 0:
-                sides.append(side)
-            else:
-                print("Warning, found side with no points")
+        corner_indices = list(self.corner_indices(threshholdAngle))
+        sides = [self.slice_by_index(i, j+1) for i,j in zip(corner_indices, corner_indices[1:])]
+        if self.closed:
+            if self.first_point_is_a_corner(threshholdAngle):
+                sides.insert(0, self.slice_by_index(0, corner_indices[0]+1))
+                
+                sides.append(self.slice_by_index(corner_indices[-1], self.number_of_points ))
         return sides
+
 
     def numbered_sides(self, threshhold_angle=math.radians(15)):
         sides = self.sides(threshhold_angle)

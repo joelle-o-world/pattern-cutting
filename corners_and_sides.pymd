@@ -8,7 +8,6 @@ from src.render import render
 from src.example_shapes import square
 
 render(
-  square,
   *square.numbered_corners(),
   *square.numbered_sides()
 )

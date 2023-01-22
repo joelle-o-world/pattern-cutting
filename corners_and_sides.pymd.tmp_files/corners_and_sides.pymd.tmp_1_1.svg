@@ -2,10 +2,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="300" height="300" viewBox="-100 -200 300 300" stroke="black" fill="none">
 <defs>
-<path d="M0,0" fill="none" stroke="black" id="d0" />
-<path d="M0,-100" fill="none" stroke="black" id="d1" />
-<path d="M100,-100" fill="none" stroke="black" id="d2" />
-<path d="M100,0" fill="none" stroke="black" id="d3" />
+<path d="M0,0 L0,-100" fill="none" stroke="black" id="d0" />
+<path d="M0,-100 L100,-100" fill="none" stroke="black" id="d1" />
+<path d="M100,-100 L100,0" fill="none" stroke="black" id="d2" />
+<path d="M100,0 L0,0" fill="none" stroke="black" id="d3" />
 </defs>
 <path d="M-100,100 L200,100" stroke="#dddddd" />
 <path d="M-100,-110 L200,-110" stroke="#dddddd" />
@@ -37,9 +37,6 @@
 <path d="M150,100 L150,-200" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="152" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
 <g>
-<path d="M0,0 L0,-100 L100,-100 L100,0 L0,0" fill="#E6E6FA66" stroke="black" />
-</g>
-<g>
 <circle cx="0" cy="0" r="1" fill="black" />
 <text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">0</text>
 </g>
@@ -56,25 +53,25 @@
 <text x="102" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">3</text>
 </g>
 <g>
-<path d="M0,0" fill="none" stroke="black" />
+<path d="M0,0 L0,-100" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
 <tspan dy="-1em">side 0</tspan>
 </textPath></text>
 </g>
 <g>
-<path d="M0,-100" fill="none" stroke="black" />
+<path d="M0,-100 L100,-100" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
 <tspan dy="-1em">side 1</tspan>
 </textPath></text>
 </g>
 <g>
-<path d="M100,-100" fill="none" stroke="black" />
+<path d="M100,-100 L100,0" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
 <tspan dy="-1em">side 2</tspan>
 </textPath></text>
 </g>
 <g>
-<path d="M100,0" fill="none" stroke="black" />
+<path d="M100,0 L0,0" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
 <tspan dy="-1em">side 3</tspan>
 </textPath></text>
