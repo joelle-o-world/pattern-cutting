@@ -660,47 +660,11 @@ from aldrich.tailored_skirt_block import tailored_skirt_block
 render(tailored_skirt_block())
 ```
 
-    Slicing by indices 1 - 3
-    Slicing by indices 2 - 5
-    Slicing by indices 4 - 6
-    Slicing by indices 5 - 7
-    Slicing by indices 6 - 8
-    Slicing by indices 7 - 9
-    Slicing by indices 8 - 10
-    Slicing by indices 9 - 11
-    Slicing by indices 0 - 2
-    Slicing by indices 10 - 12
-    Slicing by indices 1 - 3
-    Slicing by indices 2 - 5
-    Slicing by indices 4 - 6
-    Slicing by indices 5 - 7
-    Slicing by indices 6 - 8
-    Slicing by indices 7 - 9
-    Slicing by indices 8 - 10
-    Slicing by indices 9 - 11
-    Slicing by indices 0 - 2
-    Slicing by indices 10 - 12
-    Slicing by indices 1 - 3
-    Slicing by indices 2 - 4
-    Slicing by indices 3 - 5
-    Slicing by indices 4 - 7
-    Slicing by indices 6 - 8
-    Slicing by indices 0 - 2
-    Slicing by indices 7 - 9
-    Slicing by indices 1 - 3
-    Slicing by indices 2 - 4
-    Slicing by indices 3 - 5
-    Slicing by indices 4 - 7
-    Slicing by indices 6 - 8
-    Slicing by indices 0 - 2
-    Slicing by indices 7 - 9
-
-
 
 
 
     
-![svg](readme_files/readme_54_1.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -950,29 +914,11 @@ render(
 )
 ```
 
-    Slicing by indices 99 - 101
-    Slicing by indices 100 - 200
-    Slicing by indices 0 - 100
-    Slicing by indices 199 - 201
-    Slicing by indices 99 - 101
-    Slicing by indices 100 - 200
-    Slicing by indices 0 - 100
-    Slicing by indices 199 - 201
-    Slicing by indices 99 - 101
-    Slicing by indices 100 - 200
-    Slicing by indices 0 - 100
-    Slicing by indices 199 - 201
-    Slicing by indices 99 - 101
-    Slicing by indices 100 - 200
-    Slicing by indices 0 - 100
-    Slicing by indices 199 - 201
-
-
 
 
 
     
-![svg](readme_files/readme_78_1.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 

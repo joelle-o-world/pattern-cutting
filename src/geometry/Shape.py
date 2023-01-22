@@ -8,7 +8,7 @@ from src.geometry.Intersection import Intersection
 from src.geometry.LineSegment import LineSegment
 from src.geometry.vec3 import vec3
 from src.geometry.Vector import Vector, distance
-from src.competition import competition
+from src.competition import competition, multiwinner_competition
 
 
 default_corner_threshold = math.radians(15)
@@ -460,6 +460,8 @@ class Shape:
             return self.svg_dashed_arrow()
         elif self.style == "join_the_dots":
             return self.svg_join_the_dots()
+        elif self.style == "all_guides":
+            return self.svg_all_guides()
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
@@ -551,6 +553,13 @@ class Shape:
         group.append(self.svg_line_only(fill="#E6E6FA66"))
         if self.label:
             group.append(self.svg_parallel_label())
+        return group
+
+    def svg_all_guides(self):
+        group = draw.Group()
+        group.append(self.svg_line_only())
+        for side in self.numbered_sides():
+            group.append(side.svg_parallel_label())
         return group
 
     def svg_tape(self):
@@ -772,8 +781,11 @@ class Shape:
         if self.closed:
             if self.first_point_is_a_corner(threshholdAngle):
                 sides.insert(0, self.slice_by_index(0, corner_indices[0]+1))
-                
                 sides.append(self.slice_by_index(corner_indices[-1], self.number_of_points ))
+            else:
+                sides.append(
+                        self.slice_by_index(corner_indices[-1], corner_indices[1])
+                        )
         return sides
 
 
@@ -785,6 +797,9 @@ class Shape:
     def topmost_side(self):
         sides = self.sides()
         return competition(sides, lambda side: side.center_of_mass().y)
+
+    def topmost_sides(self, number_of_sides):
+        return multiwinner_competition(self.sides(), lambda side: side.center_of_mass().y, number_of_sides)
 
     def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment

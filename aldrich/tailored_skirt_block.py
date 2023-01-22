@@ -73,7 +73,18 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     front_right = front.flipped_horizontally(front.right)
     back_right = back.flipped_horizontally(back.left)
 
-    waist_line = Shape().line_through(back_right.topmost_side(), back.topmost_side(), front.topmost_side(), front_right.topmost_side())
+    waist_line = Shape().line_through(
+            back_right.sides()[3], 
+            back_right.sides()[6], 
+            back_right.sides()[9], 
+            back.sides()[9], 
+            back.sides()[6], 
+            back.sides()[3], 
+            front.sides()[3],
+            front.sides()[0],
+            front_right.sides()[0],
+            front_right.sides()[3]
+        )
     waist_hem = rolled_hem(waist_line, 20)
 
     g = Group(front=front, back=back, front_right=front_right, back_right=back_right, waist_hem=waist_hem)

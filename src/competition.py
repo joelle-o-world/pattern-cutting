@@ -10,3 +10,8 @@ def competition(items, score_function):
                 winner = item
                 winning_score = score
         return winner
+
+def multiwinner_competition(items, score_function, number_of_winners=1):
+     copy = items.copy()
+     copy.sort(key=score_function)
+     return copy[:number_of_winners]
