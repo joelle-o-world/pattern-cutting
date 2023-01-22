@@ -724,7 +724,6 @@ class Shape:
         result.close()
         return result
 
-
     def corners(self, threshholdAngle=math.radians(15)):
         "Find the corners that have an angle larger than the threshhold"
         return [self.firstPoint()] + [

@@ -1,0 +1,15 @@
+## Corners and sides
+
+Find the corners of a shape using the `.corners()` method. Optionally provide a threshold angle.
+
+
+```code
+from src.render import render
+from src.example_shapes import square
+
+render(
+  square,
+  *square.numbered_corners(),
+  *square.numbered_sides()
+)
+```

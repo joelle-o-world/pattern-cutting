@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="300" height="300" viewBox="-100 -200 300 300" stroke="black" fill="none">
+<defs>
+<path d="M0.0,-0.0 L0.0,-100.0" fill="none" stroke="black" id="d0" />
+<path d="M0.0,-100.0 L100.0,-100.0" fill="none" stroke="black" id="d1" />
+<path d="M100.0,-100.0 L100.0,-0.0" fill="none" stroke="black" id="d2" />
+<path d="M0.0,-0.0 L0,-100 L100,-100 L100.0,-0.0" fill="none" stroke="black" id="d3" />
+</defs>
+<path d="M-100,100 L200,100" stroke="#dddddd" />
+<path d="M-100,-110 L200,-110" stroke="#dddddd" />
+<path d="M-100,100 L-100,-200" stroke="#dddddd" />
+<path d="M197,100 L197,-200" stroke="#dddddd" />
+<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<path d="M-100,100 L200,100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="98" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-100,50 L200,50" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="48" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M-100,0 L200,0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-2" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M-100,-50 L200,-50" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-52" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M-100,-100 L200,-100" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-102" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M-100,-150 L200,-150" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-152" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M-100,100 L-100,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-98" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-50,100 L-50,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M0,100 L0,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M50,100 L50,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M100,100 L100,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="102" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M150,100 L150,-200" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="152" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<g>
+<path d="M0,0 L0,-100 L100,-100 L100,0 L0,0" fill="#E6E6FA66" stroke="black" />
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">0</text>
+</g>
+<g>
+<circle cx="0" cy="-100" r="1" fill="black" />
+<text x="2" y="-102" font-size="12" fill="#000000" stroke="none" dy="0em">1</text>
+</g>
+<g>
+<circle cx="100" cy="-100" r="1" fill="black" />
+<text x="102" y="-102" font-size="12" fill="#000000" stroke="none" dy="0em">2</text>
+</g>
+<g>
+<circle cx="100" cy="0" r="1" fill="black" />
+<text x="102" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">3</text>
+</g>
+<g>
+<path d="M0.0,-0.0 L0.0,-100.0" fill="none" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">side 0</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M0.0,-100.0 L100.0,-100.0" fill="none" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">side 1</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M100.0,-100.0 L100.0,-0.0" fill="none" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
+<tspan dy="-1em">side 2</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M0.0,-0.0 L0,-100 L100,-100 L100.0,-0.0" fill="none" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
+<tspan dy="-1em">side 3</tspan>
+</textPath></text>
+</g>
+</svg>
