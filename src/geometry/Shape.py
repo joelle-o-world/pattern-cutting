@@ -13,6 +13,7 @@ from src.competition import competition, multiwinner_competition
 
 default_corner_threshold = math.radians(15)
 
+
 class Shape:
     "As opposed to a monogamous line. This represents a shape made by many line segments joined end to end."
     points: List[Vector]
@@ -29,16 +30,14 @@ class Shape:
     def check_points(self):
         for a, b, i in zip(self.points, self.points[1:], range(0, len(self.points))):
             if a == b:
-                raise Exception ("We have duplicate points at position {}".format(i))
+                raise Exception("We have duplicate points at position {}".format(i))
 
     def fix_points(self):
         points = []
         for p in self.points:
-            if len(points) == 0 or p != points[len(points)-1]:
+            if len(points) == 0 or p != points[len(points) - 1]:
                 points.append(p)
         self.points = points
-
-
 
     def copy(self):
         return Shape(points=self.points, label=self.label, style=self.style)
@@ -66,6 +65,7 @@ class Shape:
     def start_at(self, p):
         self.points = [p.copy()]
         return self
+
     def startAt(self, p):
         "deprecated alias for start_at"
         return self.start_at(p)
@@ -78,13 +78,17 @@ class Shape:
     def line_through_shape(self, other: "Shape"):
         "Draw a line through all the points of another shape"
 
-        if(self.has_no_points):
+        if self.has_no_points:
             self.start_at(other.first_point)
 
         # First decide which side to start with
         distance_to_first = distance(self.last_point, other.first_point)
         distance_to_last = distance(self.last_point, other.last_point)
-        points_to_add = other.points if distance_to_last > distance_to_first else reversed(other.points)
+        points_to_add = (
+            other.points
+            if distance_to_last > distance_to_first
+            else reversed(other.points)
+        )
         # Then draw a line through all the points
         for point in points_to_add:
             self.line_to(point)
@@ -94,8 +98,6 @@ class Shape:
         for shape in shapes:
             self.line_through_shape(shape)
         return self
-
-
 
     def line(self, x: float, y: float):
         return self.line_to(self.last_point + Vector(x, y))
@@ -204,7 +206,6 @@ class Shape:
 
     def firstSegment(self):
         return self.segment(0)
-
 
     @property
     def last_segment(self):
@@ -532,6 +533,7 @@ class Shape:
 
     def x_center(self):
         return (self.left + self.right) / 2
+
     def vertical_center_line(self):
         x = self.x_center()
         return Shape([Vector(x, self.top), Vector(x, self.bottom)], style="dashed")
@@ -694,13 +696,11 @@ class Shape:
 
     def map_points(self, f):
         return Shape(
-            points = [f(p) for p in self.points],
-            label=self.label,
-            style=self.style
+            points=[f(p) for p in self.points], label=self.label, style=self.style
         )
 
     def flipped_horizontally(self, mirror_x: float):
-        return self.map_points(lambda p : Vector(mirror_x - (p.x - mirror_x), p.y))
+        return self.map_points(lambda p: Vector(mirror_x - (p.x - mirror_x), p.y))
 
     def sliceAfter(self, start: int | float | Vector):
         startMeasurement = self.at(start)
@@ -727,11 +727,11 @@ class Shape:
 
     def slice_by_index(self, start_index: int, end_index: int):
         new_shape = Shape()
-        for point in self.points[start_index : end_index]:
+        for point in self.points[start_index:end_index]:
             new_shape.line_to(point)
         return new_shape
 
-    def allowance(self, allowance = 25.4,label=None):
+    def allowance(self, allowance=25.4, label=None):
         if label == None:
             label = "{:.1f}mm allowance".format(math.fabs(allowance))
         sliced_section = self.copy()
@@ -752,14 +752,11 @@ class Shape:
         "Iterate all the three point angles"
         return [intersection.angle for intersection in self.intersections()]
 
-
     def corner_indices(self, threshhold_angle=default_corner_threshold):
-        for i in range(1, len(self.points)-1):
+        for i in range(1, len(self.points) - 1):
             intersection = Intersection(
-                    self.points[i-1], 
-                    self.points[i], 
-                    self.points[i+1]
-                )
+                self.points[i - 1], self.points[i], self.points[i + 1]
+            )
             if abs(intersection.angle) > threshhold_angle:
                 yield i
 
@@ -773,39 +770,45 @@ class Shape:
 
     def numbered_corners(self, threshholdAngle=math.radians(15)):
         corners = self.corners(threshholdAngle)
-        return [corner.with_label("{}".format(i)) for corner, i in zip(corners, range(0, len(corners)))]
+        return [
+            corner.with_label("{}".format(i))
+            for corner, i in zip(corners, range(0, len(corners)))
+        ]
 
     def sides(self, threshholdAngle=math.radians(15)):
         corner_indices = list(self.corner_indices(threshholdAngle))
-        sides = [self.slice_by_index(i, j+1) for i,j in zip(corner_indices, corner_indices[1:])]
+        sides = [
+            self.slice_by_index(i, j + 1)
+            for i, j in zip(corner_indices, corner_indices[1:])
+        ]
         if self.closed:
             if self.first_point_is_a_corner(threshholdAngle):
-                sides.insert(0, self.slice_by_index(0, corner_indices[0]+1))
-                sides.append(self.slice_by_index(corner_indices[-1], self.number_of_points ))
-            else:
+                sides.insert(0, self.slice_by_index(0, corner_indices[0] + 1))
                 sides.append(
-                        self.slice_by_index(corner_indices[-1], corner_indices[1])
-                        )
+                    self.slice_by_index(corner_indices[-1], self.number_of_points)
+                )
+            else:
+                sides.append(self.slice_by_index(corner_indices[-1], corner_indices[1]))
         return sides
-
 
     def numbered_sides(self, threshhold_angle=math.radians(15)):
         sides = self.sides(threshhold_angle)
-        return [side.with_label("side {}".format(i)) for side, i in zip(sides, range(0, len(sides)))]
-
+        return [
+            side.with_label("side {}".format(i))
+            for side, i in zip(sides, range(0, len(sides)))
+        ]
 
     def topmost_side(self):
         sides = self.sides()
         return competition(sides, lambda side: side.center_of_mass().y)
 
     def bottommost_side(self):
-        return competition(
-                self.sides(), 
-                lambda side: -side.center_of_mass().y
-            )
+        return competition(self.sides(), lambda side: -side.center_of_mass().y)
 
     def topmost_sides(self, number_of_sides):
-        return multiwinner_competition(self.sides(), lambda side: side.center_of_mass().y, number_of_sides)
+        return multiwinner_competition(
+            self.sides(), lambda side: side.center_of_mass().y, number_of_sides
+        )
 
     def angleBisectionPathThing(self, distance):
         # First point is drawn at a normal to the first segment
@@ -937,8 +940,16 @@ def dashed(*points, label=None):
 def measurement_from_y_axis(p: Vector):
     return Shape([Vector(0, p.y), p], style="tape")
 
+
 def rectangle(x, y, width, height):
-    return Shape([Vector(x, y), Vector(x + width, y), Vector(x + width, y + height), Vector(x, y + height)]).close()
+    return Shape(
+        [
+            Vector(x, y),
+            Vector(x + width, y),
+            Vector(x + width, y + height),
+            Vector(x, y + height),
+        ]
+    ).close()
 
 
 if __name__ == "__main__":
