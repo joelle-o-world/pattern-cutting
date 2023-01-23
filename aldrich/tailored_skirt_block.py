@@ -105,7 +105,7 @@ def tailored_skirt_pattern(
     waist_hem_value=1 * inch,
     seam_allowance=1 * inch,
 ):
-    block = tailored_skirt_block()
+    block = tailored_skirt_block(body=body, skirt_length=skirt_length)
 
     back_right = block.objects["back_right"]
     back = block.objects["back"]
