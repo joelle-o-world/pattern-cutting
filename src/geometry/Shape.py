@@ -365,6 +365,22 @@ class Shape:
         return max([point.x for point in self.points])
 
     @property
+    def bottom_left(self):
+        return Vector(self.left, self.bottom)
+
+    @property
+    def bottom_right(self):
+        return Vector(self.right, self.bottom)
+
+    @property
+    def top_right(self):
+        return Vector(self.right, self.top)
+
+    @property
+    def top_left(self):
+        return Vector(self.left, self.top)
+
+    @property
     def width(self) -> float:
         return self.right - self.left
 

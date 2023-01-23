@@ -35,5 +35,5 @@ def french_seam(a: Shape, b: Shape, seam_allowance=1 * inch):
 
     return Group(
         a=french_seam_allowance(a, seam_allowance),
-        b=french_seam_allowance(b, seam_allowance),
+        b=french_seam_allowance(b, -seam_allowance),
     )

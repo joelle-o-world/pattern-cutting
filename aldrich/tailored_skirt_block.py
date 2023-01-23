@@ -141,14 +141,20 @@ def tailored_skirt_pattern(
     )
     back_waist_hem = rolled_hem(back_waist_line, waist_hem_value)
 
-    bottom_line = Shape().line_through(
-        back_right.bottommost_side().reverse(),
-        back.bottommost_side(),
+    front_bottom_line = Shape().line_through(
         front.bottommost_side(),
         front_right.bottommost_side(),
     )
+    front_bottom_hem = rolled_hem(front_bottom_line, -bottom_hem_value)
 
-    bottom_hem = rolled_hem(bottom_line, -bottom_hem_value)
+    back_bottom_line = (
+        Shape()
+        # TODO: Change to accomodate flare
+        .start_at(back.bottom_right).line_through(
+            back.bottommost_side(), back_right.bottommost_side()
+        )
+    )
+    back_bottom_hem = rolled_hem(back_bottom_line, bottom_hem_value)
 
     seam = french_seam(
         back_right.leftmost_side(),
@@ -158,7 +164,8 @@ def tailored_skirt_pattern(
     allowances = Group(
         front_waist_hem=front_waist_hem,
         back_waist_hem=back_waist_hem,
-        bottom_hem=bottom_hem,
+        front_bottom_hem=front_bottom_hem,
+        back_bottom_hem=back_bottom_hem,
         seam=seam,
     )
 
