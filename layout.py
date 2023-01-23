@@ -30,6 +30,8 @@ def side_by_side(*objects, margin=25):
         x += margin
 
     return l
+
+
 def sideBySide(*objects, margin=25):
     "deprecated alias for side_by_side"
     return side_by_side(*objects, margin=margin)

@@ -4,10 +4,13 @@ from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
 from src.finishings import rolled_hem
 
-def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, skirt_length=600.0):
-    p = [Vector(0,0)] *  18
 
-    p[1] = Vector(0,0)
+def tailored_skirt_block(
+    body: BodyMeasurements = example_body_measurements, skirt_length=600.0
+):
+    p = [Vector(0, 0)] * 18
+
+    p[1] = Vector(0, 0)
 
     # Square down and across from 1.
     # 1–2 half the hip measurement plus 1.5cm, square down; this line is the centre front line.
@@ -26,21 +29,20 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     p[7] = p[5].squareRight(body.hip / 4 + 15)
     p[8] = p[7].squareDown(p[3])
 
-
     # 1–9 quarter waist measurement plus 4.25cm.
     p[9] = p[1].squareRight(body.waist / 4 + 42.5)
 
-    # 9–10 1.25cm; 
+    # 9–10 1.25cm;
     # TODO: join 10 to points 1 and 7 with dotted lines.
     p[10] = p[9].squareUp(12.5)
 
     # Divide the line 1–10 into three parts, mark points 11 and 12.
-    p[11] = p[1] + (p[10]-p[1]) / 3
-    p[12] = p[11] + (p[10]-p[1]) / 3
+    p[11] = p[1] + (p[10] - p[1]) / 3
+    p[12] = p[11] + (p[10] - p[1]) / 3
 
     # Using the line 1–10, square down from points 11 and 12 with dotted lines.
 
-    # TODO: Draw in the waistline with a slight curve; 
+    # TODO: Draw in the waistline with a slight curve;
     # TODO: draw in the side seam curving it outwards 0.5cm.
 
     # 2-15 quarter the waist measurement plus 2.25cm
@@ -55,11 +57,11 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     for i in range(0, len(p)):
         p[i].label = "{}".format(i)
 
-    # TODO: Draw in the waistline with a slight curve, 
+    # TODO: Draw in the waistline with a slight curve,
     # TODO: draw in the side seam curving outwards 0.5cm.
 
     back = Shape([p[i] for i in [1, 3, 8, 7, 10]], label="back").close()
-    front = Shape([p[i] for i in [2, 16, 7,8,  4]], label="front").close()
+    front = Shape([p[i] for i in [2, 16, 7, 8, 4]], label="front").close()
 
     # add a dart at p[11] 14 cm, 2cm wide
     back.addDart(p[11], 140, 20)
@@ -74,43 +76,46 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
     back_right = back.flipped_horizontally(back.left)
 
     waist_line = Shape().line_through(
-            back_right.sides()[3], 
-            back_right.sides()[6], 
-            back_right.sides()[9], 
-            back.sides()[9], 
-            back.sides()[6], 
-            back.sides()[3], 
-            front.sides()[3],
-            front.sides()[0],
-            front_right.sides()[0],
-            front_right.sides()[3]
-        )
+        back_right.sides()[3],
+        back_right.sides()[6],
+        back_right.sides()[9],
+        back.sides()[9],
+        back.sides()[6],
+        back.sides()[3],
+        front.sides()[3],
+        front.sides()[0],
+        front_right.sides()[0],
+        front_right.sides()[3],
+    )
     waist_hem = rolled_hem(waist_line, 20)
 
-
     bottom_line = Shape().line_through(
-            back_right.bottommost_side().reverse(),
-            back.bottommost_side(),
-            front.bottommost_side(),
-            front_right.bottommost_side()
-        )
+        back_right.bottommost_side().reverse(),
+        back.bottommost_side(),
+        front.bottommost_side(),
+        front_right.bottommost_side(),
+    )
 
     bottom_hem = rolled_hem(bottom_line, -25.4)
 
-
-
-    g = Group(front=front, back=back, front_right=front_right, back_right=back_right, waist_hem=waist_hem, bottom_hem = bottom_hem)
-    g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(body.waist, body.hip, body.waist_to_hip, skirt_length)
+    g = Group(
+        front=front,
+        back=back,
+        front_right=front_right,
+        back_right=back_right,
+        waist_hem=waist_hem,
+        bottom_hem=bottom_hem,
+    )
+    g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(
+        body.waist, body.hip, body.waist_to_hip, skirt_length
+    )
     for i in range(0, len(p)):
         g["p{}".format(i)] = p[i]
 
     return g
-    
+
     # Special note for individual figures
     # If the waist is small in proportion to the hip size of the standard block, increase the width of the darts to 2.5cm. This will require you to draft:
     # 1–9 quarter waist plus 5.25cm.
     # 2–15 quarter waist plus 2.75cm.
     # This ensures a more even suppression around the waistline.
-
-
-
