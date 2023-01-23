@@ -1,4 +1,5 @@
 from src.geometry.Group import Group
+from src.seams import french_seam
 from src.sizing.BodyMeasurements import BodyMeasurements, example_body_measurements
 from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
@@ -98,6 +99,8 @@ def tailored_skirt_block(
 
     bottom_hem = rolled_hem(bottom_line, -25.4)
 
+    seam = french_seam(back_right.leftmost_side(), front_right.rightmost_side())
+
     g = Group(
         front=front,
         back=back,
@@ -105,6 +108,7 @@ def tailored_skirt_block(
         back_right=back_right,
         waist_hem=waist_hem,
         bottom_hem=bottom_hem,
+        seam=seam,
     )
     g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(
         body.waist, body.hip, body.waist_to_hip, skirt_length

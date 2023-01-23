@@ -805,6 +805,12 @@ class Shape:
     def bottommost_side(self):
         return competition(self.sides(), lambda side: -side.center_of_mass().y)
 
+    def rightmost_side(self):
+        return competition(self.sides(), lambda side: side.center_of_mass().x)
+
+    def leftmost_side(self):
+        return competition(self.sides(), lambda side: -side.center_of_mass().x)
+
     def topmost_sides(self, number_of_sides):
         return multiwinner_competition(
             self.sides(), lambda side: side.center_of_mass().y, number_of_sides
