@@ -463,6 +463,8 @@ class Shape:
             return self.svg_join_the_dots()
         elif self.style == "all_guides":
             return self.svg_all_guides()
+        elif self.style == "notch":
+            return self.svg_notch()
         else:
             raise ValueError("Unable to render unexpected polyline style:", self.style)
 
@@ -502,6 +504,11 @@ class Shape:
             startOffset=10,
             lineOffset=-1,
         )
+
+    def svg_side_label(self):
+        x = self.right
+        y = self.bottom
+        return draw.Text(self.label, 12, x=x, y=y, stroke="none", fill="#000000")
 
     def svg_pointset(self):
         g = draw.Group()
@@ -555,6 +562,13 @@ class Shape:
         group.append(self.svg_line_only(fill="#E6E6FA66"))
         if self.label:
             group.append(self.svg_parallel_label())
+        return group
+
+    def svg_notch(self):
+        group = draw.Group()
+        group.append(self.svg_line_only(stroke="none", fill="#000000"))
+        if self.label:
+            group.append(self.svg_side_label())
         return group
 
     def svg_all_guides(self):
@@ -876,6 +890,7 @@ class Shape:
         else:
             return self.closest(p)
 
+    # TODO: Rename as cut_dart
     def addDart(self, position: Vector | float | int, depth: float, width: float):
         at = self.at(position)
         lengthAlong = at.lengthAlong

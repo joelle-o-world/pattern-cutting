@@ -136,7 +136,9 @@ def tailored_skirt_pattern(
     bottom_hem = rolled_hem(bottom_line, -bottom_hem_value)
 
     seam = french_seam(
-        back_right.leftmost_side(), front_right.rightmost_side(), seam_allowance
+        back_right.leftmost_side(),
+        front_right.rightmost_side().reverse(),
+        seam_allowance,
     )
     allowances = Group(
         waist_hem=waist_hem,

@@ -678,11 +678,14 @@ from aldrich.tailored_skirt_block import tailored_skirt_pattern
 render(tailored_skirt_pattern())
 ```
 
+    Warning: creating french seam on two lines with different length
+
+
 
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_56_1.svg)
     
 
 
