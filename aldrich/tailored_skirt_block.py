@@ -122,12 +122,21 @@ def tailored_skirt_pattern(
         back.sides()[9],
         back.sides()[6],
         back.sides()[3],
+        # front.sides()[3],
+        # front.sides()[0],
+        # front_right.sides()[0],
+        # front_right.sides()[3],
+    )
+    waist_hem = rolled_hem(waist_line, waist_hem_value)
+
+    back_waist_line = Shape().line_through(
         front.sides()[3],
         front.sides()[0],
         front_right.sides()[0],
         front_right.sides()[3],
     )
-    waist_hem = rolled_hem(waist_line, waist_hem_value)
+    back_waist_hem = rolled_hem(back_waist_line, waist_hem_value)
+    print(back_waist_hem)
 
     bottom_line = Shape().line_through(
         back_right.bottommost_side().reverse(),

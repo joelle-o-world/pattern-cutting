@@ -18,6 +18,12 @@ class Abstract_Group:
     def __delitem__(self, key):
         del self.objects[key]
 
+    def __str__(self):
+        out = "group:\n"
+        for key in self.objects:
+            out += "\t{} = {}\n".format(key, self.objects[key])
+        return out
+
     def append(self, obj):
         self.objects[self.new_unused_key()] = obj
 

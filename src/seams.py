@@ -27,7 +27,11 @@ def french_seam_allowance(
 
 def french_seam(a: Shape, b: Shape, seam_allowance=1 * inch):
     if a.length != b.length:
-        print("Warning: creating french seam on two lines with different length")
+        print(
+            "Warning: creating french seam on two lines with different length: {} and {}".format(
+                a.length, b.length
+            )
+        )
 
     return Group(
         a=french_seam_allowance(a, seam_allowance),
