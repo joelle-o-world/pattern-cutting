@@ -334,6 +334,14 @@ from aldrich.tailored_skirt_block import tailored_skirt_block
 render(tailored_skirt_block())
 ```
 
+Here it is with the seam and hems marked,
+
+```code
+from aldrich.tailored_skirt_block import tailored_skirt_pattern
+
+render(tailored_skirt_pattern())
+```
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):

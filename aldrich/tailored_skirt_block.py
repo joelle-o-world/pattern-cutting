@@ -76,6 +76,35 @@ def tailored_skirt_block(
     front_right = front.flipped_horizontally(front.right)
     back_right = back.flipped_horizontally(back.left)
 
+    g = Group(
+        front=front,
+        back=back,
+        front_right=front_right,
+        back_right=back_right,
+    )
+    g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(
+        body.waist, body.hip, body.waist_to_hip, skirt_length
+    )
+    for i in range(0, len(p)):
+        g["p{}".format(i)] = p[i]
+
+    return g
+
+    # Special note for individual figures
+    # If the waist is small in proportion to the hip size of the standard block, increase the width of the darts to 2.5cm. This will require you to draft:
+    # 1–9 quarter waist plus 5.25cm.
+    # 2–15 quarter waist plus 2.75cm.
+    # This ensures a more even suppression around the waistline.
+
+
+def tailored_skirt_pattern(body=example_body_measurements, skirt_length=600):
+    block = tailored_skirt_block()
+
+    back_right = block.objects["back_right"]
+    back = block.objects["back"]
+    front = block.objects["front"]
+    front_right = block.objects["front_right"]
+
     waist_line = Shape().line_through(
         back_right.sides()[3],
         back_right.sides()[6],
@@ -100,26 +129,10 @@ def tailored_skirt_block(
     bottom_hem = rolled_hem(bottom_line, -25.4)
 
     seam = french_seam(back_right.leftmost_side(), front_right.rightmost_side())
-
-    g = Group(
-        front=front,
-        back=back,
-        front_right=front_right,
-        back_right=back_right,
+    allowances = Group(
         waist_hem=waist_hem,
         bottom_hem=bottom_hem,
         seam=seam,
     )
-    g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(
-        body.waist, body.hip, body.waist_to_hip, skirt_length
-    )
-    for i in range(0, len(p)):
-        g["p{}".format(i)] = p[i]
 
-    return g
-
-    # Special note for individual figures
-    # If the waist is small in proportion to the hip size of the standard block, increase the width of the darts to 2.5cm. This will require you to draft:
-    # 1–9 quarter waist plus 5.25cm.
-    # 2–15 quarter waist plus 2.75cm.
-    # This ensures a more even suppression around the waistline.
+    return Group(block=block, allowances=allowances)

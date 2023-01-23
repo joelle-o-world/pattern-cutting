@@ -669,6 +669,24 @@ render(tailored_skirt_block())
 
 
 
+Here it is with the seam and hems marked,
+
+
+```python
+from aldrich.tailored_skirt_block import tailored_skirt_pattern
+
+render(tailored_skirt_pattern())
+```
+
+
+
+
+    
+![svg](readme_files/readme_56_0.svg)
+    
+
+
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):
@@ -689,7 +707,7 @@ render(
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_58_0.svg)
     
 
 
@@ -710,7 +728,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -764,7 +782,7 @@ render(
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -784,7 +802,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -803,7 +821,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -821,7 +839,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -843,7 +861,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -863,7 +881,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -880,7 +898,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -918,7 +936,7 @@ render(
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -948,7 +966,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
