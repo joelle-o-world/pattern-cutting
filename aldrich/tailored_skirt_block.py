@@ -4,6 +4,7 @@ from src.sizing.BodyMeasurements import BodyMeasurements, example_body_measureme
 from src.geometry.Vector import Vector
 from src.geometry.Shape import Shape
 from src.finishings import rolled_hem
+from src.units import inch
 
 
 def tailored_skirt_block(
@@ -97,7 +98,13 @@ def tailored_skirt_block(
     # This ensures a more even suppression around the waistline.
 
 
-def tailored_skirt_pattern(body=example_body_measurements, skirt_length=600):
+def tailored_skirt_pattern(
+    body=example_body_measurements,
+    skirt_length=600,
+    bottom_hem_value=1.0 * inch,
+    waist_hem_value=1 * inch,
+    seam_allowance=1 * inch,
+):
     block = tailored_skirt_block()
 
     back_right = block.objects["back_right"]
@@ -117,7 +124,7 @@ def tailored_skirt_pattern(body=example_body_measurements, skirt_length=600):
         front_right.sides()[0],
         front_right.sides()[3],
     )
-    waist_hem = rolled_hem(waist_line, 20)
+    waist_hem = rolled_hem(waist_line, waist_hem_value)
 
     bottom_line = Shape().line_through(
         back_right.bottommost_side().reverse(),
@@ -126,9 +133,11 @@ def tailored_skirt_pattern(body=example_body_measurements, skirt_length=600):
         front_right.bottommost_side(),
     )
 
-    bottom_hem = rolled_hem(bottom_line, -25.4)
+    bottom_hem = rolled_hem(bottom_line, -bottom_hem_value)
 
-    seam = french_seam(back_right.leftmost_side(), front_right.rightmost_side())
+    seam = french_seam(
+        back_right.leftmost_side(), front_right.rightmost_side(), seam_allowance
+    )
     allowances = Group(
         waist_hem=waist_hem,
         bottom_hem=bottom_hem,
