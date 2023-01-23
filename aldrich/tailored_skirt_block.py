@@ -115,7 +115,7 @@ def tailored_skirt_pattern(
     front = block.objects["front"]
     front_right = block.objects["front_right"]
 
-    waist_line = Shape().line_through(
+    front_waist_line = Shape().line_through(
         back_right.sides()[3],
         back_right.sides()[6],
         back_right.sides()[9],
@@ -127,16 +127,19 @@ def tailored_skirt_pattern(
         # front_right.sides()[0],
         # front_right.sides()[3],
     )
-    waist_hem = rolled_hem(waist_line, waist_hem_value)
+    front_waist_hem = rolled_hem(front_waist_line, waist_hem_value)
 
-    back_waist_line = Shape().line_through(
-        front.sides()[3],
-        front.sides()[0],
-        front_right.sides()[0],
-        front_right.sides()[3],
+    back_waist_line = (
+        Shape()
+        .start_at(block["p16"])
+        .line_through(
+            front.sides()[3],
+            front.sides()[0],
+            front_right.sides()[0],
+            front_right.sides()[3],
+        )
     )
     back_waist_hem = rolled_hem(back_waist_line, waist_hem_value)
-    print(back_waist_hem)
 
     bottom_line = Shape().line_through(
         back_right.bottommost_side().reverse(),
@@ -153,7 +156,8 @@ def tailored_skirt_pattern(
         seam_allowance,
     )
     allowances = Group(
-        waist_hem=waist_hem,
+        front_waist_hem=front_waist_hem,
+        back_waist_hem=back_waist_hem,
         bottom_hem=bottom_hem,
         seam=seam,
     )
