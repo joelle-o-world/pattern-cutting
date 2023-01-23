@@ -57,4 +57,4 @@ class Intersection:
         if meeting:
             return Intersection(start=first.start, meeting=meeting, end=second.end)
         else:
-            raise Exception()
+            raise Exception("No couldn't find intersection of parallel line segments:\n\tfirst: {}\n\tsecond: {}".format(self.first, self.second))

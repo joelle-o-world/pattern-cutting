@@ -87,7 +87,19 @@ def tailored_skirt_block(body: BodyMeasurements = example_body_measurements, ski
         )
     waist_hem = rolled_hem(waist_line, 20)
 
-    g = Group(front=front, back=back, front_right=front_right, back_right=back_right, waist_hem=waist_hem)
+
+    bottom_line = Shape().line_through(
+            back_right.bottommost_side().reverse(),
+            back.bottommost_side(),
+            front.bottommost_side(),
+            front_right.bottommost_side()
+        )
+
+    bottom_hem = rolled_hem(bottom_line, -25.4)
+
+
+
+    g = Group(front=front, back=back, front_right=front_right, back_right=back_right, waist_hem=waist_hem, bottom_hem = bottom_hem)
     g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(body.waist, body.hip, body.waist_to_hip, skirt_length)
     for i in range(0, len(p)):
         g["p{}".format(i)] = p[i]
