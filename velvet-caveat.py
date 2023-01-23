@@ -15,3 +15,11 @@ velvet_caveat = BodyMeasurements(
 )
 
 print(velvet_caveat)
+
+
+# More measuruments from 23.01.2023
+# Neck to shoulder: 7”/18cm
+# Bust: 39”/99cm
+# Chest: 14”/36.5cm
+# Nape to waist: 17”/44cm
+# Back: 14.5”/37.5cm
