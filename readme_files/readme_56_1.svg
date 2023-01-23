@@ -137,18 +137,6 @@
 </textPath></text>
 </g>
 <g>
-<path d="M465.0,-0.0 L590.8520993009289,-7.720987687173553 L606.9567897949306,91.47900699071141 L610.8145673657378,-8.94567897949312 L668.75,-12.5 L690.0,265 L690.0,600 L465.0,600 L465.0,0" fill="#E6E6FA66" stroke="black" />
-<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
-<tspan dy="-1em">front</tspan>
-</textPath></text>
-</g>
-<g>
-<path d="M0.0,-0.0 L0.0,600 L-240.0,600 L-240.0,265 L-223.75,-12.5 L-159.15109809326995,-8.891122798506702 L-156.13903498133365,116.4720594992067 L-139.18223524006356,-7.775543868159976 L-84.56776475993651,-4.724456131840029 L-82.39238584576032,135.61537330577818 L-64.5989019067301,-3.6088772014933017 L0.0,0" fill="#E6E6FA66" stroke="black" />
-<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
-<tspan dy="-1em">back</tspan>
-</textPath></text>
-</g>
-<g>
 <circle cx="0" cy="0" r="1" fill="black" />
 <text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
 </g>
@@ -220,7 +208,19 @@
 <circle cx="329.16666666666663" cy="-8.333333333333334" r="1" fill="black" />
 <text x="331.16666666666663" y="-10.333333333333334" font-size="12" fill="#000000" stroke="none" dy="0em">17</text>
 </g>
-<text x="196.72348484848487" y="163.27695080649679" font-size="12" fill="#000000" stroke="none"><tspan x="196.72348484848487" dy="0em">Tailored Skirt Block</tspan><tspan x="196.72348484848487" dy="1em">waist=725</tspan><tspan x="196.72348484848487" dy="1em">hips=900</tspan><tspan x="196.72348484848487" dy="1em">waist_to_hip=265</tspan><tspan x="196.72348484848487" dy="1em">skirt_length=600</tspan></text>
+<g>
+<path d="M465.0,-0.0 L590.8520993009289,-7.720987687173553 L606.9567897949306,91.47900699071141 L610.8145673657378,-8.94567897949312 L668.75,-12.5 L690.0,265 L690.0,600 L465.0,600 L465.0,0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
+<tspan dy="-1em">front</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M0.0,-0.0 L0.0,600 L-240.0,600 L-240.0,265 L-223.75,-12.5 L-159.15109809326995,-8.891122798506702 L-156.13903498133365,116.4720594992067 L-139.18223524006356,-7.775543868159976 L-84.56776475993651,-4.724456131840029 L-82.39238584576032,135.61537330577818 L-64.5989019067301,-3.6088772014933017 L0.0,0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
+<tspan dy="-1em">back</tspan>
+</textPath></text>
+</g>
+<text x="196.72348484848482" y="163.2769508064968" font-size="12" fill="#000000" stroke="none"><tspan x="196.72348484848482" dy="0em">Tailored Skirt Block</tspan><tspan x="196.72348484848482" dy="1em">waist=725</tspan><tspan x="196.72348484848482" dy="1em">hips=900</tspan><tspan x="196.72348484848482" dy="1em">waist_to_hip=265</tspan><tspan x="196.72348484848482" dy="1em">skirt_length=600</tspan></text>
 </g>
 <g>
 <g>

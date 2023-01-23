@@ -74,14 +74,9 @@ def tailored_skirt_block(
     #  Contsruct a dart at 17, length 10c; width 2cm
     front.addDart(p[17], 100, 20)
 
-    front_right = front.flipped_horizontally(front.right)
-    back_right = back.flipped_horizontally(back.left)
-
     g = Group(
         front=front,
         back=back,
-        front_right=front_right,
-        back_right=back_right,
     )
     g.label = "Tailored Skirt Block\nwaist={}\nhips={}\nwaist_to_hip={}\nskirt_length={}".format(
         body.waist, body.hip, body.waist_to_hip, skirt_length
@@ -98,6 +93,14 @@ def tailored_skirt_block(
     # This ensures a more even suppression around the waistline.
 
 
+def complete_tailored_skirt_block(body=example_body_measurements, skirt_length=600):
+    block = tailored_skirt_block(body, skirt_length)
+    return block.add_objects(
+        front_right=block["front"].flipped_horizontally(block["front"].right),
+        back_right=block["back"].flipped_horizontally(block["back"].left),
+    )
+
+
 def tailored_skirt_pattern(
     body=example_body_measurements,
     skirt_length=600,
@@ -105,7 +108,7 @@ def tailored_skirt_pattern(
     waist_hem_value=1 * inch,
     seam_allowance=1 * inch,
 ):
-    block = tailored_skirt_block(body=body, skirt_length=skirt_length)
+    block = complete_tailored_skirt_block(body=body, skirt_length=skirt_length)
 
     back_right = block.objects["back_right"]
     back = block.objects["back"]

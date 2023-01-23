@@ -4,6 +4,7 @@ from src.geometry.Vector import Vector
 
 from src.geometry.isMovable import isMovable
 
+
 class Group(Abstract_Group):
 
     label: str | None
@@ -42,16 +43,17 @@ class Group(Abstract_Group):
         return self.top - self.bottom
 
     def midpoint(self):
-        sum = Vector(0,0)
+        sum = Vector(0, 0)
         for name in self.objects:
             sum += self.objects[name].midpoint()
         return sum / len(self.objects)
 
-
-    def svg_label(self): 
+    def svg_label(self):
         if self.label:
             midpoint = self.midpoint()
-            return svg.Text(self.label, 12, midpoint.x, midpoint.y, fill="#000000", stroke="none")
+            return svg.Text(
+                self.label, 12, midpoint.x, midpoint.y, fill="#000000", stroke="none"
+            )
 
     def svg(self):
         g = svg.Group([obj.svg() for obj in self.iterate_objects()])
@@ -60,14 +62,17 @@ class Group(Abstract_Group):
             g.append(label)
         return g
 
-
     def move(self, x: float, y: float):
         return Group(
-            *[obj.move(x, y) if isMovable(obj) else obj for obj in self.iterate_objects()]
+            *[
+                obj.move(x, y) if isMovable(obj) else obj
+                for obj in self.iterate_objects()
+            ]
         )
 
     def to_3D(self):
         from src.geometry.Group3d import Group3d
+
         g = Group3d()
         for name in self.objects:
             g[name] = self.objects[name].to_3D()
