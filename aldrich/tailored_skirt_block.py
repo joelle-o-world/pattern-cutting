@@ -8,9 +8,9 @@ from src.units import inch
 
 
 def tailored_skirt_block(
-    body: BodyMeasurements = example_body_measurements, skirt_length=600.0
+    body: BodyMeasurements = example_body_measurements, skirt_length=600.0, flare=1.0
 ):
-    p = [Vector(0, 0)] * 18
+    p = [Vector(0, 0)] * 20
 
     p[1] = Vector(0, 0)
 
@@ -56,14 +56,18 @@ def tailored_skirt_block(
     # 16-17 is one third the distance 2–16; using the line 2–16, square down from 17 with a dotted line.
     p[17] = p[16] + (p[2] - p[16]) / 3
 
+    bottom_width = body.hip * flare
+    p[18] = p[8] - Vector((bottom_width - body.hip) / 4, 0)
+    p[19] = p[8] + Vector((bottom_width - body.hip) / 4, 0)
+
     for i in range(0, len(p)):
         p[i].label = "{}".format(i)
 
     # TODO: Draw in the waistline with a slight curve,
     # TODO: draw in the side seam curving outwards 0.5cm.
 
-    back = Shape([p[i] for i in [1, 3, 8, 7, 10]], label="back").close()
-    front = Shape([p[i] for i in [2, 16, 7, 8, 4]], label="front").close()
+    back = Shape([p[i] for i in [1, 3, 19, 7, 10]], label="back").close()
+    front = Shape([p[i] for i in [2, 16, 7, 18, 4]], label="front").close()
 
     # add a dart at p[11] 14 cm, 2cm wide
     back.addDart(p[11], 140, 20)
@@ -73,6 +77,8 @@ def tailored_skirt_block(
 
     #  Contsruct a dart at 17, length 10c; width 2cm
     front.addDart(p[17], 100, 20)
+
+    front = front.set_left(back.right)
 
     g = Group(
         front=front,
@@ -93,8 +99,10 @@ def tailored_skirt_block(
     # This ensures a more even suppression around the waistline.
 
 
-def complete_tailored_skirt_block(body=example_body_measurements, skirt_length=600):
-    block = tailored_skirt_block(body, skirt_length)
+def complete_tailored_skirt_block(
+    body=example_body_measurements, skirt_length=600, flare=1.0
+):
+    block = tailored_skirt_block(body, skirt_length, flare=flare)
     return block.add_objects(
         front_right=block["front"].flipped_horizontally(block["front"].right),
         back_right=block["back"].flipped_horizontally(block["back"].left),
@@ -104,11 +112,14 @@ def complete_tailored_skirt_block(body=example_body_measurements, skirt_length=6
 def tailored_skirt_pattern(
     body=example_body_measurements,
     skirt_length=600,
+    flare=1.0,
     bottom_hem_value=1.0 * inch,
     waist_hem_value=1 * inch,
     seam_allowance=1 * inch,
 ):
-    block = complete_tailored_skirt_block(body=body, skirt_length=skirt_length)
+    block = complete_tailored_skirt_block(
+        body=body, skirt_length=skirt_length, flare=flare
+    )
 
     back_right = block.objects["back_right"]
     back = block.objects["back"]
@@ -129,15 +140,11 @@ def tailored_skirt_pattern(
     )
     front_waist_hem = rolled_hem(front_waist_line, waist_hem_value)
 
-    back_waist_line = (
-        Shape()
-        .start_at(block["p16"])
-        .line_through(
-            front.sides()[3],
-            front.sides()[0],
-            front_right.sides()[0],
-            front_right.sides()[3],
-        )
+    back_waist_line = Shape().line_through(
+        front.sides()[3].reverse(),
+        front.sides()[0],
+        front_right.sides()[0],
+        front_right.sides()[3],
     )
     back_waist_hem = rolled_hem(back_waist_line, waist_hem_value)
 
@@ -156,17 +163,25 @@ def tailored_skirt_pattern(
     )
     back_bottom_hem = rolled_hem(back_bottom_line, bottom_hem_value)
 
-    seam = french_seam(
-        back_right.leftmost_side(),
-        front_right.rightmost_side().reverse(),
-        seam_allowance,
+    left_seam = french_seam(
+        back_right.leftmost_side().reverse(),
+        front_right.rightmost_side(),
+        -seam_allowance,
     )
+
     allowances = Group(
         front_waist_hem=front_waist_hem,
         back_waist_hem=back_waist_hem,
         front_bottom_hem=front_bottom_hem,
         back_bottom_hem=back_bottom_hem,
-        seam=seam,
+        left_seam=left_seam,
     )
+
+    if flare > 1.0:
+        allowances.add_objects(
+            right_seam=french_seam(
+                back.rightmost_side().reverse(), front.leftmost_side(), seam_allowance
+            )
+        )
 
     return Group(block=block, allowances=allowances)

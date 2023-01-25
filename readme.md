@@ -690,6 +690,26 @@ render(tailored_skirt_pattern())
 
 
 
+I’m planning a long flared skirt.
+
+
+```python
+render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
+```
+
+    Warning: creating french seam on two lines with different length: 958.9489488731247 and 959.2860046092952
+    Warning: creating french seam on two lines with different length: 958.9489488731247 and 959.2860046092952
+
+
+
+
+
+    
+![svg](readme_files/readme_58_1.svg)
+    
+
+
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):
@@ -710,7 +730,7 @@ render(
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -731,7 +751,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_60_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -785,7 +805,7 @@ render(
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -805,7 +825,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -824,7 +844,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -842,7 +862,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -864,7 +884,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -884,7 +904,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -901,7 +921,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -939,7 +959,7 @@ render(
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -969,7 +989,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 

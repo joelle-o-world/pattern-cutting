@@ -167,6 +167,14 @@
 <circle cx="329.16666666666663" cy="-8.333333333333334" r="1" fill="black" />
 <text x="331.16666666666663" y="-10.333333333333334" font-size="12" fill="#000000" stroke="none" dy="0em">17</text>
 </g>
-<text x="193.37243262244908" y="153.5314896102399" font-size="12" fill="#000000" stroke="none"><tspan x="193.37243262244908" dy="0em">Tailored Skirt Block</tspan><tspan x="193.37243262244908" dy="1em">waist=725</tspan><tspan x="193.37243262244908" dy="1em">hips=900</tspan><tspan x="193.37243262244908" dy="1em">waist_to_hip=265</tspan><tspan x="193.37243262244908" dy="1em">skirt_length=600.0</tspan></text>
+<g>
+<circle cx="240.0" cy="600.0" r="1" fill="black" />
+<text x="242.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">18</text>
+</g>
+<g>
+<circle cx="240.0" cy="600.0" r="1" fill="black" />
+<text x="242.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">19</text>
+</g>
+<text x="197.61130238404465" y="194.119536009309" font-size="12" fill="#000000" stroke="none"><tspan x="197.61130238404465" dy="0em">Tailored Skirt Block</tspan><tspan x="197.61130238404465" dy="1em">waist=725</tspan><tspan x="197.61130238404465" dy="1em">hips=900</tspan><tspan x="197.61130238404465" dy="1em">waist_to_hip=265</tspan><tspan x="197.61130238404465" dy="1em">skirt_length=600.0</tspan></text>
 </g>
 </svg>

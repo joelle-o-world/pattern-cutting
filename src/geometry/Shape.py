@@ -359,6 +359,9 @@ class Shape:
         "x coordinate of the left-most point"
         return min([point.x for point in self.points])
 
+    def set_left(self, value: float):
+        return self.translate(Vector(value - self.left, 0))
+
     @property
     def right(self) -> float:
         "x coordinate of the right-most point"
@@ -694,6 +697,11 @@ class Shape:
 
     def moveRight(self, amount):
         return self.translate(Vector(amount, 0))
+
+    def translate_in_place(self, translation_vector: Vector):
+        for point in self.points:
+            point.x += translation_vector.x
+            point.y += translation_vector.y
 
     def translate(self, t):
         return Shape(

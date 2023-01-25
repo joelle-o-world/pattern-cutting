@@ -342,6 +342,12 @@ from aldrich.tailored_skirt_block import tailored_skirt_pattern
 render(tailored_skirt_pattern())
 ```
 
+I'm planning a long flared skirt.
+
+```code
+render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
+```
+
 ## Working in 3D
 
 Turn a 2d shape into 3d one (and back again to render it):

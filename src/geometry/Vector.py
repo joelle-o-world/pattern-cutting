@@ -118,7 +118,7 @@ class Vector:
 
     def squareDown(self, amount):
         if isinstance(amount, Vector):
-            return self.squareDownToPoint(amount);
+            return self.squareDownToPoint(amount)
         return self + Vector(0, -amount)
 
     def squareDownToPoint(self, point: "Vector"):
@@ -186,7 +186,7 @@ class Vector:
     @property
     def tuple(self):
         return self.x, self.y
-    
+
     def midpoint(self):
         return Vector(self.x, self.y)
 
@@ -201,5 +201,6 @@ def midpoint(*points):
 def distance(a: Vector, b: Vector):
     return (a - b).length
 
+
 def polar(angle, length):
-    return Vector(length,0).with_angle(angle)
+    return Vector(length, 0).with_angle(angle)
