@@ -8,12 +8,12 @@
 <path d="M-75.0,274.6053456856543 L-75.0,-125.0" stroke="#dddddd" />
 <path d="M222.0,274.6053456856543 L222.0,-125.0" stroke="#dddddd" />
 <path d="M519.0,274.6053456856543 L519.0,-125.0" stroke="#dddddd" />
-<text x="73.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="73.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="370.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="370.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="667.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
-<text x="667.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
+<text x="73.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="73.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="370.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="370.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
+<text x="667.5" y="169.6053456856543" font-size="10" stroke="none" fill="#dddddd" dy="0em">γ0</text>
+<text x="667.5" y="-40.3946543143457" font-size="10" stroke="none" fill="#dddddd" dy="0em">γ1</text>
 <path d="M-75.0,274.6053456856543 L725.0,274.6053456856543" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-74.0" y="272.6053456856543" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-75.0,224.6053456856543 L725.0,224.6053456856543" stroke="#ffcccc66" stroke-dasharray="5" />

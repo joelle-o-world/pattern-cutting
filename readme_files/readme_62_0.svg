@@ -7,8 +7,8 @@
 <path d="M-271.0351765169277,2.7628114686256993 L186.26527849766242,2.7628114686256993" stroke="#dddddd" />
 <path d="M-271.0351765169277,212.7628114686257 L-271.0351765169277,-100.0" stroke="#dddddd" />
 <path d="M25.96482348307228,212.7628114686257 L25.96482348307228,-100.0" stroke="#dddddd" />
-<text x="-122.53517651692772" y="107.7628114686257" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="174.46482348307228" y="107.7628114686257" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="-122.53517651692772" y="107.7628114686257" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="174.46482348307228" y="107.7628114686257" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
 <path d="M-271.0351765169277,212.7628114686257 L186.26527849766242,212.7628114686257" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-270.0351765169277" y="210.7628114686257" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-271.0351765169277,162.7628114686257 L186.26527849766242,162.7628114686257" stroke="#ffcccc66" stroke-dasharray="5" />

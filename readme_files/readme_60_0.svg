@@ -28,8 +28,8 @@
 <path d="M-211.80186379815734,-60.191769558207966 L210.7656851607196,-60.191769558207966" stroke="#dddddd" />
 <path d="M-211.80186379815734,149.80823044179203 L-211.80186379815734,-249.87474933020272" stroke="#dddddd" />
 <path d="M85.19813620184266,149.80823044179203 L85.19813620184266,-249.87474933020272" stroke="#dddddd" />
-<text x="-63.30186379815734" y="44.808230441792034" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-63.30186379815734" y="-165.19176955820797" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
+<text x="-63.30186379815734" y="44.808230441792034" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="-63.30186379815734" y="-165.19176955820797" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
 <path d="M-211.80186379815734,149.80823044179203 L210.7656851607196,149.80823044179203" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-210.80186379815734" y="147.80823044179203" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-211.80186379815734,99.80823044179203 L210.7656851607196,99.80823044179203" stroke="#ffcccc66" stroke-dasharray="5" />

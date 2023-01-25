@@ -10,15 +10,15 @@
 <path d="M-236.4691603005426,100 L-236.4691603005426,-559.2355883884893" stroke="#dddddd" />
 <path d="M60.5308396994574,100 L60.5308396994574,-559.2355883884893" stroke="#dddddd" />
 <path d="M357.5308396994574,100 L357.5308396994574,-559.2355883884893" stroke="#dddddd" />
-<text x="-87.9691603005426" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-87.9691603005426" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="-87.9691603005426" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
-<text x="209.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="209.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="209.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
-<text x="506.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C0</text>
-<text x="506.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C1</text>
-<text x="506.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">C2</text>
+<text x="-87.9691603005426" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="-87.9691603005426" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="-87.9691603005426" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α2</text>
+<text x="209.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="209.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
+<text x="209.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β2</text>
+<text x="506.0308396994574" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">γ0</text>
+<text x="506.0308396994574" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">γ1</text>
+<text x="506.0308396994574" y="-425.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">γ2</text>
 <path d="M-236.4691603005426,100.0 L511.09213469442716,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-235.4691603005426" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-236.4691603005426,50.0 L511.09213469442716,50.0" stroke="#ffcccc66" stroke-dasharray="5" />

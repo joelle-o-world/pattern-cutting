@@ -146,18 +146,18 @@
 <path d="M-150.0,150.0 L-150.0,-1153.3000000000004" stroke="#dddddd" />
 <path d="M147.0,150.0 L147.0,-1153.3000000000004" stroke="#dddddd" />
 <path d="M444.0,150.0 L444.0,-1153.3000000000004" stroke="#dddddd" />
-<text x="-1.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-1.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="-1.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
-<text x="-1.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
-<text x="-1.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A4</text>
-<text x="-1.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A5</text>
-<text x="295.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="295.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="295.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
-<text x="295.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
-<text x="295.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
-<text x="295.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B5</text>
+<text x="-1.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="-1.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="-1.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α2</text>
+<text x="-1.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α3</text>
+<text x="-1.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α4</text>
+<text x="-1.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α5</text>
+<text x="295.5" y="45.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="295.5" y="-165.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
+<text x="295.5" y="-375.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β2</text>
+<text x="295.5" y="-585.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β3</text>
+<text x="295.5" y="-795.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β4</text>
+<text x="295.5" y="-1005.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β5</text>
 <path d="M-150.0,150.0 L459.88,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-149.0" y="148.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-150.0,100.0 L459.88,100.0" stroke="#ffcccc66" stroke-dasharray="5" />

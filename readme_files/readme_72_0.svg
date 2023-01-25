@@ -11,16 +11,16 @@
 <path d="M15.387333741624118,898.1829929870182 L15.387333741624118,-100" stroke="#dddddd" />
 <path d="M312.3873337416241,898.1829929870182 L312.3873337416241,-100" stroke="#dddddd" />
 <path d="M609.3873337416242,898.1829929870182 L609.3873337416242,-100" stroke="#dddddd" />
-<text x="163.8873337416241" y="793.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="163.8873337416241" y="583.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="163.8873337416241" y="373.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">A2</text>
-<text x="163.8873337416241" y="163.18299298701822" font-size="10" stroke="none" fill="#dddddd" dy="0em">A3</text>
-<text x="163.8873337416241" y="-46.817007012981776" font-size="10" stroke="none" fill="#dddddd" dy="0em">A4</text>
-<text x="460.8873337416241" y="793.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="460.8873337416241" y="583.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
-<text x="460.8873337416241" y="373.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">B2</text>
-<text x="460.8873337416241" y="163.18299298701822" font-size="10" stroke="none" fill="#dddddd" dy="0em">B3</text>
-<text x="460.8873337416241" y="-46.817007012981776" font-size="10" stroke="none" fill="#dddddd" dy="0em">B4</text>
+<text x="163.8873337416241" y="793.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="163.8873337416241" y="583.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="163.8873337416241" y="373.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">α2</text>
+<text x="163.8873337416241" y="163.18299298701822" font-size="10" stroke="none" fill="#dddddd" dy="0em">α3</text>
+<text x="163.8873337416241" y="-46.817007012981776" font-size="10" stroke="none" fill="#dddddd" dy="0em">α4</text>
+<text x="460.8873337416241" y="793.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="460.8873337416241" y="583.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
+<text x="460.8873337416241" y="373.1829929870182" font-size="10" stroke="none" fill="#dddddd" dy="0em">β2</text>
+<text x="460.8873337416241" y="163.18299298701822" font-size="10" stroke="none" fill="#dddddd" dy="0em">β3</text>
+<text x="460.8873337416241" y="-46.817007012981776" font-size="10" stroke="none" fill="#dddddd" dy="0em">β4</text>
 <path d="M15.387333741624118,898.1829929870182 L639.6206237361697,898.1829929870182" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="16.38733374162412" y="896.1829929870182" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M15.387333741624118,848.1829929870182 L639.6206237361697,848.1829929870182" stroke="#ffcccc66" stroke-dasharray="5" />

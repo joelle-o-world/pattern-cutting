@@ -7,7 +7,7 @@
 <path d="M-100.0,-110.0 L200,-110.0" stroke="#dddddd" />
 <path d="M-100.0,100.0 L-100.0,-150.0" stroke="#dddddd" />
 <path d="M197.0,100.0 L197.0,-150.0" stroke="#dddddd" />
-<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
 <path d="M-100.0,100.0 L200,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-99.0" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-100.0,50.0 L200,50.0" stroke="#ffcccc66" stroke-dasharray="5" />

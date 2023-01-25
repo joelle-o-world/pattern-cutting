@@ -11,8 +11,8 @@
 <path d="M-25,-85 L530.0,-85" stroke="#dddddd" />
 <path d="M-25.0,125 L-25.0,-175" stroke="#dddddd" />
 <path d="M272.0,125 L272.0,-175" stroke="#dddddd" />
-<text x="123.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="420.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
+<text x="123.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="420.5" y="20.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
 <path d="M-25,125 L530.0,125" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-24" y="123" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-25,75 L530.0,75" stroke="#ffcccc66" stroke-dasharray="5" />

@@ -10,10 +10,10 @@
 <path d="M-200,-220 L300,-220" stroke="#dddddd" />
 <path d="M-200,200 L-200,-300" stroke="#dddddd" />
 <path d="M97,200 L97,-300" stroke="#dddddd" />
-<text x="-51.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
-<text x="-51.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A1</text>
-<text x="245.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B0</text>
-<text x="245.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">B1</text>
+<text x="-51.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="-51.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="245.5" y="95.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="245.5" y="-115.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
 <path d="M-200,200 L300,200" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-199" y="198" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-200,150 L300,150" stroke="#ffcccc66" stroke-dasharray="5" />

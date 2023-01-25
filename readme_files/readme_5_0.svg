@@ -8,7 +8,7 @@
 <path d="M-100,-110 L200,-110" stroke="#dddddd" />
 <path d="M-100,100 L-100,-200" stroke="#dddddd" />
 <path d="M197,100 L197,-200" stroke="#dddddd" />
-<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">A0</text>
+<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
 <path d="M-100,100 L200,100" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="-99" y="98" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
 <path d="M-100,50 L200,50" stroke="#ffcccc66" stroke-dasharray="5" />
