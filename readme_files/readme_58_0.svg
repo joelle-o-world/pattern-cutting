@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="665.0" height="812.5" viewBox="-100.0 -112.5 665.0 812.5" stroke="black" fill="none">
+<defs>
+<path d="M465.0,-0.0 L339.1479006990711,-7.720987687173553 L323.0432102050694,91.47900699071141 L319.18543263426216,-8.94567897949312 L261.25,-12.5 L240.0,265 L240.0,600.0 L465.0,600.0 L465.0,0" fill="none" stroke="black" id="d0" />
+<path d="M0.0,-0.0 L0,600.0 L240.0,600.0 L240.0,265 L223.75,-12.5 L159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017 L0,0" fill="none" stroke="black" id="d1" />
+</defs>
+<path d="M-100.0,700.0 L565.0,700.0" stroke="#dddddd" />
+<path d="M-100.0,490.0 L565.0,490.0" stroke="#dddddd" />
+<path d="M-100.0,280.0 L565.0,280.0" stroke="#dddddd" />
+<path d="M-100.0,70.0 L565.0,70.0" stroke="#dddddd" />
+<path d="M-100.0,700.0 L-100.0,-112.5" stroke="#dddddd" />
+<path d="M197.0,700.0 L197.0,-112.5" stroke="#dddddd" />
+<path d="M494.0,700.0 L494.0,-112.5" stroke="#dddddd" />
+<text x="48.5" y="595.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="48.5" y="385.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<text x="48.5" y="175.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α2</text>
+<text x="48.5" y="-35.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α3</text>
+<text x="345.5" y="595.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β0</text>
+<text x="345.5" y="385.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β1</text>
+<text x="345.5" y="175.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β2</text>
+<text x="345.5" y="-35.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">β3</text>
+<path d="M-100.0,700.0 L565.0,700.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="698.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-100.0,650.0 L565.0,650.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="648.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M-100.0,600.0 L565.0,600.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="598.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M-100.0,550.0 L565.0,550.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="548.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M-100.0,500.0 L565.0,500.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="498.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M-100.0,450.0 L565.0,450.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="448.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M-100.0,400.0 L565.0,400.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="398.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M-100.0,350.0 L565.0,350.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="348.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<path d="M-100.0,300.0 L565.0,300.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="298.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
+<path d="M-100.0,250.0 L565.0,250.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="248.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
+<path d="M-100.0,200.0 L565.0,200.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="198.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
+<path d="M-100.0,150.0 L565.0,150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="148.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
+<path d="M-100.0,100.0 L565.0,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
+<path d="M-100.0,50.0 L565.0,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="48.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">550mm</text>
+<path d="M-100.0,-0.0 L565.0,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="-2.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">600mm</text>
+<path d="M-100.0,-50.0 L565.0,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="-52.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">650mm</text>
+<path d="M-100.0,-100.0 L565.0,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99.0" y="-102.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">700mm</text>
+<path d="M-100.0,700.0 L-100.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-98.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-50.0,700.0 L-50.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M0.0,700.0 L0.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M50.0,700.0 L50.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M100.0,700.0 L100.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="102.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M150.0,700.0 L150.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="152.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M200.0,700.0 L200.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="202.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M250.0,700.0 L250.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="252.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<path d="M300.0,700.0 L300.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="302.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
+<path d="M350.0,700.0 L350.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="352.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">350mm</text>
+<path d="M400.0,700.0 L400.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="402.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">400mm</text>
+<path d="M450.0,700.0 L450.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="452.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">450mm</text>
+<path d="M500.0,700.0 L500.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="502.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">500mm</text>
+<path d="M550.0,700.0 L550.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="552.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">550mm</text>
+<g>
+<g>
+<path d="M465.0,-0.0 L339.1479006990711,-7.720987687173553 L323.0432102050694,91.47900699071141 L319.18543263426216,-8.94567897949312 L261.25,-12.5 L240.0,265 L240.0,600.0 L465.0,600.0 L465.0,0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">front</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M0.0,-0.0 L0,600.0 L240.0,600.0 L240.0,265 L223.75,-12.5 L159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017 L0,0" fill="#E6E6FA66" stroke="black" />
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">back</tspan>
+</textPath></text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">1</text>
+</g>
+<g>
+<circle cx="465.0" cy="0" r="1" fill="black" />
+<text x="467.0" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">2</text>
+</g>
+<g>
+<circle cx="0" cy="600.0" r="1" fill="black" />
+<text x="2" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">3</text>
+</g>
+<g>
+<circle cx="465.0" cy="600.0" r="1" fill="black" />
+<text x="467.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">4</text>
+</g>
+<g>
+<circle cx="0" cy="265" r="1" fill="black" />
+<text x="2" y="263" font-size="12" fill="#000000" stroke="none" dy="0em">5</text>
+</g>
+<g>
+<circle cx="465.0" cy="265" r="1" fill="black" />
+<text x="467.0" y="263" font-size="12" fill="#000000" stroke="none" dy="0em">6</text>
+</g>
+<g>
+<circle cx="240.0" cy="265" r="1" fill="black" />
+<text x="242.0" y="263" font-size="12" fill="#000000" stroke="none" dy="0em">7</text>
+</g>
+<g>
+<circle cx="240.0" cy="600.0" r="1" fill="black" />
+<text x="242.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">8</text>
+</g>
+<g>
+<circle cx="223.75" cy="0" r="1" fill="black" />
+<text x="225.75" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">9</text>
+</g>
+<g>
+<circle cx="223.75" cy="-12.5" r="1" fill="black" />
+<text x="225.75" y="-14.5" font-size="12" fill="#000000" stroke="none" dy="0em">10</text>
+</g>
+<g>
+<circle cx="74.58333333333333" cy="-4.166666666666666" r="1" fill="black" />
+<text x="76.58333333333333" y="-6.166666666666666" font-size="12" fill="#000000" stroke="none" dy="0em">11</text>
+</g>
+<g>
+<circle cx="149.16666666666666" cy="-8.333333333333332" r="1" fill="black" />
+<text x="151.16666666666666" y="-10.333333333333332" font-size="12" fill="#000000" stroke="none" dy="0em">12</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="0" cy="0" r="1" fill="black" />
+<text x="2" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">14</text>
+</g>
+<g>
+<circle cx="261.25" cy="0" r="1" fill="black" />
+<text x="263.25" y="-2" font-size="12" fill="#000000" stroke="none" dy="0em">15</text>
+</g>
+<g>
+<circle cx="261.25" cy="-12.5" r="1" fill="black" />
+<text x="263.25" y="-14.5" font-size="12" fill="#000000" stroke="none" dy="0em">16</text>
+</g>
+<g>
+<circle cx="329.16666666666663" cy="-8.333333333333334" r="1" fill="black" />
+<text x="331.16666666666663" y="-10.333333333333334" font-size="12" fill="#000000" stroke="none" dy="0em">17</text>
+</g>
+<g>
+<circle cx="240.0" cy="600.0" r="1" fill="black" />
+<text x="242.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">18</text>
+</g>
+<g>
+<circle cx="240.0" cy="600.0" r="1" fill="black" />
+<text x="242.0" y="598.0" font-size="12" fill="#000000" stroke="none" dy="0em">19</text>
+</g>
+<text x="197.61130238404465" y="194.119536009309" font-size="12" fill="#000000" stroke="none"><tspan x="197.61130238404465" dy="0em">Tailored Skirt Block</tspan><tspan x="197.61130238404465" dy="1em">waist=725</tspan><tspan x="197.61130238404465" dy="1em">hips=900</tspan><tspan x="197.61130238404465" dy="1em">waist_to_hip=265</tspan><tspan x="197.61130238404465" dy="1em">skirt_length=600.0</tspan></text>
+</g>
+</svg>

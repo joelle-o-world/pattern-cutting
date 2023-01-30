@@ -293,6 +293,23 @@ for p in example_points:
 render(example_shape, *example_points)
 ```
 
+Lets try something a bit trickier:
+
+```code
+from aldrich.tailored_skirt_block import tailored_skirt_block
+from src.point_grid import point_grid_over_shape
+
+example_shape = tailored_skirt_block()["back"]
+
+points = []
+for point in point_grid_over_shape(example_shape, margin=17):
+  if example_shape.point_is_inside(point):
+    points.append(point)
+
+render(example_shape, *points)
+  
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
