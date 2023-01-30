@@ -79,12 +79,6 @@ class BodyMeasurements:
 # )
 
 
-joelle_measurements = BodyMeasurements(
-    waist=725,
-    hips=900,
-    waist_to_hip=265
-)
+joelle_measurements = BodyMeasurements(waist=725, hips=900, waist_to_hip=265)
 
 example_body_measurements = joelle_measurements
-
-print(joelle_measurements)
