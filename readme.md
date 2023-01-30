@@ -499,6 +499,36 @@ render(shape)
 
 
 
+## Collision detection
+
+Collision detection is powered by the
+[qwertyquerty/collision](https://github.com/qwertyquerty/collision/blob/master/examples/concaves.py)
+library.
+
+
+```python
+from src.geometry.Shape import rectangle
+example_shape = rectangle(0, 0, 100, 100)
+example_points = [Vector(50, 50), Vector(150, 50)]
+
+for p in example_points:
+  if example_shape.point_is_inside(p):
+    p.label = "Collision!"
+  else:
+    p.label = "No collision!"
+
+render(example_shape, *example_points)
+```
+
+
+
+
+    
+![svg](readme_files/readme_44_0.svg)
+    
+
+
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for
@@ -518,7 +548,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_44_0.svg)
+![svg](readme_files/readme_46_0.svg)
     
 
 
@@ -539,7 +569,7 @@ render(
 
 
     
-![svg](readme_files/readme_46_0.svg)
+![svg](readme_files/readme_48_0.svg)
     
 
 
@@ -560,7 +590,7 @@ render(
 
 
     
-![svg](readme_files/readme_48_0.svg)
+![svg](readme_files/readme_50_0.svg)
     
 
 
@@ -646,7 +676,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_52_0.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -664,7 +694,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_54_0.svg)
+![svg](readme_files/readme_56_0.svg)
     
 
 
@@ -685,7 +715,7 @@ render(tailored_skirt_pattern())
 
 
     
-![svg](readme_files/readme_56_1.svg)
+![svg](readme_files/readme_58_1.svg)
     
 
 
@@ -705,7 +735,7 @@ render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
 
 
     
-![svg](readme_files/readme_58_1.svg)
+![svg](readme_files/readme_60_1.svg)
     
 
 
@@ -730,7 +760,7 @@ render(
 
 
     
-![svg](readme_files/readme_60_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -751,7 +781,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_62_0.svg)
+![svg](readme_files/readme_64_0.svg)
     
 
 
@@ -805,7 +835,7 @@ render(
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -825,7 +855,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -844,7 +874,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -862,7 +892,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -884,7 +914,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -904,7 +934,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -921,7 +951,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -959,7 +989,7 @@ render(
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 
@@ -989,7 +1019,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_84_0.svg)
+![svg](readme_files/readme_86_0.svg)
     
 
 

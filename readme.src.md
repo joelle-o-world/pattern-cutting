@@ -275,6 +275,24 @@ shape.addDart(Vector(0, 50), 50, 20)
 render(shape)
 ```
 
+## Collision detection
+
+Collision detection is powered by the [qwertyquerty/collision](https://github.com/qwertyquerty/collision/blob/master/examples/concaves.py)  library.
+
+```code
+from src.geometry.Shape import rectangle
+example_shape = rectangle(0, 0, 100, 100)
+example_points = [Vector(50, 50), Vector(150, 50)]
+
+for p in example_points:
+  if example_shape.point_is_inside(p):
+    p.label = "Collision!"
+  else:
+    p.label = "No collision!"
+
+render(example_shape, *example_points)
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
@@ -514,3 +532,4 @@ for i in range(len(pieces)):
 
 render(*all)
 ```
+

@@ -3,6 +3,7 @@ from typing import List
 
 import drawSvg as draw
 import numpy as np
+import collision
 
 from src.geometry.Intersection import Intersection
 from src.geometry.LineSegment import LineSegment
@@ -968,6 +969,25 @@ class Shape:
 
         points = [vec3(point.x, point.y, 0) for point in self.points]
         return Shape3d(points, label=self.label, style=self.style)
+
+    def collision_vectors(self):
+        vectors = [p.collision_vector() for p in self.points]
+        if self.is_closed:
+            return vectors[:-1]
+        else:
+            return vectors
+
+    def collision_polygon(self):
+        return collision.Concave_Poly(collision.Vector(0, 0), self.collision_vectors())
+
+    def point_is_inside(self, point: Vector):
+        collision_polygon = self.collision_polygon()
+        collision_vector = point.collision_point()
+        return collision.collide(collision_polygon, collision_vector)
+        try:
+            collision.collide(collision_polygon, collision_vector)
+        except Exception as e:
+            print(e, collision_polygon, collision_vector)
 
 
 def arrow(*points, label=None):

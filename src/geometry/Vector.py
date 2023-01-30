@@ -1,4 +1,5 @@
 import math
+import collision
 
 import drawSvg as draw
 from multimethod import multimethod
@@ -182,6 +183,12 @@ class Vector:
             group.append(label)
 
         return group
+
+    def collision_vector(self):
+        return collision.Vector(self.x, self.y)
+
+    def collision_point(self):
+        return collision.Circle(self.collision_vector(), 0.0)
 
     @property
     def tuple(self):
