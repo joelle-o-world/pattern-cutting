@@ -68,6 +68,36 @@ class BodyMeasurements:
     def waist(self):
         return self.all["waist"]
 
+    @property
+    def palm_circumference(self):
+        return self.all["palm_circumference"]
+
+    @property
+    def palm(self):
+        return self.palm_circumference
+
+    @property
+    def hand_circumference(self):
+        return self.all["hand_circumference"]
+
+    @property
+    def wrist(self):
+        return self.all["wrist"]
+
+    @property
+    def elbow_circumference(self):
+        return self.all["elbow_circumference"]
+
+    @property
+    def knuckles_to_wrist(self):
+        if "knuckles_to_wrist" in self.all:
+            return self.all["knuckles_to_wrist"]
+        else:
+            return self.palm * 0.75
+
+    def wrist_to_elbow(self):
+        return self.all["wrist_to_elbow"]
+
 
 # example_body_measurements = BodyMeasurements(
 #     size=12,
@@ -79,6 +109,8 @@ class BodyMeasurements:
 # )
 
 
-joelle_measurements = BodyMeasurements(waist=725, hips=900, waist_to_hip=265)
+joelle_measurements = BodyMeasurements(
+    waist=725, hips=900, waist_to_hip=265, body_rise=340
+)
 
 example_body_measurements = joelle_measurements
