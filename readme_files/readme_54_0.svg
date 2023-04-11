@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="371.45" height="428.6" viewBox="-100 -328.6 371.45 428.6" stroke="black" fill="none">
+<defs>
+<path d="M0,0 L0,-228.6" fill="none" stroke="black" id="d0" />
+<path d="M171.45,0 L171.45,-228.6" fill="none" stroke="black" id="d1" />
+</defs>
+<path d="M-100,100.0 L271.45,100.0" stroke="#dddddd" />
+<path d="M-100,-110.0 L271.45,-110.0" stroke="#dddddd" />
+<path d="M-100,-320.0 L271.45,-320.0" stroke="#dddddd" />
+<path d="M-100.0,100 L-100.0,-328.6" stroke="#dddddd" />
+<path d="M197.0,100 L197.0,-328.6" stroke="#dddddd" />
+<text x="48.5" y="-5.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α0</text>
+<text x="48.5" y="-215.0" font-size="10" stroke="none" fill="#dddddd" dy="0em">α1</text>
+<path d="M-100,100.0 L271.45,100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="98.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-100,50.0 L271.45,50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="48.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M-100,-0.0 L271.45,-0.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-2.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M-100,-50.0 L271.45,-50.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-52.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M-100,-100.0 L271.45,-100.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-102.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M-100,-150.0 L271.45,-150.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-152.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M-100,-200.0 L271.45,-200.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-202.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M-100,-250.0 L271.45,-250.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-252.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<path d="M-100,-300.0 L271.45,-300.0" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-99" y="-302.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
+<path d="M-100.0,100 L-100.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-98.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-100mm</text>
+<path d="M-50.0,100 L-50.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="-48.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">-50mm</text>
+<path d="M0.0,100 L0.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="2.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">0mm</text>
+<path d="M50.0,100 L50.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="52.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">50mm</text>
+<path d="M100.0,100 L100.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="102.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">100mm</text>
+<path d="M150.0,100 L150.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="152.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">150mm</text>
+<path d="M200.0,100 L200.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="202.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">200mm</text>
+<path d="M250.0,100 L250.0,-328.6" stroke="#ffcccc66" stroke-dasharray="5" />
+<text x="252.0" y="99" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">250mm</text>
+<g>
+<g>
+<path d="M0,0 L0,-228.6" fill="none" stroke="black" />
+<path d="M5.0,-0.0 L-5.0,-0.0" stroke="black" />
+<path d="M5.0,-228.6 L-5.0,-228.6" stroke="black" />
+<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d0" startOffset="10">
+<tspan dy="-1em">Wrap around knuckles (228.6mm)</tspan>
+</textPath></text>
+</g>
+<g>
+<path d="M171.45,0 L171.45,-228.6" fill="none" stroke="black" />
+<path d="M176.45,-0.0 L166.45,-0.0" stroke="black" />
+<path d="M176.45,-228.6 L166.45,-228.6" stroke="black" />
+<text font-size="12" stroke="none" fill="black"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">Wrap around wrist (228.6mm)</tspan>
+</textPath></text>
+</g>
+</g>
+</svg>

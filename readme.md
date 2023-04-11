@@ -622,6 +622,29 @@ render(
 
 
 
+## Glove for Tskenya
+
+
+```python
+
+from src.sizing.tskenya import tskenya
+from src.patterns.denim_bandicoot_glove import denim_bandicoot_glove
+
+
+render(
+  denim_bandicoot_glove(tskenya)
+)
+```
+
+
+
+
+    
+![svg](readme_files/readme_54_0.svg)
+    
+
+
+
 ## Winnifred Aldrich pattern blocks
 
 One application of this library is quickly producing pattern blocks from
@@ -676,7 +699,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_58_0.svg)
     
 
 
@@ -694,7 +717,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -715,7 +738,7 @@ render(tailored_skirt_pattern())
 
 
     
-![svg](readme_files/readme_60_1.svg)
+![svg](readme_files/readme_62_1.svg)
     
 
 
@@ -735,7 +758,7 @@ render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
 
 
     
-![svg](readme_files/readme_62_1.svg)
+![svg](readme_files/readme_64_1.svg)
     
 
 
@@ -760,7 +783,7 @@ render(
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -781,7 +804,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -835,7 +858,7 @@ render(
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -855,7 +878,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -874,7 +897,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -892,7 +915,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -914,7 +937,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -934,7 +957,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 
@@ -951,7 +974,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_84_0.svg)
+![svg](readme_files/readme_86_0.svg)
     
 
 
@@ -989,7 +1012,7 @@ render(
 
 
     
-![svg](readme_files/readme_86_0.svg)
+![svg](readme_files/readme_88_0.svg)
     
 
 
@@ -1019,7 +1042,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_88_0.svg)
+![svg](readme_files/readme_90_0.svg)
     
 
 

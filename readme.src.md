@@ -344,6 +344,20 @@ render(
 )
 ```
 
+## Glove for Tskenya
+
+
+```code
+
+from src.sizing.tskenya import tskenya
+from src.patterns.denim_bandicoot_glove import denim_bandicoot_glove
+
+
+render(
+  denim_bandicoot_glove(tskenya)
+)
+```
+
 ## Winnifred Aldrich pattern blocks
 
 One application of this library is quickly producing pattern blocks from Winnfred Aldrich's book. To do that, we have to be able to use describe body measurements:
