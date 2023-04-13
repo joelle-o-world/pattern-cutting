@@ -9,6 +9,14 @@ class Mesh:
         self.lines = lines
         self.faces = faces
 
+    def add_vertex(self, p):
+        self.vertices.append(p)
+        return len(self.vertices) - 1
+
+    def add_face(self, a, b, c):
+        if a != None and b != None and c != None:
+            self.faces.append([a, b, c])
+
 
 def triangulate(shape: Shape, cell_size=0.01):
 
@@ -19,26 +27,23 @@ def triangulate(shape: Shape, cell_size=0.01):
     row = 0
     col = 0
 
-    vertices = []
-    faces = []
+    mesh = Mesh()
     for y in np.arange(shape.bottom, shape.top, cell_height):
         current_row = []
         for x in np.arange(shape.left, shape.right, cell_width):
             p = Vector(x, y)
             if shape.point_is_inside(p):
-                current_row[col] = len(vertices)
-                vertices.append(p)
-                # TODO: Use a conditional face adding function
-                if current_row[col - 1] and previous_row[col - 1]:
-                    faces.append([p, current_row[col - 1], previous_row[col - 1]])
-                    pass
-                if previous_row[col - 1] and previous_row[col]:
-                    faces.append([p, previous_row[col - 1], previous_row[col]])
-                    pass
+                current_row[col] = mesh.add_vertex(p)
+                mesh.add_face(
+                    current_row[col], current_row[col - 1], previous_row[col - 1]
+                )
+                mesh.add_face(
+                    current_row[col], previous_row[col - 1], previous_row[col]
+                )
             else:
                 current_row[col] = None
             col += 1
         previous_row = current_row
         row += 1
 
-    return Mesh(vertices=vertices, faces=faces)
+    return mesh
