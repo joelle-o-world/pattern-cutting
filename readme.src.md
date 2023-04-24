@@ -310,6 +310,15 @@ render(example_shape, *points)
   
 ```
 
+We can use this to create a triangular mesh:
+
+```code
+from src.geometry.Triangulate import triangulate
+
+mesh = triangulate(example_shape)
+render(mesh.isometric())
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).

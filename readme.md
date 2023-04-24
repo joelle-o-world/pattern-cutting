@@ -556,6 +556,25 @@ render(example_shape, *points)
 
 
 
+We can use this to create a triangular mesh:
+
+
+```python
+from src.geometry.Triangulate import triangulate
+
+mesh = triangulate(example_shape)
+render(mesh.isometric())
+```
+
+
+
+
+    
+![svg](readme_files/readme_48_0.svg)
+    
+
+
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for
@@ -575,7 +594,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_48_0.svg)
+![svg](readme_files/readme_50_0.svg)
     
 
 
@@ -596,7 +615,7 @@ render(
 
 
     
-![svg](readme_files/readme_50_0.svg)
+![svg](readme_files/readme_52_0.svg)
     
 
 
@@ -617,7 +636,7 @@ render(
 
 
     
-![svg](readme_files/readme_52_0.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -634,32 +653,32 @@ from src.sizing.BodyMeasurements import example_body_measurements
 print(example_body_measurements)
 ```
 
-    Size 24.194444444444443:
-    	waist	= 725.0mm	(-280.8mm)
-    	hips	= 900.0mm	(-324.9mm)
-    	waist_to_hip	= 265.0mm	(+40.7mm)
-    	bust	= 1165.8mm
-    	low_waist	= 1105.8mm
-    	back_width	= 413.4mm
-    	chest	= 409.8mm
-    	shoulder	= 139.3mm
-    	neck_size	= 439.4mm
-    	dart	= 106.6mm
-    	top_arm	= 373.9mm
-    	wrist	= 194.7mm
-    	ankle	= 274.7mm
-    	high_ankle	= 244.7mm
-    	nape_to_waist	= 434.4mm
-    	front_shoulder_to_waist	= 459.9mm
-    	armscye_depth	= 238.6mm
-    	waist_to_knee	= 615.5mm
-    	waist_to_floor	= 1101.0mm
-    	body_rise	= 329.0mm
-    	sleeve_length	= 607.7mm
-    	sleeve_length_jersey	= 567.7mm
-    	cuff_size_shirts	= 240.5mm
-    	cuff_size_two_piece_sleeve	= 152.7mm
-    	trouser_bottom_width	= 250.5mm
+    Size 24.74583333333333:
+    	waist	= 725.0mm	(-297.4mm)
+    	hips	= 900.0mm	(-338.6mm)
+    	waist_to_hip	= 265.0mm	(+39.9mm)
+    	body_rise	= 340.0mm	(+8.3mm)
+    	bust	= 1182.4mm
+    	low_waist	= 1122.4mm
+    	back_width	= 417.2mm
+    	chest	= 414.7mm
+    	shoulder	= 140.1mm
+    	neck_size	= 443.2mm
+    	dart	= 108.2mm
+    	top_arm	= 379.5mm
+    	wrist	= 196.6mm
+    	ankle	= 276.6mm
+    	high_ankle	= 246.6mm
+    	nape_to_waist	= 435.5mm
+    	front_shoulder_to_waist	= 462.4mm
+    	armscye_depth	= 240.2mm
+    	waist_to_knee	= 616.9mm
+    	waist_to_floor	= 1103.7mm
+    	sleeve_length	= 608.4mm
+    	sleeve_length_jersey	= 568.4mm
+    	cuff_size_shirts	= 241.9mm
+    	cuff_size_two_piece_sleeve	= 153.4mm
+    	trouser_bottom_width	= 251.9mm
     	jeans_bottom_width	= 210.0mm
 
 
@@ -676,7 +695,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_56_0.svg)
+![svg](readme_files/readme_58_0.svg)
     
 
 
@@ -694,7 +713,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -715,7 +734,7 @@ render(tailored_skirt_pattern())
 
 
     
-![svg](readme_files/readme_60_1.svg)
+![svg](readme_files/readme_62_1.svg)
     
 
 
@@ -735,7 +754,7 @@ render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
 
 
     
-![svg](readme_files/readme_62_1.svg)
+![svg](readme_files/readme_64_1.svg)
     
 
 
@@ -760,7 +779,7 @@ render(
 
 
     
-![svg](readme_files/readme_64_0.svg)
+![svg](readme_files/readme_66_0.svg)
     
 
 
@@ -781,7 +800,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -835,7 +854,7 @@ render(
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -855,7 +874,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_74_0.svg)
+![svg](readme_files/readme_76_0.svg)
     
 
 
@@ -874,7 +893,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -892,7 +911,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -914,7 +933,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -934,7 +953,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 
@@ -951,7 +970,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_84_0.svg)
+![svg](readme_files/readme_86_0.svg)
     
 
 
@@ -989,7 +1008,7 @@ render(
 
 
     
-![svg](readme_files/readme_86_0.svg)
+![svg](readme_files/readme_88_0.svg)
     
 
 
@@ -1019,7 +1038,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_88_0.svg)
+![svg](readme_files/readme_90_0.svg)
     
 
 
