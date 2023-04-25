@@ -228,5 +228,11 @@ def upmost(*points: List[Vector]):
     return competition(points, lambda point: point.y)
 
 
+topmost = upmost
+
+
 def downmost(*points: List[Vector]):
     return competition(points, lambda point: -point.y)
+
+
+bottommost = downmost
