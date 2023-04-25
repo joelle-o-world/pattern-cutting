@@ -189,7 +189,6 @@ class LineSegment:
         if not Y:
             raise Exception("Something unexpected went wrong")
 
-
         P = self.start
         Q = self.end
         x = (Y.x - P.x) / (Q.x - P.x)
@@ -201,8 +200,77 @@ class LineSegment:
         else:
             return Y
 
+    def extrapolated_horizontal_intersection(self, y: float):
+        if self.is_horizontal():
+            raise Exception(
+                "Unhandled case: finding horizontal intersection with a horizontal line"
+            )
+        else:
+            progress = (y - self.start.y) / (self.end.y - self.start.y)
+            x = self.start.x + (self.end.x - self.start.x) * progress
+            return Vector(x, y)
+
+    def horizontal_intersection_exists(self, y: float):
+        return self.top >= y and self.bottom <= y
+
+    def horizontal_intersection(self, y: float):
+        if self.horizontal_intersection_exists(y):
+            # TODO: Should the exception in extrapolated_horizontal_intersection be handled by returning None?
+            return self.extrapolated_horizontal_intersection(y)
+        else:
+            return None
+
+    def rightward_horizontal_intersection(self, point: Vector):
+        intersection = self.horizontal_intersection(point.y)
+        if intersection and intersection.x >= point.x:
+            return intersection
+        else:
+            return None
+
+    def leftward_horizontal_intersection(self, point: Vector):
+        intersection = self.horizontal_intersection(point.y)
+        if intersection and intersection.x <= point.x:
+            return intersection
+        else:
+            return None
+
+    def extrapolated_vertical_intersection(self, x: float):
+        if self.is_vertical():
+            raise Exception(
+                "Unhandled case: finding vertical intersection with vertical line segment"
+            )
+        else:
+            progress = (x - self.start.x) / (self.end.x - self.start.x)
+            y = self.start.y + (self.end.y - self.start.y) * progress
+            return Vector(x, y)
+
+    def vertical_intersection_exists(self, x: float):
+        return self.left < x and self.right > x
+
+    def vertical_intersection(self, x: float):
+        if self.vertical_intersection_exists(x):
+            # TODO: Should the exception in extrapolated_vertical_intersection be handled by returning None?
+            return self.extrapolated_vertical_intersection(x)
+        else:
+            return None
+
+    def upward_vertical_intersection(self, point: Vector):
+        intersection = self.vertical_intersection(point.x)
+        if intersection and intersection.y >= point.y:
+            return intersection
+        else:
+            return None
+
+    def downward_vertical_intersection(self, point: Vector):
+        intersection = self.vertical_intersection(point.x)
+        if intersection and intersection.y <= point.y:
+            return intersection
+        else:
+            return None
+
     def is_vertical(self):
         return self.start.x == self.end.x
+
     def is_horizontal(self):
         return self.start.y == self.end.y
 

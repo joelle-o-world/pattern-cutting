@@ -8,7 +8,14 @@ import collision
 from src.geometry.Intersection import Intersection
 from src.geometry.LineSegment import LineSegment
 from src.geometry.vec3 import vec3
-from src.geometry.Vector import Vector, distance
+from src.geometry.Vector import (
+    Vector,
+    distance,
+    bottommost,
+    topmost,
+    leftmost,
+    rightmost,
+)
 from src.competition import competition, multiwinner_competition
 
 
@@ -912,6 +919,46 @@ class Shape:
 
     def closestPoint(self, X) -> Vector:
         return self.closest(X).point
+
+    def horizontal_intersections(self, y: float):
+        biglist = [segment.horizontal_intersection(y) for segment in self.segments()]
+        return [item for item in biglist if item != None]
+
+    def vertical_intersections(self, x: float):
+        biglist = [segment.vertical_intersection(x) for segment in self.segments()]
+        return [item for item in biglist if item != None]
+
+    def rightward_horizontal_intersection(self, point: Vector):
+        candidates = [
+            intersection
+            for intersection in self.horizontal_intersections(point.y)
+            if intersection.x >= point.x
+        ]
+        return leftmost(*candidates)
+
+    def leftward_horizontal_intersection(self, point: Vector):
+        candidates = [
+            intersection
+            for intersection in self.horizontal_intersections(point.y)
+            if intersection.x <= point.x
+        ]
+        return rightmost(*candidates)
+
+    def upward_vertical_intersection(self, point: Vector):
+        candidates = [
+            intersection
+            for intersection in self.vertical_intersections(point.x)
+            if intersection.y > point.y
+        ]
+        return bottommost(*candidates)
+
+    def downward_vertical_intersection(self, point: Vector):
+        candidates = [
+            intersection
+            for intersection in self.vertical_intersections(point.x)
+            if intersection.y < point.y
+        ]
+        return topmost(*candidates)
 
     def at(self, p: int | float | Vector) -> MeasurementAlongShape:
         "Find the point closest to the given coordinate, or a certain duration along the line"
