@@ -1,8 +1,11 @@
 import math
+
+from typing import List
 import collision
 
 import drawSvg as draw
 from multimethod import multimethod
+from src.competition import competition
 
 
 class Vector:
@@ -211,3 +214,19 @@ def distance(a: Vector, b: Vector):
 
 def polar(angle, length):
     return Vector(length, 0).with_angle(angle)
+
+
+def rightmost(*points: List[Vector]):
+    return competition(points, lambda point: point.x)
+
+
+def leftmost(*points: List[Vector]):
+    return competition(points, lambda point: -point.x)
+
+
+def upmost(*points: List[Vector]):
+    return competition(points, lambda point: point.y)
+
+
+def downmost(*points: List[Vector]):
+    return competition(points, lambda point: -point.y)
