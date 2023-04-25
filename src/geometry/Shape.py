@@ -469,6 +469,8 @@ class Shape:
             return self.svg_pointset()
         elif self.style == "polygon":
             return self.svg_polygon()
+        elif self.style == "fill_only":
+            return self.svg_fill_only()
         elif self.style == "tape":
             return self.svg_tape()
         elif self.style == "ruler":
@@ -583,6 +585,9 @@ class Shape:
         if self.label:
             group.append(self.svg_parallel_label())
         return group
+
+    def svg_fill_only(self):
+        return self.svg_line_only(fill="#E6E6Fa66", stroke="none")
 
     def svg_notch(self):
         group = draw.Group()

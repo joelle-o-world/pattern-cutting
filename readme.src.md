@@ -316,7 +316,7 @@ We can use this to create a triangular mesh:
 from src.geometry.Triangulate import triangulate
 
 mesh = triangulate(example_shape)
-render(mesh.isometric())
+render(mesh.isometric(), example_shape.with_style("fill_only"))
 ```
 
 ## Die Lemma dress block

@@ -11,9 +11,15 @@ class Mesh:
         self.lines = lines
         self.faces = faces
 
+    def read_vertex_2d(self, index):
+        return Vector(x=self.vertices[index][0], y=self.vertices[index][1])
+
     def add_vertex(self, x, y, z=0.0):
         self.vertices.append([x, y, z])
         return len(self.vertices) - 1
+
+    def update_vertex(self, index, x: float, y: float, z=0.0):
+        self.vertices[index] = [x, y, z]
 
     def add_face(self, a, b, c):
         if a != None and b != None and c != None:
@@ -42,7 +48,7 @@ class Mesh:
         return Group(*faces, *lines)
 
 
-def triangulate(shape: Shape, cell_size=10):
+def triangulate(shape: Shape, cell_size=10, snapping=True):
 
     cell_width = cell_size
     cell_height = cell_size
@@ -69,6 +75,16 @@ def triangulate(shape: Shape, cell_size=10):
                     )
             else:
                 current_row[col] = None
+                left_neighbour_index = current_row[col - 1]
+                if snapping and col > 0 and left_neighbour_index:
+                    snapped_point = shape.closestPoint(
+                        mesh.read_vertex_2d(left_neighbour_index)
+                    )
+
+                    mesh.update_vertex(
+                        left_neighbour_index, snapped_point.x, snapped_point.y
+                    )
+
             col += 1
         previous_row = current_row
         row += 1
