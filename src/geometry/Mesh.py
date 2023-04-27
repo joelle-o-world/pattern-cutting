@@ -1,6 +1,8 @@
 from .Shape import Shape
+import numpy as np
 from src.geometry.Group import Group
 from src.geometry.Vector import Vector
+import meshplot as mp
 
 
 class Mesh:
@@ -44,3 +46,19 @@ class Mesh:
         ]
         lines = [Shape([points[line[0]], points[line[1]]]) for line in self.lines]
         return Group(*faces, *lines)
+
+
+    def faces_np(self):
+       return np.array(self.faces)
+
+    def vertices_np(self):
+       return np.array(self.vertices)
+
+    def meshplot(self):
+        faces = self.faces_np()
+        vertices = self.vertices_np()
+        return mp.plot(vertices, faces)
+
+
+
+

@@ -319,6 +319,12 @@ mesh = triangulate(example_shape)
 render(mesh.isometric(), example_shape.with_style("fill_only"))
 ```
 
+Can we render it in 3d?
+
+```code
+mesh.meshplot()
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
