@@ -13,6 +13,7 @@ drawSvg = "^1.8.3"
 multimethod = "^1.9"
 scipy = "^1.9.3"
 collision = "^1.2.2"
+meshplot = {git = "https://github.com/skoch9/meshplot.git"}
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.10.1"
