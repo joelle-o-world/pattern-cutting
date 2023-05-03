@@ -429,6 +429,14 @@ render(mesh_grid(300, 300))
 
 ```
 
+Interupting the mesh with a new point:
+
+```code
+my_mesh = mesh_grid(300, 300)
+my_mesh.interupt_point((105, 115))
+render(my_mesh)
+```
+
 ## Making a skirt for myself
 
 I would like a skirt. To get one, I've measured my body a little bit:

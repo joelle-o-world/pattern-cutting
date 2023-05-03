@@ -1,4 +1,4 @@
-from src.geometry.triangle import triangle_point_collision
+from src.geometry.triangle import triangle_point_collision, triangle_area_3d
 import math
 import numpy as np
 from .Shape import Shape
@@ -54,16 +54,24 @@ class Mesh:
             else:
                 return None
         else:
-            for i, (x, y) in enumerate(self.vertices):
-                if x == p[0] and y == y[1]:
+            for i, q in enumerate(self.vertices):
+                if q[0] == p[0] and q[0] == p[1]:
                     return i
             # Otherwise
             return None
 
+    def add_or_find_vertex(self, p, tolerance=0):
+        found = self.vertex_at_point(p, tolerance)
+        if found == None:
+            return self.add_vertex(*p)
+        else:
+            return found
+
     def add_face(self, a, b, c):
-        self.assert_flat()
         if a != None and b != None and c != None:
-            self.faces.append((a, b, c))
+            vertices = [self.vertices[i] for i in (a, b, c)]
+            if triangle_area_3d(*vertices) > 0:
+                self.faces.append((a, b, c))
 
     def face_coordinates(self, index):
         "Get the coordinates of a single face by index"
@@ -75,6 +83,24 @@ class Mesh:
             triangle = (self.vertices[a], self.vertices[b], self.vertices[c])
             if triangle_point_collision(triangle, p):
                 yield face_index
+
+    def interupt_point(self, p):
+        self.assert_flat()
+        interupted_faces = list(self.faces_colliding_with_point(p))
+        new_vertex = self.add_or_find_vertex(p)
+
+        for a, b, c in [self.faces[i] for i in interupted_faces]:
+            self.add_face(new_vertex, a, b)
+            self.add_face(new_vertex, b, c)
+            self.add_face(new_vertex, a, c)
+
+        # Remove the interupted faces
+        self.faces = [
+            face
+            for face_index, face in enumerate(self.faces)
+            if (face_index not in interupted_faces)
+        ]
+        return new_vertex
 
     def is_flat(self):
         "In a flat mesh all vertices are on the plane z=0"

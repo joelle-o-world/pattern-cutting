@@ -826,6 +826,27 @@ render(mesh_grid(300, 300))
 
 
 
+Interupting the mesh with a new point:
+
+
+```python
+my_mesh = mesh_grid(300, 300)
+my_mesh.interupt_point((105, 115))
+render(my_mesh)
+```
+
+    [92, 334]
+
+
+
+
+
+    
+![svg](readme_files/readme_72_1.svg)
+    
+
+
+
 ## Making a skirt for myself
 
 I would like a skirt. To get one, I’ve measured my body a little bit:
@@ -875,7 +896,7 @@ render(
 
 
     
-![svg](readme_files/readme_76_0.svg)
+![svg](readme_files/readme_78_0.svg)
     
 
 
@@ -895,7 +916,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -914,7 +935,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -932,7 +953,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 
@@ -954,7 +975,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_84_0.svg)
+![svg](readme_files/readme_86_0.svg)
     
 
 
@@ -974,7 +995,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_86_0.svg)
+![svg](readme_files/readme_88_0.svg)
     
 
 
@@ -991,7 +1012,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_88_0.svg)
+![svg](readme_files/readme_90_0.svg)
     
 
 
@@ -1029,7 +1050,7 @@ render(
 
 
     
-![svg](readme_files/readme_90_0.svg)
+![svg](readme_files/readme_92_0.svg)
     
 
 
@@ -1059,7 +1080,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_92_0.svg)
+![svg](readme_files/readme_94_0.svg)
     
 
 
