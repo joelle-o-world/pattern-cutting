@@ -108,6 +108,25 @@ class Mesh:
         lines = [Shape([points[line[0]], points[line[1]]]) for line in self.lines]
         return Group(*faces, *lines)
 
+    @property
+    def left(self):
+        return min([x for x, _, _ in self.vertices])
+
+    @property
+    def right(self):
+        return max([x for x, _, _ in self.vertices])
+
+    @property
+    def bottom(self):
+        return min([y for _, y, _ in self.vertices])
+
+    @property
+    def top(self):
+        return max([y for _, y, _ in self.vertices])
+
+    def svg(self):
+        return self.isometric().svg()
+
 
 import math
 
