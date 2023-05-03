@@ -10,6 +10,8 @@ from src.geometry.LineSegment import LineSegment
 from src.geometry.vec3 import vec3
 from src.geometry.Vector import Vector, distance
 from src.competition import competition, multiwinner_competition
+import tripy
+
 
 
 default_corner_threshold = math.radians(15)
@@ -988,6 +990,17 @@ class Shape:
             collision.collide(collision_polygon, collision_vector)
         except Exception as e:
             print(e, collision_polygon, collision_vector)
+
+    def points_as_tuples(self):
+        return [(p.x, p.y) for p in self.points]
+
+    def triangles(self):
+        return tripy.earclip(self.points_as_tuples())
+
+    def triangles_renderable(self):
+        from .Group import Group
+        return Group(*[Shape([ Vector(*a),Vector(*b),Vector(*c) ], style="polygon") for a,b,c in self.triangles()])
+        
 
 
 def arrow(*points, label=None):

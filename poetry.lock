@@ -1331,6 +1331,14 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["pre-commit", "pytest"]
 
 [[package]]
+name = "tripy"
+version = "1.0.0"
+description = "Simple polygon triangulation"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "virtualenv"
 version = "20.16.6"
 description = "Virtual Python Environment builder"
@@ -1387,7 +1395,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1232c62414d4b75e78d53cd44fe99fde8ac166d2c9b442cfb36ffa687cb0cd2a"
+content-hash = "9e350dd2b5d63737ba4a8d76cda7254e7bc4ca9b5a8546828c6d33a0aaf155b0"
 
 [metadata.files]
 anyio = [
@@ -2242,6 +2250,10 @@ tornado = [
 traitlets = [
     {file = "traitlets-5.5.0-py3-none-any.whl", hash = "sha256:1201b2c9f76097195989cdf7f65db9897593b0dfd69e4ac96016661bb6f0d30f"},
     {file = "traitlets-5.5.0.tar.gz", hash = "sha256:b122f9ff2f2f6c1709dab289a05555be011c87828e911c0cf4074b85cb780a79"},
+]
+tripy = [
+    {file = "tripy-1.0.0-py2.py3-none-any.whl", hash = "sha256:c6a8ea289e7526695edb87ac628d50f38342fbd7840b0ce27492238b65dd54d6"},
+    {file = "tripy-1.0.0-py3-none-any.whl", hash = "sha256:13f861a47a2f6626137b55cf06b2a15d147bbfac7d80c53d59c5b557a59b24ec"},
 ]
 virtualenv = [
     {file = "virtualenv-20.16.6-py3-none-any.whl", hash = "sha256:186ca84254abcbde98180fd17092f9628c5fe742273c02724972a1d8a2035108"},

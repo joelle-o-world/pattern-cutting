@@ -310,6 +310,15 @@ render(example_shape, *points)
   
 ```
 
+## Triangulation
+
+Turning a polygon into triangles:
+
+```code
+render(example_shape.triangles_renderable())
+
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
