@@ -995,7 +995,10 @@ class Shape:
         return [(p.x, p.y) for p in self.points]
 
     def triangles(self):
-        return tripy.earclip(self.points_as_tuples())
+        if self.is_closed:
+            return tripy.earclip(self.points_as_tuples())
+        else:
+            raise Exception("Cannot triangulate unclosed poly line")
 
     def triangles_renderable(self):
         from .Group import Group
