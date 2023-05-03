@@ -1,4 +1,6 @@
 from src.geometry.triangle import triangle_point_collision
+import math
+import numpy as np
 from .Shape import Shape
 from src.geometry.Group import Group
 from src.geometry.Vector import Vector
@@ -102,7 +104,7 @@ class Mesh:
             for point in self.vertices
         ]
         faces = [
-            Shape([points[face[0]], points[face[1]], points[face[2]]])
+            Shape([points[face[0]], points[face[1]], points[face[2]]]).close()
             for face in self.faces
         ]
         lines = [Shape([points[line[0]], points[line[1]]]) for line in self.lines]
@@ -128,7 +130,24 @@ class Mesh:
         return self.isometric().svg()
 
 
-import math
+def mesh_grid(left, top, right=0, bottom=0, cell_size=25):
+    mesh = Mesh()
+
+    previous_row = None
+    for y in np.arange(min(top, bottom), max(top, bottom), cell_size):
+        current_row = [
+            mesh.add_vertex(x, y)
+            for x in np.arange(min(left, right), max(left, right), cell_size)
+        ]
+        if previous_row != None:
+            for a, b, c in zip(current_row, current_row[1:], previous_row):
+                mesh.add_face(a, b, c)
+            for a, b, c in zip(current_row[1:], previous_row[1:], previous_row):
+                mesh.add_face(a, b, c)
+
+        previous_row = current_row
+
+    return mesh
 
 
 def distance(a, b):

@@ -418,6 +418,17 @@ render(*[
 ])
 ```
 
+### The `Mesh` class
+
+For cloth simulation, we need to create a triangular mesh:
+
+```code
+from src.geometry.Mesh import mesh_grid
+
+render(mesh_grid(300, 300))
+
+```
+
 ## Making a skirt for myself
 
 I would like a skirt. To get one, I've measured my body a little bit:
