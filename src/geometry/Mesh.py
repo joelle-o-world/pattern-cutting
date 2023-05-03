@@ -1,3 +1,4 @@
+from src.geometry.triangle import triangle_point_collision
 from .Shape import Shape
 from src.geometry.Group import Group
 from src.geometry.Vector import Vector
@@ -18,18 +19,60 @@ class Mesh:
 
     def delete_vertex(self, index: int):
         del self.vertices[index]
+
         def f(i):
             "Update vertex index"
             return i if i < index else i - 1
-        self.faces = [(f(a), f(b), f(c)) for a,b,c in self.faces if a != index and b != index and c != index]
-        self.lines = [(f(a), f(b)) for a , b in self.lines if a != index and b != index]
+
+        self.faces = [
+            (f(a), f(b), f(c))
+            for a, b, c in self.faces
+            if a != index and b != index and c != index
+        ]
+        self.lines = [(f(a), f(b)) for a, b in self.lines if a != index and b != index]
 
     def update_vertex(self, index, x: float, y: float, z=0.0):
-        self.vertices[index] = [x, y, z]
+        self.vertices[index] = (x, y, z)
+
+    def closest_vertex_to(self, p):
+        self.assert_flat()
+        # TODO: generalise for 3 dimensions
+        distances = [distance(p, q) for q in self.vertices]
+        smallest_disance = min(distances)
+        return distances.index(smallest_disance)
+
+    def vertex_at_point(self, p, tolerance=0.0):
+        self.assert_flat()
+        # TODO: generalise for 3 dimensions
+        if tolerance != 0:
+            closest_index = self.closest_vertex_to(p)
+            closest_point = self.read_vertex_2d(closest_index)
+            if distance(p, closest_point) < tolerance:
+                return closest_index
+            else:
+                return None
+        else:
+            for i, (x, y) in enumerate(self.vertices):
+                if x == p[0] and y == y[1]:
+                    return i
+            # Otherwise
+            return None
 
     def add_face(self, a, b, c):
+        self.assert_flat()
         if a != None and b != None and c != None:
             self.faces.append((a, b, c))
+
+    def face_coordinates(self, index):
+        "Get the coordinates of a single face by index"
+        a, b, c = self.faces[index]
+        return self.vertices[a], self.vertices[b], self.vertices[c]
+
+    def faces_colliding_with_point(self, p):
+        for face_index, (a, b, c) in enumerate(self.faces):
+            triangle = (self.vertices[a], self.vertices[b], self.vertices[c])
+            if triangle_point_collision(triangle, p):
+                yield face_index
 
     def is_flat(self):
         "In a flat mesh all vertices are on the plane z=0"
@@ -38,6 +81,10 @@ class Mesh:
                 return False
         # otherwise
         return True
+
+    def assert_flat(self):
+        if not self.is_flat():
+            raise Exception("Expected a flat mesh")
 
     def obj_str(self):
         str = ""
@@ -60,3 +107,12 @@ class Mesh:
         ]
         lines = [Shape([points[line[0]], points[line[1]]]) for line in self.lines]
         return Group(*faces, *lines)
+
+
+import math
+
+
+def distance(a, b):
+    xa, ya = a
+    xb, yb = b
+    return math.sqrt((xa - xb) ** 2 + (ya - yb) ** 2)
