@@ -13,15 +13,23 @@ class Mesh:
         return Vector(x=self.vertices[index][0], y=self.vertices[index][1])
 
     def add_vertex(self, x, y, z=0.0):
-        self.vertices.append([x, y, z])
+        self.vertices.append((x, y, z))
         return len(self.vertices) - 1
+
+    def delete_vertex(self, index: int):
+        del self.vertices[index]
+        def f(i):
+            "Update vertex index"
+            return i if i < index else i - 1
+        self.faces = [(f(a), f(b), f(c)) for a,b,c in self.faces if a != index and b != index and c != index]
+        self.lines = [(f(a), f(b)) for a , b in self.lines if a != index and b != index]
 
     def update_vertex(self, index, x: float, y: float, z=0.0):
         self.vertices[index] = [x, y, z]
 
     def add_face(self, a, b, c):
         if a != None and b != None and c != None:
-            self.faces.append([a, b, c])
+            self.faces.append((a, b, c))
 
     def obj_str(self):
         str = ""
