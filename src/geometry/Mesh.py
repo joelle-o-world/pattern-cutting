@@ -31,6 +31,14 @@ class Mesh:
         if a != None and b != None and c != None:
             self.faces.append((a, b, c))
 
+    def is_flat(self):
+        "In a flat mesh all vertices are on the plane z=0"
+        for _, _, z in self.vertices:
+            if z != 0:
+                return False
+        # otherwise
+        return True
+
     def obj_str(self):
         str = ""
         for x, y, z in self.vertices:
