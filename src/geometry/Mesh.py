@@ -1,9 +1,11 @@
+from src.SVGHyperlink import SVGHyperlink
 from src.geometry.triangle import triangle_point_collision, triangle_area_3d
 import math
 import numpy as np
 from .Shape import Shape
 from src.geometry.Group import Group
 from src.geometry.Vector import Vector
+from datauri import DataURI
 
 
 class Mesh:
@@ -129,9 +131,9 @@ class Mesh:
         for x, y, z in self.vertices:
             str += "v {} {} {}\n".format(x, y, z)
         for a, b, c in self.faces:
-            str += "f {} {} {}\n".format(a, b, c)
+            str += "f {} {} {}\n".format(a + 1, b + 1, c + 1)
         for a, b in self.lines:
-            str += "l {} {}\n".format(a, b)
+            str += "l {} {}\n".format(a + 1, b + 1)
         return str
 
     def isometric(self):
@@ -165,8 +167,18 @@ class Mesh:
     def top(self):
         return max([y for _, y, _ in self.vertices])
 
+    def datauri(self):
+        data = self.obj_str()
+        mime = "application/object"
+        uri = DataURI.make(mime, charset="us-ascii", base64=True, data=data)
+        print(uri)
+        return uri
+
     def svg(self):
-        return self.isometric().svg()
+        rendered = self.isometric().svg()
+        link = SVGHyperlink(self.datauri(), target="_blank")
+        link.append(rendered)
+        return link
 
     def add_line(self, i, j):
         self.lines.append((i, j))

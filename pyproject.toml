@@ -14,6 +14,8 @@ multimethod = "^1.9"
 scipy = "^1.9.3"
 collision = "^1.2.2"
 tripy = "^1.0.0"
+datauri = "^1.0.0"
+python-datauri = "^1.1.0"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.10.1"

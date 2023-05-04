@@ -240,6 +240,14 @@ doc = ["sphinx", "sphinx_rtd_theme"]
 test = ["flake8", "isort", "pytest"]
 
 [[package]]
+name = "datauri"
+version = "1.0.0"
+description = "implementation of the data uri scheme defined in rfc2397"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "debugpy"
 version = "1.6.3"
 description = "An implementation of the Debug Adapter Protocol for Python"
@@ -1098,6 +1106,14 @@ tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "python-datauri"
+version = "1.1.0"
+description = "A li'l class for data URI manipulation in Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -1395,7 +1411,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9e350dd2b5d63737ba4a8d76cda7254e7bc4ca9b5a8546828c6d33a0aaf155b0"
+content-hash = "6358c076ad81fbdbb301eb89f984512abc82e1e27eaa07833d30b9916956474c"
 
 [metadata.files]
 anyio = [
@@ -1567,6 +1583,10 @@ colorama = [
 cssselect2 = [
     {file = "cssselect2-0.7.0-py3-none-any.whl", hash = "sha256:fd23a65bfd444595913f02fc71f6b286c29261e354c41d722ca7a261a49b5969"},
     {file = "cssselect2-0.7.0.tar.gz", hash = "sha256:1ccd984dab89fc68955043aca4e1b03e0cf29cad9880f6e28e3ba7a74b14aa5a"},
+]
+datauri = [
+    {file = "datauri-1.0.0-py3-none-any.whl", hash = "sha256:f5997eef14465eb0b2de77f0ebc2ead4f3c2d0c9bacd75c372f245fe133dace3"},
+    {file = "datauri-1.0.0.tar.gz", hash = "sha256:4b9a4d79239ec0b0d70aad15428e1e57332c007803b83aa462c0f75f5bc777a7"},
 ]
 debugpy = [
     {file = "debugpy-1.6.3-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:c4b2bd5c245eeb49824bf7e539f95fb17f9a756186e51c3e513e32999d8846f3"},
@@ -2016,6 +2036,10 @@ pyrsistent = [
 pytest = [
     {file = "pytest-7.2.0-py3-none-any.whl", hash = "sha256:892f933d339f068883b6fd5a459f03d85bfcb355e4981e146d2c7616c21fef71"},
     {file = "pytest-7.2.0.tar.gz", hash = "sha256:c4014eb40e10f11f355ad4e3c2fb2c6c6d1919c73f3b5a433de4708202cade59"},
+]
+python-datauri = [
+    {file = "python-datauri-1.1.0.tar.gz", hash = "sha256:247504b30f719136f0e563fa73ba5e22a6f555db2797db1c00c112e12d4927a5"},
+    {file = "python_datauri-1.1.0-py2.py3-none-any.whl", hash = "sha256:fbbc34fd934e4d225b8ebcd176fbc4a850b70ef37e8717f12186ec43bb7f5e68"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
