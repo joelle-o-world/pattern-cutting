@@ -143,7 +143,10 @@ class Mesh:
             Shape([points[face[0]], points[face[1]], points[face[2]]]).close()
             for face in self.faces
         ]
-        lines = [Shape([points[line[0]], points[line[1]]]) for line in self.lines]
+        lines = [
+            Shape([points[line[0]], points[line[1]]], style="stitch_line")
+            for line in self.lines
+        ]
         return Group(*faces, *lines)
 
     @property

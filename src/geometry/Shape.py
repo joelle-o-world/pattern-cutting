@@ -466,6 +466,8 @@ class Shape:
             return self.svg_line()
         elif self.style == "dashed":
             return self.svg_dashed()
+        elif self.style == "stitch_line":
+            return self.svg_stitch_line()
         elif self.style == "pointset":
             return self.svg_pointset()
         elif self.style == "polygon":
@@ -513,6 +515,9 @@ class Shape:
             g.append(self.svg_parallel_label())
         g.append(line)
         return g
+
+    def svg_stitch_line(self):
+        return self.svg_dashed()
 
     def svg_parallel_label(self):
         "Draw the label parallel to the line itself"
