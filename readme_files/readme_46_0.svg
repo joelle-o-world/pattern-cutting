@@ -2,7 +2,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="440.0" height="812.5" viewBox="-100.0 -112.5 440.0 812.5" stroke="black" fill="none">
 <defs>
-<path d="M0.0,-0.0 L0,600.0 L240.0,600.0 L240.0,265 L223.75,-12.5 L159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017 L0,0" fill="none" stroke="black" id="d0" />
+<path d="M0.0,-0.0 L0,600.0" fill="none" stroke="black" id="d0" />
+<path d="M0,600.0 L240.0,600.0" fill="none" stroke="black" id="d1" />
+<path d="M240.0,600.0 L240.0,265 L223.75,-12.5" fill="none" stroke="black" id="d2" />
+<path d="M223.75,-12.5 L159.15109809326995,-8.891122798506702" fill="none" stroke="black" id="d3" />
+<path d="M159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067" fill="none" stroke="black" id="d4" />
+<path d="M156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976" fill="none" stroke="black" id="d5" />
+<path d="M139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029" fill="none" stroke="black" id="d6" />
+<path d="M84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818" fill="none" stroke="black" id="d7" />
+<path d="M82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017" fill="none" stroke="black" id="d8" />
+<path d="M64.5989019067301,-3.6088772014933017 L0,0" fill="none" stroke="black" id="d9" />
 </defs>
 <path d="M-100.0,700.0 L340.0,700.0" stroke="#dddddd" />
 <path d="M-100.0,490.0 L340.0,490.0" stroke="#dddddd" />
@@ -67,9 +76,36 @@
 <path d="M300.0,700.0 L300.0,-112.5" stroke="#ffcccc66" stroke-dasharray="5" />
 <text x="302.0" y="699.0" font-size="8" stroke="none" fill="#ffcccc66" dy="0em">300mm</text>
 <g>
-<path d="M0.0,-0.0 L0,600.0 L240.0,600.0 L240.0,265 L223.75,-12.5 L159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017 L0,0" fill="#E6E6FA66" stroke="black" />
+<path d="M0.0,-0.0 L0,600.0 L240.0,600.0 L240.0,265 L223.75,-12.5 L159.15109809326995,-8.891122798506702 L156.13903498133365,116.4720594992067 L139.18223524006356,-7.775543868159976 L84.56776475993651,-4.724456131840029 L82.39238584576032,135.61537330577818 L64.5989019067301,-3.6088772014933017 L0,0" fill="none" stroke="black" />
 <text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d0" startOffset="10">
-<tspan dy="-1em">back</tspan>
+<tspan dy="-1em">side 0</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d1" startOffset="10">
+<tspan dy="-1em">side 1</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d2" startOffset="10">
+<tspan dy="-1em">side 2</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d3" startOffset="10">
+<tspan dy="-1em">side 3</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d4" startOffset="10">
+<tspan dy="-1em">side 4</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d5" startOffset="10">
+<tspan dy="-1em">side 5</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d6" startOffset="10">
+<tspan dy="-1em">side 6</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d7" startOffset="10">
+<tspan dy="-1em">side 7</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d8" startOffset="10">
+<tspan dy="-1em">side 8</tspan>
+</textPath></text>
+<text font-size="12" stroke="none" fill="#000000"><textPath xlink:href="#d9" startOffset="10">
+<tspan dy="-1em">side 9</tspan>
 </textPath></text>
 </g>
 <g>

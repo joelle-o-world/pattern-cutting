@@ -70,8 +70,11 @@ class Mesh:
     def add_face(self, a, b, c):
         if a != None and b != None and c != None:
             vertices = [self.vertices[i] for i in (a, b, c)]
-            if triangle_area_3d(*vertices) > 0:
-                self.faces.append((a, b, c))
+            try:
+                if triangle_area_3d(*vertices) > 0:
+                    self.faces.append((a, b, c))
+            except:
+                pass
 
     def add_face_with_points(self, a, b, c, tolerance=0):
         self.add_face(
@@ -161,6 +164,19 @@ class Mesh:
 
     def svg(self):
         return self.isometric().svg()
+
+    def add_line(self, i, j):
+        self.lines.append((i, j))
+
+    def add_stitch(self, a, b):
+        self.add_line(self.interupt_point(a), self.interupt_point(b))
+
+    def add_seam(self, a: Shape, b: Shape, stitch_size: float = 10):
+        for w in np.arange(0, min(a.length, b.length), stitch_size):
+            self.add_line(
+                self.interupt_point(a.point_along(w).tuple),
+                self.interupt_point(b.point_along(w).tuple),
+            )
 
 
 def mesh_grid(left, top, right=0, bottom=0, cell_size=25):

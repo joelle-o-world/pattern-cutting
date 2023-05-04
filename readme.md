@@ -543,7 +543,7 @@ for point in point_grid_over_shape(example_shape, margin=17):
   if example_shape.point_is_inside(point):
     points.append(point)
 
-render(example_shape, *points)
+render(example_shape.with_style("all_guides"), *points)
   
 ```
 
@@ -563,7 +563,6 @@ Turning a polygon into triangles:
 
 ```python
 render(example_shape.earclip_mesh())
-
 ```
 
 
@@ -571,6 +570,26 @@ render(example_shape.earclip_mesh())
 
     
 ![svg](readme_files/readme_48_0.svg)
+    
+
+
+
+Sewing up the darts:
+
+
+```python
+mesh = example_shape.earclip_mesh()
+sides = example_shape.sides()
+mesh.add_seam(sides[7], sides[8].reverse())
+mesh.add_seam(sides[4], sides[5].reverse())
+render(mesh)
+```
+
+
+
+
+    
+![svg](readme_files/readme_50_0.svg)
     
 
 
@@ -594,7 +613,7 @@ render(DieLemmaDressBlock)
 
 
     
-![svg](readme_files/readme_50_0.svg)
+![svg](readme_files/readme_52_0.svg)
     
 
 
@@ -615,7 +634,7 @@ render(
 
 
     
-![svg](readme_files/readme_52_0.svg)
+![svg](readme_files/readme_54_0.svg)
     
 
 
@@ -636,7 +655,7 @@ render(
 
 
     
-![svg](readme_files/readme_54_0.svg)
+![svg](readme_files/readme_56_0.svg)
     
 
 
@@ -695,7 +714,7 @@ render(TheClassicTailoredTrouserBlock())
 
 
     
-![svg](readme_files/readme_58_0.svg)
+![svg](readme_files/readme_60_0.svg)
     
 
 
@@ -713,7 +732,7 @@ render(tailored_skirt_block())
 
 
     
-![svg](readme_files/readme_60_0.svg)
+![svg](readme_files/readme_62_0.svg)
     
 
 
@@ -734,7 +753,7 @@ render(tailored_skirt_pattern())
 
 
     
-![svg](readme_files/readme_62_1.svg)
+![svg](readme_files/readme_64_1.svg)
     
 
 
@@ -754,7 +773,7 @@ render(tailored_skirt_pattern(skirt_length=940, flare=1.4))
 
 
     
-![svg](readme_files/readme_64_1.svg)
+![svg](readme_files/readme_66_1.svg)
     
 
 
@@ -779,7 +798,7 @@ render(
 
 
     
-![svg](readme_files/readme_66_0.svg)
+![svg](readme_files/readme_68_0.svg)
     
 
 
@@ -800,7 +819,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_68_0.svg)
+![svg](readme_files/readme_70_0.svg)
     
 
 
@@ -821,7 +840,7 @@ render(mesh_grid(300, 300))
 
 
     
-![svg](readme_files/readme_70_0.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 
@@ -839,7 +858,7 @@ render(my_mesh)
 
 
     
-![svg](readme_files/readme_72_0.svg)
+![svg](readme_files/readme_74_0.svg)
     
 
 
@@ -893,7 +912,7 @@ render(
 
 
     
-![svg](readme_files/readme_78_0.svg)
+![svg](readme_files/readme_80_0.svg)
     
 
 
@@ -913,7 +932,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_80_0.svg)
+![svg](readme_files/readme_82_0.svg)
     
 
 
@@ -932,7 +951,7 @@ render(skirt_radius_graph)
 
 
     
-![svg](readme_files/readme_82_0.svg)
+![svg](readme_files/readme_84_0.svg)
     
 
 
@@ -950,7 +969,7 @@ render(*[
 
 
     
-![svg](readme_files/readme_84_0.svg)
+![svg](readme_files/readme_86_0.svg)
     
 
 
@@ -972,7 +991,7 @@ render(final_radius_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_86_0.svg)
+![svg](readme_files/readme_88_0.svg)
     
 
 
@@ -992,7 +1011,7 @@ render(final_circumference_graph.close_against_y_axis())
 
 
     
-![svg](readme_files/readme_88_0.svg)
+![svg](readme_files/readme_90_0.svg)
     
 
 
@@ -1009,7 +1028,7 @@ render(pattern_shape)
 
 
     
-![svg](readme_files/readme_90_0.svg)
+![svg](readme_files/readme_92_0.svg)
     
 
 
@@ -1047,7 +1066,7 @@ render(
 
 
     
-![svg](readme_files/readme_92_0.svg)
+![svg](readme_files/readme_94_0.svg)
     
 
 
@@ -1077,7 +1096,7 @@ render(*all)
 
 
     
-![svg](readme_files/readme_94_0.svg)
+![svg](readme_files/readme_96_0.svg)
     
 
 

@@ -306,7 +306,7 @@ for point in point_grid_over_shape(example_shape, margin=17):
   if example_shape.point_is_inside(point):
     points.append(point)
 
-render(example_shape, *points)
+render(example_shape.with_style("all_guides"), *points)
   
 ```
 
@@ -316,7 +316,16 @@ Turning a polygon into triangles:
 
 ```code
 render(example_shape.earclip_mesh())
+```
 
+Sewing up the darts:
+
+```code
+mesh = example_shape.earclip_mesh()
+sides = example_shape.sides()
+mesh.add_seam(sides[7], sides[8].reverse())
+mesh.add_seam(sides[4], sides[5].reverse())
+render(mesh)
 ```
 
 ## Die Lemma dress block
