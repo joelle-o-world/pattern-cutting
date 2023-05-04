@@ -562,7 +562,7 @@ Turning a polygon into triangles:
 
 
 ```python
-render(example_shape.triangles_renderable())
+render(example_shape.earclip_mesh())
 
 ```
 
@@ -835,14 +835,11 @@ my_mesh.interupt_point((105, 115))
 render(my_mesh)
 ```
 
-    [92, 334]
-
-
 
 
 
     
-![svg](readme_files/readme_72_1.svg)
+![svg](readme_files/readme_72_0.svg)
     
 
 

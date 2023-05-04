@@ -13,7 +13,6 @@ from src.competition import competition, multiwinner_competition
 import tripy
 
 
-
 default_corner_threshold = math.radians(15)
 
 
@@ -1002,8 +1001,21 @@ class Shape:
 
     def triangles_renderable(self):
         from .Group import Group
-        return Group(*[Shape([ Vector(*a),Vector(*b),Vector(*c) ], style="polygon") for a,b,c in self.triangles()])
-        
+
+        return Group(
+            *[
+                Shape([Vector(*a), Vector(*b), Vector(*c)], style="polygon")
+                for a, b, c in self.triangles()
+            ]
+        )
+
+    def earclip_mesh(self):
+        from .Mesh import Mesh
+
+        mesh = Mesh()
+        for a, b, c in self.triangles():
+            mesh.add_face_with_points(a, b, c)
+        return mesh
 
 
 def arrow(*points, label=None):

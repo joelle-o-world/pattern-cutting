@@ -73,6 +73,13 @@ class Mesh:
             if triangle_area_3d(*vertices) > 0:
                 self.faces.append((a, b, c))
 
+    def add_face_with_points(self, a, b, c, tolerance=0):
+        self.add_face(
+            self.add_or_find_vertex(a, tolerance),
+            self.add_or_find_vertex(b, tolerance),
+            self.add_or_find_vertex(c, tolerance),
+        )
+
     def face_coordinates(self, index):
         "Get the coordinates of a single face by index"
         a, b, c = self.faces[index]

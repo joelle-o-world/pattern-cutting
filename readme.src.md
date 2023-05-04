@@ -315,7 +315,7 @@ render(example_shape, *points)
 Turning a polygon into triangles:
 
 ```code
-render(example_shape.triangles_renderable())
+render(example_shape.earclip_mesh())
 
 ```
 
