@@ -9,10 +9,10 @@ from datauri import DataURI
 
 
 class Mesh:
-    def __init__(self, vertices=[], faces=[], lines=[]):
-        self.vertices = vertices
-        self.lines = lines
-        self.faces = faces
+    def __init__(self):
+        self.vertices = []
+        self.lines = []
+        self.faces = []
 
     def read_vertex_2d(self, index):
         return Vector(x=self.vertices[index][0], y=self.vertices[index][1])
