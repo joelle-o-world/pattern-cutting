@@ -6,6 +6,7 @@ from .Shape import Shape
 from src.geometry.Group import Group
 from src.geometry.Vector import Vector
 from datauri import DataURI
+import meshplot as mp
 
 
 class Mesh:
@@ -192,6 +193,17 @@ class Mesh:
                 self.interupt_point(a.point_along(w).tuple),
                 self.interupt_point(b.point_along(w).tuple),
             )
+
+    def faces_np(self):
+        return np.array(self.faces)
+
+    def vertices_np(self):
+        return np.array(self.vertices)
+
+    def meshplot(self):
+        faces = self.faces_np()
+        vertices = self.vertices_np()
+        return mp.plot(vertices, faces)
 
 
 def mesh_grid(left, top, right=0, bottom=0, cell_size=25):
