@@ -328,6 +328,12 @@ mesh.add_seam(sides[4], sides[5].reverse())
 render(mesh)
 ```
 
+Showing a mesh using meshplot:
+
+```code
+mesh.meshplot()
+```
+
 ## Die Lemma dress block
 
 One of the main applications of this library is to create outfits for East London drag queen [Die Lemma](https://www.instagram.com/die.lemma/).
