@@ -16,6 +16,7 @@ collision = "^1.2.2"
 tripy = "^1.0.0"
 datauri = "^1.0.0"
 python-datauri = "^1.1.0"
+meshplot = {git = "https://github.com/daara-s/meshplot.git", rev = "specify-deps"}
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.10.1"
