@@ -446,6 +446,17 @@ my_mesh.interupt_point((105, 115))
 render(my_mesh)
 ```
 
+
+I want to sew the sides of this together to make a tube.O
+
+```code
+tube = mesh_grid(300, 300)
+left_side = Shape([Vector(0,0), Vector(0, 250)])
+right_side = Shape([Vector(250,0), Vector(250, 250)])
+tube.add_seam(left_side, right_side)
+render (tube)
+```
+
 ## Making a skirt for myself
 
 I would like a skirt. To get one, I've measured my body a little bit:
